@@ -63,17 +63,11 @@ const projects: ProjectEntry[] = [
       { src: yanaWork1, alt: "Yana Kaziulia — Liberation of Colors 1" },
       { src: yanaWork2, alt: "Yana Kaziulia — Liberation of Colors 2" },
       { src: yanaWork3, alt: "Yana Kaziulia — Liberation of Colors 3" },
+      { src: yanaWork4, alt: "Yana Kaziulia — Liberation of Colors 4" },
+      { src: yanaWork5, alt: "Yana Kaziulia — Liberation of Colors 5" },
     ],
   },
-  {
-    artist: "Yana Kaziulia",
-    title: "FLOW",
-    description: "A photography project about fragile moments of presence, awareness, concentration, and embodied experience. It attempts to preserve fleeting inner moments before they disappear.",
-    images: [
-      { src: yanaWork4, alt: "Yana Kaziulia — FLOW 1" },
-      { src: yanaWork5, alt: "Yana Kaziulia — FLOW 2" },
-    ],
-  },
+  // TODO: Add "FLOW" project for Yana Kaziulia here later
   {
     artist: "Nadya Net",
     title: "FEAR HERE",
