@@ -148,7 +148,7 @@ const Exhibition = () => {
               Transforming Darkness into Resilience
             </p>
 
-            <div className="flex flex-col sm:flex-row sm:items-end gap-6 sm:gap-10">
+            <div className="flex flex-col sm:flex-row sm:items-end gap-4 sm:gap-10">
               <div className="space-y-1">
                 <p className="font-sans text-sm font-light text-primary-foreground/80">26.04.2026</p>
                 <p className="font-serif text-lg text-primary-foreground">VOID INK</p>
