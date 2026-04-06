@@ -1,24 +1,11 @@
+import { Link } from "react-router-dom";
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
-import ImageGallery from "@/components/ImageGallery";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import styxHero from "@/assets/styx-hero.jpg";
-import ajWork1 from "@/assets/aj-jul-work-1.jpg";
-import ajWork2 from "@/assets/aj-jul-work-2.jpg";
-import mariiaWork1 from "@/assets/mariia-flowers-1.jpg";
-import mariiaWork2 from "@/assets/mariia-flowers-2.jpg";
-import mariiaWork3 from "@/assets/mariia-flowers-3.jpg";
-import nadyaWork1 from "@/assets/nadya-fearhere-1.jpg";
-import yanaWork1 from "@/assets/yana-work-1.jpg";
-import yanaWork2 from "@/assets/yana-work-2.jpg";
-import yanaWork3 from "@/assets/yana-work-3.jpg";
-import yanaWork4 from "@/assets/yana-work-4.jpg";
-import yanaWork5 from "@/assets/yana-work-5.jpg";
-import annaWork1 from "@/assets/anna-work-1.jpg";
-import annaWork2 from "@/assets/anna-work-2.jpg";
-import annaWork3 from "@/assets/anna-work-3.jpg";
-import annaWork4 from "@/assets/anna-work-4.jpg";
-import annaWork5 from "@/assets/anna-work-5.jpg";
+import { featuredArtworks } from "@/lib/exhibitionData";
+
+const mapsUrl = "https://www.google.com/maps/search/?api=1&query=Schwedter+Str.+48+10435+Berlin";
 
 const generateCalendarUrl = () => {
   const event = {
@@ -28,97 +15,6 @@ const generateCalendarUrl = () => {
   };
   return `data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ADTSTART:${event.date}T180000Z%0ADTEND:${event.date}T220000Z%0ASUMMARY:${encodeURIComponent(event.title)}%0ALOCATION:${encodeURIComponent(event.location)}%0AEND:VEVENT%0AEND:VCALENDAR`;
 };
-
-const mapsUrl = "https://www.google.com/maps/search/?api=1&query=Schwedter+Str.+48+10435+Berlin";
-
-interface ExhibitionArtistProps {
-  name: string;
-  works: { src: string; alt: string }[];
-  technicalDetails: string[];
-}
-
-const ExhibitionArtistBlock = ({ name, works, technicalDetails }: ExhibitionArtistProps) => (
-  <FadeIn className="py-6 md:py-12">
-    <div className="max-w-2xl mx-auto">
-      <h3 className="text-editorial-heading mb-4">{name}</h3>
-      <div className="mb-4">
-        <ImageGallery images={works} />
-      </div>
-      <div className="space-y-1">
-        {technicalDetails.map((detail, i) => (
-          <p key={i} className="text-editorial-caption">{detail}</p>
-        ))}
-      </div>
-    </div>
-  </FadeIn>
-);
-
-const exhibitionArtists: ExhibitionArtistProps[] = [
-  {
-    name: "Yana Kaziulia",
-    works: [
-      { src: yanaWork1, alt: "Yana Kaziulia — Exhibition work 1" },
-      { src: yanaWork2, alt: "Yana Kaziulia — Exhibition work 2" },
-      { src: yanaWork3, alt: "Yana Kaziulia — Exhibition work 3" },
-      { src: yanaWork4, alt: "Yana Kaziulia — Exhibition work 4" },
-      { src: yanaWork5, alt: "Yana Kaziulia — Exhibition work 5" },
-    ],
-    technicalDetails: [
-      "5 frames, 52 × 52 cm",
-      "4 photographs, 40 × 40 cm",
-      "1 photograph, 40 × 30 cm",
-      "9 polaroids, 8.5 × 7 cm",
-    ],
-  },
-  {
-    name: "Anna Kazakova",
-    works: [
-      { src: annaWork1, alt: "Anna Kazakova — Exhibition work 1" },
-      { src: annaWork2, alt: "Anna Kazakova — Exhibition work 2" },
-      { src: annaWork3, alt: "Anna Kazakova — Exhibition work 3" },
-      { src: annaWork4, alt: "Anna Kazakova — Exhibition work 4" },
-      { src: annaWork5, alt: "Anna Kazakova — Exhibition work 5" },
-    ],
-    technicalDetails: [
-      "2 vertical works, 30 × 45 cm",
-      "3 horizontal works, 45 × 30 cm",
-      "Print on glass",
-    ],
-  },
-  {
-    name: "Nadya Net",
-    works: [
-      { src: nadyaWork1, alt: "Nadya Net — Exhibition work" },
-    ],
-    technicalDetails: [
-      "Destination Ararat — 100 × 120 cm",
-      "In Suspension — 100 × 120 cm",
-      "Followed — 140 × 120 cm, diptych",
-      "Already Inside — 60 × 60 cm, triptych",
-    ],
-  },
-  {
-    name: "Mariia Zatsepina",
-    works: [
-      { src: mariiaWork1, alt: "Mariia Zatsepina — Exhibition work 1" },
-      { src: mariiaWork2, alt: "Mariia Zatsepina — Exhibition work 2" },
-      { src: mariiaWork3, alt: "Mariia Zatsepina — Exhibition work 3" },
-    ],
-    technicalDetails: [
-      "3 photographs on canvas — 60 × 90 cm",
-    ],
-  },
-  {
-    name: "Aj Jul",
-    works: [
-      { src: ajWork1, alt: "Aj Jul — Exhibition work 1" },
-      { src: ajWork2, alt: "Aj Jul — Exhibition work 2" },
-    ],
-    technicalDetails: [
-      "2 small works, approximately A4 each",
-    ],
-  },
-];
 
 const Exhibition = () => {
   return (
@@ -236,18 +132,35 @@ const Exhibition = () => {
         </FadeIn>
       </section>
 
-      {/* Exhibition Works */}
+      {/* Featured Artworks */}
       <section className="page-padding pb-16 md:pb-24">
         <FadeIn>
-          <div className="max-w-2xl mx-auto mb-10">
+          <div className="max-w-4xl mx-auto mb-10">
             <div className="gallery-divider mb-6" />
-            <h2 className="text-editorial-subtitle">Exhibition Works</h2>
+            <h2 className="text-editorial-subtitle">Featured Artworks</h2>
           </div>
         </FadeIn>
 
-        {exhibitionArtists.map((artist) => (
-          <ExhibitionArtistBlock key={artist.name} {...artist} />
-        ))}
+        <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12">
+          {featuredArtworks.map((artwork, i) => (
+            <FadeIn key={artwork.slug} delay={i * 0.05}>
+              <Link to={`/exhibition/${artwork.slug}`} className="group">
+                <div className="aspect-[4/5] bg-secondary overflow-hidden mb-3">
+                  <img
+                    src={artwork.thumbnail}
+                    alt={artwork.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 className="font-serif text-base md:text-lg font-light leading-snug mb-0.5">
+                  {artwork.title}
+                </h3>
+                <p className="text-editorial-caption">{artwork.artist}</p>
+              </Link>
+            </FadeIn>
+          ))}
+        </div>
       </section>
     </SiteLayout>
   );
