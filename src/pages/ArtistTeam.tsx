@@ -5,6 +5,7 @@ import yanaPortrait from "@/assets/yana-kaziulia.jpg";
 import annaPortrait from "@/assets/anna-kazakova.jpg";
 import mariiaPortrait from "@/assets/mariia-zatsepina.jpg";
 import nadyaPortrait from "@/assets/nadya-net.jpg";
+import ajPortrait from "@/assets/aj-jul.png";
 
 interface ArtistEntry {
   name: string;
