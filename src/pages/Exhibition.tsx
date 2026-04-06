@@ -144,7 +144,7 @@ const Exhibition = () => {
             <p className="font-serif text-xl md:text-2xl lg:text-3xl font-light text-primary-foreground/90 mb-1">
               Crossing Shadows Within
             </p>
-            <p className="font-sans text-sm md:text-base font-light text-primary-foreground/60 mb-8">
+            <p className="font-sans text-sm md:text-base font-light text-primary-foreground/60 mb-5 md:mb-8">
               Transforming Darkness into Resilience
             </p>
 
