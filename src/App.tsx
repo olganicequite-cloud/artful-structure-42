@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Exhibition from "./pages/Exhibition";
 import HomePage from "./pages/HomePage";
 import ArtistTeam from "./pages/ArtistTeam";
+import ArtistDetail from "./pages/ArtistDetail";
 import Projects202526 from "./pages/Projects202526";
 import Projects2025 from "./pages/Projects2025";
 import NotFound from "./pages/NotFound";
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/" element={<HomePage />} />
           <Route path="/exhibition" element={<Exhibition />} />
           <Route path="/artists" element={<ArtistTeam />} />
+          <Route path="/artists/:slug" element={<ArtistDetail />} />
           <Route path="/projects" element={<Projects202526 />} />
           <Route path="/projects-2025-26" element={<Navigate to="/projects" replace />} />
           <Route path="/projects-2025" element={<Projects2025 />} />

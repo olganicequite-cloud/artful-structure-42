@@ -159,8 +159,8 @@ const HomePage = () => {
         <div className="max-w-4xl mx-auto">
           <FadeIn>
             <div className="gallery-divider mb-10" />
-            <p className="text-editorial-detail mb-2">Program Structure</p>
-            <h2 className="text-editorial-subtitle mb-10">Modules</h2>
+            <p className="text-editorial-detail mb-2">Supporting Program</p>
+            <h2 className="text-editorial-subtitle mb-10">Additional Modules</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4">
               {modules.map((mod) => (
                 <p key={mod} className="text-editorial-body">{mod}</p>
