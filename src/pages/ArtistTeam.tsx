@@ -1,81 +1,74 @@
+import { Link } from "react-router-dom";
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
+import { artists, placeholderArtists2025, Artist } from "@/lib/artistData";
 
-import yanaPortrait from "@/assets/yana-kaziulia.jpg";
-import annaPortrait from "@/assets/anna-kazakova.jpg";
-import mariiaPortrait from "@/assets/mariia-zatsepina.jpg";
-import nadyaPortrait from "@/assets/nadya-net.jpg";
-import ajPortrait from "@/assets/aj-jul.png";
+const ArtistCard = ({ artist }: { artist: Artist }) => {
+  const hasDetail = artist.cohort === "2025-26";
 
-interface ArtistEntry {
-  name: string;
-  bio: string;
-  portrait: string;
-}
+  const content = (
+    <div className="group cursor-pointer">
+      <div className="aspect-[4/5] bg-secondary overflow-hidden mb-3">
+        {artist.portrait ? (
+          <img
+            src={artist.portrait}
+            alt={`${artist.name}`}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+            loading="lazy"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center">
+            <span className="text-editorial-caption text-foreground/30">Portrait</span>
+          </div>
+        )}
+      </div>
+      <h3 className="font-serif text-base md:text-lg font-light leading-snug mb-0.5">
+        {artist.name}
+      </h3>
+      <p className="text-editorial-caption">{artist.shortLine}</p>
+    </div>
+  );
 
-const artists: ArtistEntry[] = [
-  {
-    name: "Yana Kaziulia",
-    bio: "Belarusian art photographer based in Berlin, working across analog and digital photography. Her practice explores memory, identity, emotional presence, and perception.",
-    portrait: yanaPortrait,
-  },
-  {
-    name: "Anna Kazakova",
-    bio: "Berlin-based photographer exploring urban space, nature, suspended time, light, architecture, and subtle human presence.",
-    portrait: annaPortrait,
-  },
-  {
-    name: "Mariia Zatsepina",
-    bio: "Berlin-based photographer working with portraiture, nature, flowers, emotional states, and transformation.",
-    portrait: mariiaPortrait,
-  },
-  {
-    name: "Nadya Net",
-    bio: "Berlin-based artist working with painting and illustration in a surreal visual language, exploring displacement, relocation, fear, identity, and emotional transformation.",
-    portrait: nadyaPortrait,
-  },
-  {
-    name: "Aj Jul",
-    bio: "Berlin-based artist exploring emotional states and the relationship between the human body and surrounding space. Drawing is approached as a meditative practice.",
-    portrait: ajPortrait,
-  },
-];
+  if (hasDetail) {
+    return <Link to={`/artists/${artist.slug}`}>{content}</Link>;
+  }
+
+  return content;
+};
 
 const ArtistTeam = () => {
+  const cohort202526 = artists.filter((a) => a.cohort === "2025-26");
+
   return (
     <SiteLayout>
       <section className="section-spacing page-padding">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <FadeIn>
             <p className="text-editorial-detail mb-4">Artist Team</p>
             <h1 className="text-editorial-title mb-12 md:mb-16">The Artists</h1>
           </FadeIn>
 
-          <div className="space-y-12 md:space-y-16">
-            {artists.map((artist, index) => (
-              <FadeIn key={artist.name} delay={index * 0.08}>
-                <div className="grid md:grid-cols-[240px_1fr] gap-6 md:gap-10 items-start">
-                  {/* Portrait */}
-                  <div className="w-40 h-52 md:w-full md:h-72 bg-secondary overflow-hidden">
-                    {artist.portrait ? (
-                      <img
-                        src={artist.portrait}
-                        alt={`${artist.name} — Portrait`}
-                        className="w-full h-full object-cover"
-                        loading="lazy"
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center">
-                        <span className="text-editorial-caption">Portrait</span>
-                      </div>
-                    )}
-                  </div>
+          {/* Cohort 2025–26 */}
+          <FadeIn delay={0.05}>
+            <p className="text-editorial-detail mb-6">Cohort 2025–26</p>
+          </FadeIn>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-24">
+            {cohort202526.map((artist, i) => (
+              <FadeIn key={artist.slug} delay={i * 0.05}>
+                <ArtistCard artist={artist} />
+              </FadeIn>
+            ))}
+          </div>
 
-                  <div className="flex flex-col justify-center">
-                    <h2 className="text-editorial-heading mb-3">{artist.name}</h2>
-                    <p className="text-editorial-body">{artist.bio}</p>
-                  </div>
-                </div>
+          {/* Cohort 2025 */}
+          <FadeIn>
+            <div className="gallery-divider mb-10" />
+            <p className="text-editorial-detail mb-6">Cohort 2025</p>
+          </FadeIn>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12">
+            {placeholderArtists2025.map((artist, i) => (
+              <FadeIn key={artist.slug} delay={i * 0.04}>
+                <ArtistCard artist={artist} />
               </FadeIn>
             ))}
           </div>
