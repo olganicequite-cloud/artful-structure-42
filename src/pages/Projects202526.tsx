@@ -18,6 +18,10 @@ import yanaWork2 from "@/assets/yana-work-2.jpg";
 import yanaWork3 from "@/assets/yana-work-3.jpg";
 import yanaWork4 from "@/assets/yana-work-4.jpg";
 import yanaWork5 from "@/assets/yana-work-5.jpg";
+import annaWork1 from "@/assets/anna-work-1.jpg";
+import annaWork2 from "@/assets/anna-work-2.jpg";
+import annaWork3 from "@/assets/anna-work-3.jpg";
+import annaWork4 from "@/assets/anna-work-4.jpg";
 
 interface ProjectEntry {
   artist: string;
@@ -41,8 +45,10 @@ const projects: ProjectEntry[] = [
     title: "Invisible Weight — A Diary of a Shadow",
     description: "A project about depression, not as a clinical diagnosis but as a phenomenon of inner space. A white landscape becomes a model of silence, disorientation, deceleration, and invisible weight.",
     images: [
-      { src: artwork5, alt: "Anna Kazakova — Invisible Weight 1" },
-      { src: artwork1, alt: "Anna Kazakova — Invisible Weight 2" },
+      { src: annaWork1, alt: "Anna Kazakova — Invisible Weight 1" },
+      { src: annaWork2, alt: "Anna Kazakova — Invisible Weight 2" },
+      { src: annaWork3, alt: "Anna Kazakova — Invisible Weight 3" },
+      { src: annaWork4, alt: "Anna Kazakova — Invisible Weight 4" },
     ],
   },
   {

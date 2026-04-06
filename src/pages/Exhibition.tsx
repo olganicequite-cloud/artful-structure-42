@@ -19,6 +19,10 @@ import yanaWork2 from "@/assets/yana-work-2.jpg";
 import yanaWork3 from "@/assets/yana-work-3.jpg";
 import yanaWork4 from "@/assets/yana-work-4.jpg";
 import yanaWork5 from "@/assets/yana-work-5.jpg";
+import annaWork1 from "@/assets/anna-work-1.jpg";
+import annaWork2 from "@/assets/anna-work-2.jpg";
+import annaWork3 from "@/assets/anna-work-3.jpg";
+import annaWork4 from "@/assets/anna-work-4.jpg";
 
 const generateCalendarUrl = () => {
   const event = {
@@ -73,7 +77,10 @@ const exhibitionArtists: ExhibitionArtistProps[] = [
   {
     name: "Anna Kazakova",
     works: [
-      { src: artwork5, alt: "Anna Kazakova — Exhibition work" },
+      { src: annaWork1, alt: "Anna Kazakova — Exhibition work 1" },
+      { src: annaWork2, alt: "Anna Kazakova — Exhibition work 2" },
+      { src: annaWork3, alt: "Anna Kazakova — Exhibition work 3" },
+      { src: annaWork4, alt: "Anna Kazakova — Exhibition work 4" },
     ],
     technicalDetails: [
       "2 vertical works, 30 × 45 cm",
