@@ -138,7 +138,7 @@ const Exhibition = () => {
             <p className="text-xs md:text-sm tracking-[0.3em] uppercase font-sans mb-3 text-primary-foreground/60">
               Exhibition
             </p>
-            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-primary-foreground mb-3">
+            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-primary-foreground mb-1.5">
               STYX
             </h1>
             <p className="font-serif text-xl md:text-2xl lg:text-3xl font-light text-primary-foreground/90 mb-1">
