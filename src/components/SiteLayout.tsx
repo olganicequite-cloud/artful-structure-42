@@ -13,10 +13,8 @@ const footerNav = [
 ];
 
 const footerInfo = [
-  { path: "#", label: "Participate" },
   { path: "#", label: "Download" },
   { path: "/contact", label: "Contact" },
-  { path: "#", label: "Information" },
 ];
 
 const footerLegal = [
