@@ -22,6 +22,7 @@ import annaWork1 from "@/assets/anna-work-1.jpg";
 import annaWork2 from "@/assets/anna-work-2.jpg";
 import annaWork3 from "@/assets/anna-work-3.jpg";
 import annaWork4 from "@/assets/anna-work-4.jpg";
+import annaWork5 from "@/assets/anna-work-5.jpg";
 
 interface ProjectEntry {
   artist: string;
@@ -49,6 +50,7 @@ const projects: ProjectEntry[] = [
       { src: annaWork2, alt: "Anna Kazakova — Invisible Weight 2" },
       { src: annaWork3, alt: "Anna Kazakova — Invisible Weight 3" },
       { src: annaWork4, alt: "Anna Kazakova — Invisible Weight 4" },
+      { src: annaWork5, alt: "Anna Kazakova — Invisible Weight 5" },
     ],
   },
   {
