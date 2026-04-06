@@ -7,6 +7,8 @@ import artwork3 from "@/assets/placeholder-artwork-3.jpg";
 import artwork4 from "@/assets/placeholder-artwork-4.jpg";
 import artwork5 from "@/assets/placeholder-artwork-5.jpg";
 import artwork6 from "@/assets/placeholder-artwork-6.jpg";
+import ajWork1 from "@/assets/aj-jul-work-1.jpg";
+import ajWork2 from "@/assets/aj-jul-work-2.jpg";
 
 interface ProjectEntry {
   artist: string;
@@ -21,7 +23,8 @@ const projects: ProjectEntry[] = [
     title: "Dynamics of the Seasons",
     description: "A two-part work about Winter & Spring and Summer & Autumn. The seasons are presented as relational forces that exist through the negation of one another. Themes: transition, cyclic tension, relationship, transformation.",
     images: [
-      { src: artwork6, alt: "Aj Jul — Dynamics of the Seasons" },
+      { src: ajWork1, alt: "Aj Jul — Dynamics of the Seasons 1" },
+      { src: ajWork2, alt: "Aj Jul — Dynamics of the Seasons 2" },
     ],
   },
   {

@@ -8,6 +8,8 @@ import artwork3 from "@/assets/placeholder-artwork-3.jpg";
 import artwork4 from "@/assets/placeholder-artwork-4.jpg";
 import artwork5 from "@/assets/placeholder-artwork-5.jpg";
 import artwork6 from "@/assets/placeholder-artwork-6.jpg";
+import ajWork1 from "@/assets/aj-jul-work-1.jpg";
+import ajWork2 from "@/assets/aj-jul-work-2.jpg";
 
 const generateCalendarUrl = () => {
   const event = {
@@ -91,7 +93,8 @@ const exhibitionArtists: ExhibitionArtistProps[] = [
   {
     name: "Aj Jul",
     works: [
-      { src: artwork6, alt: "Aj Jul — Exhibition work" },
+      { src: ajWork1, alt: "Aj Jul — Exhibition work 1" },
+      { src: ajWork2, alt: "Aj Jul — Exhibition work 2" },
     ],
     technicalDetails: [
       "2 small works, approximately A4 each",
