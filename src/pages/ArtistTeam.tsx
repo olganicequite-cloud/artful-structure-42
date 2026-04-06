@@ -37,7 +37,7 @@ const artists: ArtistEntry[] = [
   {
     name: "Aj Jul",
     bio: "Berlin-based artist exploring emotional states and the relationship between the human body and surrounding space. Drawing is approached as a meditative practice.",
-    portrait: "",
+    portrait: ajPortrait,
   },
 ];
 
