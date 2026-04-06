@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
-import curatorPortrait from "@/assets/curator-portrait.jpg";
+import curatorPortrait from "@/assets/olga-tarabukina.jpg";
 
 const modules = [
   "15 Minutes Creativity",
