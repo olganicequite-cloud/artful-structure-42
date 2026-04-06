@@ -3,11 +3,10 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
-  { path: "/", label: "Exhibition" },
-  { path: "/home", label: "Home" },
+  { path: "/", label: "Home" },
+  { path: "/exhibition", label: "Exhibition" },
   { path: "/artists", label: "Artist Team" },
-  { path: "/projects-2025-26", label: "Projects 2025–26" },
-  { path: "/projects-2025", label: "Projects 2025" },
+  { path: "/projects", label: "Projects" },
 ];
 
 const SiteHeader = () => {
@@ -17,8 +16,13 @@ const SiteHeader = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm">
       <div className="page-padding flex items-center justify-between h-14 md:h-16">
-        <Link to="/" className="font-serif text-lg md:text-xl font-light tracking-tight text-foreground">
-          Creative Project NEW
+        {/* Logo placeholder — will be replaced by PNG logo later */}
+        <Link to="/" className="flex items-center h-8 md:h-9">
+          <div className="h-full flex items-center">
+            <span className="font-serif text-lg md:text-xl font-light tracking-tight text-foreground">
+              Creative Project NEW
+            </span>
+          </div>
         </Link>
 
         {/* Desktop nav */}
