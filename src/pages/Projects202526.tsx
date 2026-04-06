@@ -12,6 +12,7 @@ import ajWork2 from "@/assets/aj-jul-work-2.jpg";
 import mariiaWork1 from "@/assets/mariia-flowers-1.jpg";
 import mariiaWork2 from "@/assets/mariia-flowers-2.jpg";
 import mariiaWork3 from "@/assets/mariia-flowers-3.jpg";
+import nadyaWork1 from "@/assets/nadya-fearhere-1.jpg";
 
 interface ProjectEntry {
   artist: string;

@@ -13,6 +13,7 @@ import ajWork2 from "@/assets/aj-jul-work-2.jpg";
 import mariiaWork1 from "@/assets/mariia-flowers-1.jpg";
 import mariiaWork2 from "@/assets/mariia-flowers-2.jpg";
 import mariiaWork3 from "@/assets/mariia-flowers-3.jpg";
+import nadyaWork1 from "@/assets/nadya-fearhere-1.jpg";
 
 const generateCalendarUrl = () => {
   const event = {
@@ -75,7 +76,7 @@ const exhibitionArtists: ExhibitionArtistProps[] = [
   {
     name: "Nadya Net",
     works: [
-      { src: artwork4, alt: "Nadya Net — Exhibition work" },
+      { src: nadyaWork1, alt: "Nadya Net — Exhibition work" },
     ],
     technicalDetails: [
       "Destination Ararat — 100 × 120 cm",
