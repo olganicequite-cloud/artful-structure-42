@@ -93,7 +93,8 @@ const exhibitionArtists: ExhibitionArtistProps[] = [
   {
     name: "Aj Jul",
     works: [
-      { src: artwork6, alt: "Aj Jul — Exhibition work" },
+      { src: ajWork1, alt: "Aj Jul — Exhibition work 1" },
+      { src: ajWork2, alt: "Aj Jul — Exhibition work 2" },
     ],
     technicalDetails: [
       "2 small works, approximately A4 each",

@@ -23,7 +23,8 @@ const projects: ProjectEntry[] = [
     title: "Dynamics of the Seasons",
     description: "A two-part work about Winter & Spring and Summer & Autumn. The seasons are presented as relational forces that exist through the negation of one another. Themes: transition, cyclic tension, relationship, transformation.",
     images: [
-      { src: artwork6, alt: "Aj Jul — Dynamics of the Seasons" },
+      { src: ajWork1, alt: "Aj Jul — Dynamics of the Seasons 1" },
+      { src: ajWork2, alt: "Aj Jul — Dynamics of the Seasons 2" },
     ],
   },
   {
