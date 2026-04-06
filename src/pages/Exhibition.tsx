@@ -4,6 +4,18 @@ import FadeIn from "@/components/FadeIn";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import styxHero from "@/assets/styx-hero.jpg";
 import { featuredArtworks } from "@/lib/exhibitionData";
+
+const mapsUrl = "https://www.google.com/maps/search/?api=1&query=Schwedter+Str.+48+10435+Berlin";
+
+const generateCalendarUrl = () => {
+  const event = {
+    title: "STYX: Crossing Shadows Within",
+    date: "20260426",
+    location: "VOID INK, Schwedter Str. 48, 10435 Berlin",
+  };
+  return `data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ADTSTART:${event.date}T180000Z%0ADTEND:${event.date}T220000Z%0ASUMMARY:${encodeURIComponent(event.title)}%0ALOCATION:${encodeURIComponent(event.location)}%0AEND:VEVENT%0AEND:VCALENDAR`;
+};
+
 const Exhibition = () => {
   return (
     <SiteLayout>
@@ -120,18 +132,35 @@ const Exhibition = () => {
         </FadeIn>
       </section>
 
-      {/* Exhibition Works */}
+      {/* Featured Artworks */}
       <section className="page-padding pb-16 md:pb-24">
         <FadeIn>
-          <div className="max-w-2xl mx-auto mb-10">
+          <div className="max-w-4xl mx-auto mb-10">
             <div className="gallery-divider mb-6" />
-            <h2 className="text-editorial-subtitle">Exhibition Works</h2>
+            <h2 className="text-editorial-subtitle">Featured Artworks</h2>
           </div>
         </FadeIn>
 
-        {exhibitionArtists.map((artist) => (
-          <ExhibitionArtistBlock key={artist.name} {...artist} />
-        ))}
+        <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12">
+          {featuredArtworks.map((artwork, i) => (
+            <FadeIn key={artwork.slug} delay={i * 0.05}>
+              <Link to={`/exhibition/${artwork.slug}`} className="group">
+                <div className="aspect-[4/5] bg-secondary overflow-hidden mb-3">
+                  <img
+                    src={artwork.thumbnail}
+                    alt={artwork.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 className="font-serif text-base md:text-lg font-light leading-snug mb-0.5">
+                  {artwork.title}
+                </h3>
+                <p className="text-editorial-caption">{artwork.artist}</p>
+              </Link>
+            </FadeIn>
+          ))}
+        </div>
       </section>
     </SiteLayout>
   );
