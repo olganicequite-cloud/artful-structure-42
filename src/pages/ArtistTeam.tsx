@@ -37,6 +37,22 @@ const ArtistCard = ({ artist }: { artist: Artist }) => {
   return content;
 };
 
+const CohortCTACard = () => (
+  <Link to="/contact" className="group">
+    <div className="aspect-[4/5] border border-foreground/10 bg-secondary/30 overflow-hidden mb-3 flex flex-col items-center justify-center transition-colors group-hover:border-foreground/25">
+      <div className="text-center px-4">
+        <span className="block font-sans text-xs tracking-[0.2em] uppercase text-foreground/30 mb-2">+</span>
+        <span className="block font-serif text-base md:text-lg font-light text-foreground/60 group-hover:text-foreground/80 transition-colors leading-snug">
+          Become Part of<br />the Next Cohort
+        </span>
+      </div>
+    </div>
+    <p className="text-editorial-caption text-foreground/40 group-hover:text-foreground/60 transition-colors">
+      Applications · Contact · Participation
+    </p>
+  </Link>
+);
+
 const ArtistTeam = () => {
   const cohort202526 = artists.filter((a) => a.cohort === "2025-26");
 
@@ -61,6 +77,9 @@ const ArtistTeam = () => {
                 <ArtistCard artist={artist} />
               </FadeIn>
             ))}
+            <FadeIn delay={cohort202526.length * 0.05}>
+              <CohortCTACard />
+            </FadeIn>
           </div>
 
           {/* Cohort 2025 */}
