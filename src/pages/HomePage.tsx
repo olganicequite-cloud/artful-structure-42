@@ -49,11 +49,11 @@ const HomePage = () => {
     <SiteLayout>
       {/* 1. Hero Banner */}
       <section className="relative w-full">
-        <div className="w-full aspect-[21/9] md:aspect-[21/7] bg-secondary flex items-center justify-center">
+        <div className="w-full aspect-[4/5] md:aspect-[21/7] bg-secondary flex items-center justify-center">
           <p className="text-editorial-caption">Banner Image</p>
         </div>
-        <div className="absolute bottom-0 right-0 p-5 md:p-8">
-          <button className="px-6 py-2.5 border border-foreground text-foreground text-editorial-detail hover:bg-foreground hover:text-background transition-colors duration-300">
+        <div className="absolute bottom-0 right-0 p-4 md:p-8">
+          <button className="px-4 py-2 md:px-6 md:py-2.5 border border-foreground text-foreground text-xs md:text-editorial-detail hover:bg-foreground hover:text-background transition-colors duration-300">
             Participate
           </button>
         </div>

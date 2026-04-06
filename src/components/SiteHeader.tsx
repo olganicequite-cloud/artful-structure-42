@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "@/assets/logo.png";
 
 const navItems = [
   { path: "/", label: "Home" },
@@ -16,13 +17,12 @@ const SiteHeader = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm">
       <div className="page-padding flex items-center justify-between h-14 md:h-16">
-        {/* Logo placeholder — will be replaced by PNG logo later */}
         <Link to="/" className="flex items-center h-8 md:h-9">
-          <div className="h-full flex items-center">
-            <span className="font-serif text-lg md:text-xl font-light tracking-tight text-foreground">
-              Creative Project NEW
-            </span>
-          </div>
+          <img
+            src={logo}
+            alt="Creative Project NEW"
+            className="h-5 md:h-6 w-auto"
+          />
         </Link>
 
         {/* Desktop nav */}
