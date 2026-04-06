@@ -124,7 +124,7 @@ const Exhibition = () => {
   return (
     <SiteLayout>
       {/* Hero */}
-      <section className="relative w-full min-h-[85vh] md:min-h-[90vh] flex items-end">
+      <section className="relative w-full min-h-[70vh] md:min-h-[90vh] flex items-end">
         <img
           src={styxHero}
           alt="STYX exhibition — atmospheric dark waters"
