@@ -26,7 +26,7 @@ const ArtistDetail = () => {
           {/* Artist intro */}
           <div className="grid md:grid-cols-[240px_1fr] gap-6 md:gap-10 items-start mb-12 md:mb-16">
             <FadeIn>
-              <div className="w-40 h-52 md:w-full md:h-72 bg-secondary overflow-hidden">
+              <div className="w-full aspect-[4/5] md:w-full md:h-72 bg-secondary overflow-hidden">
                 {artist.portrait ? (
                   <img
                     src={artist.portrait}
