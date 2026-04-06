@@ -12,6 +12,7 @@ import ajWork2 from "@/assets/aj-jul-work-2.jpg";
 import mariiaWork1 from "@/assets/mariia-flowers-1.jpg";
 import mariiaWork2 from "@/assets/mariia-flowers-2.jpg";
 import mariiaWork3 from "@/assets/mariia-flowers-3.jpg";
+import nadyaWork1 from "@/assets/nadya-fearhere-1.jpg";
 
 interface ProjectEntry {
   artist: string;
@@ -70,7 +71,7 @@ const projects: ProjectEntry[] = [
     title: "FEAR HERE",
     description: "A mixed-media project about forced migration as an ongoing state without stable belonging. Fear appears as a shifting companion within urban space. The project explores adaptation through coexistence rather than overcoming.",
     images: [
-      { src: artwork4, alt: "Nadya Net — FEAR HERE 1" },
+      { src: nadyaWork1, alt: "Nadya Net — FEAR HERE" },
     ],
   },
 ];
