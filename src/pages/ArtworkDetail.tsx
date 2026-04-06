@@ -16,7 +16,7 @@ const ArtworkDetail = () => {
         <div className="max-w-2xl mx-auto">
           <PageBreadcrumb
             items={[
-              { label: "Exhibition", href: "/exhibition" },
+              { label: "Exhibition", to: "/exhibition" },
               { label: artwork.title },
             ]}
           />
