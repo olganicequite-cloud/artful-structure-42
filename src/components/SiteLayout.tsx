@@ -15,7 +15,7 @@ const footerNav = [
 const footerInfo = [
   { path: "#", label: "Participate" },
   { path: "#", label: "Download" },
-  { path: "#", label: "Contact" },
+  { path: "/contact", label: "Contact" },
   { path: "#", label: "Information" },
 ];
 
