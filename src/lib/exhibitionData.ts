@@ -1,8 +1,8 @@
 import styxThumbAnna from "@/assets/styx-thumb-6.jpg";
 import styxThumbAj from "@/assets/styx-thumb-aj.jpg";
 import styxThumbMariia from "@/assets/styx-thumb-mariia.jpg";
-import styxThumbNadya from "@/assets/styx-thumb-anna.jpg";
-import styxThumbYana from "@/assets/styx-thumb-nadya.jpg";
+import styxThumbNadya from "@/assets/styx-thumb-nadya-correct.jpg";
+import styxThumbYana from "@/assets/styx-thumb-yana-correct.jpg";
 
 export interface FeaturedArtwork {
   slug: string;
