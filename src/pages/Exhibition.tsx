@@ -133,7 +133,7 @@ const Exhibition = () => {
           height={1080}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-        <div className="relative z-10 page-padding pb-10 md:pb-16 w-full">
+        <div className="relative z-10 page-padding pb-6 md:pb-16 w-full">
           <FadeIn>
             <p className="text-xs md:text-sm tracking-[0.3em] uppercase font-sans mb-3 text-primary-foreground/60">
               Exhibition
