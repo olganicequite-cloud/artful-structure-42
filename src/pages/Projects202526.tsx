@@ -1,0 +1,100 @@
+import SiteLayout from "@/components/SiteLayout";
+import FadeIn from "@/components/FadeIn";
+import ImageGallery from "@/components/ImageGallery";
+import artwork1 from "@/assets/placeholder-artwork-1.jpg";
+import artwork2 from "@/assets/placeholder-artwork-2.jpg";
+import artwork3 from "@/assets/placeholder-artwork-3.jpg";
+import artwork4 from "@/assets/placeholder-artwork-4.jpg";
+import artwork5 from "@/assets/placeholder-artwork-5.jpg";
+import artwork6 from "@/assets/placeholder-artwork-6.jpg";
+
+interface ProjectEntry {
+  artist: string;
+  title: string;
+  description: string;
+  images: { src: string; alt: string }[];
+}
+
+const projects: ProjectEntry[] = [
+  {
+    artist: "Aj Jul",
+    title: "Dynamics of the Seasons",
+    description: "A two-part work about Winter & Spring and Summer & Autumn. The seasons are presented as relational forces that exist through the negation of one another. Themes: transition, cyclic tension, relationship, transformation.",
+    images: [
+      { src: artwork6, alt: "Aj Jul — Dynamics of the Seasons" },
+    ],
+  },
+  {
+    artist: "Anna Kazakova",
+    title: "Invisible Weight — A Diary of a Shadow",
+    description: "A project about depression, not as a clinical diagnosis but as a phenomenon of inner space. A white landscape becomes a model of silence, disorientation, deceleration, and invisible weight.",
+    images: [
+      { src: artwork5, alt: "Anna Kazakova — Invisible Weight 1" },
+      { src: artwork1, alt: "Anna Kazakova — Invisible Weight 2" },
+    ],
+  },
+  {
+    artist: "Mariia Zatsepina",
+    title: "Flowers",
+    description: "A personal project about dried flowers, transition, grief, memory, fragility, and transformation. The flowers are not symbols of death, but of continuation, presence, and another state of being.",
+    images: [
+      { src: artwork3, alt: "Mariia Zatsepina — Flowers" },
+    ],
+  },
+  {
+    artist: "Yana Kaziulia",
+    title: "Liberation of Colors",
+    description: "A project about red and green as traumatic emotional triggers linked to violence, ideology, and imposed identity. The work asks whether these colors can be reclaimed and transformed into something new.",
+    images: [
+      { src: artwork2, alt: "Yana Kaziulia — Liberation of Colors 1" },
+    ],
+  },
+  {
+    artist: "Yana Kaziulia",
+    title: "FLOW",
+    description: "A photography project about fragile moments of presence, awareness, concentration, and embodied experience. It attempts to preserve fleeting inner moments before they disappear.",
+    images: [
+      { src: artwork1, alt: "Yana Kaziulia — FLOW" },
+    ],
+  },
+  {
+    artist: "Nadya Net",
+    title: "FEAR HERE",
+    description: "A mixed-media project about forced migration as an ongoing state without stable belonging. Fear appears as a shifting companion within urban space. The project explores adaptation through coexistence rather than overcoming.",
+    images: [
+      { src: artwork4, alt: "Nadya Net — FEAR HERE 1" },
+    ],
+  },
+];
+
+const Projects202526 = () => {
+  return (
+    <SiteLayout>
+      <section className="section-spacing page-padding">
+        <div className="max-w-2xl mx-auto">
+          <FadeIn>
+            <p className="text-editorial-detail mb-4">Cohort 2025–26</p>
+            <h1 className="text-editorial-title mb-12 md:mb-16">Projects</h1>
+          </FadeIn>
+
+          <div className="space-y-16 md:space-y-20">
+            {projects.map((project, index) => (
+              <FadeIn key={`${project.artist}-${project.title}`} delay={index * 0.05}>
+                <article>
+                  <div className="mb-4">
+                    <ImageGallery images={project.images} aspectRatio="aspect-square" />
+                  </div>
+                  <p className="text-editorial-detail mb-2">{project.artist}</p>
+                  <h2 className="text-editorial-heading mb-3">{project.title}</h2>
+                  <p className="text-editorial-body">{project.description}</p>
+                </article>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+    </SiteLayout>
+  );
+};
+
+export default Projects202526;
