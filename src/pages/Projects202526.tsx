@@ -71,7 +71,7 @@ const projects: ProjectEntry[] = [
     title: "FEAR HERE",
     description: "A mixed-media project about forced migration as an ongoing state without stable belonging. Fear appears as a shifting companion within urban space. The project explores adaptation through coexistence rather than overcoming.",
     images: [
-      { src: artwork4, alt: "Nadya Net — FEAR HERE 1" },
+      { src: nadyaWork1, alt: "Nadya Net — FEAR HERE" },
     ],
   },
 ];
