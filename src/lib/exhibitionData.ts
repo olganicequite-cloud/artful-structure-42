@@ -3,6 +3,7 @@ import styxThumbAj from "@/assets/styx-thumb-aj.jpg";
 import styxThumbMariia from "@/assets/styx-thumb-mariia.jpg";
 import styxThumbNadya from "@/assets/styx-thumb-nadya-correct.jpg";
 import styxThumbYana from "@/assets/styx-thumb-yana-correct.jpg";
+import styxThumbOlga from "@/assets/styx-thumb-yana.jpg";
 
 export interface FeaturedArtwork {
   slug: string;
@@ -47,5 +48,12 @@ export const featuredArtworks: FeaturedArtwork[] = [
     artist: "Yana Kaziulia",
     thumbnail: styxThumbYana,
     technicalNote: "5 frames, 52 × 52 cm · 4 photographs, 40 × 40 cm · 1 photograph, 40 × 30 cm · 9 polaroids, 8.5 × 7 cm",
+  },
+  {
+    slug: "olga-tarabukina-selfportrait-of-fear",
+    title: "Selfportrait of Fear",
+    artist: "Olga Tarabukina",
+    thumbnail: styxThumbOlga,
+    technicalNote: "",
   },
 ];
