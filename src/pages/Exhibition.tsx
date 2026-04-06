@@ -135,16 +135,19 @@ const Exhibition = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
         <div className="relative z-10 page-padding pb-6 md:pb-16 w-full">
           <FadeIn>
-            <p className="text-xs md:text-sm tracking-[0.3em] uppercase font-sans mb-1.5 md:mb-3 text-primary-foreground/60">
+            <p className="text-xs md:text-sm tracking-[0.3em] uppercase font-sans mb-2 md:mb-3 text-primary-foreground/60">
               Exhibition
             </p>
-            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-primary-foreground mb-1 md:mb-3">
+            <h1
+              className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tight text-primary-foreground mb-2 md:mb-4"
+              style={{ fontFamily: "'Arial Black', 'Arial', sans-serif" }}
+            >
               STYX
             </h1>
-            <p className="font-serif text-xl md:text-2xl lg:text-3xl font-light text-primary-foreground/90 mb-0.5 md:mb-1">
+            <p className="font-serif text-2xl md:text-3xl lg:text-4xl font-light italic text-primary-foreground/95 mb-1.5 md:mb-3">
               Crossing Shadows Within
             </p>
-            <p className="font-sans text-sm md:text-base font-light text-primary-foreground/60 mb-4 md:mb-8">
+            <p className="font-sans text-xs md:text-sm tracking-[0.15em] uppercase font-light text-primary-foreground/50 mb-4 md:mb-8">
               Transforming Darkness into Resilience
             </p>
 
