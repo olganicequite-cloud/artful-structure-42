@@ -68,7 +68,6 @@ const projects: ProjectEntry[] = [
     ],
   },
   // TODO: Add "FLOW" project for Yana Kaziulia here later
-  },
   {
     artist: "Nadya Net",
     title: "FEAR HERE",
