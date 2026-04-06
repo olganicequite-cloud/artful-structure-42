@@ -144,10 +144,10 @@ const Exhibition = () => {
             >
               STYX
             </h1>
-            <p className="font-serif text-2xl md:text-3xl lg:text-4xl font-light italic text-primary-foreground/95 mb-1.5 md:mb-3">
+            <p className="font-serif text-2xl md:text-3xl lg:text-4xl font-light italic text-primary-foreground/95 mb-4 lg:mb-3">
               Crossing Shadows Within
             </p>
-            <p className="font-sans text-xs md:text-sm tracking-[0.15em] uppercase font-light text-primary-foreground/50 mb-4 md:mb-8">
+            <p className="hidden lg:block font-sans text-xs md:text-sm tracking-[0.15em] uppercase font-light text-primary-foreground/50 mb-4 md:mb-8">
               Transforming Darkness into Resilience
             </p>
 
