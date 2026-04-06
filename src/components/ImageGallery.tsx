@@ -22,14 +22,14 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
 
   const total = images.length;
 
-  // Single image — still uses stable frame
-  if (images.length === 1) {
+  // Single image — no fixed frame, just show naturally
+  if (total === 1) {
     return (
-      <div className="w-full aspect-[4/5] bg-secondary flex items-center justify-center overflow-hidden">
+      <div className="w-full">
         <img
           src={images[0].src}
           alt={images[0].alt}
-          className="max-w-full max-h-full object-contain"
+          className="w-full h-auto"
           loading="lazy"
         />
       </div>
@@ -38,12 +38,12 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
 
   return (
     <div className="w-full">
-      {/* Mobile swiper — fixed frame */}
+      {/* Mobile swiper — fixed frame, white background */}
       <div className="md:hidden">
         <div ref={emblaRef} className="overflow-hidden">
           <div className="flex">
             {images.map((img, i) => (
-              <div key={i} className="flex-none w-full aspect-[4/5] bg-secondary flex items-center justify-center overflow-hidden">
+              <div key={i} className="flex-none w-full aspect-[4/5] bg-background flex items-center justify-center overflow-hidden">
                 <img
                   src={img.src}
                   alt={img.alt}
@@ -70,9 +70,9 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
         )}
       </div>
 
-      {/* Desktop controlled viewer — fixed frame */}
+      {/* Desktop controlled viewer — fixed frame, white background */}
       <div className="hidden md:block">
-        <div className="relative w-full aspect-[4/5] bg-secondary flex items-center justify-center overflow-hidden">
+        <div className="relative w-full aspect-[4/5] bg-background flex items-center justify-center overflow-hidden">
           <img
             src={images[desktopCurrent].src}
             alt={images[desktopCurrent].alt}
