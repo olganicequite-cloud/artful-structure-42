@@ -1,6 +1,6 @@
+import { Link } from "react-router-dom";
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
-import curatorPortrait from "@/assets/olga-tarabukina.jpg";
 
 const modules = [
   "15 Minutes Creativity",
@@ -53,9 +53,12 @@ const HomePage = () => {
           <p className="text-editorial-caption">Banner Image</p>
         </div>
         <div className="absolute bottom-0 right-0 p-4 md:p-8">
-          <button className="px-4 py-2 md:px-6 md:py-2.5 border border-foreground text-foreground text-xs md:text-editorial-detail hover:bg-foreground hover:text-background transition-colors duration-300">
+          <Link
+            to="/contact"
+            className="px-4 py-2 md:px-6 md:py-2.5 border border-foreground text-foreground text-xs md:text-editorial-detail hover:bg-foreground hover:text-background transition-colors duration-300 inline-block"
+          >
             Participate
-          </button>
+          </Link>
         </div>
       </section>
 
