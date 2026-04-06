@@ -21,7 +21,7 @@ const footerInfo = [
 
 const footerLegal = [
   { path: "/impressum", label: "Impressum" },
-  { path: "#", label: "Privacy Policy" },
+  { path: "/privacy", label: "Privacy Policy" },
 ];
 
 const SiteLayout = ({ children }: SiteLayoutProps) => {
