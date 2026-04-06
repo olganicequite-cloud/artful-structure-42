@@ -5,6 +5,7 @@ import yanaPortrait from "@/assets/yana-kaziulia.jpg";
 import annaPortrait from "@/assets/anna-kazakova.jpg";
 import mariiaPortrait from "@/assets/mariia-zatsepina.jpg";
 import nadyaPortrait from "@/assets/nadya-net.jpg";
+import ajPortrait from "@/assets/aj-jul.png";
 
 interface ArtistEntry {
   name: string;
@@ -36,7 +37,7 @@ const artists: ArtistEntry[] = [
   {
     name: "Aj Jul",
     bio: "Berlin-based artist exploring emotional states and the relationship between the human body and surrounding space. Drawing is approached as a meditative practice.",
-    portrait: "",
+    portrait: ajPortrait,
   },
 ];
 
