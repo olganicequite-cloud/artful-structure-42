@@ -12,8 +12,16 @@ const footerNav = [
   { path: "/projects", label: "Projects" },
 ];
 
+const footerInfo = [
+  { path: "#", label: "Participate" },
+  { path: "#", label: "Download" },
+  { path: "#", label: "Contact" },
+  { path: "#", label: "Information" },
+];
+
 const footerLegal = [
   { path: "/impressum", label: "Impressum" },
+  { path: "#", label: "Privacy Policy" },
 ];
 
 const SiteLayout = ({ children }: SiteLayoutProps) => {
@@ -25,7 +33,7 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
       </main>
       <footer className="page-padding pt-12 pb-8 border-t border-border">
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
             {/* Brand */}
             <div className="col-span-2 md:col-span-1">
               <Link to="/" className="font-serif text-lg font-light tracking-tight text-foreground">
@@ -50,13 +58,29 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
               </div>
             </div>
 
-            {/* Legal */}
+            {/* Information */}
             <div>
               <p className="text-editorial-detail mb-4">Information</p>
               <div className="flex flex-col gap-2.5">
+                {footerInfo.map((item) => (
+                  <Link
+                    key={item.label}
+                    to={item.path}
+                    className="text-editorial-caption hover:text-foreground transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Legal */}
+            <div>
+              <p className="text-editorial-detail mb-4">Legal</p>
+              <div className="flex flex-col gap-2.5">
                 {footerLegal.map((item) => (
                   <Link
-                    key={item.path}
+                    key={item.label}
                     to={item.path}
                     className="text-editorial-caption hover:text-foreground transition-colors"
                   >

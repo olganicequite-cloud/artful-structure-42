@@ -17,16 +17,32 @@ const feedbacks = [
   {
     quote: "The process changed how I see my own practice — structured guidance without losing creative freedom.",
     author: "Participant, Cohort 2025",
+    stars: 5,
   },
   {
     quote: "A rare space where artists genuinely support each other while being challenged to grow.",
     author: "Participant, Cohort 2025",
+    stars: 5,
   },
   {
     quote: "I found clarity in my artistic direction that I had been searching for years.",
     author: "Participant, Cohort 2025–26",
+    stars: 4,
   },
 ];
+
+const StarRating = ({ count }: { count: number }) => (
+  <div className="flex gap-0.5 mb-3">
+    {Array.from({ length: 5 }).map((_, i) => (
+      <span
+        key={i}
+        className={`text-xs ${i < count ? "text-foreground/70" : "text-foreground/15"}`}
+      >
+        ★
+      </span>
+    ))}
+  </div>
+);
 
 const HomePage = () => {
   return (
@@ -100,13 +116,16 @@ const HomePage = () => {
               <p className="text-editorial-detail mb-4">Curator</p>
               <h2 className="text-editorial-subtitle mb-6">Olga Tarabukina</h2>
               <p className="text-editorial-body mb-5">
-                Creative Project NEW is a curatorial collaboration where artists develop their own projects under the guidance of a curator.
+                Olga Tarabukina is a Ukrainian-born art photographer and curator based in Germany. She first studied Philology in Kyiv and later Media Design in Potsdam, moving from literature and visual storytelling into photography as her primary artistic language.
               </p>
               <p className="text-editorial-body mb-5">
-                It is, first of all, a process of creating art: structured, focused, and intentional.
+                Her work explores inner emotional states, vulnerability, perception, and transformation. Across recent projects such as <em>Self-Portrait of Fear</em>, <em>Freedom Island</em>, <em>Beauty Secret</em>, and <em>Abstract City</em>, she develops a photographic language shaped by introspection, experimentation, and an increasing movement toward abstraction.
               </p>
-              <p className="text-editorial-body">
-                Through this process, artists expand their artistic field, deepen their practice, and reach new creative horizons.
+              <p className="text-editorial-body mb-5">
+                Alongside her artistic practice, Olga Tarabukina has participated in numerous exhibitions in Germany and in 2025 exhibited in <em>Iconic, Imagination Paris</em> at Galerie Joseph Chapon 17, Paris.
+              </p>
+              <p className="text-editorial-body italic text-foreground/60 text-sm leading-relaxed">
+                In her artistic practice, photography becomes a way to translate inner experience into visual form — moving between emotional reality, abstraction, and the atmosphere of urban space.
               </p>
             </FadeIn>
           </div>
@@ -125,6 +144,7 @@ const HomePage = () => {
             {feedbacks.map((fb, i) => (
               <FadeIn key={i} delay={0.1 * (i + 1)}>
                 <blockquote className="border-l border-border pl-5">
+                  <StarRating count={fb.stars} />
                   <p className="text-editorial-body italic mb-4">"{fb.quote}"</p>
                   <cite className="text-editorial-caption not-italic">{fb.author}</cite>
                 </blockquote>
