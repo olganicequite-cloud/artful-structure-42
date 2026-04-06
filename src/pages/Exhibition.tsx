@@ -177,7 +177,7 @@ const Exhibition = () => {
       </section>
 
       {/* Breadcrumb + Description */}
-      <section className="section-spacing page-padding">
+      <section className="pt-8 pb-10 md:section-spacing page-padding">
         <div className="max-w-2xl mx-auto">
           <PageBreadcrumb items={[{ label: "Exhibition" }]} />
         </div>
