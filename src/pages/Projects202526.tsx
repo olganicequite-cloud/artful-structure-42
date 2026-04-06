@@ -85,7 +85,7 @@ const Projects202526 = () => {
               <FadeIn key={`${project.artist}-${project.title}`} delay={index * 0.05}>
                 <article>
                   <div className="mb-4">
-                    <ImageGallery images={project.images} aspectRatio="aspect-square" />
+                    <ImageGallery images={project.images} />
                   </div>
                   <p className="text-editorial-detail mb-2">{project.artist}</p>
                   <h2 className="text-editorial-heading mb-3">{project.title}</h2>
