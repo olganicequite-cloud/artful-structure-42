@@ -9,6 +9,9 @@ import artwork5 from "@/assets/placeholder-artwork-5.jpg";
 import artwork6 from "@/assets/placeholder-artwork-6.jpg";
 import ajWork1 from "@/assets/aj-jul-work-1.jpg";
 import ajWork2 from "@/assets/aj-jul-work-2.jpg";
+import mariiaWork1 from "@/assets/mariia-flowers-1.jpg";
+import mariiaWork2 from "@/assets/mariia-flowers-2.jpg";
+import mariiaWork3 from "@/assets/mariia-flowers-3.jpg";
 
 interface ProjectEntry {
   artist: string;
@@ -41,7 +44,9 @@ const projects: ProjectEntry[] = [
     title: "Flowers",
     description: "A personal project about dried flowers, transition, grief, memory, fragility, and transformation. The flowers are not symbols of death, but of continuation, presence, and another state of being.",
     images: [
-      { src: artwork3, alt: "Mariia Zatsepina — Flowers" },
+      { src: mariiaWork1, alt: "Mariia Zatsepina — Flowers 1" },
+      { src: mariiaWork2, alt: "Mariia Zatsepina — Flowers 2" },
+      { src: mariiaWork3, alt: "Mariia Zatsepina — Flowers 3" },
     ],
   },
   {
