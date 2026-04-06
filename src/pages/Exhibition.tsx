@@ -14,6 +14,11 @@ import mariiaWork1 from "@/assets/mariia-flowers-1.jpg";
 import mariiaWork2 from "@/assets/mariia-flowers-2.jpg";
 import mariiaWork3 from "@/assets/mariia-flowers-3.jpg";
 import nadyaWork1 from "@/assets/nadya-fearhere-1.jpg";
+import yanaWork1 from "@/assets/yana-work-1.jpg";
+import yanaWork2 from "@/assets/yana-work-2.jpg";
+import yanaWork3 from "@/assets/yana-work-3.jpg";
+import yanaWork4 from "@/assets/yana-work-4.jpg";
+import yanaWork5 from "@/assets/yana-work-5.jpg";
 
 const generateCalendarUrl = () => {
   const event = {
@@ -52,8 +57,11 @@ const exhibitionArtists: ExhibitionArtistProps[] = [
   {
     name: "Yana Kaziulia",
     works: [
-      { src: artwork2, alt: "Yana Kaziulia — Exhibition work" },
-      { src: artwork1, alt: "Yana Kaziulia — Exhibition work 2" },
+      { src: yanaWork1, alt: "Yana Kaziulia — Exhibition work 1" },
+      { src: yanaWork2, alt: "Yana Kaziulia — Exhibition work 2" },
+      { src: yanaWork3, alt: "Yana Kaziulia — Exhibition work 3" },
+      { src: yanaWork4, alt: "Yana Kaziulia — Exhibition work 4" },
+      { src: yanaWork5, alt: "Yana Kaziulia — Exhibition work 5" },
     ],
     technicalDetails: [
       "5 frames, 52 × 52 cm",

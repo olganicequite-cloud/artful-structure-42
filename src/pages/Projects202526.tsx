@@ -13,6 +13,11 @@ import mariiaWork1 from "@/assets/mariia-flowers-1.jpg";
 import mariiaWork2 from "@/assets/mariia-flowers-2.jpg";
 import mariiaWork3 from "@/assets/mariia-flowers-3.jpg";
 import nadyaWork1 from "@/assets/nadya-fearhere-1.jpg";
+import yanaWork1 from "@/assets/yana-work-1.jpg";
+import yanaWork2 from "@/assets/yana-work-2.jpg";
+import yanaWork3 from "@/assets/yana-work-3.jpg";
+import yanaWork4 from "@/assets/yana-work-4.jpg";
+import yanaWork5 from "@/assets/yana-work-5.jpg";
 
 interface ProjectEntry {
   artist: string;
@@ -55,7 +60,9 @@ const projects: ProjectEntry[] = [
     title: "Liberation of Colors",
     description: "A project about red and green as traumatic emotional triggers linked to violence, ideology, and imposed identity. The work asks whether these colors can be reclaimed and transformed into something new.",
     images: [
-      { src: artwork2, alt: "Yana Kaziulia — Liberation of Colors 1" },
+      { src: yanaWork1, alt: "Yana Kaziulia — Liberation of Colors 1" },
+      { src: yanaWork2, alt: "Yana Kaziulia — Liberation of Colors 2" },
+      { src: yanaWork3, alt: "Yana Kaziulia — Liberation of Colors 3" },
     ],
   },
   {
@@ -63,7 +70,8 @@ const projects: ProjectEntry[] = [
     title: "FLOW",
     description: "A photography project about fragile moments of presence, awareness, concentration, and embodied experience. It attempts to preserve fleeting inner moments before they disappear.",
     images: [
-      { src: artwork1, alt: "Yana Kaziulia — FLOW" },
+      { src: yanaWork4, alt: "Yana Kaziulia — FLOW 1" },
+      { src: yanaWork5, alt: "Yana Kaziulia — FLOW 2" },
     ],
   },
   {
