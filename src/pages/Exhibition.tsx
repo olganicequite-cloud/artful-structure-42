@@ -124,7 +124,7 @@ const Exhibition = () => {
   return (
     <SiteLayout>
       {/* Hero */}
-      <section className="relative w-full min-h-[85vh] md:min-h-[90vh] flex items-end">
+      <section className="relative w-full min-h-[85vh] md:min-h-[90vh] flex items-start">
         <img
           src={styxHero}
           alt="STYX exhibition — atmospheric dark waters"
@@ -132,8 +132,8 @@ const Exhibition = () => {
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-        <div className="relative z-10 page-padding pb-6 md:pb-16 w-full">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-transparent" />
+        <div className="relative z-10 page-padding pt-24 md:pt-32 lg:pt-40 w-full">
           <FadeIn>
             <p className="text-xs md:text-sm tracking-[0.3em] uppercase font-sans mb-2 md:mb-3 text-primary-foreground/60">
               Exhibition
