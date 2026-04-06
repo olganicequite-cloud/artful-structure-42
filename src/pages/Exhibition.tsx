@@ -38,7 +38,7 @@ interface ExhibitionArtistProps {
 }
 
 const ExhibitionArtistBlock = ({ name, works, technicalDetails }: ExhibitionArtistProps) => (
-  <FadeIn className="py-8 md:py-12">
+  <FadeIn className="py-6 md:py-12">
     <div className="max-w-2xl mx-auto">
       <h3 className="text-editorial-heading mb-4">{name}</h3>
       <div className="mb-4">
