@@ -31,9 +31,9 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
       <main className="pt-14 md:pt-16">
         {children}
       </main>
-      <footer className="page-padding pt-12 pb-8 border-t border-border">
+      <footer className="page-padding pt-16 pb-10 mt-8 border-t-2 border-foreground/10">
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 mb-12">
             {/* Brand */}
             <div className="col-span-2 md:col-span-1">
               <Link to="/" className="font-serif text-lg font-light tracking-tight text-foreground">
@@ -44,7 +44,7 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
 
             {/* Navigation */}
             <div>
-              <p className="text-editorial-detail mb-4">Navigation</p>
+              <p className="font-sans text-xs tracking-[0.2em] uppercase text-foreground/40 mb-4">Navigation</p>
               <div className="flex flex-col gap-2.5">
                 {footerNav.map((item) => (
                   <Link
@@ -60,7 +60,7 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
 
             {/* Information */}
             <div>
-              <p className="text-editorial-detail mb-4">Information</p>
+              <p className="font-sans text-xs tracking-[0.2em] uppercase text-foreground/40 mb-4">Information</p>
               <div className="flex flex-col gap-2.5">
                 {footerInfo.map((item) => (
                   <Link
@@ -76,7 +76,7 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
 
             {/* Legal */}
             <div>
-              <p className="text-editorial-detail mb-4">Legal</p>
+              <p className="font-sans text-xs tracking-[0.2em] uppercase text-foreground/40 mb-4">Legal</p>
               <div className="flex flex-col gap-2.5">
                 {footerLegal.map((item) => (
                   <Link
@@ -91,10 +91,11 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
             </div>
           </div>
 
-          <div className="gallery-divider mb-6" />
-          <p className="text-editorial-caption">
-            © 2025–2026 Creative Project NEW
-          </p>
+          <div className="border-t border-foreground/8 pt-6">
+            <p className="text-editorial-caption text-foreground/40">
+              © 2025–2026 Creative Project NEW
+            </p>
+          </div>
         </div>
       </footer>
     </div>
