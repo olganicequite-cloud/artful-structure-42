@@ -20,33 +20,34 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
 
   if (images.length === 0) return null;
 
+  const total = images.length;
+
+  // Single image — still uses stable frame
   if (images.length === 1) {
     return (
-      <div className="w-full overflow-hidden bg-secondary">
+      <div className="w-full aspect-[4/5] bg-secondary flex items-center justify-center overflow-hidden">
         <img
           src={images[0].src}
           alt={images[0].alt}
-          className="w-full h-auto object-cover"
+          className="max-w-full max-h-full object-contain"
           loading="lazy"
         />
       </div>
     );
   }
 
-  const total = images.length;
-
   return (
     <div className="w-full">
-      {/* Mobile swiper */}
+      {/* Mobile swiper — fixed frame */}
       <div className="md:hidden">
         <div ref={emblaRef} className="overflow-hidden">
           <div className="flex">
             {images.map((img, i) => (
-              <div key={i} className="flex-none w-full">
+              <div key={i} className="flex-none w-full aspect-[4/5] bg-secondary flex items-center justify-center overflow-hidden">
                 <img
                   src={img.src}
                   alt={img.alt}
-                  className="w-full h-auto object-cover"
+                  className="max-w-full max-h-full object-contain"
                   loading="lazy"
                 />
               </div>
@@ -69,13 +70,13 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
         )}
       </div>
 
-      {/* Desktop controlled viewer */}
+      {/* Desktop controlled viewer — fixed frame */}
       <div className="hidden md:block">
-        <div className="relative w-full overflow-hidden bg-secondary">
+        <div className="relative w-full aspect-[4/5] bg-secondary flex items-center justify-center overflow-hidden">
           <img
             src={images[desktopCurrent].src}
             alt={images[desktopCurrent].alt}
-            className="w-full h-auto object-cover transition-opacity duration-300"
+            className="max-w-full max-h-full object-contain transition-opacity duration-300"
             loading="lazy"
           />
           {total > 1 && (
