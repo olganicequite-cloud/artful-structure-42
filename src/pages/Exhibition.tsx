@@ -33,7 +33,7 @@ const ExhibitionArtistBlock = ({ name, works, technicalDetails }: ExhibitionArti
     <div className="max-w-2xl mx-auto">
       <h3 className="text-editorial-heading mb-4">{name}</h3>
       <div className="mb-4">
-        <ImageGallery images={works} aspectRatio="aspect-square" />
+        <ImageGallery images={works} />
       </div>
       <div className="space-y-1">
         {technicalDetails.map((detail, i) => (
