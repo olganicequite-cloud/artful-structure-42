@@ -1,7 +1,7 @@
-import { useParams, Navigate } from "react-router-dom";
+import { useParams, Navigate, Link } from "react-router-dom";
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
-import ImageGallery from "@/components/ImageGallery";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 import { getArtistBySlug } from "@/lib/artistData";
 
 const ArtistDetail = () => {
@@ -10,10 +10,19 @@ const ArtistDetail = () => {
 
   if (!artist) return <Navigate to="/artists" replace />;
 
+  const projectAnchor = artist.slug;
+
   return (
     <SiteLayout>
       <section className="section-spacing page-padding">
         <div className="max-w-3xl mx-auto">
+          <PageBreadcrumb
+            items={[
+              { label: "Artist Team", to: "/artists" },
+              { label: artist.name },
+            ]}
+          />
+
           {/* Artist intro */}
           <div className="grid md:grid-cols-[240px_1fr] gap-6 md:gap-10 items-start mb-12 md:mb-16">
             <FadeIn>
@@ -21,7 +30,7 @@ const ArtistDetail = () => {
                 {artist.portrait ? (
                   <img
                     src={artist.portrait}
-                    alt={`${artist.name}`}
+                    alt={artist.name}
                     className="w-full h-full object-cover"
                   />
                 ) : (
@@ -39,29 +48,44 @@ const ArtistDetail = () => {
             </FadeIn>
           </div>
 
-          {/* Projects */}
-          {artist.projects.length > 0 && (
-            <>
-              <FadeIn>
-                <div className="gallery-divider mb-10" />
-                <p className="text-editorial-detail mb-2">Works</p>
-                <h2 className="text-editorial-subtitle mb-10">Projects</h2>
-              </FadeIn>
-
-              <div className="space-y-16 md:space-y-20">
-                {artist.projects.map((project, i) => (
-                  <FadeIn key={project.title} delay={i * 0.05}>
-                    <article>
-                      <div className="mb-4">
-                        <ImageGallery images={project.images} />
-                      </div>
-                      <h3 className="text-editorial-heading mb-3">{project.title}</h3>
-                      <p className="text-editorial-body">{project.description}</p>
-                    </article>
-                  </FadeIn>
+          {/* Biography */}
+          {artist.longBio && (
+            <FadeIn>
+              <div className="gallery-divider mb-10" />
+              <p className="text-editorial-detail mb-2">Biography</p>
+              <div className="mb-12 md:mb-16 space-y-4">
+                {artist.longBio.split("\n\n").map((p, i) => (
+                  <p key={i} className="text-editorial-body leading-relaxed">{p}</p>
                 ))}
               </div>
-            </>
+            </FadeIn>
+          )}
+
+          {/* Artist Statement */}
+          {artist.artistStatement && (
+            <FadeIn>
+              <div className="gallery-divider mb-10" />
+              <p className="text-editorial-detail mb-2">Artist Statement</p>
+              <div className="mb-12 md:mb-16">
+                <blockquote className="text-editorial-body leading-relaxed italic text-foreground/80">
+                  {artist.artistStatement}
+                </blockquote>
+              </div>
+            </FadeIn>
+          )}
+
+          {/* Project button */}
+          {artist.projects.length > 0 && (
+            <FadeIn>
+              <div className="gallery-divider mb-10" />
+              <p className="text-editorial-detail mb-3">Works</p>
+              <Link
+                to={`/projects#${projectAnchor}`}
+                className="inline-block font-sans text-sm tracking-wider uppercase border border-foreground/20 hover:border-foreground/50 px-6 py-3 transition-colors hover:bg-foreground/5"
+              >
+                View Project →
+              </Link>
+            </FadeIn>
           )}
         </div>
       </section>

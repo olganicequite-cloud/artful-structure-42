@@ -1,13 +1,8 @@
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
 import ImageGallery from "@/components/ImageGallery";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 import styxHero from "@/assets/styx-hero.jpg";
-import artwork1 from "@/assets/placeholder-artwork-1.jpg";
-import artwork2 from "@/assets/placeholder-artwork-2.jpg";
-import artwork3 from "@/assets/placeholder-artwork-3.jpg";
-import artwork4 from "@/assets/placeholder-artwork-4.jpg";
-import artwork5 from "@/assets/placeholder-artwork-5.jpg";
-import artwork6 from "@/assets/placeholder-artwork-6.jpg";
 import ajWork1 from "@/assets/aj-jul-work-1.jpg";
 import ajWork2 from "@/assets/aj-jul-work-2.jpg";
 import mariiaWork1 from "@/assets/mariia-flowers-1.jpg";
@@ -181,8 +176,11 @@ const Exhibition = () => {
         </div>
       </section>
 
-      {/* Exhibition Description */}
+      {/* Breadcrumb + Description */}
       <section className="section-spacing page-padding">
+        <div className="max-w-2xl mx-auto">
+          <PageBreadcrumb items={[{ label: "Exhibition" }]} />
+        </div>
         <FadeIn>
           <div className="max-w-2xl mx-auto">
             <p className="text-editorial-body leading-relaxed mb-6">

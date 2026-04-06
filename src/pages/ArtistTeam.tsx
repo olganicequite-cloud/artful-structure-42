@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 import { artists, placeholderArtists2025, Artist } from "@/lib/artistData";
 
 const ArtistCard = ({ artist }: { artist: Artist }) => {
@@ -12,7 +13,7 @@ const ArtistCard = ({ artist }: { artist: Artist }) => {
         {artist.portrait ? (
           <img
             src={artist.portrait}
-            alt={`${artist.name}`}
+            alt={artist.name}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
             loading="lazy"
           />
@@ -43,6 +44,8 @@ const ArtistTeam = () => {
     <SiteLayout>
       <section className="section-spacing page-padding">
         <div className="max-w-4xl mx-auto">
+          <PageBreadcrumb items={[{ label: "Artist Team" }]} />
+
           <FadeIn>
             <p className="text-editorial-detail mb-4">Artist Team</p>
             <h1 className="text-editorial-title mb-12 md:mb-16">The Artists</h1>
