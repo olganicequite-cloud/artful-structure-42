@@ -38,7 +38,7 @@ interface ExhibitionArtistProps {
 }
 
 const ExhibitionArtistBlock = ({ name, works, technicalDetails }: ExhibitionArtistProps) => (
-  <FadeIn className="py-8 md:py-12">
+  <FadeIn className="py-6 md:py-12">
     <div className="max-w-2xl mx-auto">
       <h3 className="text-editorial-heading mb-4">{name}</h3>
       <div className="mb-4">
@@ -124,7 +124,7 @@ const Exhibition = () => {
   return (
     <SiteLayout>
       {/* Hero */}
-      <section className="relative w-full min-h-[85vh] md:min-h-[90vh] flex items-end">
+      <section className="relative w-full min-h-[70vh] md:min-h-[90vh] flex items-end">
         <img
           src={styxHero}
           alt="STYX exhibition — atmospheric dark waters"
@@ -133,22 +133,22 @@ const Exhibition = () => {
           height={1080}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-        <div className="relative z-10 page-padding pb-10 md:pb-16 w-full">
+        <div className="relative z-10 page-padding pb-6 md:pb-16 w-full">
           <FadeIn>
             <p className="text-xs md:text-sm tracking-[0.3em] uppercase font-sans mb-3 text-primary-foreground/60">
               Exhibition
             </p>
-            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-primary-foreground mb-3">
+            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-primary-foreground mb-1.5">
               STYX
             </h1>
             <p className="font-serif text-xl md:text-2xl lg:text-3xl font-light text-primary-foreground/90 mb-1">
               Crossing Shadows Within
             </p>
-            <p className="font-sans text-sm md:text-base font-light text-primary-foreground/60 mb-8">
+            <p className="font-sans text-sm md:text-base font-light text-primary-foreground/60 mb-5 md:mb-8">
               Transforming Darkness into Resilience
             </p>
 
-            <div className="flex flex-col sm:flex-row sm:items-end gap-6 sm:gap-10">
+            <div className="flex flex-col sm:flex-row sm:items-end gap-4 sm:gap-10">
               <div className="space-y-1">
                 <p className="font-sans text-sm font-light text-primary-foreground/80">26.04.2026</p>
                 <p className="font-serif text-lg text-primary-foreground">VOID INK</p>
@@ -177,7 +177,7 @@ const Exhibition = () => {
       </section>
 
       {/* Breadcrumb + Description */}
-      <section className="section-spacing page-padding">
+      <section className="pt-8 pb-10 md:section-spacing page-padding">
         <div className="max-w-2xl mx-auto">
           <PageBreadcrumb items={[{ label: "Exhibition" }]} />
         </div>
