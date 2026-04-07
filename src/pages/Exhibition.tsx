@@ -9,7 +9,7 @@ const mapsUrl = "https://www.google.com/maps/search/?api=1&query=Schwedter+Str.+
 
 const generateCalendarUrl = () => {
   const event = {
-    title: "STYX: Crossing Shadows Within",
+    title: "STYX: Crossing Darkness Within",
     date: "20260426",
     location: "VOID INK, Schwedter Str. 48, 10435 Berlin",
   };
