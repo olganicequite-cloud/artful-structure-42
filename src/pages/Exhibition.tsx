@@ -9,7 +9,7 @@ const mapsUrl = "https://www.google.com/maps/search/?api=1&query=Schwedter+Str.+
 
 const generateCalendarUrl = () => {
   const event = {
-    title: "STYX: Crossing Shadows Within",
+    title: "STYX: Crossing Darkness Within",
     date: "20260426",
     location: "VOID INK, Schwedter Str. 48, 10435 Berlin",
   };
@@ -43,7 +43,7 @@ const Exhibition = () => {
               STYX
             </h1>
             <p className="font-serif text-2xl md:text-3xl lg:text-4xl font-light italic text-primary-foreground/95">
-              Crossing Shadows Within
+              Crossing Darkness Within
             </p>
             <p className="hidden lg:block font-sans text-xs tracking-[0.15em] uppercase font-light text-primary-foreground/50 mt-3">
               Transforming Darkness into Resilience
@@ -116,10 +116,13 @@ const Exhibition = () => {
         <FadeIn>
           <div className="max-w-2xl mx-auto">
             <p className="text-editorial-body leading-relaxed mb-6">
-              Named after the river Styx — the mythological boundary between worlds — this exhibition reflects a passage through inner states. Just as Styx symbolized transition, six artists use photography and painting to confront and cross their own inner shadows: fear, loss, and depression.
+              Named after the river Styx — the mythological boundary between worlds — this exhibition explores moments of transition. Through photography, painting, and mixed media, six artists reflect on personal experiences of fear, loss, presence, and change.
+            </p>
+            <p className="text-editorial-body leading-relaxed mb-6">
+              Each work approaches transformation from a different perspective: from learning to exist within uncertainty, to confronting inner states, to observing natural cycles, where each state gives way to another, emphasizing the continuity and inevitability of transformation.
             </p>
             <p className="text-editorial-body leading-relaxed mb-8">
-              Each work embodies a metamorphosis, revealing how darkness can be transformed into strength. Through this process, vulnerability becomes resilience, and personal struggle turns into a source of growth.
+              Together, the works present a series of crossings — from darkness toward clarity, from vulnerability toward strength — where change becomes a necessary condition for growth.
             </p>
             <div className="flex flex-wrap gap-x-4 gap-y-2">
               {["Fear", "Loss", "Depression", "Transition", "Transformation", "Vulnerability", "Resilience", "Growth"].map((theme) => (
