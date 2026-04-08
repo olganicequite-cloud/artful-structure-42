@@ -45,9 +45,6 @@ const Exhibition = () => {
             <p className="font-serif text-2xl md:text-3xl lg:text-4xl font-light italic text-primary-foreground/95">
               Crossing Darkness Within
             </p>
-            <p className="hidden lg:block font-sans text-xs tracking-[0.15em] uppercase font-light text-primary-foreground/50 mt-3">
-              Transforming Darkness into Resilience
-            </p>
 
             {/* Desktop: event info stays inline below title */}
             <div className="hidden lg:flex flex-row items-end gap-10 mt-8">
