@@ -8,6 +8,7 @@ import HomePage from "./pages/HomePage";
 import ArtistTeam from "./pages/ArtistTeam";
 import ArtistDetail from "./pages/ArtistDetail";
 import Projects202526 from "./pages/Projects202526";
+import ProjectDetail from "./pages/ProjectDetail";
 import Projects2025 from "./pages/Projects2025";
 import Contact from "./pages/Contact";
 import ArtworkDetail from "./pages/ArtworkDetail";
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/artists" element={<ArtistTeam />} />
           <Route path="/artists/:slug" element={<ArtistDetail />} />
           <Route path="/projects" element={<Projects202526 />} />
+          <Route path="/projects/:slug" element={<ProjectDetail />} />
           <Route path="/projects-2025-26" element={<Navigate to="/projects" replace />} />
           <Route path="/projects-2025" element={<Projects2025 />} />
           <Route path="/contact" element={<Contact />} />
