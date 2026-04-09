@@ -13,7 +13,7 @@ const footerNav = [
 ];
 
 const footerInfo = [
-  { path: "#", label: "Download" },
+  { path: "/Creative_Project_NEW_participant_info.pdf", label: "Download", isExternal: true },
   { path: "/contact", label: "Contact" },
 ];
 
@@ -61,13 +61,24 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
               <p className="font-sans text-xs tracking-[0.2em] uppercase text-foreground/40 mb-4">Information</p>
               <div className="flex flex-col gap-2.5">
                 {footerInfo.map((item) => (
-                  <Link
-                    key={item.label}
-                    to={item.path}
-                    className="text-editorial-caption hover:text-foreground transition-colors"
-                  >
-                    {item.label}
-                  </Link>
+                  'isExternal' in item ? (
+                    <a
+                      key={item.label}
+                      href={item.path}
+                      download
+                      className="text-editorial-caption hover:text-foreground transition-colors"
+                    >
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link
+                      key={item.label}
+                      to={item.path}
+                      className="text-editorial-caption hover:text-foreground transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  )
                 ))}
               </div>
             </div>
