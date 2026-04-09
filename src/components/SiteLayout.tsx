@@ -34,7 +34,7 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 mb-12">
             {/* Brand */}
             <div className="col-span-2 md:col-span-1">
-              <Link to="/" className="font-serif text-lg font-light tracking-tight text-foreground">
+              <Link to="/" className="font-sans text-lg font-light tracking-tight text-foreground">
                 Creative Project NEW
               </Link>
               <p className="text-editorial-caption mt-2">Berlin, Germany</p>
