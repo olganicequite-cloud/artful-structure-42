@@ -88,9 +88,13 @@ const HomePage = () => {
           {/* 3. Download Button */}
           <FadeIn delay={0.15}>
             <div className="mt-10">
-              <button className="px-6 py-2.5 border border-foreground text-foreground text-editorial-detail hover:bg-foreground hover:text-background transition-colors duration-300">
+              <a
+                href="/Creative_Project_NEW_participant_info.pdf"
+                download
+                className="inline-block px-6 py-2.5 border border-foreground text-foreground text-editorial-detail hover:bg-foreground hover:text-background transition-colors duration-300"
+              >
                 Download
-              </button>
+              </a>
             </div>
           </FadeIn>
         </div>
