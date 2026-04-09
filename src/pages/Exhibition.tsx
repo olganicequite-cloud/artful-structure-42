@@ -33,16 +33,22 @@ const Exhibition = () => {
         {/* Title group — upper-left */}
         <div className="relative z-10 page-padding pt-24 md:pt-32 lg:pt-40 w-full">
           <FadeIn>
-            <p className="text-xs md:text-sm tracking-[0.3em] uppercase font-sans mb-2 md:mb-3 text-primary-foreground/60">
+            <p
+              className="text-xs md:text-sm tracking-[0.3em] uppercase mb-2 md:mb-3 text-primary-foreground/60"
+              style={{ fontFamily: "'Alumni Sans', sans-serif" }}
+            >
               Exhibition
             </p>
             <h1
-              className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tight text-primary-foreground mb-2 md:mb-4"
-              style={{ fontFamily: "'Arial Black', 'Arial', sans-serif" }}
+              className="text-6xl md:text-8xl lg:text-9xl uppercase tracking-tight text-primary-foreground mb-2 md:mb-4"
+              style={{ fontFamily: "'Italiana', serif", fontWeight: 400 }}
             >
               STYX
             </h1>
-            <p className="font-serif text-2xl md:text-3xl lg:text-4xl font-light italic text-primary-foreground/95">
+            <p
+              className="text-2xl md:text-3xl lg:text-4xl font-light tracking-wide text-primary-foreground/95"
+              style={{ fontFamily: "'Alumni Sans', sans-serif" }}
+            >
               Crossing Darkness Within
             </p>
 
