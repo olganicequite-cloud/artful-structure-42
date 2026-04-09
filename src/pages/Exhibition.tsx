@@ -55,23 +55,25 @@ const Exhibition = () => {
             {/* Desktop: event info stays inline below title */}
             <div className="hidden lg:flex flex-row items-end gap-10 mt-8">
               <div className="space-y-1">
-                <p className="font-sans text-sm font-light text-primary-foreground/80">26.04.2026</p>
-                <p className="font-serif text-lg text-primary-foreground">VOID INK</p>
-                <p className="font-sans text-sm font-light text-primary-foreground/70">Schwedter Str. 48, 10435 Berlin</p>
+                <p className="text-sm font-light text-primary-foreground/80" style={{ fontFamily: "'Alumni Sans', sans-serif" }}>26.04.2026</p>
+                <p className="text-lg text-primary-foreground" style={{ fontFamily: "'Alumni Sans', sans-serif", fontWeight: 500 }}>VOID INK</p>
+                <p className="text-sm font-light text-primary-foreground/70" style={{ fontFamily: "'Alumni Sans', sans-serif" }}>Schwedter Str. 48, 10435 Berlin</p>
               </div>
               <div className="flex gap-4">
                 <a
                   href={mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-sans text-xs tracking-wider uppercase text-primary-foreground/60 hover:text-primary-foreground border-b border-primary-foreground/30 hover:border-primary-foreground/60 pb-0.5 transition-colors"
+                  className="text-xs tracking-wider uppercase text-primary-foreground/60 hover:text-primary-foreground border-b border-primary-foreground/30 hover:border-primary-foreground/60 pb-0.5 transition-colors"
+                  style={{ fontFamily: "'Alumni Sans', sans-serif" }}
                 >
                   Map
                 </a>
                 <a
                   href={generateCalendarUrl()}
                   download="styx-exhibition.ics"
-                  className="font-sans text-xs tracking-wider uppercase text-primary-foreground/60 hover:text-primary-foreground border-b border-primary-foreground/30 hover:border-primary-foreground/60 pb-0.5 transition-colors"
+                  className="text-xs tracking-wider uppercase text-primary-foreground/60 hover:text-primary-foreground border-b border-primary-foreground/30 hover:border-primary-foreground/60 pb-0.5 transition-colors"
+                  style={{ fontFamily: "'Alumni Sans', sans-serif" }}
                 >
                   Add to Calendar
                 </a>
@@ -85,23 +87,25 @@ const Exhibition = () => {
           <FadeIn>
             <div className="flex flex-col sm:flex-row sm:items-end gap-3 sm:gap-10">
               <div className="space-y-1">
-                <p className="font-sans text-sm font-light text-primary-foreground/80">26.04.2026</p>
-                <p className="font-serif text-lg text-primary-foreground">VOID INK</p>
-                <p className="font-sans text-sm font-light text-primary-foreground/70">Schwedter Str. 48, 10435 Berlin</p>
+                <p className="text-sm font-light text-primary-foreground/80" style={{ fontFamily: "'Alumni Sans', sans-serif" }}>26.04.2026</p>
+                <p className="text-lg text-primary-foreground" style={{ fontFamily: "'Alumni Sans', sans-serif", fontWeight: 500 }}>VOID INK</p>
+                <p className="text-sm font-light text-primary-foreground/70" style={{ fontFamily: "'Alumni Sans', sans-serif" }}>Schwedter Str. 48, 10435 Berlin</p>
               </div>
               <div className="flex gap-4">
                 <a
                   href={mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-sans text-xs tracking-wider uppercase text-primary-foreground/60 hover:text-primary-foreground border-b border-primary-foreground/30 hover:border-primary-foreground/60 pb-0.5 transition-colors"
+                  className="text-xs tracking-wider uppercase text-primary-foreground/60 hover:text-primary-foreground border-b border-primary-foreground/30 hover:border-primary-foreground/60 pb-0.5 transition-colors"
+                  style={{ fontFamily: "'Alumni Sans', sans-serif" }}
                 >
                   Map
                 </a>
                 <a
                   href={generateCalendarUrl()}
                   download="styx-exhibition.ics"
-                  className="font-sans text-xs tracking-wider uppercase text-primary-foreground/60 hover:text-primary-foreground border-b border-primary-foreground/30 hover:border-primary-foreground/60 pb-0.5 transition-colors"
+                  className="text-xs tracking-wider uppercase text-primary-foreground/60 hover:text-primary-foreground border-b border-primary-foreground/30 hover:border-primary-foreground/60 pb-0.5 transition-colors"
+                  style={{ fontFamily: "'Alumni Sans', sans-serif" }}
                 >
                   Add to Calendar
                 </a>
