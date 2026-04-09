@@ -50,7 +50,6 @@
     --text-detail: 220 5% 38%;
 
     /* Fonts */
-    --font-serif: 'Cormorant Garamond', 'Georgia', serif;
     --font-sans: 'DM Sans', system-ui, sans-serif;
   }
 
@@ -88,23 +87,23 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
   }
 }
 
 @layer components {
   .text-editorial-title {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     @apply text-3xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight;
   }
 
   .text-editorial-subtitle {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     @apply text-xl md:text-2xl lg:text-3xl font-light tracking-tight leading-snug;
   }
 
   .text-editorial-heading {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     @apply text-lg md:text-xl lg:text-2xl font-normal tracking-tight;
   }
 
