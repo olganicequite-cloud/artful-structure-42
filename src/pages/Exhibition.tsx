@@ -42,7 +42,10 @@ const Exhibition = () => {
             >
               STYX
             </h1>
-            <p className="font-sans text-2xl md:text-3xl lg:text-4xl font-light italic text-primary-foreground/95">
+            <p
+              className="text-2xl md:text-3xl lg:text-4xl italic text-primary-foreground/95"
+              style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 400 }}
+            >
               Crossing Darkness Within
             </p>
 
