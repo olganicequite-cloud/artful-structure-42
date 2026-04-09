@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import SiteHeader from "./SiteHeader";
+import logo from "@/assets/logo.png";
 
 interface SiteLayoutProps {
   children: React.ReactNode;
