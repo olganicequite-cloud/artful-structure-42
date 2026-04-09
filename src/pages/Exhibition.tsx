@@ -44,7 +44,7 @@ const Exhibition = () => {
             </h1>
             <p
               className="text-2xl md:text-3xl lg:text-4xl italic text-primary-foreground/95"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 400 }}
+              style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 200 }}
             >
               Crossing Darkness Within
             </p>
