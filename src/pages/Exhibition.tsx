@@ -31,7 +31,7 @@ const Exhibition = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/50" />
 
         {/* Title group — upper-left */}
-        <div className="relative z-10 page-padding pt-24 md:pt-32 lg:pt-28 w-full">
+        <div className="relative z-10 page-padding pt-24 md:pt-32 lg:pt-20 w-full">
           <FadeIn>
             <p className="text-xs md:text-sm tracking-[0.3em] uppercase font-sans mb-2 md:mb-3 text-primary-foreground/60">
               Exhibition
