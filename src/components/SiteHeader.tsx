@@ -68,7 +68,7 @@ const SiteHeader = () => {
                   key={item.path}
                   to={item.path}
                   onClick={() => setMenuOpen(false)}
-                  className={`font-serif text-xl font-light transition-colors ${
+                  className={`font-sans text-xl font-light transition-colors ${
                     location.pathname === item.path ? "text-foreground" : "text-caption"
                   }`}
                 >

@@ -32,7 +32,7 @@ const ArtworkDetail = () => {
           </FadeIn>
 
           <FadeIn delay={0.05}>
-            <h1 className="font-serif text-2xl md:text-3xl font-light mb-2">
+            <h1 className="font-sans text-2xl md:text-3xl font-light mb-2">
               {artwork.title}
             </h1>
             <p className="text-editorial-detail mb-8">{artwork.artist}</p>

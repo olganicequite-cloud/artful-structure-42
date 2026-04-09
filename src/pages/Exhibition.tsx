@@ -42,7 +42,7 @@ const Exhibition = () => {
             >
               STYX
             </h1>
-            <p className="font-serif text-2xl md:text-3xl lg:text-4xl font-light italic text-primary-foreground/95">
+            <p className="font-sans text-2xl md:text-3xl lg:text-4xl font-light italic text-primary-foreground/95">
               Crossing Darkness Within
             </p>
 
@@ -50,7 +50,7 @@ const Exhibition = () => {
             <div className="hidden lg:flex flex-row items-end gap-10 mt-8">
               <div className="space-y-1">
                 <p className="font-sans text-sm font-light text-primary-foreground/80">26.04.2026</p>
-                <p className="font-serif text-lg text-primary-foreground">VOID INK</p>
+                <p className="font-sans text-lg text-primary-foreground">VOID INK</p>
                 <p className="font-sans text-sm font-light text-primary-foreground/70">Schwedter Str. 48, 10435 Berlin</p>
               </div>
               <div className="flex gap-4">
@@ -80,7 +80,7 @@ const Exhibition = () => {
             <div className="flex flex-col sm:flex-row sm:items-end gap-3 sm:gap-10">
               <div className="space-y-1">
                 <p className="font-sans text-sm font-light text-primary-foreground/80">26.04.2026</p>
-                <p className="font-serif text-lg text-primary-foreground">VOID INK</p>
+                <p className="font-sans text-lg text-primary-foreground">VOID INK</p>
                 <p className="font-sans text-sm font-light text-primary-foreground/70">Schwedter Str. 48, 10435 Berlin</p>
               </div>
               <div className="flex gap-4">
@@ -153,7 +153,7 @@ const Exhibition = () => {
                     loading="lazy"
                   />
                 </div>
-                <h3 className="font-serif text-base md:text-lg font-light leading-snug mb-0.5">
+                <h3 className="font-sans text-base md:text-lg font-light leading-snug mb-0.5">
                   {artwork.title}
                 </h3>
                 <p className="text-editorial-caption">{artwork.artist}</p>

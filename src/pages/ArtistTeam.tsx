@@ -23,7 +23,7 @@ const ArtistCard = ({ artist }: { artist: Artist }) => {
           </div>
         )}
       </div>
-      <h3 className="font-serif text-base md:text-lg font-light leading-snug mb-0.5">
+      <h3 className="font-sans text-base md:text-lg font-light leading-snug mb-0.5">
         {artist.name}
       </h3>
       <p className="text-editorial-caption">{artist.shortLine}</p>
@@ -42,7 +42,7 @@ const CohortCTACard = () => (
     <div className="aspect-[4/5] border border-foreground/10 bg-secondary/30 overflow-hidden mb-3 flex flex-col items-center justify-center transition-colors group-hover:border-foreground/25">
       <div className="text-center px-4">
         <span className="block font-sans text-xs tracking-[0.2em] uppercase text-foreground/30 mb-2">+</span>
-        <span className="block font-serif text-base md:text-lg font-light text-foreground/60 group-hover:text-foreground/80 transition-colors leading-snug">
+        <span className="block font-sans text-base md:text-lg font-light text-foreground/60 group-hover:text-foreground/80 transition-colors leading-snug">
           Become Part of<br />the Next Cohort
         </span>
       </div>
