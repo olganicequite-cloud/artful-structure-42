@@ -128,21 +128,6 @@ export const projects: Project[] = [
       { src: yanaWork5, alt: "Yana Kaziulia — Liberation of Colors 5" },
     ],
   },
-  {
-    slug: "flow",
-    title: "FLOW",
-    artist: "Yana Kaziulia",
-    artistSlug: "yana-kaziulia",
-    thumbnail: projectsThumbYana,
-    description: [
-      "Life is made of moments. Waking up to the warmth of sunlight on your face. The smell of freshly brewed coffee. Water running over your skin in the shower. Goosebumps from a touching piece of music. But how often do we really live these moments?",
-      "Modern life is full of stress — at work, at home, through an overwhelming flow of information. The pace is so fast that we are almost always one step ahead of ourselves. We worry about the future during the day and lie awake at night, replaying the past in our minds.",
-      "Many people begin to notice that life is passing by without being fully lived. While they search for ways to ground themselves and bring their wandering mind back to the present, some have already found their path — through art. They enter the process and slow down.",
-      "These moments are fragile. They cannot be held or repeated. They exist only briefly — and then they disappear.",
-      "The photography project \"Flow\" is an attempt to capture these intimate moments of presence — moments of full concentration, when something shaped from the inside becomes visible: a movement, a sound, a gesture. Photography freezes what is already passing. What once existed only in the body remains as a trace — a memory of a moment that is already gone.",
-    ],
-    images: [],
-  },
 ];
 
 export const getProjectBySlug = (slug: string): Project | undefined =>
