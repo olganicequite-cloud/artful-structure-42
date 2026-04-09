@@ -13,7 +13,7 @@ const footerNav = [
 ];
 
 const footerInfo = [
-  { path: "#", label: "Download" },
+  { path: "/Creative_Project_NEW_participant_info.pdf", label: "Download", isExternal: true },
   { path: "/contact", label: "Contact" },
 ];
 
