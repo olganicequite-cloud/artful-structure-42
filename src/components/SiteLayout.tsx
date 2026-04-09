@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import SiteHeader from "./SiteHeader";
-import logo from "@/assets/logo.png";
 
 interface SiteLayoutProps {
   children: React.ReactNode;
@@ -35,8 +34,8 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 mb-12">
             {/* Brand */}
             <div className="col-span-2 md:col-span-1">
-              <Link to="/" className="flex items-center">
-                <img src={logo} alt="Creative Project NEW" className="h-5 w-auto" />
+              <Link to="/" className="font-sans text-lg font-light tracking-tight text-foreground">
+                Creative Project NEW
               </Link>
               <p className="text-editorial-caption mt-2">Berlin, Germany</p>
             </div>
