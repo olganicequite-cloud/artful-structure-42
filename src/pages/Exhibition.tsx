@@ -33,47 +33,39 @@ const Exhibition = () => {
         {/* Title group — upper-left */}
         <div className="relative z-10 page-padding pt-24 md:pt-32 lg:pt-40 w-full">
           <FadeIn>
-            <p
-              className="text-xs md:text-sm tracking-[0.3em] uppercase mb-2 md:mb-3 text-primary-foreground/60"
-              style={{ fontFamily: "'Alumni Sans', sans-serif" }}
-            >
+            <p className="text-xs md:text-sm tracking-[0.3em] uppercase font-sans mb-2 md:mb-3 text-primary-foreground/60">
               Exhibition
             </p>
             <h1
-              className="text-6xl md:text-8xl lg:text-9xl uppercase tracking-tight text-primary-foreground mb-2 md:mb-4"
-              style={{ fontFamily: "'Italiana', serif", fontWeight: 400 }}
+              className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tight text-primary-foreground mb-2 md:mb-4"
+              style={{ fontFamily: "'Arial Black', 'Arial', sans-serif" }}
             >
               STYX
             </h1>
-            <p
-              className="text-2xl md:text-3xl lg:text-4xl font-light tracking-wide text-primary-foreground/95"
-              style={{ fontFamily: "'Alumni Sans', sans-serif" }}
-            >
+            <p className="font-serif text-2xl md:text-3xl lg:text-4xl font-light italic text-primary-foreground/95">
               Crossing Darkness Within
             </p>
 
             {/* Desktop: event info stays inline below title */}
             <div className="hidden lg:flex flex-row items-end gap-10 mt-8">
               <div className="space-y-1">
-                <p className="text-sm font-light text-primary-foreground/80" style={{ fontFamily: "'Alumni Sans', sans-serif" }}>26.04.2026</p>
-                <p className="text-lg text-primary-foreground" style={{ fontFamily: "'Alumni Sans', sans-serif", fontWeight: 500 }}>VOID INK</p>
-                <p className="text-sm font-light text-primary-foreground/70" style={{ fontFamily: "'Alumni Sans', sans-serif" }}>Schwedter Str. 48, 10435 Berlin</p>
+                <p className="font-sans text-sm font-light text-primary-foreground/80">26.04.2026</p>
+                <p className="font-serif text-lg text-primary-foreground">VOID INK</p>
+                <p className="font-sans text-sm font-light text-primary-foreground/70">Schwedter Str. 48, 10435 Berlin</p>
               </div>
               <div className="flex gap-4">
                 <a
                   href={mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs tracking-wider uppercase text-primary-foreground/60 hover:text-primary-foreground border-b border-primary-foreground/30 hover:border-primary-foreground/60 pb-0.5 transition-colors"
-                  style={{ fontFamily: "'Alumni Sans', sans-serif" }}
+                  className="font-sans text-xs tracking-wider uppercase text-primary-foreground/60 hover:text-primary-foreground border-b border-primary-foreground/30 hover:border-primary-foreground/60 pb-0.5 transition-colors"
                 >
                   Map
                 </a>
                 <a
                   href={generateCalendarUrl()}
                   download="styx-exhibition.ics"
-                  className="text-xs tracking-wider uppercase text-primary-foreground/60 hover:text-primary-foreground border-b border-primary-foreground/30 hover:border-primary-foreground/60 pb-0.5 transition-colors"
-                  style={{ fontFamily: "'Alumni Sans', sans-serif" }}
+                  className="font-sans text-xs tracking-wider uppercase text-primary-foreground/60 hover:text-primary-foreground border-b border-primary-foreground/30 hover:border-primary-foreground/60 pb-0.5 transition-colors"
                 >
                   Add to Calendar
                 </a>
@@ -87,25 +79,23 @@ const Exhibition = () => {
           <FadeIn>
             <div className="flex flex-col sm:flex-row sm:items-end gap-3 sm:gap-10">
               <div className="space-y-1">
-                <p className="text-sm font-light text-primary-foreground/80" style={{ fontFamily: "'Alumni Sans', sans-serif" }}>26.04.2026</p>
-                <p className="text-lg text-primary-foreground" style={{ fontFamily: "'Alumni Sans', sans-serif", fontWeight: 500 }}>VOID INK</p>
-                <p className="text-sm font-light text-primary-foreground/70" style={{ fontFamily: "'Alumni Sans', sans-serif" }}>Schwedter Str. 48, 10435 Berlin</p>
+                <p className="font-sans text-sm font-light text-primary-foreground/80">26.04.2026</p>
+                <p className="font-serif text-lg text-primary-foreground">VOID INK</p>
+                <p className="font-sans text-sm font-light text-primary-foreground/70">Schwedter Str. 48, 10435 Berlin</p>
               </div>
               <div className="flex gap-4">
                 <a
                   href={mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs tracking-wider uppercase text-primary-foreground/60 hover:text-primary-foreground border-b border-primary-foreground/30 hover:border-primary-foreground/60 pb-0.5 transition-colors"
-                  style={{ fontFamily: "'Alumni Sans', sans-serif" }}
+                  className="font-sans text-xs tracking-wider uppercase text-primary-foreground/60 hover:text-primary-foreground border-b border-primary-foreground/30 hover:border-primary-foreground/60 pb-0.5 transition-colors"
                 >
                   Map
                 </a>
                 <a
                   href={generateCalendarUrl()}
                   download="styx-exhibition.ics"
-                  className="text-xs tracking-wider uppercase text-primary-foreground/60 hover:text-primary-foreground border-b border-primary-foreground/30 hover:border-primary-foreground/60 pb-0.5 transition-colors"
-                  style={{ fontFamily: "'Alumni Sans', sans-serif" }}
+                  className="font-sans text-xs tracking-wider uppercase text-primary-foreground/60 hover:text-primary-foreground border-b border-primary-foreground/30 hover:border-primary-foreground/60 pb-0.5 transition-colors"
                 >
                   Add to Calendar
                 </a>
