@@ -37,7 +37,7 @@ const Exhibition = () => {
               Exhibition
             </p>
             <h1
-              className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tight text-primary-foreground mb-2 md:mb-4"
+              className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-[0.04em] text-primary-foreground mb-2 md:mb-4"
               style={{ fontFamily: "'Arial Black', 'Arial', sans-serif" }}
             >
               STYX
