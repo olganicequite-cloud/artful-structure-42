@@ -57,9 +57,9 @@ export const projects: Project[] = [
     ],
     images: [
       {
-        src: annaWork1,
-        alt: "Anna Kazakova — Invisible Weight 1",
-        caption: { title: "Invisible Weight I", medium: "Print on glass", dimensions: "30 × 45 cm", note: "Vertical" },
+        src: annaWork4,
+        alt: "Anna Kazakova — Invisible Weight 4",
+        caption: { title: "Invisible Weight IV", medium: "Print on glass", dimensions: "45 × 30 cm", note: "Horizontal" },
       },
       {
         src: annaWork2,
@@ -72,9 +72,9 @@ export const projects: Project[] = [
         caption: { title: "Invisible Weight III", medium: "Print on glass", dimensions: "45 × 30 cm", note: "Horizontal" },
       },
       {
-        src: annaWork4,
-        alt: "Anna Kazakova — Invisible Weight 4",
-        caption: { title: "Invisible Weight IV", medium: "Print on glass", dimensions: "45 × 30 cm", note: "Horizontal" },
+        src: annaWork1,
+        alt: "Anna Kazakova — Invisible Weight 1",
+        caption: { title: "Invisible Weight I", medium: "Print on glass", dimensions: "30 × 45 cm", note: "Vertical" },
       },
       {
         src: annaWork5,
