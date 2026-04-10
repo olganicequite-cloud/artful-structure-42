@@ -130,9 +130,15 @@ const Contact = () => {
                   Message <span className="text-foreground/30">*</span>
                 </label>
                 {form.reason === "Participation" && (
-                  <p className="font-sans text-[11px] text-foreground/40 leading-relaxed mb-3">
-                    Please introduce yourself briefly: who you are, what kind of artistic practice you have, and include your Instagram or portfolio link if available. This is only a first contact for a possible further conversation, not a final application.
-                  </p>
+                  <div className="mb-4 space-y-2.5">
+                    <p className="font-sans text-[11px] text-foreground/40 leading-relaxed">
+                      Please introduce yourself briefly: who you are, what kind of artistic practice you have, and include your Instagram or portfolio link if available. This is only a first contact for a possible further conversation, not a final application.
+                    </p>
+                    <hr className="border-foreground/8" />
+                    <p className="font-sans text-[11px] text-foreground/35 leading-relaxed">
+                      Briefly introduce yourself, describe your practice, and add your Instagram or portfolio link.
+                    </p>
+                  </div>
                 )}
                 <textarea
                   value={form.message}
