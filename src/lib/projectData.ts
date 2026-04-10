@@ -29,6 +29,7 @@ export interface Project {
   thumbnail: string;
   description: string[];
   images: { src: string; alt: string }[];
+  technicalInfo: string[];
 }
 
 export const projects: Project[] = [
