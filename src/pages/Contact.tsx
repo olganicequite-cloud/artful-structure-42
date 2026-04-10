@@ -135,7 +135,7 @@ const Contact = () => {
                       Please introduce yourself briefly: who you are, what kind of artistic practice you have, and include your Instagram or portfolio link if available. This is only a first contact for a possible further conversation, not a final application.
                     </p>
                     <hr className="border-foreground/8" />
-                    <p className="font-sans text-[11px] text-foreground/35 leading-relaxed">
+                    <p className="font-sans text-[12px] text-foreground/50 leading-relaxed">
                       Briefly introduce yourself, describe your practice, and add your Instagram or portfolio link.
                     </p>
                   </div>
@@ -144,7 +144,6 @@ const Contact = () => {
                   value={form.message}
                   onChange={(e) => update("message", e.target.value)}
                   className={`${inputClass} resize-none min-h-[140px]`}
-                  placeholder={form.reason === "Participation" ? "Briefly introduce yourself, describe your practice, and add your Instagram or portfolio link." : undefined}
                   maxLength={2000}
                   required
                 />
