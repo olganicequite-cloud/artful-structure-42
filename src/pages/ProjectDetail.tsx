@@ -1,5 +1,6 @@
 import { useParams, Navigate, Link } from "react-router-dom";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
@@ -37,13 +38,12 @@ const ArtworkBlock = ({
 }) => {
   const { ref, visible } = useScrollReveal();
 
-  // Desktop stepped offset pattern: alternate left/right with subtle indentation
   const stepPatterns = [
-    "md:ml-0 md:mr-auto",        // left
-    "md:ml-auto md:mr-0",        // right
-    "md:ml-[8%] md:mr-auto",     // slightly indented left
-    "md:ml-auto md:mr-[8%]",     // slightly indented right
-    "md:ml-[4%] md:mr-auto",     // barely indented left
+    "md:ml-0 md:mr-auto",
+    "md:ml-auto md:mr-0",
+    "md:ml-[8%] md:mr-auto",
+    "md:ml-auto md:mr-[8%]",
+    "md:ml-[4%] md:mr-auto",
   ];
   const stepClass = stepPatterns[index % stepPatterns.length];
 
@@ -56,7 +56,6 @@ const ArtworkBlock = ({
         ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
       `}
     >
-      {/* Image */}
       <div
         className="overflow-hidden cursor-pointer group"
         onClick={onOpen}
@@ -69,7 +68,6 @@ const ArtworkBlock = ({
         />
       </div>
 
-      {/* Per-image technical caption */}
       <div className="mt-2.5 mb-0 space-y-0">
         <p className="text-[12px] font-sans text-foreground/40 leading-snug">
           {artist}
@@ -90,28 +88,127 @@ const ArtworkBlock = ({
   );
 };
 
+/* ── Lightbox with arrows + swipe ── */
+const Lightbox = ({
+  images,
+  startIndex,
+  onClose,
+}: {
+  images: { src: string; alt: string }[];
+  startIndex: number;
+  onClose: () => void;
+}) => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: false,
+    startIndex,
+    dragFree: false,
+  });
+  const [current, setCurrent] = useState(startIndex);
+  const total = images.length;
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    const onSelect = () => setCurrent(emblaApi.selectedScrollSnap());
+    emblaApi.on("select", onSelect);
+    return () => { emblaApi.off("select", onSelect); };
+  }, [emblaApi]);
+
+  const goPrev = useCallback(() => { emblaApi?.scrollPrev(); }, [emblaApi]);
+  const goNext = useCallback(() => { emblaApi?.scrollNext(); }, [emblaApi]);
+
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft") goPrev();
+      if (e.key === "ArrowRight") goNext();
+    };
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleKey);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", handleKey);
+    };
+  }, [onClose, goPrev, goNext]);
+
+  return (
+    <div className="fixed inset-0 z-[100] bg-black flex items-center justify-center">
+      {/* Close */}
+      <button
+        onClick={onClose}
+        className="absolute top-4 right-4 z-[110] text-white/70 hover:text-white text-2xl w-10 h-10 flex items-center justify-center"
+        aria-label="Close"
+      >
+        ✕
+      </button>
+
+      {/* Left arrow */}
+      {total > 1 && (
+        <button
+          onClick={goPrev}
+          className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-[110] text-white/50 hover:text-white transition-colors"
+          aria-label="Previous image"
+        >
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </button>
+      )}
+
+      {/* Right arrow */}
+      {total > 1 && (
+        <button
+          onClick={goNext}
+          className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-[110] text-white/50 hover:text-white transition-colors"
+          aria-label="Next image"
+        >
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="9 6 15 12 9 18" />
+          </svg>
+        </button>
+      )}
+
+      {/* Swipeable image area */}
+      <div className="w-full h-full flex items-center justify-center px-12 md:px-20" ref={emblaRef}>
+        <div className="flex h-full items-center">
+          {images.map((img, i) => (
+            <div
+              key={i}
+              className="flex-none w-full h-full flex items-center justify-center"
+            >
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="max-w-[88vw] max-h-[88vh] object-contain select-none"
+                draggable={false}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Dots */}
+      {total > 1 && (
+        <div className="absolute bottom-6 left-0 right-0 flex items-center justify-center gap-1.5 z-[110]">
+          {images.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => emblaApi?.scrollTo(i)}
+              className={`w-2 h-2 rounded-full transition-colors ${
+                i === current ? "bg-white" : "bg-white/30"
+              }`}
+              aria-label={`View image ${i + 1}`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
 const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const project = slug ? getProjectBySlug(slug) : undefined;
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
-
-  useEffect(() => {
-    document.body.style.overflow = lightboxIndex !== null ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
-  }, [lightboxIndex]);
-
-  useEffect(() => {
-    if (lightboxIndex === null || !project) return;
-    const handleKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setLightboxIndex(null);
-      if (e.key === "ArrowRight" && lightboxIndex < project.images.length - 1)
-        setLightboxIndex(lightboxIndex + 1);
-      if (e.key === "ArrowLeft" && lightboxIndex > 0)
-        setLightboxIndex(lightboxIndex - 1);
-    };
-    window.addEventListener("keydown", handleKey);
-    return () => window.removeEventListener("keydown", handleKey);
-  }, [lightboxIndex, project]);
 
   if (!project) return <Navigate to="/projects" replace />;
 
@@ -119,7 +216,6 @@ const ProjectDetail = () => {
     <SiteLayout>
       <section className="section-spacing page-padding">
         <div className="max-w-2xl mx-auto">
-          {/* Breadcrumb */}
           <PageBreadcrumb
             items={[
               { label: "Projects", to: "/projects" },
@@ -127,7 +223,6 @@ const ProjectDetail = () => {
             ]}
           />
 
-          {/* Title + Artist */}
           <FadeIn>
             <h1 className="font-serif text-2xl md:text-3xl font-light mb-2">
               {project.title}
@@ -140,7 +235,6 @@ const ProjectDetail = () => {
             </Link>
           </FadeIn>
 
-          {/* Description */}
           <FadeIn delay={0.05}>
             <div className="gallery-divider my-8" />
             <div className="space-y-4 mb-14 md:mb-20">
@@ -153,7 +247,6 @@ const ProjectDetail = () => {
           </FadeIn>
         </div>
 
-        {/* Artwork Presentation — wider container for stepped desktop layout */}
         <div className="max-w-4xl mx-auto">
           <div className="space-y-10 md:space-y-16">
             {project.images.map((img, i) => (
@@ -169,45 +262,12 @@ const ProjectDetail = () => {
         </div>
       </section>
 
-      {/* Lightbox */}
       {lightboxIndex !== null && (
-        <div
-          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
-          onClick={() => setLightboxIndex(null)}
-        >
-          <button
-            onClick={() => setLightboxIndex(null)}
-            className="absolute top-4 right-4 z-50 text-white/70 hover:text-white text-2xl w-10 h-10 flex items-center justify-center"
-            aria-label="Close"
-          >
-            ✕
-          </button>
-
-          <img
-            src={project.images[lightboxIndex].src}
-            alt={project.images[lightboxIndex].alt}
-            className="max-w-[90vw] max-h-[90vh] object-contain"
-            onClick={(e) => e.stopPropagation()}
-          />
-
-          {project.images.length > 1 && (
-            <div className="absolute bottom-6 left-0 right-0 flex items-center justify-center gap-1.5">
-              {project.images.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setLightboxIndex(i);
-                  }}
-                  className={`w-2 h-2 rounded-full transition-colors ${
-                    i === lightboxIndex ? "bg-white" : "bg-white/30"
-                  }`}
-                  aria-label={`View image ${i + 1}`}
-                />
-              ))}
-            </div>
-          )}
-        </div>
+        <Lightbox
+          images={project.images}
+          startIndex={lightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+        />
       )}
     </SiteLayout>
   );
