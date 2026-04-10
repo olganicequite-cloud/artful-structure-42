@@ -39,11 +39,12 @@ const ArtworkBlock = ({
   const { ref, visible } = useScrollReveal();
 
   const stepPatterns = [
-    "md:ml-0 md:mr-auto",
-    "md:ml-auto md:mr-0",
-    "md:ml-[8%] md:mr-auto",
-    "md:ml-auto md:mr-[8%]",
-    "md:ml-[4%] md:mr-auto",
+    "md:ml-[2%] md:mr-auto",
+    "md:ml-auto md:mr-[5%]",
+    "md:ml-[12%] md:mr-auto",
+    "md:ml-auto md:mr-[2%]",
+    "md:ml-[6%] md:mr-auto",
+    "md:ml-auto md:mr-[12%]",
   ];
   const stepClass = stepPatterns[index % stepPatterns.length];
 
@@ -51,7 +52,7 @@ const ArtworkBlock = ({
     <div
       ref={ref}
       className={`
-        w-full md:max-w-[72%] transition-all duration-700 ease-out
+        w-full md:max-w-[55%] transition-all duration-700 ease-out
         ${stepClass}
         ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
       `}
