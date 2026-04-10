@@ -52,6 +52,11 @@ export const projects: Project[] = [
       { src: annaWork4, alt: "Anna Kazakova — Invisible Weight 4" },
       { src: annaWork5, alt: "Anna Kazakova — Invisible Weight 5" },
     ],
+    technicalInfo: [
+      "2 vertical works 30 × 45 cm",
+      "3 horizontal works 45 × 30 cm",
+      "print on glass",
+    ],
   },
   {
     slug: "dynamics-of-the-seasons",
@@ -67,6 +72,9 @@ export const projects: Project[] = [
     images: [
       { src: ajWork1, alt: "Aj Jul — Dynamics of the Seasons 1" },
       { src: ajWork2, alt: "Aj Jul — Dynamics of the Seasons 2" },
+    ],
+    technicalInfo: [
+      "2 small works, approximately A4 each",
     ],
   },
   {
@@ -91,6 +99,9 @@ export const projects: Project[] = [
       { src: mariiaWork2, alt: "Mariia Zatsepina — Flowers 2" },
       { src: mariiaWork3, alt: "Mariia Zatsepina — Flowers 3" },
     ],
+    technicalInfo: [
+      "3 photographs on canvas — 60 × 90 cm",
+    ],
   },
   {
     slug: "fear-here",
@@ -106,6 +117,12 @@ export const projects: Project[] = [
     ],
     images: [
       { src: nadyaWork1, alt: "Nadya Net — FEAR HERE" },
+    ],
+    technicalInfo: [
+      "Destination Ararat — 100 × 120 cm",
+      "In Suspension — 100 × 120 cm",
+      "Followed — 140 × 120 cm, 2 pieces (diptych)",
+      "Already Inside — 60 × 60 cm (triptych)",
     ],
   },
   {
@@ -127,6 +144,12 @@ export const projects: Project[] = [
       { src: yanaWork3, alt: "Yana Kaziulia — Liberation of Colors 3" },
       { src: yanaWork4, alt: "Yana Kaziulia — Liberation of Colors 4" },
       { src: yanaWork5, alt: "Yana Kaziulia — Liberation of Colors 5" },
+    ],
+    technicalInfo: [
+      "All 5 frames 52 × 52 cm",
+      "4 photographs 40 × 40 cm",
+      "1 photograph 40 × 30 cm",
+      "9 polaroids 8.5 × 7 cm",
     ],
   },
 ];
