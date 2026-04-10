@@ -32,7 +32,6 @@ const ArtworkBlock = ({
 }: {
   image: ProjectImage;
   artist: string;
-  index: number;
   onOpen: () => void;
 }) => {
   const { ref, visible } = useScrollReveal();
@@ -234,15 +233,15 @@ const ProjectDetail = () => {
         </div>
 
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-10">
             {project.images.map((img, i) => (
-              <ArtworkBlock
-                key={i}
-                image={img}
-                artist={project.artist}
-                index={i}
-                onOpen={() => setLightboxIndex(i)}
-              />
+              <div key={i} className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.75rem)]">
+                <ArtworkBlock
+                  image={img}
+                  artist={project.artist}
+                  onOpen={() => setLightboxIndex(i)}
+                />
+              </div>
             ))}
           </div>
         </div>
