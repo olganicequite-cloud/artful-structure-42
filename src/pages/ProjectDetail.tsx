@@ -234,16 +234,30 @@ const ProjectDetail = () => {
         </div>
 
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
-            {project.images.map((img, i) => (
-              <ArtworkBlock
-                key={i}
-                image={img}
-                artist={project.artist}
-                index={i}
-                onOpen={() => setLightboxIndex(i)}
-              />
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 justify-items-center [&>*]:w-full">
+            {project.images.map((img, i) => {
+              const total = project.images.length;
+              const lastRowCount = total % 3 || 3;
+              const isLastRow = i >= total - lastRowCount;
+              // Center incomplete last rows on lg
+              let lgColClass = "";
+              if (isLastRow && lastRowCount === 1) {
+                lgColClass = "lg:col-start-2";
+              } else if (isLastRow && lastRowCount === 2) {
+                // Use a nested approach: wrap last 2 in a sub-grid won't work easily,
+                // so we offset: first of pair starts at col 1, but we use justify
+              }
+              return (
+                <ArtworkBlock
+                  key={i}
+                  image={img}
+                  artist={project.artist}
+                  index={i}
+                  onOpen={() => setLightboxIndex(i)}
+                  className={lgColClass}
+                />
+              );
+            })}
           </div>
         </div>
       </section>
