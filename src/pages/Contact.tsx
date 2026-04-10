@@ -26,10 +26,11 @@ const Contact = () => {
       return;
     }
     setSending(true);
-    // Placeholder — no backend yet
+    const mailtoBody = `Name: ${form.name}\nEmail: ${form.email}\nReason: ${form.reason || "—"}\nSubject: ${form.subject}\n\n${form.message}`;
+    window.location.href = `mailto:olga.nicequite@gmail.com?subject=${encodeURIComponent(form.subject)}&body=${encodeURIComponent(mailtoBody)}`;
     setTimeout(() => {
       setSending(false);
-      toast({ title: "Message sent", description: "Thank you for reaching out. We will get back to you soon." });
+      toast({ title: "Opening your email client…", description: "If it doesn't open, please email olga.nicequite@gmail.com directly." });
       setForm({ name: "", email: "", reason: "", subject: "", message: "" });
     }, 800);
   };

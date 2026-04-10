@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { Instagram } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const navItems = [
@@ -75,6 +76,16 @@ const SiteHeader = () => {
                   {item.label}
                 </Link>
               ))}
+              <a
+                href="https://www.instagram.com/creative.project.new/?__d=undefined"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMenuOpen(false)}
+                className="font-sans text-xl font-light text-caption transition-colors hover:text-foreground flex items-center gap-2"
+              >
+                <Instagram size={18} strokeWidth={1.5} />
+                Instagram
+              </a>
             </div>
           </motion.nav>
         )}

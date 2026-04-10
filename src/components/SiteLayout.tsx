@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import SiteHeader from "./SiteHeader";
+import FixedInstagramIcon from "./FixedInstagramIcon";
 
 interface SiteLayoutProps {
   children: React.ReactNode;
@@ -26,6 +27,7 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
+      <FixedInstagramIcon />
       <main className="pt-14 md:pt-16">
         {children}
       </main>
