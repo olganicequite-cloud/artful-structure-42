@@ -21,6 +21,17 @@ import yanaWork3 from "@/assets/yana-work-3.jpg";
 import yanaWork4 from "@/assets/yana-work-4.jpg";
 import yanaWork5 from "@/assets/yana-work-5.jpg";
 
+export interface ProjectImage {
+  src: string;
+  alt: string;
+  caption: {
+    title: string;
+    medium: string;
+    dimensions: string;
+    note?: string;
+  };
+}
+
 export interface Project {
   slug: string;
   title: string;
@@ -28,8 +39,7 @@ export interface Project {
   artistSlug: string;
   thumbnail: string;
   description: string[];
-  images: { src: string; alt: string }[];
-  technicalInfo: string[];
+  images: ProjectImage[];
 }
 
 export const projects: Project[] = [
@@ -46,16 +56,31 @@ export const projects: Project[] = [
       "The project avoids visual dramatization. Instead, it invites the viewer into a state of deceleration, allowing them to sense what usually remains unseen — the invisible weight of everyday existence.",
     ],
     images: [
-      { src: annaWork1, alt: "Anna Kazakova — Invisible Weight 1" },
-      { src: annaWork2, alt: "Anna Kazakova — Invisible Weight 2" },
-      { src: annaWork3, alt: "Anna Kazakova — Invisible Weight 3" },
-      { src: annaWork4, alt: "Anna Kazakova — Invisible Weight 4" },
-      { src: annaWork5, alt: "Anna Kazakova — Invisible Weight 5" },
-    ],
-    technicalInfo: [
-      "2 vertical works 30 × 45 cm",
-      "3 horizontal works 45 × 30 cm",
-      "print on glass",
+      {
+        src: annaWork1,
+        alt: "Anna Kazakova — Invisible Weight 1",
+        caption: { title: "Invisible Weight I", medium: "Print on glass", dimensions: "30 × 45 cm", note: "Vertical" },
+      },
+      {
+        src: annaWork2,
+        alt: "Anna Kazakova — Invisible Weight 2",
+        caption: { title: "Invisible Weight II", medium: "Print on glass", dimensions: "30 × 45 cm", note: "Vertical" },
+      },
+      {
+        src: annaWork3,
+        alt: "Anna Kazakova — Invisible Weight 3",
+        caption: { title: "Invisible Weight III", medium: "Print on glass", dimensions: "45 × 30 cm", note: "Horizontal" },
+      },
+      {
+        src: annaWork4,
+        alt: "Anna Kazakova — Invisible Weight 4",
+        caption: { title: "Invisible Weight IV", medium: "Print on glass", dimensions: "45 × 30 cm", note: "Horizontal" },
+      },
+      {
+        src: annaWork5,
+        alt: "Anna Kazakova — Invisible Weight 5",
+        caption: { title: "Invisible Weight V", medium: "Print on glass", dimensions: "45 × 30 cm", note: "Horizontal" },
+      },
     ],
   },
   {
@@ -70,11 +95,16 @@ export const projects: Project[] = [
       "The year keeps turning. The seasons are in love, but they can only exist through the negation of the other.",
     ],
     images: [
-      { src: ajWork1, alt: "Aj Jul — Dynamics of the Seasons 1" },
-      { src: ajWork2, alt: "Aj Jul — Dynamics of the Seasons 2" },
-    ],
-    technicalInfo: [
-      "2 small works, approximately A4 each",
+      {
+        src: ajWork1,
+        alt: "Aj Jul — Dynamics of the Seasons 1",
+        caption: { title: "Winter & Spring", medium: "Color pastels and pencils on paper", dimensions: "Approx. A4" },
+      },
+      {
+        src: ajWork2,
+        alt: "Aj Jul — Dynamics of the Seasons 2",
+        caption: { title: "Summer & Autumn", medium: "Color pastels and pencils on paper", dimensions: "Approx. A4" },
+      },
     ],
   },
   {
@@ -95,12 +125,21 @@ export const projects: Project[] = [
       "This project will remain with me as a personal experience, as a dialogue with something greater than we can explain. And as a reminder that even in change and loss, beauty and presence remain.",
     ],
     images: [
-      { src: mariiaWork1, alt: "Mariia Zatsepina — Flowers 1" },
-      { src: mariiaWork2, alt: "Mariia Zatsepina — Flowers 2" },
-      { src: mariiaWork3, alt: "Mariia Zatsepina — Flowers 3" },
-    ],
-    technicalInfo: [
-      "3 photographs on canvas — 60 × 90 cm",
+      {
+        src: mariiaWork1,
+        alt: "Mariia Zatsepina — Flowers 1",
+        caption: { title: "Flowers I", medium: "Photograph on canvas", dimensions: "60 × 90 cm" },
+      },
+      {
+        src: mariiaWork2,
+        alt: "Mariia Zatsepina — Flowers 2",
+        caption: { title: "Flowers II", medium: "Photograph on canvas", dimensions: "60 × 90 cm" },
+      },
+      {
+        src: mariiaWork3,
+        alt: "Mariia Zatsepina — Flowers 3",
+        caption: { title: "Flowers III", medium: "Photograph on canvas", dimensions: "60 × 90 cm" },
+      },
     ],
   },
   {
@@ -116,13 +155,16 @@ export const projects: Project[] = [
       "Fear Here is an inner archive of trauma, composed not of facts, but of lived states. The project proposes a model of adaptation not through overcoming, but through coexistence.",
     ],
     images: [
-      { src: nadyaWork1, alt: "Nadya Net — FEAR HERE" },
-    ],
-    technicalInfo: [
-      "Destination Ararat — 100 × 120 cm",
-      "In Suspension — 100 × 120 cm",
-      "Followed — 140 × 120 cm, 2 pieces (diptych)",
-      "Already Inside — 60 × 60 cm (triptych)",
+      {
+        src: nadyaWork1,
+        alt: "Nadya Net — FEAR HERE",
+        caption: {
+          title: "FEAR HERE",
+          medium: "Mixed media — archival photographs with illustration",
+          dimensions: "Various sizes",
+          note: "Destination Ararat 100 × 120 cm · In Suspension 100 × 120 cm · Followed 140 × 120 cm (diptych) · Already Inside 60 × 60 cm (triptych)",
+        },
+      },
     ],
   },
   {
@@ -139,17 +181,31 @@ export const projects: Project[] = [
       "This project is an act of resistance — a way to face these colors and try to change their meaning. Can they become part of life rather than symbols of pain? The answer is still open.",
     ],
     images: [
-      { src: yanaWork1, alt: "Yana Kaziulia — Liberation of Colors 1" },
-      { src: yanaWork2, alt: "Yana Kaziulia — Liberation of Colors 2" },
-      { src: yanaWork3, alt: "Yana Kaziulia — Liberation of Colors 3" },
-      { src: yanaWork4, alt: "Yana Kaziulia — Liberation of Colors 4" },
-      { src: yanaWork5, alt: "Yana Kaziulia — Liberation of Colors 5" },
-    ],
-    technicalInfo: [
-      "All 5 frames 52 × 52 cm",
-      "4 photographs 40 × 40 cm",
-      "1 photograph 40 × 30 cm",
-      "9 polaroids 8.5 × 7 cm",
+      {
+        src: yanaWork1,
+        alt: "Yana Kaziulia — Liberation of Colors 1",
+        caption: { title: "Liberation of Colors I", medium: "Photograph", dimensions: "40 × 40 cm", note: "Frame 52 × 52 cm" },
+      },
+      {
+        src: yanaWork2,
+        alt: "Yana Kaziulia — Liberation of Colors 2",
+        caption: { title: "Liberation of Colors II", medium: "Photograph", dimensions: "40 × 40 cm", note: "Frame 52 × 52 cm" },
+      },
+      {
+        src: yanaWork3,
+        alt: "Yana Kaziulia — Liberation of Colors 3",
+        caption: { title: "Liberation of Colors III", medium: "Photograph", dimensions: "40 × 40 cm", note: "Frame 52 × 52 cm" },
+      },
+      {
+        src: yanaWork4,
+        alt: "Yana Kaziulia — Liberation of Colors 4",
+        caption: { title: "Liberation of Colors IV", medium: "Photograph", dimensions: "40 × 40 cm", note: "Frame 52 × 52 cm" },
+      },
+      {
+        src: yanaWork5,
+        alt: "Yana Kaziulia — Liberation of Colors 5",
+        caption: { title: "Liberation of Colors V", medium: "Photograph", dimensions: "40 × 30 cm", note: "Frame 52 × 52 cm · 9 polaroids 8.5 × 7 cm" },
+      },
     ],
   },
 ];
