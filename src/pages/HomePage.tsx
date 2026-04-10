@@ -55,7 +55,7 @@ const HomePage = () => {
         </div>
         <div className="absolute bottom-0 right-0 p-4 md:p-8">
           <Link
-            to="/contact"
+            to="/contact?reason=Participation"
             className="px-4 py-2 md:px-6 md:py-2.5 border border-foreground text-foreground text-xs md:text-editorial-detail hover:bg-foreground hover:text-background transition-colors duration-300 inline-block"
           >
             Participate

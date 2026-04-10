@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
@@ -7,10 +8,12 @@ import { toast } from "@/hooks/use-toast";
 const reasons = ["Participation", "Collaboration", "General Inquiry"] as const;
 
 const Contact = () => {
+  const [searchParams] = useSearchParams();
+  const presetReason = searchParams.get("reason") || "";
   const [form, setForm] = useState({
     name: "",
     email: "",
-    reason: "",
+    reason: reasons.includes(presetReason as any) ? presetReason : "",
     subject: "",
     message: "",
   });

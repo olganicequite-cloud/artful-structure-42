@@ -38,7 +38,7 @@ const ArtistCard = ({ artist }: { artist: Artist }) => {
 };
 
 const CohortCTACard = () => (
-  <Link to="/contact" className="group">
+  <Link to="/contact?reason=Participation" className="group">
     <div className="aspect-[4/5] border border-foreground/10 bg-secondary/30 overflow-hidden mb-3 flex flex-col items-center justify-center transition-colors group-hover:border-foreground/25">
       <div className="text-center px-4">
         <span className="block font-sans text-xs tracking-[0.2em] uppercase text-foreground/30 mb-2">+</span>
