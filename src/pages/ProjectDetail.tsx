@@ -32,7 +32,6 @@ const ArtworkBlock = ({
 }: {
   image: ProjectImage;
   artist: string;
-  index: number;
   onOpen: () => void;
 }) => {
   const { ref, visible } = useScrollReveal();
