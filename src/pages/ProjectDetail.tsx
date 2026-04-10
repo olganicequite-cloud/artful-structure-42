@@ -1,22 +1,102 @@
 import { useParams, Navigate, Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
-import { getProjectBySlug } from "@/lib/projectData";
+import { getProjectBySlug, type ProjectImage } from "@/lib/projectData";
+
+/** Subtle scroll-reveal for each artwork block on desktop */
+const useScrollReveal = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
+      { threshold: 0.15 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return { ref, visible };
+};
+
+const ArtworkBlock = ({
+  image,
+  artist,
+  index,
+  onOpen,
+}: {
+  image: ProjectImage;
+  artist: string;
+  index: number;
+  onOpen: () => void;
+}) => {
+  const { ref, visible } = useScrollReveal();
+
+  // Desktop stepped offset pattern: alternate left/right with subtle indentation
+  const stepPatterns = [
+    "md:ml-0 md:mr-auto",        // left
+    "md:ml-auto md:mr-0",        // right
+    "md:ml-[8%] md:mr-auto",     // slightly indented left
+    "md:ml-auto md:mr-[8%]",     // slightly indented right
+    "md:ml-[4%] md:mr-auto",     // barely indented left
+  ];
+  const stepClass = stepPatterns[index % stepPatterns.length];
+
+  return (
+    <div
+      ref={ref}
+      className={`
+        w-full md:max-w-[72%] transition-all duration-700 ease-out
+        ${stepClass}
+        ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
+      `}
+    >
+      {/* Image */}
+      <div
+        className="overflow-hidden cursor-pointer group"
+        onClick={onOpen}
+      >
+        <img
+          src={image.src}
+          alt={image.alt}
+          className="w-full h-auto object-contain transition-opacity duration-300 group-hover:opacity-90"
+          loading="lazy"
+        />
+      </div>
+
+      {/* Per-image technical caption */}
+      <div className="mt-2.5 mb-0 space-y-0">
+        <p className="text-[12px] font-sans text-foreground/40 leading-snug">
+          {artist}
+        </p>
+        <p className="text-[12px] font-sans text-foreground/60 leading-snug italic">
+          {image.caption.title}
+        </p>
+        <p className="text-[11px] font-sans text-foreground/35 leading-snug">
+          {image.caption.medium} — {image.caption.dimensions}
+        </p>
+        {image.caption.note && (
+          <p className="text-[11px] font-sans text-foreground/30 leading-snug">
+            {image.caption.note}
+          </p>
+        )}
+      </div>
+    </div>
+  );
+};
 
 const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const project = slug ? getProjectBySlug(slug) : undefined;
-
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   useEffect(() => {
-    if (lightboxIndex !== null) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    document.body.style.overflow = lightboxIndex !== null ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [lightboxIndex]);
 
@@ -63,7 +143,7 @@ const ProjectDetail = () => {
           {/* Description */}
           <FadeIn delay={0.05}>
             <div className="gallery-divider my-8" />
-            <div className="space-y-4 mb-12">
+            <div className="space-y-4 mb-14 md:mb-20">
               {project.description.map((paragraph, i) => (
                 <p key={i} className="text-editorial-body leading-relaxed">
                   {paragraph}
@@ -71,48 +151,21 @@ const ProjectDetail = () => {
               ))}
             </div>
           </FadeIn>
+        </div>
 
-          {/* Artwork Presentation */}
-          <FadeIn delay={0.1}>
-            <div className="space-y-6 md:space-y-8">
-              {project.images.map((img, i) => (
-                <div key={i}>
-                  <div
-                    className="overflow-hidden cursor-pointer group"
-                    onClick={() => setLightboxIndex(i)}
-                  >
-                    <img
-                      src={img.src}
-                      alt={img.alt}
-                      className="w-full h-auto object-contain transition-opacity duration-300 group-hover:opacity-90"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </FadeIn>
-
-          {/* Technical Information */}
-          {project.technicalInfo.length > 0 && (
-            <FadeIn delay={0.15}>
-              <div className="mt-8 pt-6 border-t border-foreground/10">
-                <p className="text-editorial-detail mb-2 uppercase tracking-wider text-[11px]">
-                  Technical Details
-                </p>
-                <div className="space-y-0.5">
-                  {project.technicalInfo.map((line, i) => (
-                    <p
-                      key={i}
-                      className="text-[13px] text-foreground/50 font-sans leading-relaxed"
-                    >
-                      {line}
-                    </p>
-                  ))}
-                </div>
-              </div>
-            </FadeIn>
-          )}
+        {/* Artwork Presentation — wider container for stepped desktop layout */}
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-10 md:space-y-16">
+            {project.images.map((img, i) => (
+              <ArtworkBlock
+                key={i}
+                image={img}
+                artist={project.artist}
+                index={i}
+                onOpen={() => setLightboxIndex(i)}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
