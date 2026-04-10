@@ -3,6 +3,7 @@ import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import { getArtistBySlug } from "@/lib/artistData";
+import { projects } from "@/lib/projectData";
 
 const ArtistDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -10,8 +11,8 @@ const ArtistDetail = () => {
 
   if (!artist) return <Navigate to="/artists" replace />;
 
-  const projectAnchor = artist.slug;
-
+  // Find the artist's project slug for direct linking
+  const artistProject = projects.find((p) => p.artistSlug === artist.slug);
   return (
     <SiteLayout>
       <section className="section-spacing page-padding">
@@ -75,12 +76,12 @@ const ArtistDetail = () => {
           )}
 
           {/* Project button */}
-          {artist.projects.length > 0 && (
+          {artistProject && (
             <FadeIn>
               <div className="gallery-divider mb-10" />
               <p className="text-editorial-detail mb-3">Works</p>
               <Link
-                to={`/projects#${projectAnchor}`}
+                to={`/projects/${artistProject.slug}`}
                 className="inline-block font-sans text-sm tracking-wider uppercase border border-foreground/20 hover:border-foreground/50 px-6 py-3 transition-colors hover:bg-foreground/5"
               >
                 View Project →
