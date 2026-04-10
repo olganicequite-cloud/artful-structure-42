@@ -248,8 +248,8 @@ const ProjectDetail = () => {
           </FadeIn>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="space-y-10 md:space-y-16">
+        <div className="max-w-4xl md:max-w-6xl mx-auto">
+          <div className="space-y-10 md:space-y-20">
             {project.images.map((img, i) => (
               <ArtworkBlock
                 key={i}
