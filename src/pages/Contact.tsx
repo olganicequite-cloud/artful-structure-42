@@ -126,10 +126,16 @@ const Contact = () => {
                 <label className="font-sans text-xs tracking-[0.15em] uppercase text-foreground/50 mb-1 block">
                   Message <span className="text-foreground/30">*</span>
                 </label>
+                {form.reason === "Participation" && (
+                  <p className="font-sans text-[11px] text-foreground/40 leading-relaxed mb-3">
+                    Please introduce yourself briefly: who you are, what kind of artistic practice you have, and include your Instagram or portfolio link if available. This is only a first contact for a possible further conversation, not a final application.
+                  </p>
+                )}
                 <textarea
                   value={form.message}
                   onChange={(e) => update("message", e.target.value)}
                   className={`${inputClass} resize-none min-h-[140px]`}
+                  placeholder={form.reason === "Participation" ? "Briefly introduce yourself, describe your practice, and add your Instagram or portfolio link." : undefined}
                   maxLength={2000}
                   required
                 />
