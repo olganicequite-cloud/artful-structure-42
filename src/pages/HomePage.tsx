@@ -47,6 +47,19 @@ const StarRating = ({ count }: { count: number }) => (
 );
 
 const HomePage = () => {
+  const [downloadDisabled, setDownloadDisabled] = useState(false);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleDownload = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (downloadDisabled) {
+      e.preventDefault();
+      return;
+    }
+    // Allow the native download to proceed, then disable
+    setDownloadDisabled(true);
+    timerRef.current = setTimeout(() => setDownloadDisabled(false), 4000);
+  }, [downloadDisabled]);
+
   return (
     <SiteLayout>
       {/* 1. Hero Banner */}
