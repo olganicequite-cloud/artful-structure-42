@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState, useCallback, useRef } from "react";
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
 import curatorPortrait from "@/assets/olga-tarabukina.jpg";
@@ -46,6 +47,19 @@ const StarRating = ({ count }: { count: number }) => (
 );
 
 const HomePage = () => {
+  const [downloadDisabled, setDownloadDisabled] = useState(false);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleDownload = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (downloadDisabled) {
+      e.preventDefault();
+      return;
+    }
+    // Allow the native download to proceed, then disable
+    setDownloadDisabled(true);
+    timerRef.current = setTimeout(() => setDownloadDisabled(false), 4000);
+  }, [downloadDisabled]);
+
   return (
     <SiteLayout>
       {/* 1. Hero Banner */}
@@ -91,7 +105,13 @@ const HomePage = () => {
               <a
                 href="/Creative_Project_NEW_participant_info.pdf"
                 download
-                className="inline-block px-6 py-2.5 border border-foreground text-foreground text-editorial-detail hover:bg-foreground hover:text-background transition-colors duration-300"
+                onClick={handleDownload}
+                className={`inline-block px-6 py-2.5 border border-foreground text-editorial-detail transition-colors duration-300 ${
+                  downloadDisabled
+                    ? "opacity-40 pointer-events-none text-foreground/50 border-foreground/30"
+                    : "text-foreground hover:bg-foreground hover:text-background"
+                }`}
+                aria-disabled={downloadDisabled}
               >
                 Download
               </a>
