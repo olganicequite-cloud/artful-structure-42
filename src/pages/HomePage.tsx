@@ -105,7 +105,13 @@ const HomePage = () => {
               <a
                 href="/Creative_Project_NEW_participant_info.pdf"
                 download
-                className="inline-block px-6 py-2.5 border border-foreground text-foreground text-editorial-detail hover:bg-foreground hover:text-background transition-colors duration-300"
+                onClick={handleDownload}
+                className={`inline-block px-6 py-2.5 border border-foreground text-editorial-detail transition-colors duration-300 ${
+                  downloadDisabled
+                    ? "opacity-40 pointer-events-none text-foreground/50 border-foreground/30"
+                    : "text-foreground hover:bg-foreground hover:text-background"
+                }`}
+                aria-disabled={downloadDisabled}
               >
                 Download
               </a>
