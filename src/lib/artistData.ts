@@ -43,6 +43,7 @@ export interface Artist {
   longBio: string;
   artistStatement: string;
   portrait: string;
+  portraitPosition?: string;
   cohort: "2025-26" | "2025";
   projects: ArtistProject[];
 }
