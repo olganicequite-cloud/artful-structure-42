@@ -7,7 +7,7 @@ import { artists, placeholderArtists2025, Artist } from "@/lib/artistData";
 const portraitCropMap: Record<string, string> = {
   "olga-iavorskaia": "50% 30%",
   "daria-wagner": "50% 32%",
-  "anna-kazakova-2025": "50% 34%",
+  "anna-kazakova-2025": "50% 40%",
   "eva-maria-shipova": "50% 33%",
   "oxana-grom": "50% 28%",
 };
