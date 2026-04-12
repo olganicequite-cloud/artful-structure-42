@@ -15,6 +15,7 @@ const ArtistCard = ({ artist }: { artist: Artist }) => {
             src={artist.portrait}
             alt={artist.name}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+            style={artist.portraitPosition ? { objectPosition: artist.portraitPosition } : undefined}
             loading="lazy"
           />
         ) : (
