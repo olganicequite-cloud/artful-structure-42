@@ -33,7 +33,6 @@ const ArtistDetail = () => {
                     src={artist.portrait}
                     alt={artist.name}
                     className="w-full h-full object-cover"
-                    style={artist.portraitPosition ? { objectPosition: artist.portraitPosition } : undefined}
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center">
