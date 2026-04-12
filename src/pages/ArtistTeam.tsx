@@ -4,8 +4,17 @@ import FadeIn from "@/components/FadeIn";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import { artists, placeholderArtists2025, Artist } from "@/lib/artistData";
 
+const portraitCropMap: Record<string, string> = {
+  "olga-iavorskaia": "50% 30%",
+  "daria-wagner": "50% 32%",
+  "anna-kazakova-2025": "50% 34%",
+  "eva-maria-shipova": "50% 33%",
+  "oxana-grom": "50% 28%",
+};
+
 const ArtistCard = ({ artist }: { artist: Artist }) => {
   const hasDetail = artist.cohort === "2025-26" || artist.cohort === "2025";
+  const objectPosition = portraitCropMap[artist.slug] || "center";
 
   const content = (
     <div className="group cursor-pointer">
@@ -15,6 +24,7 @@ const ArtistCard = ({ artist }: { artist: Artist }) => {
             src={artist.portrait}
             alt={artist.name}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+            style={{ objectPosition }}
             loading="lazy"
           />
         ) : (
