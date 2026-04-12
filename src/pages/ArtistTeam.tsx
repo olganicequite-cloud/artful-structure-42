@@ -5,7 +5,7 @@ import PageBreadcrumb from "@/components/PageBreadcrumb";
 import { artists, placeholderArtists2025, Artist } from "@/lib/artistData";
 
 const ArtistCard = ({ artist }: { artist: Artist }) => {
-  const hasDetail = artist.cohort === "2025-26";
+  const hasDetail = artist.cohort === "2025-26" || artist.cohort === "2025";
 
   const content = (
     <div className="group cursor-pointer">
