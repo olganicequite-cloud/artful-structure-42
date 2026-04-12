@@ -5,6 +5,14 @@ import PageBreadcrumb from "@/components/PageBreadcrumb";
 import { getArtistBySlug } from "@/lib/artistData";
 import { projects } from "@/lib/projectData";
 
+const portraitCropMap: Record<string, string> = {
+  "olga-iavorskaia": "50% 30%",
+  "daria-wagner": "50% 32%",
+  "anna-kazakova-2025": "50% 40%",
+  "eva-maria-shipova": "50% 33%",
+  "oxana-grom": "50% 28%",
+};
+
 const ArtistDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const artist = slug ? getArtistBySlug(slug) : undefined;
@@ -13,6 +21,8 @@ const ArtistDetail = () => {
 
   // Find the artist's project slug for direct linking
   const artistProject = projects.find((p) => p.artistSlug === artist.slug);
+  const objectPosition = portraitCropMap[artist.slug] || "center";
+
   return (
     <SiteLayout>
       <section className="section-spacing page-padding">
@@ -33,6 +43,7 @@ const ArtistDetail = () => {
                     src={artist.portrait}
                     alt={artist.name}
                     className="w-full h-full object-cover"
+                    style={{ objectPosition }}
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center">
