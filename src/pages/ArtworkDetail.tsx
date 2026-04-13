@@ -35,7 +35,12 @@ const ArtworkDetail = () => {
             <h1 className="font-sans text-2xl md:text-3xl font-light mb-2">
               {artwork.title}
             </h1>
-            <p className="text-editorial-detail mb-8">{artwork.artist}</p>
+            <Link
+              to={`/artists/${artwork.artistSlug}`}
+              className="text-editorial-detail hover:text-foreground transition-colors"
+            >
+              {artwork.artist}
+            </Link>
           </FadeIn>
 
           <FadeIn delay={0.1}>
