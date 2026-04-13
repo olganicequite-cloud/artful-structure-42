@@ -3,6 +3,7 @@ import projectsThumbAj from "@/assets/projects-thumb-aj.jpg";
 import projectsThumbMariia from "@/assets/projects-thumb-mariia.jpg";
 import projectsThumbNadya from "@/assets/projects-thumb-nadya.jpg";
 import projectsThumbYana from "@/assets/projects-thumb-yana.jpg";
+import projectsThumbYanaFlow from "@/assets/projects-thumb-yana-flow.jpg";
 
 import ajWork1 from "@/assets/aj-jul-work-1.jpg";
 import ajWork2 from "@/assets/aj-jul-work-2.jpg";
@@ -207,6 +208,21 @@ export const projects: Project[] = [
         caption: { title: "Liberation of Colors V", medium: "Photograph", dimensions: "40 × 30 cm", note: "Frame 52 × 52 cm · 9 polaroids 8.5 × 7 cm" },
       },
     ],
+  },
+  {
+    slug: "flow",
+    title: "Flow",
+    artist: "Yana Kaziulia",
+    artistSlug: "yana-kaziulia",
+    thumbnail: projectsThumbYanaFlow,
+    description: [
+      "Life is made of moments.\nWaking up to the warmth of sunlight on your face.\nThe smell of freshly brewed coffee.\nWater running over your skin in the shower.\nGoosebumps from a touching piece of music.",
+      "But how often do we really live these moments?",
+      "Modern life is full of stress — at work, at home, through an overwhelming flow of information.\nThe pace is so fast that we are almost always one step ahead of ourselves.\nWe worry about the future during the day and lie awake at night, replaying the past in our minds.\nMany people begin to notice that life is passing by without being fully lived.\nWhile they search for ways to ground themselves and bring their wandering mind back to the present, some have already found their path — through art.\nThey enter the process and slow down.",
+      "These moments are fragile.\nThey cannot be held or repeated.\nThey exist only briefly — and then they disappear.",
+      "The photography project \"Flow\" is an attempt to capture these intimate moments of presence — moments of full concentration, when something shaped from the inside becomes visible: a movement, a sound, a gesture.\nPhotography freezes what is already passing.\nWhat once existed only in the body remains as a trace —\na memory of a moment that is already gone.",
+    ],
+    images: [],
   },
 ];
 
