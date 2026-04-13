@@ -3,6 +3,7 @@ import projectsThumbAj from "@/assets/projects-thumb-aj.jpg";
 import projectsThumbMariia from "@/assets/projects-thumb-mariia.jpg";
 import projectsThumbNadya from "@/assets/projects-thumb-nadya.jpg";
 import projectsThumbYana from "@/assets/projects-thumb-yana.jpg";
+import projectsThumbYanaFlow from "@/assets/projects-thumb-yana-flow.jpg";
 
 import ajWork1 from "@/assets/aj-jul-work-1.jpg";
 import ajWork2 from "@/assets/aj-jul-work-2.jpg";
