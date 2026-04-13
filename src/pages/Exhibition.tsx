@@ -148,7 +148,7 @@ const Exhibition = () => {
           {featuredArtworks.map((artwork, i) => (
             <FadeIn key={artwork.slug} delay={i * 0.05}>
               <div>
-                <Link to={artwork.projectSlug ? `/projects/${artwork.projectSlug}` : `/exhibition/${artwork.slug}`} className="group">
+                <Link to={`/exhibition/${artwork.slug}`} className="group">
                   <div className="aspect-[4/5] bg-secondary overflow-hidden mb-3">
                     <img
                       src={artwork.thumbnail}
