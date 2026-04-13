@@ -84,7 +84,7 @@ const HomePage = () => {
           </div>
         </div>
         {/* Tablet + Mobile: button below banner */}
-        <div className="lg:hidden flex justify-end px-4 pt-1 pb-3 sm:pt-4 md:pt-6">
+        <div className="lg:hidden flex justify-end px-4 pt-1 pb-3 sm:pt-4 md:pt-6 md:pr-16">
           <Link
             to="/contact?reason=Participation"
             className="px-4 py-2 border border-foreground text-foreground text-xs hover:bg-foreground hover:text-background transition-colors duration-300 inline-block"
