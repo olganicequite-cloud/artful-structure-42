@@ -209,7 +209,7 @@ const ProjectDetail = () => {
           />
 
           <FadeIn>
-            <h1 className="font-serif text-2xl md:text-3xl font-light mb-2">
+            <h1 className="font-sans text-2xl md:text-3xl font-light mb-2">
               {project.title}
             </h1>
             <Link
