@@ -161,16 +161,23 @@ const HomePage = () => {
               <p className="text-editorial-detail mb-4">Curator</p>
               <h2 className="text-editorial-subtitle mb-6">Olga Tarabukina</h2>
               <p className="text-editorial-body mb-5">
-                Olga Tarabukina is a Ukrainian-born art photographer and curator based in Germany. She first studied Philology in Kyiv and later Media Design in Potsdam, moving from literature and visual storytelling into photography as her primary artistic language.
+                My name is Olga Tarabukina.
+                <br />I am the founder and curator of Creative Project NEW.
               </p>
               <p className="text-editorial-body mb-5">
-                Her work explores inner emotional states, vulnerability, perception, and transformation. Across recent projects such as <em>Self-Portrait of Fear</em>, <em>Freedom Island</em>, <em>Beauty Secret</em>, and <em>Abstract City</em>, she develops a photographic language shaped by introspection, experimentation, and an increasing movement toward abstraction.
+                This project was created to support artists on their path toward growth, visibility, and professional development.
               </p>
               <p className="text-editorial-body mb-5">
-                Alongside her artistic practice, Olga Tarabukina has participated in numerous exhibitions in Germany and in 2025 exhibited in <em>Iconic, Imagination Paris</em> at Galerie Joseph Chapon 17, Paris.
+                As a curator, I have extensive experience in the European art field. My background includes working as a creative and art director, filmmaker, writer, fashion designer, street artist, and painter. However, today my primary focus is on art photography.
               </p>
-              <p className="text-editorial-body italic text-foreground/60 text-sm leading-relaxed">
-                In her artistic practice, photography becomes a way to translate inner experience into visual form — moving between emotional reality, abstraction, and the atmosphere of urban space.
+              <p className="text-editorial-body mb-5">
+                Creative Project NEW is a space for collaboration, artistic growth, and long-term creative development.
+              </p>
+              <p className="text-editorial-body mb-5">
+                Follow us and support the artists of Creative Project NEW and who knows, in the future, you might become a part of us, too!
+              </p>
+              <p className="text-editorial-caption italic text-foreground/60">
+                Photo by Anka Zhuravleva
               </p>
             </FadeIn>
           </div>
