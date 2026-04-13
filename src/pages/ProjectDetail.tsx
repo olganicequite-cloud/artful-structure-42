@@ -224,7 +224,7 @@ const ProjectDetail = () => {
             <div className="gallery-divider my-8" />
             <div className="space-y-4 mb-14 md:mb-20">
               {project.description.map((paragraph, i) => (
-                <p key={i} className="text-editorial-body leading-relaxed">
+                <p key={i} className="text-editorial-body leading-relaxed whitespace-pre-line">
                   {paragraph}
                 </p>
               ))}
