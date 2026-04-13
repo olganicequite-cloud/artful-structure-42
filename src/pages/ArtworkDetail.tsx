@@ -52,9 +52,6 @@ const ArtworkDetail = () => {
               <p className="text-editorial-body leading-relaxed">
                 Through careful attention to material, light, and composition, the piece invites the viewer into a space of contemplation — where darkness is not avoided but confronted, and where the act of looking becomes an act of understanding.
               </p>
-              <p className="text-editorial-caption mt-6">
-                {artwork.technicalNote}
-              </p>
             </div>
           </FadeIn>
         </div>
