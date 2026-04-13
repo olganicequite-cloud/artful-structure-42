@@ -64,8 +64,8 @@ const HomePage = () => {
   return (
     <SiteLayout>
       {/* 1. Hero Banner */}
-      <section className="relative w-full bg-white">
-        <div className="w-full">
+      <section className="w-full bg-white">
+        <div className="relative w-full">
           <img
             src={heroBanner}
             alt="Creative Project NEW — banner featuring artwork from participating artists"
@@ -73,11 +73,21 @@ const HomePage = () => {
             width={1440}
             height={810}
           />
+          {/* Desktop: button overlaid on banner */}
+          <div className="hidden md:block absolute bottom-0 right-0 p-8">
+            <Link
+              to="/contact?reason=Participation"
+              className="px-6 py-2.5 border border-foreground text-foreground text-editorial-detail hover:bg-foreground hover:text-background transition-colors duration-300 inline-block"
+            >
+              Participate
+            </Link>
+          </div>
         </div>
-        <div className="absolute bottom-0 right-0 p-4 md:p-8">
+        {/* Tablet + Mobile: button below banner */}
+        <div className="md:hidden flex justify-end px-4 py-4">
           <Link
             to="/contact?reason=Participation"
-            className="px-4 py-2 md:px-6 md:py-2.5 border border-foreground text-foreground text-xs md:text-editorial-detail hover:bg-foreground hover:text-background transition-colors duration-300 inline-block"
+            className="px-4 py-2 border border-foreground text-foreground text-xs hover:bg-foreground hover:text-background transition-colors duration-300 inline-block"
           >
             Participate
           </Link>
