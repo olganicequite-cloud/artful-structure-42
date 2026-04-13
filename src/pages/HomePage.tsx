@@ -155,6 +155,9 @@ const HomePage = () => {
                   height={1000}
                 />
               </div>
+              <p className="text-editorial-caption italic text-foreground/60 mt-2">
+                Photo by Anka Zhuravleva
+              </p>
             </FadeIn>
 
             <FadeIn delay={0.2}>
@@ -175,9 +178,6 @@ const HomePage = () => {
               </p>
               <p className="text-editorial-body mb-5">
                 Follow us and support the artists of Creative Project NEW and who knows, in the future, you might become a part of us, too!
-              </p>
-              <p className="text-editorial-caption italic text-foreground/60">
-                Photo by Anka Zhuravleva
               </p>
             </FadeIn>
           </div>
