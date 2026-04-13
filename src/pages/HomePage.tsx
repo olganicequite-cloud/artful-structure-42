@@ -3,6 +3,7 @@ import { useState, useCallback, useRef } from "react";
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
 import curatorPortrait from "@/assets/olga-tarabukina.jpg";
+import heroBanner from "@/assets/hero-banner.jpg";
 
 const modules = [
   "15 Minutes Creativity",
@@ -63,9 +64,15 @@ const HomePage = () => {
   return (
     <SiteLayout>
       {/* 1. Hero Banner */}
-      <section className="relative w-full">
-        <div className="w-full aspect-[4/5] md:aspect-[21/7] bg-secondary flex items-center justify-center">
-          <p className="text-editorial-caption">Banner Image</p>
+      <section className="relative w-full bg-white">
+        <div className="w-full">
+          <img
+            src={heroBanner}
+            alt="Creative Project NEW — banner featuring artwork from participating artists"
+            className="w-full h-auto block md:object-contain object-cover object-center md:max-h-[70vh]"
+            width={1440}
+            height={810}
+          />
         </div>
         <div className="absolute bottom-0 right-0 p-4 md:p-8">
           <Link
