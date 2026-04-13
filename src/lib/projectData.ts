@@ -16,6 +16,11 @@ import mariiaWork1 from "@/assets/mariia-flowers-1.jpg";
 import mariiaWork2 from "@/assets/mariia-flowers-2.jpg";
 import mariiaWork3 from "@/assets/mariia-flowers-3.jpg";
 import nadyaWork1 from "@/assets/nadya-fearhere-1.jpg";
+import nadyaWork2 from "@/assets/fear-here-ii.jpg";
+import nadyaWork3 from "@/assets/fear-here-iii.jpg";
+import nadyaWork4 from "@/assets/fear-here-iv.jpg";
+import nadyaWork5 from "@/assets/fear-here-v.jpg";
+import nadyaWork6 from "@/assets/fear-here-vi.jpg";
 import yanaWork1 from "@/assets/yana-work-1.jpg";
 import yanaWork2 from "@/assets/yana-work-2.jpg";
 import yanaWork3 from "@/assets/yana-work-3.jpg";
@@ -158,12 +163,57 @@ export const projects: Project[] = [
     images: [
       {
         src: nadyaWork1,
-        alt: "Nadya Net — FEAR HERE",
+        alt: "Nadya Net — FEAR HERE I",
         caption: {
-          title: "FEAR HERE",
+          title: "FEAR HERE I",
           medium: "Mixed media — archival photographs with illustration",
           dimensions: "Various sizes",
           note: "Destination Ararat 100 × 120 cm · In Suspension 100 × 120 cm · Followed 140 × 120 cm (diptych) · Already Inside 60 × 60 cm (triptych)",
+        },
+      },
+      {
+        src: nadyaWork2,
+        alt: "Nadya Net — FEAR HERE II",
+        caption: {
+          title: "FEAR HERE II",
+          medium: "Mixed media — archival photographs with illustration",
+          dimensions: "Various sizes",
+        },
+      },
+      {
+        src: nadyaWork3,
+        alt: "Nadya Net — FEAR HERE III",
+        caption: {
+          title: "FEAR HERE III",
+          medium: "Mixed media — archival photographs with illustration",
+          dimensions: "Various sizes",
+        },
+      },
+      {
+        src: nadyaWork4,
+        alt: "Nadya Net — FEAR HERE IV",
+        caption: {
+          title: "FEAR HERE IV",
+          medium: "Mixed media — archival photographs with illustration",
+          dimensions: "Various sizes",
+        },
+      },
+      {
+        src: nadyaWork5,
+        alt: "Nadya Net — FEAR HERE V",
+        caption: {
+          title: "FEAR HERE V",
+          medium: "Mixed media — archival photographs with illustration",
+          dimensions: "Various sizes",
+        },
+      },
+      {
+        src: nadyaWork6,
+        alt: "Nadya Net — FEAR HERE VI",
+        caption: {
+          title: "FEAR HERE VI",
+          medium: "Mixed media — archival photographs with illustration",
+          dimensions: "Various sizes",
         },
       },
     ],
