@@ -135,12 +135,12 @@ const Exhibition = () => {
         </FadeIn>
       </section>
 
-      {/* Featured Artworks */}
+      {/* Featured Projects */}
       <section className="page-padding pb-16 md:pb-24">
         <FadeIn>
           <div className="max-w-4xl mx-auto mb-10">
             <div className="gallery-divider mb-6" />
-            <h2 className="text-editorial-subtitle">Featured Artworks</h2>
+            <h2 className="text-editorial-subtitle">Featured Projects</h2>
           </div>
         </FadeIn>
 
