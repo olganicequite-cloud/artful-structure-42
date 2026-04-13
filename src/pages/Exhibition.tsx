@@ -147,20 +147,27 @@ const Exhibition = () => {
         <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12">
           {featuredArtworks.map((artwork, i) => (
             <FadeIn key={artwork.slug} delay={i * 0.05}>
-              <Link to={`/exhibition/${artwork.slug}`} className="group">
-                <div className="aspect-[4/5] bg-secondary overflow-hidden mb-3">
-                  <img
-                    src={artwork.thumbnail}
-                    alt={artwork.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                    loading="lazy"
-                  />
-                </div>
-                <h3 className="font-sans text-base md:text-lg font-light leading-snug mb-0.5">
-                  {artwork.title}
-                </h3>
-                <p className="text-editorial-caption">{artwork.artist}</p>
-              </Link>
+              <div>
+                <Link to={artwork.projectSlug ? `/projects/${artwork.projectSlug}` : `/exhibition/${artwork.slug}`} className="group">
+                  <div className="aspect-[4/5] bg-secondary overflow-hidden mb-3">
+                    <img
+                      src={artwork.thumbnail}
+                      alt={artwork.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                      loading="lazy"
+                    />
+                  </div>
+                  <h3 className="font-sans text-base md:text-lg font-light leading-snug mb-0.5">
+                    {artwork.title}
+                  </h3>
+                </Link>
+                <Link
+                  to={`/artists/${artwork.artistSlug}`}
+                  className="text-editorial-caption hover:text-foreground transition-colors"
+                >
+                  {artwork.artist}
+                </Link>
+              </div>
             </FadeIn>
           ))}
         </div>
