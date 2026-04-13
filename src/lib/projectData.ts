@@ -163,12 +163,57 @@ export const projects: Project[] = [
     images: [
       {
         src: nadyaWork1,
-        alt: "Nadya Net — FEAR HERE",
+        alt: "Nadya Net — FEAR HERE I",
         caption: {
-          title: "FEAR HERE",
+          title: "FEAR HERE I",
           medium: "Mixed media — archival photographs with illustration",
           dimensions: "Various sizes",
           note: "Destination Ararat 100 × 120 cm · In Suspension 100 × 120 cm · Followed 140 × 120 cm (diptych) · Already Inside 60 × 60 cm (triptych)",
+        },
+      },
+      {
+        src: nadyaWork2,
+        alt: "Nadya Net — FEAR HERE II",
+        caption: {
+          title: "FEAR HERE II",
+          medium: "Mixed media — archival photographs with illustration",
+          dimensions: "Various sizes",
+        },
+      },
+      {
+        src: nadyaWork3,
+        alt: "Nadya Net — FEAR HERE III",
+        caption: {
+          title: "FEAR HERE III",
+          medium: "Mixed media — archival photographs with illustration",
+          dimensions: "Various sizes",
+        },
+      },
+      {
+        src: nadyaWork4,
+        alt: "Nadya Net — FEAR HERE IV",
+        caption: {
+          title: "FEAR HERE IV",
+          medium: "Mixed media — archival photographs with illustration",
+          dimensions: "Various sizes",
+        },
+      },
+      {
+        src: nadyaWork5,
+        alt: "Nadya Net — FEAR HERE V",
+        caption: {
+          title: "FEAR HERE V",
+          medium: "Mixed media — archival photographs with illustration",
+          dimensions: "Various sizes",
+        },
+      },
+      {
+        src: nadyaWork6,
+        alt: "Nadya Net — FEAR HERE VI",
+        caption: {
+          title: "FEAR HERE VI",
+          medium: "Mixed media — archival photographs with illustration",
+          dimensions: "Various sizes",
         },
       },
     ],
