@@ -69,12 +69,12 @@ const HomePage = () => {
           <img
             src={heroBanner}
             alt="Creative Project NEW — banner featuring artwork from participating artists"
-            className="w-full h-auto block md:object-contain object-cover object-center md:max-h-[70vh]"
+            className="w-full h-auto block lg:object-contain object-cover object-center lg:max-h-[70vh]"
             width={1440}
             height={810}
           />
           {/* Desktop: button overlaid on banner */}
-          <div className="hidden md:block absolute bottom-0 right-0 p-8">
+          <div className="hidden lg:block absolute bottom-0 right-0 p-8">
             <Link
               to="/contact?reason=Participation"
               className="px-6 py-2.5 border border-foreground text-foreground text-editorial-detail hover:bg-foreground hover:text-background transition-colors duration-300 inline-block"
@@ -84,7 +84,7 @@ const HomePage = () => {
           </div>
         </div>
         {/* Tablet + Mobile: button below banner */}
-        <div className="md:hidden flex justify-end px-4 pt-[18px] pb-4 sm:pt-[50px] sm:pb-4">
+        <div className="lg:hidden flex justify-end px-4 pt-1 pb-3 sm:pt-4 md:pt-6">
           <Link
             to="/contact?reason=Participation"
             className="px-4 py-2 border border-foreground text-foreground text-xs hover:bg-foreground hover:text-background transition-colors duration-300 inline-block"
