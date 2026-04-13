@@ -3,6 +3,7 @@ import { useState, useCallback, useRef } from "react";
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
 import curatorPortrait from "@/assets/olga-tarabukina.jpg";
+import heroBanner from "@/assets/hero-banner.jpg";
 
 const modules = [
   "15 Minutes Creativity",
