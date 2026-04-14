@@ -3,7 +3,7 @@ import { useState, useCallback, useRef } from "react";
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
 import curatorPortrait from "@/assets/olga-tarabukina.jpg";
-import heroBanner from "@/assets/hero-banner.jpg";
+import heroBerlin from "@/assets/hero-berlin.jpg";
 
 const modules = [
   "15 Minutes Creativity",
@@ -64,27 +64,37 @@ const HomePage = () => {
   return (
     <SiteLayout>
       {/* 1. Hero Banner */}
-      <section className="w-full bg-white">
-        <div className="relative w-full">
+      <section className="relative w-full">
+        <div className="relative w-full h-[45vh] sm:h-[50vh] md:h-[62vh] lg:h-[78vh] overflow-hidden">
           <img
-            src={heroBanner}
-            alt="Creative Project NEW — banner featuring artwork from participating artists"
-            className="w-full h-auto block lg:object-contain object-cover object-center lg:max-h-[70vh]"
-            width={1440}
-            height={810}
+            src={heroBerlin}
+            alt="Berlin skyline at sunset — Fernsehturm and Victory Column"
+            className="absolute inset-0 w-full h-full object-cover object-[50%_35%]"
+            width={1920}
+            height={800}
           />
-          {/* Desktop: button overlaid on banner */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+
+          {/* Small label — bottom left */}
+          <div className="absolute z-10 bottom-5 left-4 sm:bottom-6 sm:left-6 md:bottom-8 md:left-8 lg:bottom-10 lg:left-10 page-padding">
+            <p className="text-[11px] sm:text-xs tracking-[0.25em] uppercase font-sans text-white/75">
+              Creative Project NEW
+            </p>
+          </div>
+
+          {/* Desktop: Participate button overlaid bottom-right */}
           <div className="hidden lg:block absolute bottom-0 right-0 p-8">
             <Link
               to="/contact?reason=Participation"
-              className="px-6 py-2.5 border border-foreground text-foreground text-editorial-detail hover:bg-foreground hover:text-background transition-colors duration-300 inline-block"
+              className="px-6 py-2.5 border border-white/80 text-white/90 text-editorial-detail hover:bg-white hover:text-black transition-colors duration-300 inline-block"
             >
               Participate
             </Link>
           </div>
         </div>
-        {/* Tablet + Mobile: button below banner */}
-        <div className="lg:hidden flex justify-end px-4 pt-1 pb-3 sm:pt-4 md:pt-6 md:pr-16">
+
+        {/* Tablet + Mobile: button below hero */}
+        <div className="lg:hidden flex justify-end px-4 pt-3 pb-3 sm:pt-4 md:pt-6 md:pr-16 bg-background">
           <Link
             to="/contact?reason=Participation"
             className="px-4 py-2 border border-foreground text-foreground text-xs hover:bg-foreground hover:text-background transition-colors duration-300 inline-block"
