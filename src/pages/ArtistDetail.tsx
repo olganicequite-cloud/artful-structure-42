@@ -4,6 +4,7 @@ import FadeIn from "@/components/FadeIn";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import { getArtistBySlug } from "@/lib/artistData";
 import { projects } from "@/lib/projectData";
+import { projects2025 } from "@/lib/projectData2025";
 
 const portraitCropMap: Record<string, string> = {
   "olga-iavorskaia": "50% 30%",
@@ -20,7 +21,8 @@ const ArtistDetail = () => {
   if (!artist) return <Navigate to="/artists" replace />;
 
   // Find the artist's project slug for direct linking
-  const artistProject = projects.find((p) => p.artistSlug === artist.slug);
+  const artistProject = projects.find((p) => p.artistSlug === artist.slug)
+    || projects2025.find((p) => p.artistSlug === artist.slug);
   const objectPosition = portraitCropMap[artist.slug] || "center";
 
   return (
