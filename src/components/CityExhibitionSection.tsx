@@ -23,6 +23,13 @@ const CityExhibitionSection = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/15 to-black/45" />
 
+        {/* Photo Credit - top right inside hero, matching STYX style */}
+        <div className="absolute z-20 top-4 right-4 md:top-6 md:right-6">
+          <p className="text-xs font-sans text-primary-foreground/40">
+            CITY banner image: Photo by Oxana Grom
+          </p>
+        </div>
+
         <div className="relative z-10 page-padding pt-20 md:pt-28 lg:pt-24 w-full">
           <FadeIn>
             <p className="text-xs md:text-sm tracking-[0.3em] uppercase font-sans mb-2 md:mb-3 text-primary-foreground/60">
@@ -84,14 +91,7 @@ const CityExhibitionSection = () => {
         </div>
       </section>
 
-      {/* Photo Credit */}
-      <section className="page-padding pb-4 md:pb-6">
-        <FadeIn>
-          <p className="text-editorial-caption text-muted-foreground text-right">
-            CITY banner image: Photo by Oxana Grom
-          </p>
-        </FadeIn>
-      </section>
+
 
       {/* CITY Description */}
       <section className="pt-8 pb-10 md:section-spacing page-padding">
