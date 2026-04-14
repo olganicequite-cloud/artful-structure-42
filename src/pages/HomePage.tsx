@@ -77,8 +77,11 @@ const HomePage = () => {
 
           {/* Small label — bottom left */}
           <div className="absolute z-10 bottom-5 left-4 sm:bottom-6 sm:left-6 md:bottom-8 md:left-8 lg:bottom-10 lg:left-10 page-padding">
-            <p className="text-[11px] sm:text-xs tracking-[0.25em] uppercase font-sans text-white/75">
+            <p className="text-xs sm:text-[13px] tracking-[0.22em] uppercase font-sans font-medium text-white/90">
               Creative Project NEW
+            </p>
+            <p className="text-[9px] sm:text-[10px] tracking-[0.18em] uppercase font-sans font-light text-white/55 mt-1">
+              Based in Berlin
             </p>
           </div>
 
