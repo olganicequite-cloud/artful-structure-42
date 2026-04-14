@@ -184,7 +184,10 @@ const Exhibition = () => {
           {featuredArtworks.map((artwork, i) => (
             <FadeIn key={artwork.slug} delay={i * 0.05}>
               <div>
-                <Link to={`/exhibition/${artwork.slug}`} className="group">
+                <Link
+                  to={artwork.artistSlug === "olga-tarabukina" ? "/#curator" : `/exhibition/${artwork.slug}`}
+                  className="group"
+                >
                   <div className="aspect-[4/5] bg-secondary overflow-hidden mb-3">
                     <img
                       src={artwork.thumbnail}
@@ -198,7 +201,7 @@ const Exhibition = () => {
                   </h3>
                 </Link>
                 <Link
-                  to={`/artists/${artwork.artistSlug}`}
+                  to={artwork.artistSlug === "olga-tarabukina" ? "/#curator" : `/artists/${artwork.artistSlug}`}
                   className="text-editorial-caption hover:text-foreground transition-colors"
                 >
                   {artwork.artist}
