@@ -73,7 +73,7 @@ const HomePage = () => {
             width={1920}
             height={800}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
 
           {/* Small label — bottom left */}
           <div className="absolute z-10 bottom-5 left-4 sm:bottom-6 sm:left-6 md:bottom-8 md:left-8 lg:bottom-10 lg:left-10 page-padding">
