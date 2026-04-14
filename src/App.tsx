@@ -1,32 +1,29 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
-import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import Exhibition from "./pages/Exhibition";
 import HomePage from "./pages/HomePage";
-import ArtistTeam from "./pages/ArtistTeam";
-import ArtistDetail from "./pages/ArtistDetail";
-import Projects202526 from "./pages/Projects202526";
-import ProjectDetail from "./pages/ProjectDetail";
-import Projects2025 from "./pages/Projects2025";
-import Contact from "./pages/Contact";
-import ArtworkDetail from "./pages/ArtworkDetail";
-import CityProjectDetail from "./pages/CityProjectDetail";
-import Imprint from "./pages/Imprint";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 
-const queryClient = new QueryClient();
+// Lazy-loaded routes
+const Exhibition = lazy(() => import("./pages/Exhibition"));
+const ArtistTeam = lazy(() => import("./pages/ArtistTeam"));
+const ArtistDetail = lazy(() => import("./pages/ArtistDetail"));
+const Projects202526 = lazy(() => import("./pages/Projects202526"));
+const ProjectDetail = lazy(() => import("./pages/ProjectDetail"));
+const Projects2025 = lazy(() => import("./pages/Projects2025"));
+const Contact = lazy(() => import("./pages/Contact"));
+const ArtworkDetail = lazy(() => import("./pages/ArtworkDetail"));
+const CityProjectDetail = lazy(() => import("./pages/CityProjectDetail"));
+const Imprint = lazy(() => import("./pages/Imprint"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <ScrollToTop />
+  <>
+    <Toaster />
+    <BrowserRouter>
+      <ScrollToTop />
+      <Suspense fallback={null}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/exhibition" element={<Exhibition />} />
@@ -44,9 +41,9 @@ const App = () => (
           <Route path="/home" element={<Navigate to="/" replace />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+      </Suspense>
+    </BrowserRouter>
+  </>
 );
 
 export default App;
