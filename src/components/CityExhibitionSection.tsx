@@ -91,8 +91,6 @@ const CityExhibitionSection = () => {
         </div>
       </section>
 
-
-
       {/* CITY Photo Credit - mobile only, below hero */}
       <div className="md:hidden page-padding pt-4 pb-5">
         <p className="text-xs font-sans text-foreground/40">
@@ -137,43 +135,22 @@ const CityExhibitionSection = () => {
           {cityArtworks.map((artwork, i) => (
             <FadeIn key={artwork.slug} delay={i * 0.05}>
               <div>
-                {artwork.artistSlug === "olga-tarabukina" ? (
-                  <Link to="/#curator" className="group block">
-                    <div className="aspect-[4/5] bg-secondary overflow-hidden mb-3">
-                      <img
-                        src={artwork.thumbnail}
-                        alt={artwork.title}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                        loading="lazy"
-                      />
-                    </div>
-                    <h3 className="font-sans text-base md:text-lg font-light leading-snug mb-0.5">
-                      {artwork.title}
-                    </h3>
-                    <p className="text-editorial-caption hover:text-foreground transition-colors">
-                      {artwork.artist}
-                    </p>
-                  </Link>
-                ) : (
-                  <div>
-                    <div className="group">
-                      <div className="aspect-[4/5] bg-secondary overflow-hidden mb-3">
-                        <img
-                          src={artwork.thumbnail}
-                          alt={artwork.title}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                          loading="lazy"
-                        />
-                      </div>
-                      <h3 className="font-sans text-base md:text-lg font-light leading-snug mb-0.5">
-                        {artwork.title}
-                      </h3>
-                    </div>
-                    <p className="text-editorial-caption">
-                      {artwork.artist}
-                    </p>
+                <Link to={`/projects/${artwork.slug}`} className="group block">
+                  <div className="aspect-[4/5] bg-secondary overflow-hidden mb-3">
+                    <img
+                      src={artwork.thumbnail}
+                      alt={artwork.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                      loading="lazy"
+                    />
                   </div>
-                )}
+                  <h3 className="font-sans text-base md:text-lg font-light leading-snug mb-0.5">
+                    {artwork.title}
+                  </h3>
+                  <p className="text-editorial-caption hover:text-foreground transition-colors">
+                    {artwork.artist}
+                  </p>
+                </Link>
               </div>
             </FadeIn>
           ))}

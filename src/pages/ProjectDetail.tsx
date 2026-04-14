@@ -5,6 +5,7 @@ import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import { getProjectBySlug, type ProjectImage } from "@/lib/projectData";
+import { cityArtworks } from "@/lib/cityExhibitionData";
 
 /** Subtle scroll-reveal for each artwork block on desktop */
 const useScrollReveal = () => {
@@ -197,6 +198,10 @@ const ProjectDetail = () => {
 
   if (!project) return <Navigate to="/projects" replace />;
 
+  const cityArtwork = cityArtworks.find((a) => a.slug === slug);
+  const hasImages = project.images.length > 0;
+  const bannerImage = cityArtwork?.thumbnail;
+
   return (
     <SiteLayout>
       <section className="section-spacing page-padding">
@@ -232,19 +237,33 @@ const ProjectDetail = () => {
           </FadeIn>
         </div>
 
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-10">
-            {project.images.map((img, i) => (
-              <div key={i} className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.75rem)]">
-                <ArtworkBlock
-                  image={img}
-                  artist={project.artist}
-                  onOpen={() => setLightboxIndex(i)}
-                />
-              </div>
-            ))}
+        {bannerImage && !hasImages && (
+          <div className="max-w-2xl mx-auto">
+            <FadeIn delay={0.1}>
+              <img
+                src={bannerImage}
+                alt={project.title}
+                className="w-full h-auto object-contain"
+              />
+            </FadeIn>
           </div>
-        </div>
+        )}
+
+        {hasImages && (
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-10">
+              {project.images.map((img, i) => (
+                <div key={i} className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.75rem)]">
+                  <ArtworkBlock
+                    image={img}
+                    artist={project.artist}
+                    onOpen={() => setLightboxIndex(i)}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </section>
 
       {lightboxIndex !== null && (
