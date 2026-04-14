@@ -18,19 +18,19 @@ const modules = [
 
 const feedbacks = [
   {
-    quote: "The process changed how I see my own practice — structured guidance without losing creative freedom.",
-    author: "Participant, Cohort 2025",
+    quote: "Creative Project NEW gave me the opportunity to take part in a group exhibition and to experience its development from within. The process helped me better understand my strengths and encouraged me to continue developing my artistic practice.",
+    author: "Oxana Grom, 2025",
     stars: 5,
   },
   {
-    quote: "A rare space where artists genuinely support each other while being challenged to grow.",
-    author: "Participant, Cohort 2025",
+    quote: "Creative Project NEW gave me valuable experience in presenting my work more clearly and speaking about it with greater confidence. It was an inspiring and important stage in my development.",
+    author: "Mark Poriadkov, 2025",
     stars: 5,
   },
   {
-    quote: "I found clarity in my artistic direction that I had been searching for years.",
-    author: "Participant, Cohort 2025–26",
-    stars: 4,
+    quote: "Being part of Creative Project NEW was a meaningful experience. Presenting my film, seeing the audience's response, and encountering the strong individual works of other participants made the project especially memorable.",
+    author: "Participant, 2025",
+    stars: 5,
   },
 ];
 
