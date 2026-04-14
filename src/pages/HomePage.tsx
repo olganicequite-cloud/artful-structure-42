@@ -28,8 +28,8 @@ const feedbacks = [
     stars: 5,
   },
   {
-    quote: "Under Olga's curatorial guidance, I learned to articulate my ideas more clearly and to present my work with greater confidence.",
-    author: "Participant, Cohort 2025",
+    quote: "What stayed with me most was the guidance from the first idea to the final presentation. Olga supported us through every stage and helped turn the work into something real, visible, and ready to be shown.",
+    author: "Nadezhda Slaviskene, Cohort 2025",
     stars: 5,
   },
 ];
