@@ -4,6 +4,7 @@ import FadeIn from "@/components/FadeIn";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import styxHero from "@/assets/styx-hero.jpg";
 import { featuredArtworks } from "@/lib/exhibitionData";
+import CityExhibitionSection from "@/components/CityExhibitionSection";
 
 const mapsUrl = "https://www.google.com/maps/search/?api=1&query=Schwedter+Str.+48+10435+Berlin";
 
@@ -200,6 +201,9 @@ const Exhibition = () => {
           ))}
         </div>
       </section>
+
+      {/* Past Exhibition: CITY */}
+      <CityExhibitionSection />
     </SiteLayout>
   );
 };
