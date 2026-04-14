@@ -72,6 +72,9 @@ const HomePage = () => {
             className="absolute inset-0 w-full h-full object-cover object-[50%_35%]"
             width={1920}
             height={800}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
 
