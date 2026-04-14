@@ -85,25 +85,15 @@ const HomePage = () => {
             </p>
           </div>
 
-          {/* Desktop: Participate button overlaid bottom-right */}
-          <div className="hidden lg:block absolute bottom-0 right-0 p-8">
+          {/* Participate button — bottom right on all breakpoints */}
+          <div className="absolute z-10 bottom-5 right-5 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 lg:bottom-8 lg:right-8">
             <Link
               to="/contact?reason=Participation"
-              className="px-6 py-2.5 border border-white/80 text-white/90 text-editorial-detail hover:bg-white hover:text-black transition-colors duration-300 inline-block"
+              className="px-4 py-2 sm:px-5 sm:py-2 lg:px-6 lg:py-2.5 border border-white/80 text-white/90 text-xs lg:text-editorial-detail hover:bg-white hover:text-black transition-colors duration-300 inline-block"
             >
               Participate
             </Link>
           </div>
-        </div>
-
-        {/* Tablet + Mobile: button below hero */}
-        <div className="lg:hidden flex justify-end px-4 pt-3 pb-3 sm:pt-4 md:pt-6 md:pr-16 bg-background">
-          <Link
-            to="/contact?reason=Participation"
-            className="px-4 py-2 border border-foreground text-foreground text-xs hover:bg-foreground hover:text-background transition-colors duration-300 inline-block"
-          >
-            Participate
-          </Link>
         </div>
       </section>
 
