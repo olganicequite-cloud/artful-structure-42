@@ -35,11 +35,11 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 mb-12">
             {/* Brand */}
-            <div className="col-span-2 md:col-span-1">
-              <Link to="/" className="font-sans text-lg font-light tracking-tight text-foreground">
+            <div className="col-span-2 md:col-span-1 flex flex-col justify-start">
+              <Link to="/" className="font-sans text-[15px] md:text-base font-normal tracking-wide uppercase text-foreground hover:text-foreground/70 transition-colors leading-tight">
                 Creative Project NEW
               </Link>
-              <p className="text-editorial-caption mt-2">Berlin, Germany</p>
+              <p className="font-sans text-xs tracking-wider text-foreground/35 mt-1.5">Berlin, Germany</p>
             </div>
 
             {/* Navigation */}
