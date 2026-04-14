@@ -51,10 +51,24 @@ const Exhibition = () => {
 
             {/* Desktop: event info stays inline below title */}
             <div className="hidden lg:flex flex-row items-end gap-10 mt-8">
-              <div className="space-y-1">
-                <p className="font-sans text-sm font-light text-primary-foreground/80">26.04.2026</p>
-                <p className="font-sans text-lg text-primary-foreground">VOID INK</p>
-                <p className="font-sans text-sm font-light text-primary-foreground/70">Schwedter Str. 48, 10435 Berlin</p>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-sans text-xs tracking-widest uppercase text-primary-foreground/50 mb-0.5">Vernissage</p>
+                  <p className="font-sans text-sm text-primary-foreground/90">26. April 2026</p>
+                  <p className="font-sans text-sm font-light text-primary-foreground/70">3 p.m. – 10 p.m.</p>
+                </div>
+                <div>
+                  <p className="font-sans text-xs tracking-widest uppercase text-primary-foreground/50 mb-0.5">Exhibition</p>
+                  <p className="font-sans text-sm text-primary-foreground/90">26.04.2026 – 31.05.2026</p>
+                </div>
+                <div>
+                  <p className="font-sans text-xs tracking-widest uppercase text-primary-foreground/50 mb-0.5">Finissage</p>
+                  <p className="font-sans text-sm text-primary-foreground/90">31. Mai 2026</p>
+                </div>
+                <div className="pt-1">
+                  <p className="font-sans text-lg text-primary-foreground">VOID INK</p>
+                  <p className="font-sans text-sm font-light text-primary-foreground/70">Schwedter Str. 48, 10435 Berlin</p>
+                </div>
               </div>
               <div className="flex gap-4">
                 <a
@@ -81,10 +95,24 @@ const Exhibition = () => {
         <div className="lg:hidden relative z-10 page-padding mt-auto pb-6 md:pb-10 w-full">
           <FadeIn>
             <div className="flex flex-col sm:flex-row sm:items-end gap-3 sm:gap-10">
-              <div className="space-y-1">
-                <p className="font-sans text-sm font-light text-primary-foreground/80">26.04.2026</p>
-                <p className="font-sans text-lg text-primary-foreground">VOID INK</p>
-                <p className="font-sans text-sm font-light text-primary-foreground/70">Schwedter Str. 48, 10435 Berlin</p>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-sans text-xs tracking-widest uppercase text-primary-foreground/50 mb-0.5">Vernissage</p>
+                  <p className="font-sans text-sm text-primary-foreground/90">26. April 2026</p>
+                  <p className="font-sans text-sm font-light text-primary-foreground/70">3 p.m. – 10 p.m.</p>
+                </div>
+                <div>
+                  <p className="font-sans text-xs tracking-widest uppercase text-primary-foreground/50 mb-0.5">Exhibition</p>
+                  <p className="font-sans text-sm text-primary-foreground/90">26.04.2026 – 31.05.2026</p>
+                </div>
+                <div>
+                  <p className="font-sans text-xs tracking-widest uppercase text-primary-foreground/50 mb-0.5">Finissage</p>
+                  <p className="font-sans text-sm text-primary-foreground/90">31. Mai 2026</p>
+                </div>
+                <div className="pt-1">
+                  <p className="font-sans text-lg text-primary-foreground">VOID INK</p>
+                  <p className="font-sans text-sm font-light text-primary-foreground/70">Schwedter Str. 48, 10435 Berlin</p>
+                </div>
               </div>
               <div className="flex gap-4">
                 <a
