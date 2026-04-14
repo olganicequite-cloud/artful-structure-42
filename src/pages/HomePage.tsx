@@ -18,17 +18,17 @@ const modules = [
 
 const feedbacks = [
   {
-    quote: "The process helped me understand my strengths more clearly and gave me confidence to continue developing my work.",
+    quote: "Working on this project gave me a clearer sense of my strengths and strengthened my desire to continue developing my artistic practice.",
     author: "Oxana Grom, Cohort 2025",
     stars: 5,
   },
   {
-    quote: "The process taught me how to present my work more clearly and speak about it with greater confidence.",
+    quote: "Presenting my film within the project and encountering the work of others made the experience deeply engaging and rewarding.",
     author: "Mark Poriadkov, Cohort 2025",
     stars: 5,
   },
   {
-    quote: "The process gave me the chance to share my film, receive thoughtful feedback, and connect with the distinct practices of other participants.",
+    quote: "Under Olga's curatorial guidance, I learned to articulate my ideas more clearly and to present my work with greater confidence.",
     author: "Participant, Cohort 2025",
     stars: 5,
   },
