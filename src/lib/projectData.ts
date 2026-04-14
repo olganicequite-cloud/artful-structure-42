@@ -23,6 +23,12 @@ import nadyaWork5 from "@/assets/fear-here-v.jpg";
 import nadyaWork6 from "@/assets/fear-here-vi.jpg";
 import yanaWork1 from "@/assets/yana-work-1.jpg";
 import yanaWork2 from "@/assets/yana-work-2.jpg";
+import yanaFlow1 from "@/assets/yana-flow-1.jpg";
+import yanaFlow2 from "@/assets/yana-flow-2.jpg";
+import yanaFlow3 from "@/assets/yana-flow-3.jpg";
+import yanaFlow4 from "@/assets/yana-flow-4.jpg";
+import yanaFlow5 from "@/assets/yana-flow-5.jpg";
+import yanaFlow6 from "@/assets/yana-flow-6.jpg";
 import yanaWork3 from "@/assets/yana-work-3.jpg";
 import yanaWork4 from "@/assets/yana-work-4.jpg";
 import yanaWork5 from "@/assets/yana-work-5.jpg";
@@ -262,7 +268,38 @@ export const projects: Project[] = [
       "These moments are fragile.\nThey cannot be held or repeated.\nThey exist only briefly — and then they disappear.",
       "The photography project \"Flow\" is an attempt to capture these intimate moments of presence — moments of full concentration, when something shaped from the inside becomes visible: a movement, a sound, a gesture.\nPhotography freezes what is already passing.\nWhat once existed only in the body remains as a trace —\na memory of a moment that is already gone.",
     ],
-    images: [],
+    images: [
+      {
+        src: yanaFlow1,
+        alt: "Yana Kaziulia — Flow I",
+        caption: { title: "Flow I", medium: "Photograph", dimensions: "60 × 90 cm" },
+      },
+      {
+        src: yanaFlow2,
+        alt: "Yana Kaziulia — Flow II",
+        caption: { title: "Flow II", medium: "Photograph", dimensions: "60 × 90 cm" },
+      },
+      {
+        src: yanaFlow3,
+        alt: "Yana Kaziulia — Flow III",
+        caption: { title: "Flow III", medium: "Photograph", dimensions: "60 × 90 cm" },
+      },
+      {
+        src: yanaFlow4,
+        alt: "Yana Kaziulia — Flow IV",
+        caption: { title: "Flow IV", medium: "Photograph", dimensions: "60 × 90 cm" },
+      },
+      {
+        src: yanaFlow5,
+        alt: "Yana Kaziulia — Flow V",
+        caption: { title: "Flow V", medium: "Photograph", dimensions: "60 × 90 cm" },
+      },
+      {
+        src: yanaFlow6,
+        alt: "Yana Kaziulia — Flow VI",
+        caption: { title: "Flow VI", medium: "Photograph", dimensions: "60 × 90 cm" },
+      },
+    ],
   },
 ];
 
