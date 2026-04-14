@@ -135,7 +135,8 @@ const CityExhibitionSection = () => {
           {cityArtworks.map((artwork, i) => (
             <FadeIn key={artwork.slug} delay={i * 0.05}>
               <div>
-                <Link to={`/projects/${artwork.slug}`} className="group block">
+                {/* Image + title → project detail page */}
+                <Link to={`/exhibition/city/${artwork.slug}`} className="group block">
                   <div className="aspect-[4/5] bg-secondary overflow-hidden mb-3">
                     <img
                       src={artwork.thumbnail}
@@ -147,9 +148,13 @@ const CityExhibitionSection = () => {
                   <h3 className="font-sans text-base md:text-lg font-light leading-snug mb-0.5">
                     {artwork.title}
                   </h3>
-                  <p className="text-editorial-caption hover:text-foreground transition-colors">
-                    {artwork.artist}
-                  </p>
+                </Link>
+                {/* Artist name → artist bio page */}
+                <Link
+                  to={`/artists/${artwork.artistSlug}`}
+                  className="text-editorial-caption hover:text-foreground transition-colors"
+                >
+                  {artwork.artist}
                 </Link>
               </div>
             </FadeIn>
