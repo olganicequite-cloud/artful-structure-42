@@ -280,7 +280,7 @@ export const projects: Project[] = [
         caption: { title: "Flow II", medium: "Photograph", dimensions: "60 × 90 cm" },
       },
       {
-        src: yanaFlow3,
+        src: yanaFlow6,
         alt: "Yana Kaziulia — Flow III",
         caption: { title: "Flow III", medium: "Photograph", dimensions: "60 × 90 cm" },
       },
@@ -295,7 +295,7 @@ export const projects: Project[] = [
         caption: { title: "Flow V", medium: "Photograph", dimensions: "60 × 90 cm" },
       },
       {
-        src: yanaFlow6,
+        src: yanaFlow3,
         alt: "Yana Kaziulia — Flow VI",
         caption: { title: "Flow VI", medium: "Photograph", dimensions: "60 × 90 cm" },
       },
