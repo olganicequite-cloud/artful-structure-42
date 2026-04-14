@@ -5,6 +5,7 @@ import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import { getProjectBySlug, type ProjectImage } from "@/lib/projectData";
+import { cityArtworks } from "@/lib/cityExhibitionData";
 
 /** Subtle scroll-reveal for each artwork block on desktop */
 const useScrollReveal = () => {
@@ -196,6 +197,10 @@ const ProjectDetail = () => {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   if (!project) return <Navigate to="/projects" replace />;
+
+  const cityArtwork = cityArtworks.find((a) => a.slug === slug);
+  const hasImages = project.images.length > 0;
+  const bannerImage = cityArtwork?.thumbnail;
 
   return (
     <SiteLayout>
