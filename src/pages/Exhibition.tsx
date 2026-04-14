@@ -31,10 +31,10 @@ const Exhibition = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/50" />
 
-        {/* Photo Credit - positioned absolute top-right */}
-        <div className="absolute z-20 top-4 right-4 md:top-6 md:right-6">
+        {/* Photo Credit - top right inside hero (desktop/tablet only) */}
+        <div className="hidden md:block absolute z-20 top-4 right-4 md:top-6 md:right-6">
           <p className="text-xs font-sans text-primary-foreground/40">
-            First STYX banner image: Photo by Olga Tarabukina
+            Photo by Olga Tarabukina
           </p>
         </div>
 
@@ -143,6 +143,13 @@ const Exhibition = () => {
           </FadeIn>
         </div>
       </section>
+
+      {/* STYX Photo Credit - mobile only, below hero */}
+      <div className="md:hidden page-padding pt-4 pb-5">
+        <p className="text-xs font-sans text-foreground/40">
+          Photo by Olga Tarabukina
+        </p>
+      </div>
 
       {/* Breadcrumb + Description */}
       <section className="pt-8 pb-10 md:section-spacing page-padding">
