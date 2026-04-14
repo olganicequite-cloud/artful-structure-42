@@ -138,7 +138,7 @@ const HomePage = () => {
       </section>
 
       {/* 4. Curator — Olga Tarabukina */}
-      <section className="page-padding pb-16 md:pb-28">
+      <section id="curator" className="page-padding pb-16 md:pb-28">
         <div className="max-w-4xl mx-auto">
           <FadeIn>
             <div className="gallery-divider mb-10" />
