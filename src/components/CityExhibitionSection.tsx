@@ -23,10 +23,10 @@ const CityExhibitionSection = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/15 to-black/45" />
 
-        {/* Photo Credit - top right inside hero, matching STYX style */}
-        <div className="absolute z-20 top-4 right-4 md:top-6 md:right-6">
+        {/* Photo Credit - top right inside hero (desktop/tablet only) */}
+        <div className="hidden md:block absolute z-20 top-4 right-4 md:top-6 md:right-6">
           <p className="text-xs font-sans text-primary-foreground/40">
-            CITY banner image: Photo by Oxana Grom
+            Photo by Oxana Grom
           </p>
         </div>
 
@@ -92,6 +92,13 @@ const CityExhibitionSection = () => {
       </section>
 
 
+
+      {/* CITY Photo Credit - mobile only, below hero */}
+      <div className="md:hidden page-padding pt-4 pb-5">
+        <p className="text-xs font-sans text-foreground/40">
+          Photo by Oxana Grom
+        </p>
+      </div>
 
       {/* CITY Description */}
       <section className="pt-8 pb-10 md:section-spacing page-padding">
