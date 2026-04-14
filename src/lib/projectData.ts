@@ -300,6 +300,7 @@ export const projects: Project[] = [
         caption: { title: "Flow VI", medium: "Photograph", dimensions: "60 × 90 cm" },
       },
     ],
+  },
 ];
 
 export const getProjectBySlug = (slug: string): Project | undefined =>
