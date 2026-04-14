@@ -25,7 +25,7 @@ const footerLegal = [
 
 const SiteLayout = ({ children }: SiteLayoutProps) => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="bg-background" style={{ minHeight: '100dvh' }}>
       <SiteHeader />
       <FixedInstagramIcon />
       <main className="pt-14 md:pt-16">
