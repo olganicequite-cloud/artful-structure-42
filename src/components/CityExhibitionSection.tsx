@@ -143,9 +143,15 @@ const CityExhibitionSection = () => {
                     {artwork.title}
                   </h3>
                 </div>
-                <p className="text-editorial-caption">
-                  {artwork.artist}
-                </p>
+                {artwork.artistSlug === "olga-tarabukina" ? (
+                  <Link to="/#curator" className="text-editorial-caption hover:text-foreground transition-colors">
+                    {artwork.artist}
+                  </Link>
+                ) : (
+                  <p className="text-editorial-caption">
+                    {artwork.artist}
+                  </p>
+                )}
               </div>
             </FadeIn>
           ))}
