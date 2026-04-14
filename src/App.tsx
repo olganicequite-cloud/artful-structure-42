@@ -12,6 +12,7 @@ import ProjectDetail from "./pages/ProjectDetail";
 import Projects2025 from "./pages/Projects2025";
 import Contact from "./pages/Contact";
 import ArtworkDetail from "./pages/ArtworkDetail";
+import CityProjectDetail from "./pages/CityProjectDetail";
 import Imprint from "./pages/Imprint";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/" element={<HomePage />} />
           <Route path="/exhibition" element={<Exhibition />} />
           <Route path="/exhibition/:slug" element={<ArtworkDetail />} />
+          <Route path="/exhibition/city/:slug" element={<CityProjectDetail />} />
           <Route path="/artists" element={<ArtistTeam />} />
           <Route path="/artists/:slug" element={<ArtistDetail />} />
           <Route path="/projects" element={<Projects202526 />} />
