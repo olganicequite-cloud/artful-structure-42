@@ -303,5 +303,7 @@ export const projects: Project[] = [
   },
 ];
 
+import { projects2025 } from "@/lib/projectData2025";
+
 export const getProjectBySlug = (slug: string): Project | undefined =>
-  projects.find((p) => p.slug === slug);
+  projects.find((p) => p.slug === slug) || projects2025.find((p) => p.slug === slug);
