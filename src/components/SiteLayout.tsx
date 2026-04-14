@@ -36,7 +36,7 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 mb-12">
             {/* Brand */}
             <div className="col-span-2 md:col-span-1">
-              <Link to="/" className="font-sans text-xs tracking-[0.2em] uppercase text-foreground/40 hover:text-foreground transition-colors">
+              <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="font-sans text-xs tracking-[0.2em] uppercase text-foreground/40 hover:text-foreground transition-colors">
                 Creative Project NEW
               </Link>
               <p className="text-editorial-caption mt-2.5">Berlin, Germany</p>
