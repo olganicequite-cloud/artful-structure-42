@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Instagram } from "lucide-react";
-import logo from "@/assets/logo.png";
+
 
 const navItems = [
   { path: "/", label: "Home" },
@@ -18,12 +18,10 @@ const SiteHeader = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm">
       <div className="page-padding flex items-center justify-between h-14 md:h-16">
-        <Link to="/" className="flex items-center h-8 md:h-9">
-          <img
-            src={logo}
-            alt="Creative Project NEW"
-            className="h-5 md:h-6 w-auto"
-          />
+        <Link to="/" className="flex items-center">
+          <span className="font-sans text-sm md:text-[15px] font-medium tracking-[0.08em] uppercase text-foreground">
+            Creative Project <span className="font-semibold">NEW</span>
+          </span>
         </Link>
 
         {/* Desktop nav */}
