@@ -102,7 +102,15 @@ const SiteLayout = ({ children }: SiteLayoutProps) => {
             </div>
           </div>
 
-          <div className="border-t border-foreground/8 pt-6">
+          <div className="border-t border-foreground/8 pt-6 flex flex-col gap-2.5">
+            <a
+              href="https://www.instagram.com/creative.project.new/?__d=undefined"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-editorial-caption hover:text-foreground transition-colors md:hidden"
+            >
+              Instagram
+            </a>
             <p className="text-editorial-caption text-foreground/40">
               © 2025–2026 Creative Project NEW
             </p>
