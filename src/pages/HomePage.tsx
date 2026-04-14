@@ -89,7 +89,7 @@ const HomePage = () => {
           <div className="absolute z-10 bottom-5 right-5 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 lg:bottom-8 lg:right-8">
             <Link
               to="/contact?reason=Participation"
-              className="px-4 py-2 sm:px-5 sm:py-2 lg:px-6 lg:py-2.5 border border-white/80 text-white/90 text-xs lg:text-editorial-detail hover:bg-white hover:text-black transition-colors duration-300 inline-block"
+              className="px-4 py-2 sm:px-5 sm:py-2 lg:px-6 lg:py-2.5 border border-white/80 text-white/90 bg-black/25 backdrop-blur-sm text-xs lg:text-editorial-detail hover:bg-white hover:text-black transition-colors duration-300 inline-block"
             >
               Participate
             </Link>
