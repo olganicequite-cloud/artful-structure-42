@@ -26,7 +26,7 @@ const CityExhibitionSection = () => {
         <div className="relative z-10 page-padding pt-20 md:pt-28 lg:pt-24 w-full">
           <FadeIn>
             <p className="text-xs md:text-sm tracking-[0.3em] uppercase font-sans mb-2 md:mb-3 text-primary-foreground/60">
-              Past Exhibition
+              PAST EXHIBITION
             </p>
             <h2
               className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-[0.04em] text-primary-foreground mb-2 md:mb-4"
@@ -45,9 +45,13 @@ const CityExhibitionSection = () => {
             <div className="hidden lg:flex flex-row items-end gap-10 mt-8">
               <div className="space-y-3">
                 <div>
-                  <p className="font-sans text-xs tracking-widest uppercase text-primary-foreground/50 mb-0.5">Opening</p>
+                  <p className="font-sans text-xs tracking-widest uppercase text-primary-foreground/50 mb-0.5">VERNISSAGE</p>
                   <p className="font-sans text-sm text-primary-foreground/90">7. June 2025</p>
                   <p className="font-sans text-sm font-light text-primary-foreground/70">5 p.m. – 8 p.m.</p>
+                </div>
+                <div>
+                  <p className="font-sans text-xs tracking-widest uppercase text-primary-foreground/50 mb-0.5">EXHIBITION</p>
+                  <p className="font-sans text-sm text-primary-foreground/90">7.06.2025 – 2.09.2025</p>
                 </div>
                 <div className="pt-1">
                   <p className="font-sans text-lg text-primary-foreground">BOX66</p>
@@ -63,9 +67,13 @@ const CityExhibitionSection = () => {
           <FadeIn>
             <div className="space-y-3">
               <div>
-                <p className="font-sans text-xs tracking-widest uppercase text-primary-foreground/50 mb-0.5">Opening</p>
+                <p className="font-sans text-xs tracking-widest uppercase text-primary-foreground/50 mb-0.5">VERNISSAGE</p>
                 <p className="font-sans text-sm text-primary-foreground/90">7. June 2025</p>
                 <p className="font-sans text-sm font-light text-primary-foreground/70">5 p.m. – 8 p.m.</p>
+              </div>
+              <div>
+                <p className="font-sans text-xs tracking-widest uppercase text-primary-foreground/50 mb-0.5">EXHIBITION</p>
+                <p className="font-sans text-sm text-primary-foreground/90">7.06.2025 – 2.09.2025</p>
               </div>
               <div className="pt-1">
                 <p className="font-sans text-lg text-primary-foreground">BOX66</p>
@@ -74,6 +82,15 @@ const CityExhibitionSection = () => {
             </div>
           </FadeIn>
         </div>
+      </section>
+
+      {/* Photo Credit */}
+      <section className="page-padding pb-4 md:pb-6">
+        <FadeIn>
+          <p className="text-editorial-caption text-muted-foreground text-right">
+            CITY banner image: Photo by Oxana Grom
+          </p>
+        </FadeIn>
       </section>
 
       {/* CITY Description */}
