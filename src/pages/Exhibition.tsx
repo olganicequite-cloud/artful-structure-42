@@ -31,6 +31,13 @@ const Exhibition = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/50" />
 
+        {/* Photo Credit - positioned absolute top-right */}
+        <div className="absolute z-20 top-4 right-4 md:top-6 md:right-6">
+          <p className="text-xs font-sans text-primary-foreground/40">
+            First STYX banner image: Photo by Olga Tarabukina
+          </p>
+        </div>
+
         {/* Title group — upper-left */}
         <div className="relative z-10 page-padding pt-24 md:pt-32 lg:pt-20 w-full">
           <FadeIn>
