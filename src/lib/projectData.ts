@@ -268,7 +268,38 @@ export const projects: Project[] = [
       "These moments are fragile.\nThey cannot be held or repeated.\nThey exist only briefly — and then they disappear.",
       "The photography project \"Flow\" is an attempt to capture these intimate moments of presence — moments of full concentration, when something shaped from the inside becomes visible: a movement, a sound, a gesture.\nPhotography freezes what is already passing.\nWhat once existed only in the body remains as a trace —\na memory of a moment that is already gone.",
     ],
-    images: [],
+    images: [
+      {
+        src: yanaFlow1,
+        alt: "Yana Kaziulia — Flow I",
+        caption: { title: "Flow I", medium: "Photograph", dimensions: "60 × 90 cm" },
+      },
+      {
+        src: yanaFlow2,
+        alt: "Yana Kaziulia — Flow II",
+        caption: { title: "Flow II", medium: "Photograph", dimensions: "60 × 90 cm" },
+      },
+      {
+        src: yanaFlow3,
+        alt: "Yana Kaziulia — Flow III",
+        caption: { title: "Flow III", medium: "Photograph", dimensions: "60 × 90 cm" },
+      },
+      {
+        src: yanaFlow4,
+        alt: "Yana Kaziulia — Flow IV",
+        caption: { title: "Flow IV", medium: "Photograph", dimensions: "60 × 90 cm" },
+      },
+      {
+        src: yanaFlow5,
+        alt: "Yana Kaziulia — Flow V",
+        caption: { title: "Flow V", medium: "Photograph", dimensions: "60 × 90 cm" },
+      },
+      {
+        src: yanaFlow6,
+        alt: "Yana Kaziulia — Flow VI",
+        caption: { title: "Flow VI", medium: "Photograph", dimensions: "60 × 90 cm" },
+      },
+    ],
   },
 ];
 
