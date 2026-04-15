@@ -110,12 +110,12 @@ export const projects: Project[] = [
       {
         src: ajWork1,
         alt: "Aj Jul — Dynamics of the Seasons 1",
-        caption: { title: "Winter & Spring", medium: "Color pastels and pencils on paper", dimensions: "Approx. A4" },
+        caption: { title: "Summer & Autumn", medium: "Color pastels and pencils on paper", dimensions: "Approx. A4" },
       },
       {
         src: ajWork2,
         alt: "Aj Jul — Dynamics of the Seasons 2",
-        caption: { title: "Summer & Autumn", medium: "Color pastels and pencils on paper", dimensions: "Approx. A4" },
+        caption: { title: "Winter & Spring", medium: "Color pastels and pencils on paper", dimensions: "Approx. A4" },
       },
     ],
   },
