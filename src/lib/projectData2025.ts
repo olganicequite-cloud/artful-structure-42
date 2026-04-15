@@ -15,6 +15,10 @@ import dariaDancing2 from "@/assets/daria-dancing-2.jpg";
 import evaCity1 from "@/assets/eva-city-1.jpg";
 import evaCity2 from "@/assets/eva-city-2.jpg";
 import nadezhdaBeyond1 from "@/assets/nadezhda-beyond-1.jpg";
+import olgaGeometry1 from "@/assets/olga-geometry-1.jpg";
+import olgaGeometry2 from "@/assets/olga-geometry-2.jpg";
+import oxanaOrchestra1 from "@/assets/oxana-orchestra-1.jpg";
+import oxanaOrchestra2 from "@/assets/oxana-orchestra-2.jpg";
 
 import type { Project } from "@/lib/projectData";
 
@@ -152,9 +156,14 @@ export const projects2025: Project[] = [
     ],
     images: [
       {
-        src: thumbOxana,
-        alt: "Oxana Grom — The City as Orchestra",
-        caption: { title: "The City as Orchestra", medium: "Photograph", dimensions: "Various sizes" },
+        src: oxanaOrchestra1,
+        alt: "Oxana Grom — The City as Orchestra I",
+        caption: { title: "The City as Orchestra I", medium: "Photograph", dimensions: "Various sizes" },
+      },
+      {
+        src: oxanaOrchestra2,
+        alt: "Oxana Grom — The City as Orchestra II",
+        caption: { title: "The City as Orchestra II", medium: "Photograph", dimensions: "Various sizes" },
       },
     ],
   },
@@ -171,9 +180,14 @@ export const projects2025: Project[] = [
     ],
     images: [
       {
-        src: thumbOlga,
-        alt: "Olga Iavorskaia — Geometry of the City",
-        caption: { title: "Geometry of the City", medium: "Photograph", dimensions: "Various sizes" },
+        src: olgaGeometry1,
+        alt: "Olga Iavorskaia — Geometry of the City I",
+        caption: { title: "Geometry of the City I", medium: "Photograph", dimensions: "Various sizes" },
+      },
+      {
+        src: olgaGeometry2,
+        alt: "Olga Iavorskaia — Geometry of the City II",
+        caption: { title: "Geometry of the City II", medium: "Photograph", dimensions: "Various sizes" },
       },
     ],
   },
