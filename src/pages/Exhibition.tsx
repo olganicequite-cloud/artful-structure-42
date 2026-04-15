@@ -192,7 +192,7 @@ const Exhibition = () => {
             <FadeIn key={artwork.slug} delay={i * 0.05}>
               <div>
                 <Link
-                  to={artwork.artistSlug === "olga-tarabukina" ? "/#curator" : `/exhibition/${artwork.slug}`}
+                  to={`/exhibition/${artwork.slug}`}
                   className="group"
                 >
                   <div className="aspect-[4/5] bg-secondary overflow-hidden mb-3">
