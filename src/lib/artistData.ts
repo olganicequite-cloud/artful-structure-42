@@ -45,6 +45,7 @@ export interface Artist {
   portrait: string;
   cohort: "2025-26" | "2025";
   projects: ArtistProject[];
+  instagram?: { handle: string; url: string }[];
 }
 
 export const artists: Artist[] = [
@@ -57,6 +58,7 @@ export const artists: Artist[] = [
     artistStatement: "My work centers on the human figure — faces, hands, bodies — as it dissolves into and re-forms from its surroundings. I am exploring the boundary between person and environment: how figures blend into space through lines, dots, and fields of color, while simultaneously shaping that space. In this way, the work reflects a mutual influence — people are continuously affecting and being affected by other people and the context around them.\n\nFrom Schiele, I draw a tension in line and proportion; from Toulouse-Lautrec, a fluid mixing of media; from Chagall, poetic treatment of love and human connection.\n\nMy recent works are made primarily with color pastels and pencils on paper, occasionally incorporating watercolor. These materials let me shift between line and color, reinforcing the sense of figures fragmenting into space. The process itself plays a decisive role. Light, mood, and intuition often shift the direction of a piece, so that the image begins to guide me as much as I guide it.\n\nRather than prescribing a single meaning, my works suggest a direction, inviting viewers to look closer, to recognize something that resonates uniquely with them.",
     portrait: ajPortrait,
     cohort: "2025-26",
+    instagram: [{ handle: "@_aj.jul", url: "https://www.instagram.com/_aj.jul" }],
     projects: [
       {
         title: "Dynamics of the Seasons",
@@ -77,6 +79,7 @@ export const artists: Artist[] = [
     artistStatement: "My photographic practice engages with states that resist direct articulation. At its core lies the fragility of presence, shifts in perception, and an inner tension that exists at the threshold of the visible.\n\nStylistically, I draw on the language of Impressionism, particularly its luminous and sensorial dimension, where impression takes precedence over form. The influence of artists such as Claude Monet, Pierre-Auguste Renoir, and Berthe Morisot is reflected in my use of light, softened focus, and the dissolution of boundaries as a way to convey psychological states.\n\nI am not interested in documenting events, but in capturing internal shifts — moments of dislocation, where the sense of self begins to destabilize. Within the frame, space operates as an extension of the psyche: it compresses, dissolves, or isolates the figure.\n\nMy practice merges the roles of photographer and multimedia artist. I work with my own images, positioning myself as both author and subject. This gesture removes the distance between experience and its representation. The use of artificial intelligence becomes a tool for transformation — a movement from documentation toward an internal, subjective image.\n\nThe work is built on minimal visual shifts: gesture, breath, light. Through these elements, a field emerges in which the otherwise invisible can surface.\n\nFor me, photography is a space where solitude becomes visible.",
     portrait: annaPortrait,
     cohort: "2025-26",
+    instagram: [{ handle: "@anna_art.foto", url: "https://www.instagram.com/anna_art.foto" }],
     projects: [
       {
         title: "Invisible Weight — A Diary of a Shadow",
@@ -100,6 +103,10 @@ export const artists: Artist[] = [
     artistStatement: "My artistic practice explores states of transition, where beauty does not disappear but transforms. I am drawn to the fragile moment between vitality and stillness — a space where form changes, yet presence remains.\n\nIn my recent work, I focus on dried flowers as carriers of this transformation. Rather than symbols of decay, I see them as evidence of continuation: a quieter, more introspective state of being, where time becomes visible and beauty reveals a different depth.\n\nWorking primarily with macro photography, I shift the viewer's perception by bringing attention to details that often remain unnoticed. By isolating fragments and enlarging them, I create a visual language that invites a slower, more attentive way of seeing — one that reveals hidden structures, textures, and inner landscapes.\n\nMy approach is shaped by my background as a criminal investigator in the police. This experience formed my way of seeing — looking beyond the surface, uncovering what is hidden, and bringing it into visibility. Today, this investigative gaze remains, but it has transformed: instead of evidence, I reveal fragile traces of beauty, change, and presence.\n\nMoving between observation and interpretation, my work uncovers what exists beneath the visible. I am interested not in endings, but in continuations — in the quiet persistence of form, and in the idea that transformation itself holds its own kind of beauty.",
     portrait: mariiaPortrait,
     cohort: "2025-26",
+    instagram: [
+      { handle: "@maria.zatsepina", url: "https://www.instagram.com/maria.zatsepina" },
+      { handle: "@perunda", url: "https://www.instagram.com/perunda" },
+    ],
     projects: [
       {
         title: "Flowers",
@@ -121,6 +128,7 @@ export const artists: Artist[] = [
     artistStatement: "My work explores memory, identity, and emotional presence. I'm interested in how spaces carry traces of human experience and how inner feelings become visible.\n\nFor me, photography is a way to slow down and resist anxiety caused by everyday stress and information overload. It is a practice of being present — of paying attention to details that often remain unnoticed.\n\nI believe a photograph should evoke an emotional response without needing explanation. A concept can offer context, but it should never overshadow the image itself. Emotional impact matters more to me than technical perfection. I am drawn to images that breathe — even if they are blurred, slightly out of focus, or marked by movement. What matters is whether the photograph carries emotion and tells a story.\n\nMy visual language is shaped by black-and-white analog photography, with its attention to atmosphere, human presence, and quiet psychological tension. It is also informed by the work of contemporary artists such as Elizaveta Porodina, Anton Corbijn, Joakim Möller, Sarah Moon, and Xenie Zasetskaya. Corbijn's raw, living portraits, Zasetskaya's use of light through prisms, Möller's visual rhymes, and the painterly use of color and abstraction in the works of Moon and Porodina resonate strongly with my approach.\n\nIn my practice, I use experimental and intuitive techniques, including creative filters, long exposure, and double exposure. These methods help preserve a sense of emotion and atmosphere, rather than merely documenting reality.",
     portrait: yanaPortrait,
     cohort: "2025-26",
+    instagram: [{ handle: "@yanakaziulia_photography", url: "https://www.instagram.com/yanakaziulia_photography" }],
     projects: [
       {
         title: "Liberation of Colors",
@@ -144,6 +152,7 @@ export const artists: Artist[] = [
     artistStatement: "My artistic practice explores what it means to live between worlds — shaped by forced migration, inherited histories of displacement, and the instability of belonging within a changing social and political reality. I am interested in the space between past and future, old and new identities, where memory, fear, and adaptation coexist.\n\nMy practice is also informed by the broader social and political realities that shape contemporary experiences of migration, displacement, and fractured belonging. I am interested in how these conditions affect not only individual lives, but collective and intergenerational experiences of loss, adaptation, and the search for home.\n\nI work between painting, digital photography, and illustration. Many of my works begin as digital compositions in which I combine photographs from my personal archive with drawn interventions and fictional elements. These images later develop into physical paintings, where I use acrylic and oil pastel on canvas to build texture, density, and a tactile emotional surface.\n\nMy visual language is informed by artists whose work transforms memory, displacement, and unstable belonging into symbolic form. I feel close to Marc Chagall's dreamlike imagery and his use of floating, imagined figures as carriers of memory and emotional experience. Alva Skog's hybrid approach to combining illustrated bodies with urban and photographic space influenced my early digital experiments, where I first began merging photography and illustration. I am also drawn to Szilveszter Makó's theatrical, painterly use of photography, in which staged characters and carefully constructed atmospheres create a reality that feels both historical and unreal.\n\nMoving between digital and physical processes, documentary fragments and imagined forms, real and surreal dimensions, I create narrative spaces in which everyday reality gradually shifts into an inner symbolic world. Rooted in my own experience, my work speaks to collective and intergenerational stories of migration, loss, and the search for home. I understand adaptation not as overcoming, but as learning to exist within change while gradually constructing a new sense of balance.",
     portrait: nadyaPortrait,
     cohort: "2025-26",
+    instagram: [{ handle: "@nadya_netsvetaeva", url: "https://www.instagram.com/nadya_netsvetaeva" }],
     projects: [
       {
         title: "FEAR HERE",
@@ -166,6 +175,7 @@ export const placeholderArtists2025: Artist[] = [
     artistStatement: "My work begins where noise ends. I am drawn to the overlooked spaces within cities — transitional zones, reflections in glass, corridors of light between buildings — where solitude is not absence but presence. Photography, for me, is a practice of attention: slowing down enough to notice how urban space holds and releases us. I am interested in the tension between confinement and openness, between the built environment and the vastness it occasionally reveals. Each image is an attempt to make visible the quiet freedom that exists within the everyday.",
     portrait: nadezhdaPortrait,
     cohort: "2025",
+    instagram: [{ handle: "@slavinskene", url: "https://www.instagram.com/slavinskene" }],
     projects: [{ title: "Beyond Form", description: "A project exploring the tension between architectural structure and emotional states within urban interiors.", images: [] }],
   },
   {
@@ -177,6 +187,7 @@ export const placeholderArtists2025: Artist[] = [
     artistStatement: "I see the city as a body — breathing, expanding, contracting. My video work attempts to capture this respiration: the way light shifts across a facade over minutes, the rhythm of footsteps in an underpass, the almost musical quality of traffic seen from a distance. I am not interested in narrative in the traditional sense, but in atmosphere as content. Each piece is an invitation to experience urban space as something felt rather than merely seen, to recognize the city not as a fixed structure but as an ongoing, collective performance.",
     portrait: markPortrait,
     cohort: "2025",
+    instagram: [{ handle: "@markusha_cars", url: "https://www.instagram.com/markusha_cars" }],
     projects: [{ title: "Marzahn 90", description: "A visual journey into the rhythms and textures of a Berlin district that carries layers of history.", images: [] }],
   },
   {
@@ -188,6 +199,10 @@ export const placeholderArtists2025: Artist[] = [
     artistStatement: "I photograph what buildings do not intend to show. My attention is drawn to shadow zones — the spaces where light fails to reach evenly, where surfaces crack or discolor, where architectural intention gives way to material reality. These are the moments where a structure reveals something unguarded. I work slowly, often returning to the same site under different conditions, watching how a wall or a corner transforms with the movement of the sun. For me, photography is a way of listening to space — recording not what is said, but what is whispered.",
     portrait: olgaPortrait,
     cohort: "2025",
+    instagram: [
+      { handle: "@photolife_by_olga", url: "https://www.instagram.com/photolife_by_olga" },
+      { handle: "@photoart_by_olga", url: "https://www.instagram.com/photoart_by_olga" },
+    ],
     projects: [{ title: "Geometry of the City", description: "A photographic investigation into the formal language of architecture — lines, angles, and surfaces.", images: [] }],
   },
   {
@@ -199,6 +214,7 @@ export const placeholderArtists2025: Artist[] = [
     artistStatement: "I am interested in the choreography of the unscripted moment — the way a person moves through a doorway, shifts their weight on a train platform, or turns toward a sound. These gestures, fleeting and often unconscious, contain a visual music that I try to preserve through photography. My work sits at the intersection of portraiture and movement study, seeking not to freeze motion but to hold it in suspension. I want the viewer to feel the continuation — the breath before and after the frame — and to recognize in these ordinary movements something deeply, quietly expressive.",
     portrait: dariaPortrait,
     cohort: "2025",
+    instagram: [{ handle: "@makelovenotevol", url: "https://www.instagram.com/makelovenotevol" }],
     projects: [{ title: "The City as Dancing Figure", description: "Visual choreography where gesture, space, and structure become inseparable.", images: [] }],
   },
   {
@@ -210,6 +226,7 @@ export const placeholderArtists2025: Artist[] = [
     artistStatement: "Transformation is not a single event but a constant undercurrent. My photographs attempt to make this visible — to capture the moment when something is no longer what it was but has not yet become what it will be. I am drawn to thresholds: physical, emotional, psychological. Whether working with a model in a controlled setting or observing a stranger in passing light, I look for the instant when the surface cracks slightly and something authentic emerges. My practice is driven by the belief that photography can hold complexity — that a single frame can contain both vulnerability and strength, stillness and motion, ending and beginning.",
     portrait: annaK2025Portrait,
     cohort: "2025",
+    instagram: [{ handle: "@anna_art.foto", url: "https://www.instagram.com/anna_art.foto" }],
     projects: [{ title: "Frozen Moments", description: "Capturing the transient beauty of suspended time within urban environments.", images: [] }],
   },
   {
@@ -221,6 +238,7 @@ export const placeholderArtists2025: Artist[] = [
     artistStatement: "I photograph what I remember before I forget it. My practice is rooted in the belief that perception is already a form of memory — that the moment we see something, it has already begun to transform in our minds. I am drawn to soft transitions, ambient light, and the edges of attention, where the world reveals itself most honestly. My work is not about capturing decisive moments but about preserving the texture of experience — the quality of light in a room, the weight of silence in a corridor, the way a face looks just after a thought has passed. Photography, for me, is a form of intuitive notation.",
     portrait: evaMariaPortrait,
     cohort: "2025",
+    instagram: [{ handle: "@blixa_ketzer", url: "https://www.instagram.com/blixa_ketzer" }],
     projects: [{ title: "The City Is…", description: "An open-ended exploration of urban identity through intuitive observation and poetic fragments.", images: [] }],
   },
   {
@@ -232,6 +250,7 @@ export const placeholderArtists2025: Artist[] = [
     artistStatement: "I look for rhythm in the city the way a musician listens for a beat. My photographs isolate the visual patterns that urban environments produce — the repetition of windows, the syncopation of shadows on a wall, the counterpoint between a smooth surface and a textured one. I am interested in form not as an abstract exercise but as something deeply connected to how we experience space. Rhythm creates expectation, and breaks in rhythm create surprise. My work moves between these two poles, seeking compositions where order and disruption coexist, and where the city reveals itself as both system and improvisation.",
     portrait: oxanaPortrait,
     cohort: "2025",
+    instagram: [{ handle: "@oxanagromartfoto", url: "https://www.instagram.com/oxanagromartfoto" }],
     projects: [{ title: "The City as Orchestra", description: "Translating the visual rhythms of urban environments into a photographic language of form and repetition.", images: [] }],
   },
 ];
