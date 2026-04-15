@@ -101,6 +101,27 @@ const ArtistDetail = () => {
               </Link>
             </FadeIn>
           )}
+
+          {/* Instagram */}
+          {artist.instagram && artist.instagram.length > 0 && (
+            <FadeIn>
+              <div className="gallery-divider mb-10" />
+              <p className="text-editorial-detail mb-3">Instagram</p>
+              <div className="flex flex-col gap-1">
+                {artist.instagram.map((ig) => (
+                  <a
+                    key={ig.handle}
+                    href={ig.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-editorial-body hover:opacity-60 transition-opacity"
+                  >
+                    {ig.handle}
+                  </a>
+                ))}
+              </div>
+            </FadeIn>
+          )}
         </div>
       </section>
     </SiteLayout>

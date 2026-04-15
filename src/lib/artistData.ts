@@ -250,6 +250,7 @@ export const placeholderArtists2025: Artist[] = [
     artistStatement: "I look for rhythm in the city the way a musician listens for a beat. My photographs isolate the visual patterns that urban environments produce — the repetition of windows, the syncopation of shadows on a wall, the counterpoint between a smooth surface and a textured one. I am interested in form not as an abstract exercise but as something deeply connected to how we experience space. Rhythm creates expectation, and breaks in rhythm create surprise. My work moves between these two poles, seeking compositions where order and disruption coexist, and where the city reveals itself as both system and improvisation.",
     portrait: oxanaPortrait,
     cohort: "2025",
+    instagram: [{ handle: "@oxanagromartfoto", url: "https://www.instagram.com/oxanagromartfoto" }],
     projects: [{ title: "The City as Orchestra", description: "Translating the visual rhythms of urban environments into a photographic language of form and repetition.", images: [] }],
   },
 ];
