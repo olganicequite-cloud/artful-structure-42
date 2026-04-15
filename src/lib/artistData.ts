@@ -175,6 +175,7 @@ export const placeholderArtists2025: Artist[] = [
     artistStatement: "My work begins where noise ends. I am drawn to the overlooked spaces within cities — transitional zones, reflections in glass, corridors of light between buildings — where solitude is not absence but presence. Photography, for me, is a practice of attention: slowing down enough to notice how urban space holds and releases us. I am interested in the tension between confinement and openness, between the built environment and the vastness it occasionally reveals. Each image is an attempt to make visible the quiet freedom that exists within the everyday.",
     portrait: nadezhdaPortrait,
     cohort: "2025",
+    instagram: [{ handle: "@slavinskene", url: "https://www.instagram.com/slavinskene" }],
     projects: [{ title: "Beyond Form", description: "A project exploring the tension between architectural structure and emotional states within urban interiors.", images: [] }],
   },
   {
@@ -186,6 +187,7 @@ export const placeholderArtists2025: Artist[] = [
     artistStatement: "I see the city as a body — breathing, expanding, contracting. My video work attempts to capture this respiration: the way light shifts across a facade over minutes, the rhythm of footsteps in an underpass, the almost musical quality of traffic seen from a distance. I am not interested in narrative in the traditional sense, but in atmosphere as content. Each piece is an invitation to experience urban space as something felt rather than merely seen, to recognize the city not as a fixed structure but as an ongoing, collective performance.",
     portrait: markPortrait,
     cohort: "2025",
+    instagram: [{ handle: "@markusha_cars", url: "https://www.instagram.com/markusha_cars" }],
     projects: [{ title: "Marzahn 90", description: "A visual journey into the rhythms and textures of a Berlin district that carries layers of history.", images: [] }],
   },
   {
@@ -197,6 +199,10 @@ export const placeholderArtists2025: Artist[] = [
     artistStatement: "I photograph what buildings do not intend to show. My attention is drawn to shadow zones — the spaces where light fails to reach evenly, where surfaces crack or discolor, where architectural intention gives way to material reality. These are the moments where a structure reveals something unguarded. I work slowly, often returning to the same site under different conditions, watching how a wall or a corner transforms with the movement of the sun. For me, photography is a way of listening to space — recording not what is said, but what is whispered.",
     portrait: olgaPortrait,
     cohort: "2025",
+    instagram: [
+      { handle: "@photolife_by_olga", url: "https://www.instagram.com/photolife_by_olga" },
+      { handle: "@photoart_by_olga", url: "https://www.instagram.com/photoart_by_olga" },
+    ],
     projects: [{ title: "Geometry of the City", description: "A photographic investigation into the formal language of architecture — lines, angles, and surfaces.", images: [] }],
   },
   {
@@ -208,6 +214,7 @@ export const placeholderArtists2025: Artist[] = [
     artistStatement: "I am interested in the choreography of the unscripted moment — the way a person moves through a doorway, shifts their weight on a train platform, or turns toward a sound. These gestures, fleeting and often unconscious, contain a visual music that I try to preserve through photography. My work sits at the intersection of portraiture and movement study, seeking not to freeze motion but to hold it in suspension. I want the viewer to feel the continuation — the breath before and after the frame — and to recognize in these ordinary movements something deeply, quietly expressive.",
     portrait: dariaPortrait,
     cohort: "2025",
+    instagram: [{ handle: "@makelovenotevol", url: "https://www.instagram.com/makelovenotevol" }],
     projects: [{ title: "The City as Dancing Figure", description: "Visual choreography where gesture, space, and structure become inseparable.", images: [] }],
   },
   {
@@ -219,6 +226,7 @@ export const placeholderArtists2025: Artist[] = [
     artistStatement: "Transformation is not a single event but a constant undercurrent. My photographs attempt to make this visible — to capture the moment when something is no longer what it was but has not yet become what it will be. I am drawn to thresholds: physical, emotional, psychological. Whether working with a model in a controlled setting or observing a stranger in passing light, I look for the instant when the surface cracks slightly and something authentic emerges. My practice is driven by the belief that photography can hold complexity — that a single frame can contain both vulnerability and strength, stillness and motion, ending and beginning.",
     portrait: annaK2025Portrait,
     cohort: "2025",
+    instagram: [{ handle: "@anna_art.foto", url: "https://www.instagram.com/anna_art.foto" }],
     projects: [{ title: "Frozen Moments", description: "Capturing the transient beauty of suspended time within urban environments.", images: [] }],
   },
   {
@@ -230,6 +238,7 @@ export const placeholderArtists2025: Artist[] = [
     artistStatement: "I photograph what I remember before I forget it. My practice is rooted in the belief that perception is already a form of memory — that the moment we see something, it has already begun to transform in our minds. I am drawn to soft transitions, ambient light, and the edges of attention, where the world reveals itself most honestly. My work is not about capturing decisive moments but about preserving the texture of experience — the quality of light in a room, the weight of silence in a corridor, the way a face looks just after a thought has passed. Photography, for me, is a form of intuitive notation.",
     portrait: evaMariaPortrait,
     cohort: "2025",
+    instagram: [{ handle: "@blixa_ketzer", url: "https://www.instagram.com/blixa_ketzer" }],
     projects: [{ title: "The City Is…", description: "An open-ended exploration of urban identity through intuitive observation and poetic fragments.", images: [] }],
   },
   {
