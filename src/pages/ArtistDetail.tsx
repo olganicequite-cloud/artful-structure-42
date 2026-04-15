@@ -88,37 +88,30 @@ const ArtistDetail = () => {
             </FadeIn>
           )}
 
-          {/* Project button */}
-          {artistProject && (
+          {/* Works + Instagram buttons */}
+          {(artistProject || (artist.instagram && artist.instagram.length > 0)) && (
             <FadeIn>
               <div className="gallery-divider mb-10" />
               <p className="text-editorial-detail mb-3">Works</p>
-              <Link
-                to={`/projects/${artistProject.slug}`}
-                className="inline-block font-sans text-sm tracking-wider uppercase border border-foreground/20 hover:border-foreground/50 px-6 py-3 transition-colors hover:bg-foreground/5"
-              >
-                View Project →
-              </Link>
-            </FadeIn>
-          )}
-
-          {/* Instagram */}
-          {artist.instagram && artist.instagram.length > 0 && (
-            <FadeIn>
-              <div className="gallery-divider mb-10" />
-              <p className="text-editorial-detail mb-3">Instagram</p>
-              <div className="flex flex-col gap-1">
-                {artist.instagram.map((ig) => (
+              <div className="flex flex-wrap gap-3">
+                {artistProject && (
+                  <Link
+                    to={`/projects/${artistProject.slug}`}
+                    className="inline-block font-sans text-sm tracking-wider uppercase border border-foreground/20 hover:border-foreground/50 px-6 py-3 transition-colors hover:bg-foreground/5"
+                  >
+                    View Project →
+                  </Link>
+                )}
+                {artist.instagram && artist.instagram.length > 0 && (
                   <a
-                    key={ig.handle}
-                    href={ig.url}
+                    href={artist.instagram[0].url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-editorial-body hover:opacity-60 transition-opacity"
+                    className="inline-block font-sans text-sm tracking-wider uppercase border border-foreground/20 hover:border-foreground/50 px-6 py-3 transition-colors hover:bg-foreground/5"
                   >
-                    {ig.handle}
+                    Instagram ↗
                   </a>
-                ))}
+                )}
               </div>
             </FadeIn>
           )}
