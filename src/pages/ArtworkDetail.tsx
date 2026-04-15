@@ -47,7 +47,7 @@ const ArtworkDetail = () => {
             <div className="gallery-divider mb-8" />
             <div className="space-y-4">
               <p className="text-editorial-body leading-relaxed">
-                This project explores themes of inner transformation, drawing on personal experience and emotional depth. The artist examines the boundary between vulnerability and strength, creating a visual language that speaks to the tension between concealment and revelation.
+                This project  explores themes of inner transformation, drawing on personal experience and emotional depth. The artist examines the boundary between vulnerability and strength, creating a visual language that speaks to the tension between concealment and revelation.
               </p>
               <p className="text-editorial-body leading-relaxed">
                 Through careful attention to material, light, and composition, the piece invites the viewer into a space of contemplation — where darkness is not avoided but confronted, and where the act of looking becomes an act of understanding.
