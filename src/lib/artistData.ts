@@ -45,6 +45,7 @@ export interface Artist {
   portrait: string;
   cohort: "2025-26" | "2025";
   projects: ArtistProject[];
+  instagram?: { handle: string; url: string }[];
 }
 
 export const artists: Artist[] = [
