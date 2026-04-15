@@ -6,6 +6,16 @@ import thumbAnna2025 from "@/assets/projects-thumb-anna-kazakova-2025.jpg";
 import thumbOxana from "@/assets/projects-thumb-oxana-grom.jpg";
 import thumbOlga from "@/assets/projects-thumb-olga-iavorskaia.jpg";
 
+import annaFrozen1 from "@/assets/anna-frozen-1.jpg";
+import annaFrozen2 from "@/assets/anna-frozen-2.jpg";
+import annaFrozen3 from "@/assets/anna-frozen-3.jpg";
+import annaFrozen4 from "@/assets/anna-frozen-4.jpg";
+import dariaDancing1 from "@/assets/daria-dancing-1.jpg";
+import dariaDancing2 from "@/assets/daria-dancing-2.jpg";
+import evaCity1 from "@/assets/eva-city-1.jpg";
+import evaCity2 from "@/assets/eva-city-2.jpg";
+import nadezhdaBeyond1 from "@/assets/nadezhda-beyond-1.jpg";
+
 import type { Project } from "@/lib/projectData";
 
 export const projects2025: Project[] = [
@@ -22,9 +32,9 @@ export const projects2025: Project[] = [
     ],
     images: [
       {
-        src: thumbNadezhda,
-        alt: "Nadezhda Slavinskene — Beyond Form",
-        caption: { title: "Beyond Form", medium: "Photograph", dimensions: "Various sizes" },
+        src: nadezhdaBeyond1,
+        alt: "Nadezhda Slavinskene — Beyond Form I",
+        caption: { title: "Beyond Form I", medium: "Photograph", dimensions: "Various sizes" },
       },
     ],
   },
@@ -60,9 +70,14 @@ export const projects2025: Project[] = [
     ],
     images: [
       {
-        src: thumbDaria,
-        alt: "Daria Wagner — The City as Dancing Figure",
-        caption: { title: "The City as Dancing Figure", medium: "Photograph", dimensions: "Various sizes" },
+        src: dariaDancing1,
+        alt: "Daria Wagner — The City as Dancing Figure I",
+        caption: { title: "The City as Dancing Figure I", medium: "Photograph", dimensions: "Various sizes" },
+      },
+      {
+        src: dariaDancing2,
+        alt: "Daria Wagner — The City as Dancing Figure II",
+        caption: { title: "The City as Dancing Figure II", medium: "Photograph", dimensions: "Various sizes" },
       },
     ],
   },
@@ -79,9 +94,14 @@ export const projects2025: Project[] = [
     ],
     images: [
       {
-        src: thumbEvaMaria,
-        alt: "Eva-Maria Shipova — The City Is…",
-        caption: { title: "The City Is…", medium: "Photograph", dimensions: "Various sizes" },
+        src: evaCity1,
+        alt: "Eva-Maria Shipova — The City Is… I",
+        caption: { title: "The City Is… I", medium: "Photograph", dimensions: "Various sizes" },
+      },
+      {
+        src: evaCity2,
+        alt: "Eva-Maria Shipova — The City Is… II",
+        caption: { title: "The City Is… II", medium: "Photograph", dimensions: "Various sizes" },
       },
     ],
   },
@@ -98,9 +118,24 @@ export const projects2025: Project[] = [
     ],
     images: [
       {
-        src: thumbAnna2025,
-        alt: "Anna Kazakova — Frozen Moments",
-        caption: { title: "Frozen Moments", medium: "Photograph", dimensions: "Various sizes" },
+        src: annaFrozen1,
+        alt: "Anna Kazakova — Frozen Moments I",
+        caption: { title: "Frozen Moments I", medium: "Photograph", dimensions: "Various sizes" },
+      },
+      {
+        src: annaFrozen2,
+        alt: "Anna Kazakova — Frozen Moments II",
+        caption: { title: "Frozen Moments II", medium: "Photograph", dimensions: "Various sizes" },
+      },
+      {
+        src: annaFrozen3,
+        alt: "Anna Kazakova — Frozen Moments III",
+        caption: { title: "Frozen Moments III", medium: "Photograph", dimensions: "Various sizes" },
+      },
+      {
+        src: annaFrozen4,
+        alt: "Anna Kazakova — Frozen Moments IV",
+        caption: { title: "Frozen Moments IV", medium: "Photograph", dimensions: "Various sizes" },
       },
     ],
   },
