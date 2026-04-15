@@ -127,7 +127,7 @@ export const projects2025: Project[] = [
         caption: { title: "Frozen Moments I", medium: "Photograph", dimensions: "Various sizes" },
       },
       {
-        src: annaFrozen2,
+        src: annaFrozen4,
         alt: "Anna Kazakova — Frozen Moments II",
         caption: { title: "Frozen Moments II", medium: "Photograph", dimensions: "Various sizes" },
       },
@@ -137,7 +137,7 @@ export const projects2025: Project[] = [
         caption: { title: "Frozen Moments III", medium: "Photograph", dimensions: "Various sizes" },
       },
       {
-        src: annaFrozen4,
+        src: annaFrozen2,
         alt: "Anna Kazakova — Frozen Moments IV",
         caption: { title: "Frozen Moments IV", medium: "Photograph", dimensions: "Various sizes" },
       },
