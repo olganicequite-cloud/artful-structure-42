@@ -101,7 +101,9 @@ export const projects: Project[] = [
     artist: "Aj Jul",
     artistSlug: "aj-jul",
     thumbnail: projectsThumbAj,
-    description: [],
+    description: [
+      "The year keeps turning. The seasons are in love, but they can only exist through the negation of the other.",
+    ],
     images: [
       {
         src: ajWork1,
