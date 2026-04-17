@@ -104,8 +104,7 @@ export const artists: Artist[] = [
     portrait: mariiaPortrait,
     cohort: "2025-26",
     instagram: [
-      { handle: "@maria.zatsepina", url: "https://www.instagram.com/maria.zatsepina" },
-      { handle: "@perunda", url: "https://www.instagram.com/perunda" },
+      { handle: "@naturegallery.art_", url: "https://www.instagram.com/naturegallery.art_" },
     ],
     projects: [
       {
