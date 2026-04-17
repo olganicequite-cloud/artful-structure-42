@@ -151,7 +151,7 @@ const CityExhibitionSection = () => {
                 </Link>
                 {/* Artist name → artist bio page */}
                 <Link
-                  to={`/artists/${artwork.artistSlug}`}
+                  to={artwork.artistSlug === "olga-tarabukina" ? "/#curator" : `/artists/${artwork.artistSlug}`}
                   className="text-editorial-caption hover:text-foreground transition-colors"
                 >
                   {artwork.artist}
