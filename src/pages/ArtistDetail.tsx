@@ -109,7 +109,7 @@ const ArtistDetail = () => {
                     rel="noopener noreferrer"
                     className="inline-block font-sans text-sm tracking-wider uppercase border border-foreground/20 hover:border-foreground/50 px-6 py-3 transition-colors hover:bg-foreground/5"
                   >
-                    Instagram ↗
+                    Artist Instagram ↗
                   </a>
                 )}
               </div>

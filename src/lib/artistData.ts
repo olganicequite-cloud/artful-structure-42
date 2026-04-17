@@ -104,8 +104,7 @@ export const artists: Artist[] = [
     portrait: mariiaPortrait,
     cohort: "2025-26",
     instagram: [
-      { handle: "@maria.zatsepina", url: "https://www.instagram.com/maria.zatsepina" },
-      { handle: "@perunda", url: "https://www.instagram.com/perunda" },
+      { handle: "@naturegallery.art_", url: "https://www.instagram.com/naturegallery.art_" },
     ],
     projects: [
       {
@@ -200,7 +199,6 @@ export const placeholderArtists2025: Artist[] = [
     portrait: olgaPortrait,
     cohort: "2025",
     instagram: [
-      { handle: "@photolife_by_olga", url: "https://www.instagram.com/photolife_by_olga" },
       { handle: "@photoart_by_olga", url: "https://www.instagram.com/photoart_by_olga" },
     ],
     projects: [{ title: "Geometry of the City", description: "A photographic investigation into the formal language of architecture — lines, angles, and surfaces.", images: [] }],
