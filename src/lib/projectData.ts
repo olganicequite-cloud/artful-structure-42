@@ -101,11 +101,7 @@ export const projects: Project[] = [
     artist: "Aj Jul",
     artistSlug: "aj-jul",
     thumbnail: projectsThumbAj,
-    description: [
-      "I. Winter & Spring: Spring leans over Winter with a hunger, he is dismantling her.",
-      "II. Summer & Autumn: Summer yielding to the shadow of Autumn.",
-      "The year keeps turning. The seasons are in love, but they can only exist through the negation of the other.",
-    ],
+    description: [],
     images: [
       {
         src: ajWork1,
