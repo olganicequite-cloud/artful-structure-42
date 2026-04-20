@@ -170,8 +170,8 @@ export const projects: Project[] = [
         alt: "Nadya Net — Already Inside I",
         caption: {
           title: "Already Inside I",
-          medium: "Mixed media — archival photographs with illustration",
-          dimensions: "Various sizes",
+          medium: "Acrylic and oil pastel on canvas, triptych",
+          dimensions: "60 x 60 cm",
         },
       },
       {
@@ -179,8 +179,8 @@ export const projects: Project[] = [
         alt: "Nadya Net — Already Inside  II",
         caption: {
           title: "Already Inside  II",
-          medium: "Mixed media — archival photographs with illustration",
-          dimensions: "Various sizes",
+          medium: "Acrylic and oil pastel on canvas, triptych",
+          dimensions: "60 x 60 cm",
         },
       },
       {
@@ -188,8 +188,8 @@ export const projects: Project[] = [
         alt: "Nadya Net — Already Inside  III",
         caption: {
           title: "Already Inside  III",
-          medium: "Mixed media — archival photographs with illustration",
-          dimensions: "Various sizes",
+          medium: "Acrylic and oil pastel on canvas, triptych",
+          dimensions: "60 x 60 cm",
         },
       },
       {
@@ -197,8 +197,8 @@ export const projects: Project[] = [
         alt: "Nadya Net — Destination Ararat",
         caption: {
           title: "Destination Ararat",
-          medium: "Mixed media — archival photographs with illustration",
-          dimensions: "Various sizes",
+          medium: "Acrylic and oil pastel on canvas",
+          dimensions: "100 x 120 cm",
         },
       },
       {
@@ -206,8 +206,8 @@ export const projects: Project[] = [
         alt: "Nadya Net — In Suspension",
         caption: {
           title: "In Suspension",
-          medium: "Mixed media — archival photographs with illustration",
-          dimensions: "Various sizes",
+          medium: "Acrylic and oil pastel on canvas",
+          dimensions: "100 x 120 cm",
         },
       },
     ],
