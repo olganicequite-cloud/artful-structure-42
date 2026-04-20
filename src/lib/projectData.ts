@@ -42,6 +42,15 @@ export interface ProjectImage {
     dimensions: string;
     note?: string;
   };
+  /** Optional group id — consecutive images sharing this id render as a single work with one shared caption (e.g. a triptych). */
+  groupId?: string;
+  /** Caption shown for the whole group (only read from the first image of the group). */
+  groupCaption?: {
+    title: string;
+    medium: string;
+    dimensions: string;
+    note?: string;
+  };
 }
 
 export interface Project {
