@@ -229,27 +229,27 @@ export const projects: Project[] = [
       {
         src: yanaWork1,
         alt: "Yana Kaziulia — Liberation of Colors 1",
-        caption: { title: "Liberation of Colors I", medium: "Photograph", dimensions: "40 × 40 cm", note: "Frame 52 × 52 cm" },
+        caption: { title: "Confrontation III", medium: "Fine art print", dimensions: "40 × 40 cm", note: "Fine art print 52 × 52 cm" },
       },
       {
         src: yanaWork2,
         alt: "Yana Kaziulia — Liberation of Colors 2",
-        caption: { title: "Liberation of Colors II", medium: "Photograph", dimensions: "40 × 40 cm", note: "Frame 52 × 52 cm" },
+        caption: { title: "Confrontation IV", medium: "Fine art print", dimensions: "40 × 40 cm", note: "Fine art print 40 × 40 cm" },
       },
       {
         src: yanaWork3,
         alt: "Yana Kaziulia — Liberation of Colors 3",
-        caption: { title: "Liberation of Colors III", medium: "Photograph", dimensions: "40 × 40 cm", note: "Frame 52 × 52 cm" },
+        caption: { title: "Confrontation I", medium: "Fine art print", dimensions: "40 × 40 cm", note: "Frame 52 × 52 cm" },
       },
       {
         src: yanaWork4,
         alt: "Yana Kaziulia — Liberation of Colors 4",
-        caption: { title: "Liberation of Colors IV", medium: "Photograph", dimensions: "40 × 40 cm", note: "Frame 52 × 52 cm" },
+        caption: { title: "Confrontation II", medium: "Fine art print", dimensions: "40 × 40 cm", note: "Frame 52 × 52 cm" },
       },
       {
         src: yanaWork5,
         alt: "Yana Kaziulia — Liberation of Colors 5",
-        caption: { title: "Liberation of Colors V", medium: "Photograph", dimensions: "40 × 30 cm", note: "Frame 52 × 52 cm · 9 polaroids 8.5 × 7 cm" },
+        caption: { title: "Liberation", medium: "Fine art print", dimensions: "40 × 30 cm", note: "Fine art print 52 × 52 cm · 9 polaroids 8.5 × 7 cm" },
       },
     ],
   },
