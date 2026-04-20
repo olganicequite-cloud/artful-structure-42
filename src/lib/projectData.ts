@@ -42,15 +42,6 @@ export interface ProjectImage {
     dimensions: string;
     note?: string;
   };
-  /** Optional group id — consecutive images sharing this id render as a single work with one shared caption (e.g. a triptych). */
-  groupId?: string;
-  /** Caption shown for the whole group (only read from the first image of the group). */
-  groupCaption?: {
-    title: string;
-    medium: string;
-    dimensions: string;
-    note?: string;
-  };
 }
 
 export interface Project {
@@ -176,38 +167,30 @@ export const projects: Project[] = [
     images: [
       {
         src: nadyaWork4,
-        alt: "Nadya Net — Already Inside (panel I)",
+        alt: "Nadya Net — FEAR HERE I",
         caption: {
-          title: "Already Inside",
-          medium: "Acrylic and oil pastel on canvas, triptych",
-          dimensions: "60 × 60 cm each (23.6 × 23.6 in each)",
-        },
-        groupId: "already-inside",
-        groupCaption: {
-          title: "Already Inside, 2025",
-          medium: "Acrylic and oil pastel on canvas, triptych",
-          dimensions: "60 × 60 cm each (23.6 × 23.6 in each)",
+          title: "FEAR HERE I",
+          medium: "Mixed media — archival photographs with illustration",
+          dimensions: "Various sizes",
         },
       },
       {
         src: nadyaWork3,
-        alt: "Nadya Net — Already Inside (panel II)",
+        alt: "Nadya Net — FEAR HERE II",
         caption: {
-          title: "Already Inside",
-          medium: "Acrylic and oil pastel on canvas, triptych",
-          dimensions: "60 × 60 cm each (23.6 × 23.6 in each)",
+          title: "FEAR HERE II",
+          medium: "Mixed media — archival photographs with illustration",
+          dimensions: "Various sizes",
         },
-        groupId: "already-inside",
       },
       {
         src: nadyaWork2,
-        alt: "Nadya Net — Already Inside (panel III)",
+        alt: "Nadya Net — FEAR HERE III",
         caption: {
-          title: "Already Inside",
-          medium: "Acrylic and oil pastel on canvas, triptych",
-          dimensions: "60 × 60 cm each (23.6 × 23.6 in each)",
+          title: "FEAR HERE III",
+          medium: "Mixed media — archival photographs with illustration",
+          dimensions: "Various sizes",
         },
-        groupId: "already-inside",
       },
       {
         src: nadyaWork5,
