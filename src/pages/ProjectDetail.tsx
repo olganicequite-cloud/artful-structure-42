@@ -241,15 +241,82 @@ const ProjectDetail = () => {
         {project.images.length > 0 && (
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-10">
-              {project.images.map((img, i) => (
-                <div key={i} className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.75rem)]">
-                  <ArtworkBlock
-                    image={img}
-                    artist={project.artist}
-                    onOpen={() => setLightboxIndex(i)}
-                  />
-                </div>
-              ))}
+              {(() => {
+                const blocks: JSX.Element[] = [];
+                let i = 0;
+                while (i < project.images.length) {
+                  const img = project.images[i];
+                  if (img.groupId) {
+                    // Collect all consecutive images sharing this groupId
+                    const groupImages: { image: ProjectImage; index: number }[] = [];
+                    const gid = img.groupId;
+                    let j = i;
+                    while (j < project.images.length && project.images[j].groupId === gid) {
+                      groupImages.push({ image: project.images[j], index: j });
+                      j++;
+                    }
+                    const shared = img.groupCaption ?? img.caption;
+                    const count = groupImages.length;
+                    blocks.push(
+                      <div key={`group-${gid}-${i}`} className="w-full">
+                        <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+                          {groupImages.map(({ image, index }) => (
+                            <div
+                              key={index}
+                              className="w-full md:flex-1 md:min-w-0"
+                              style={{ flexBasis: `calc(${100 / count}% - 1.5rem)` }}
+                            >
+                              <div
+                                className="overflow-hidden cursor-pointer group"
+                                onClick={() => setLightboxIndex(index)}
+                              >
+                                <img
+                                  src={image.src}
+                                  alt={image.alt}
+                                  className="w-full h-auto object-contain transition-opacity duration-300 group-hover:opacity-90"
+                                  loading="lazy"
+                                />
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                        <div className="mt-2.5 mb-0 space-y-0">
+                          <p className="text-[12px] font-sans text-foreground/40 leading-snug">
+                            {project.artist}
+                          </p>
+                          <p className="text-[12px] font-sans text-foreground/60 leading-snug italic">
+                            {shared.title}
+                          </p>
+                          <p className="text-[11px] font-sans text-foreground/35 leading-snug">
+                            {shared.dimensions
+                              ? `${shared.medium} — ${shared.dimensions}`
+                              : shared.medium}
+                          </p>
+                          {shared.note && (
+                            <p className="text-[11px] font-sans text-foreground/30 leading-snug">
+                              {shared.note}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                    );
+                    i = j;
+                  } else {
+                    const idx = i;
+                    blocks.push(
+                      <div key={idx} className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.75rem)]">
+                        <ArtworkBlock
+                          image={img}
+                          artist={project.artist}
+                          onOpen={() => setLightboxIndex(idx)}
+                        />
+                      </div>
+                    );
+                    i++;
+                  }
+                }
+                return blocks;
+              })()}
             </div>
           </div>
         )}
