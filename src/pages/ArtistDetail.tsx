@@ -20,9 +20,11 @@ const ArtistDetail = () => {
 
   if (!artist) return <Navigate to="/artists" replace />;
 
-  // Find the artist's project slug for direct linking
-  const artistProject = projects.find((p) => p.artistSlug === artist.slug)
-    || projects2025.find((p) => p.artistSlug === artist.slug);
+  // Find all projects by this artist (most artists have one; Yana has two)
+  const artistProjects = [
+    ...projects.filter((p) => p.artistSlug === artist.slug),
+    ...projects2025.filter((p) => p.artistSlug === artist.slug),
+  ];
   const objectPosition = portraitCropMap[artist.slug] || "center";
 
   return (
@@ -89,19 +91,20 @@ const ArtistDetail = () => {
           )}
 
           {/* Works + Instagram buttons */}
-          {(artistProject || (artist.instagram && artist.instagram.length > 0)) && (
+          {(artistProjects.length > 0 || (artist.instagram && artist.instagram.length > 0)) && (
             <FadeIn>
               <div className="gallery-divider mb-10" />
               <p className="text-editorial-detail mb-3">Works</p>
               <div className="flex flex-wrap gap-3">
-                {artistProject && (
+                {artistProjects.map((p) => (
                   <Link
-                    to={`/projects/${artistProject.slug}`}
+                    key={p.slug}
+                    to={`/projects/${p.slug}`}
                     className="inline-block font-sans text-sm tracking-wider uppercase border border-foreground/20 hover:border-foreground/50 px-6 py-3 transition-colors hover:bg-foreground/5"
                   >
-                    View Project →
+                    {artistProjects.length > 1 ? `View ${p.title} →` : "View Project →"}
                   </Link>
-                )}
+                ))}
                 {artist.instagram && artist.instagram.length > 0 && (
                   <a
                     href={artist.instagram[0].url}
