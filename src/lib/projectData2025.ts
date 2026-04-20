@@ -123,23 +123,23 @@ export const projects2025: Project[] = [
     images: [
       {
         src: annaFrozen1,
-        alt: "Anna Kazakova — Frozen Moments I",
-        caption: { title: "Frozen Moments I", medium: "Photograph", dimensions: "Various sizes" },
+        alt: "Anna Kazakova — Waiting",
+        caption: { title: "Waiting", medium: "Photograph", dimensions: "Various sizes" },
       },
       {
         src: annaFrozen2,
-        alt: "Anna Kazakova — Frozen Moments II",
-        caption: { title: "Frozen Moments II", medium: "Photograph", dimensions: "Various sizes" },
+        alt: "Anna Kazakova — Colonnade",
+        caption: { title: "Colonnade", medium: "Photograph", dimensions: "Various sizes" },
       },
       {
         src: annaFrozen3,
-        alt: "Anna Kazakova — Frozen Moments III",
-        caption: { title: "Frozen Moments III", medium: "Photograph", dimensions: "Various sizes" },
+        alt: "Anna Kazakova — Time Disruption",
+        caption: { title: "Time Disruption", medium: "Photograph", dimensions: "Various sizes" },
       },
       {
         src: annaFrozen4,
-        alt: "Anna Kazakova — Frozen Moments IV",
-        caption: { title: "Frozen Moments IV", medium: "Photograph", dimensions: "Various sizes" },
+        alt: "Anna Kazakova — Ruins of St. Giles' Church",
+        caption: { title: "Ruins of St. Giles' Church", medium: "Photograph", dimensions: "Various sizes" },
       },
     ],
   },
