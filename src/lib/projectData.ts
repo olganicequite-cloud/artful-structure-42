@@ -167,45 +167,45 @@ export const projects: Project[] = [
     images: [
       {
         src: nadyaWork4,
-        alt: "Nadya Net — FEAR HERE I",
+        alt: "Nadya Net — Already Inside I",
         caption: {
-          title: "FEAR HERE I",
+          title: "Already Inside I",
           medium: "Mixed media — archival photographs with illustration",
           dimensions: "Various sizes",
         },
       },
       {
         src: nadyaWork3,
-        alt: "Nadya Net — FEAR HERE II",
+        alt: "Nadya Net — Already Inside  II",
         caption: {
-          title: "FEAR HERE II",
+          title: "Already Inside  II",
           medium: "Mixed media — archival photographs with illustration",
           dimensions: "Various sizes",
         },
       },
       {
         src: nadyaWork2,
-        alt: "Nadya Net — FEAR HERE III",
+        alt: "Nadya Net — Already Inside  III",
         caption: {
-          title: "FEAR HERE III",
+          title: "Already Inside  III",
           medium: "Mixed media — archival photographs with illustration",
           dimensions: "Various sizes",
         },
       },
       {
         src: nadyaWork5,
-        alt: "Nadya Net — FEAR HERE IV",
+        alt: "Nadya Net — Destination Ararat",
         caption: {
-          title: "FEAR HERE IV",
+          title: "Destination Ararat",
           medium: "Mixed media — archival photographs with illustration",
           dimensions: "Various sizes",
         },
       },
       {
         src: nadyaWork6,
-        alt: "Nadya Net — FEAR HERE V",
+        alt: "Nadya Net — In Suspension",
         caption: {
-          title: "FEAR HERE V",
+          title: "In Suspension",
           medium: "Mixed media — archival photographs with illustration",
           dimensions: "Various sizes",
         },
