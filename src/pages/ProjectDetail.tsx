@@ -62,7 +62,9 @@ const ArtworkBlock = ({
           {image.caption.title}
         </p>
         <p className="text-[11px] font-sans text-foreground/35 leading-snug">
-          {image.caption.medium} — {image.caption.dimensions}
+          {image.caption.dimensions
+            ? `${image.caption.medium} — ${image.caption.dimensions}`
+            : image.caption.medium}
         </p>
         {image.caption.note && (
           <p className="text-[11px] font-sans text-foreground/30 leading-snug">
