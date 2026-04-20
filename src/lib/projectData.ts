@@ -138,17 +138,17 @@ export const projects: Project[] = [
       {
         src: mariiaWork1,
         alt: "Mariia Zatsepina — Flowers 1",
-        caption: { title: "Flowers I", medium: "Photograph on canvas", dimensions: "60 × 90 cm" },
+        caption: { title: "Continuation", medium: "Print on canvas", dimensions: "80 × 60 cm" },
       },
       {
         src: mariiaWork2,
         alt: "Mariia Zatsepina — Flowers 2",
-        caption: { title: "Flowers II", medium: "Photograph on canvas", dimensions: "60 × 90 cm" },
+        caption: { title: "Transition", medium: "Print on canvas", dimensions: "90 × 60 cm" },
       },
       {
         src: mariiaWork3,
         alt: "Mariia Zatsepina — Flowers 3",
-        caption: { title: "Flowers III", medium: "Photograph on canvas", dimensions: "60 × 90 cm" },
+        caption: { title: "Alterd State", medium: "Print on canvas", dimensions: "90 × 60 cm" },
       },
     ],
   },
