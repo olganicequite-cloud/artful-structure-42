@@ -62,7 +62,9 @@ const ArtworkBlock = ({
           {image.caption.title}
         </p>
         <p className="text-[11px] font-sans text-foreground/35 leading-snug">
-          {image.caption.medium} — {image.caption.dimensions}
+          {image.caption.dimensions
+            ? `${image.caption.medium} — ${image.caption.dimensions}`
+            : image.caption.medium}
         </p>
         {image.caption.note && (
           <p className="text-[11px] font-sans text-foreground/30 leading-snug">
@@ -220,9 +222,6 @@ const ProjectDetail = () => {
             >
               {project.artist}
             </Link>
-            {project.slug === "flow" && (
-              <p className="font-sans text-[11px] tracking-wide text-foreground/35 mt-1.5">Work in Progress</p>
-            )}
           </FadeIn>
 
           <FadeIn delay={0.05}>

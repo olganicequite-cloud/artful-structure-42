@@ -27,9 +27,6 @@ const ProjectCard = ({ project, i }: { project: typeof projects[0]; i: number })
       >
         {project.artist}
       </Link>
-      {project.slug === "flow" && (
-        <p className="font-sans text-[11px] tracking-wide text-foreground/35 mt-1">Work in Progress</p>
-      )}
     </div>
   </FadeIn>
 );
