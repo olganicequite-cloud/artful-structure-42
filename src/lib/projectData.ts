@@ -239,12 +239,12 @@ export const projects: Project[] = [
       {
         src: yanaWork3,
         alt: "Yana Kaziulia — Liberation of Colors 3",
-        caption: { title: "Confrontation I", medium: "Fine art print", dimensions: "40 × 40 cm", note: "Frame 52 × 52 cm" },
+        caption: { title: "Confrontation I", medium: "Fine art print", dimensions: "40 × 40 cm", note: "Fine art print 52 × 52 cm" },
       },
       {
         src: yanaWork4,
         alt: "Yana Kaziulia — Liberation of Colors 4",
-        caption: { title: "Confrontation II", medium: "Fine art print", dimensions: "40 × 40 cm", note: "Frame 52 × 52 cm" },
+        caption: { title: "Confrontation II", medium: "Fine art print", dimensions: "40 × 40 cm", note: "Fine art print 52 × 52 cm" },
       },
       {
         src: yanaWork5,
