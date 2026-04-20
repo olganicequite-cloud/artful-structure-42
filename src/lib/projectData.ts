@@ -270,32 +270,32 @@ export const projects: Project[] = [
       {
         src: yanaFlow1,
         alt: "Yana Kaziulia — Flow I",
-        caption: { title: "Flow I", medium: "Photograph", dimensions: "60 × 90 cm" },
+        caption: { title: "Flow I", medium: "In Progress", dimensions: "" },
       },
       {
         src: yanaFlow2,
         alt: "Yana Kaziulia — Flow II",
-        caption: { title: "Flow II", medium: "Photograph", dimensions: "60 × 90 cm" },
+        caption: { title: "Flow II", medium: "In Progress", dimensions: "" },
       },
       {
         src: yanaFlow6,
         alt: "Yana Kaziulia — Flow III",
-        caption: { title: "Flow III", medium: "Photograph", dimensions: "60 × 90 cm" },
+        caption: { title: "Flow III", medium: "In Progress", dimensions: "" },
       },
       {
         src: yanaFlow4,
         alt: "Yana Kaziulia — Flow IV",
-        caption: { title: "Flow IV", medium: "Photograph", dimensions: "60 × 90 cm" },
+        caption: { title: "Flow IV", medium: "In Progress", dimensions: "" },
       },
       {
         src: yanaFlow5,
         alt: "Yana Kaziulia — Flow V",
-        caption: { title: "Flow V", medium: "Photograph", dimensions: "60 × 90 cm" },
+        caption: { title: "Flow V", medium: "In Progress", dimensions: "" },
       },
       {
         src: yanaFlow3,
         alt: "Yana Kaziulia — Flow VI",
-        caption: { title: "Flow VI", medium: "Photograph", dimensions: "60 × 90 cm" },
+        caption: { title: "Flow VI", medium: "In Progress", dimensions: "" },
       },
     ],
   },
