@@ -222,9 +222,6 @@ const ProjectDetail = () => {
             >
               {project.artist}
             </Link>
-            {project.slug === "flow" && (
-              <p className="font-sans text-[11px] tracking-wide text-foreground/35 mt-1.5">Work in Progress</p>
-            )}
           </FadeIn>
 
           <FadeIn delay={0.05}>
