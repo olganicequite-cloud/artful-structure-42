@@ -256,31 +256,27 @@ const ProjectDetail = () => {
                       j++;
                     }
                     const shared = img.groupCaption ?? img.caption;
-                    const count = groupImages.length;
                     blocks.push(
                       <div key={`group-${gid}-${i}`} className="w-full">
-                        <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+                        <div
+                          className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 items-end"
+                        >
                           {groupImages.map(({ image, index }) => (
                             <div
                               key={index}
-                              className="w-full md:flex-1 md:min-w-0"
-                              style={{ flexBasis: `calc(${100 / count}% - 1.5rem)` }}
+                              className="overflow-hidden cursor-pointer group"
+                              onClick={() => setLightboxIndex(index)}
                             >
-                              <div
-                                className="overflow-hidden cursor-pointer group"
-                                onClick={() => setLightboxIndex(index)}
-                              >
-                                <img
-                                  src={image.src}
-                                  alt={image.alt}
-                                  className="w-full h-auto object-contain transition-opacity duration-300 group-hover:opacity-90"
-                                  loading="lazy"
-                                />
-                              </div>
+                              <img
+                                src={image.src}
+                                alt={image.alt}
+                                className="w-full h-auto object-contain transition-opacity duration-300 group-hover:opacity-90"
+                                loading="lazy"
+                              />
                             </div>
                           ))}
                         </div>
-                        <div className="mt-2.5 mb-0 space-y-0">
+                        <div className="mt-3 text-center space-y-0.5">
                           <p className="text-[12px] font-sans text-foreground/40 leading-snug">
                             {project.artist}
                           </p>
