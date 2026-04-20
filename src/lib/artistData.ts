@@ -141,6 +141,27 @@ export const artists: Artist[] = [
       },
     ],
   },
+  {
+    slug: "aj-jul",
+    name: "Aj Jul",
+    shortLine: "Drawing · Emotional States · Space",
+    bio: "Berlin-based artist exploring emotional states and the interplay between the human body and the surrounding space. Drawing is approached as a meditative practice.",
+    longBio: "Aj Jul is a Berlin-based artist exploring emotional states and the interplay between the human body and the surrounding space. From 2023 to 2024, Aj Jul attended the Experimental Figure Drawing Workshop (by Salvatore Siciliano). In 2024, Aj Jul participated in a group exhibition as part of the 48 Stunden Neukölln festival. In 2025, a private joint exhibition was co-organized together with a fellow artist. From 2025 to 2026, Aj Jul has been involved in the group initiative Creative Project New.\n\nToday, for Aj Jul, drawing is a meditative practice — a space to explore the self and give shape to emotions and thoughts.",
+    artistStatement: "My work centers on the human figure — faces, hands, bodies — as it dissolves into and re-forms from its surroundings. I am exploring the boundary between person and environment: how figures blend into space through lines, dots, and fields of color, while simultaneously shaping that space. In this way, the work reflects a mutual influence — people are continuously affecting and being affected by other people and the context around them.\n\nFrom Schiele, I draw a tension in line and proportion; from Toulouse-Lautrec, a fluid mixing of media; from Chagall, poetic treatment of love and human connection.\n\nMy recent works are made primarily with color pastels and pencils on paper, occasionally incorporating watercolor. These materials let me shift between line and color, reinforcing the sense of figures fragmenting into space. The process itself plays a decisive role. Light, mood, and intuition often shift the direction of a piece, so that the image begins to guide me as much as I guide it.\n\nRather than prescribing a single meaning, my works suggest a direction, inviting viewers to look closer, to recognize something that resonates uniquely with them.",
+    portrait: ajPortrait,
+    cohort: "2025-26",
+    instagram: [{ handle: "@_aj.jul", url: "https://www.instagram.com/_aj.jul" }],
+    projects: [
+      {
+        title: "Dynamics of the Seasons",
+        description: "A two-part work about Winter & Spring and Summer & Autumn. The seasons are presented as relational forces that exist through the negation of one another. Themes: transition, cyclic tension, relationship, transformation.",
+        images: [
+          { src: ajWork1, alt: "Aj Jul — Dynamics of the Seasons 1" },
+          { src: ajWork2, alt: "Aj Jul — Dynamics of the Seasons 2" },
+        ],
+      },
+    ],
+  },
 ];
 
 export const placeholderArtists2025: Artist[] = [
