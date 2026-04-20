@@ -20,7 +20,7 @@ const footerInfo = [
 ];
 
 const footerLegal = [
-  { path: "/impressum", label: "Impressum" },
+  { path: "/impressum", label: "Imprint" },
   { path: "/privacy", label: "Privacy Policy" },
 ];
 
