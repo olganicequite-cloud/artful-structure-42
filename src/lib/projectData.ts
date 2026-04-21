@@ -70,27 +70,27 @@ export const projects: Project[] = [
     images: [
       {
         src: annaWork4,
-        alt: "Anna Kazakova — Invisible Weight 4",
+        alt: "Anna Kazakova — The loop of space",
         caption: { title: "The loop of space", medium: "Print on glass", dimensions: "45 × 30 cm", note: "Horizontal" },
       },
       {
         src: annaWork2,
-        alt: "Anna Kazakova — Invisible Weight 2",
+        alt: "Anna Kazakova — Loss of bearings",
         caption: { title: "Loss of bearings", medium: "Print on glass", dimensions: "30 × 45 cm", note: "Vertical" },
       },
       {
         src: annaWork3,
-        alt: "Anna Kazakova — Invisible Weight 3",
+        alt: "Anna Kazakova — Out of contact",
         caption: { title: "Out of contact", medium: "Print on glass", dimensions: "45 × 30 cm", note: "Horizontal" },
       },
       {
         src: annaWork1,
-        alt: "Anna Kazakova — Invisible Weight 1",
+        alt: "Anna Kazakova — Fading",
         caption: { title: "Fading", medium: "Print on glass", dimensions: "30 × 45 cm", note: "Vertical" },
       },
       {
         src: annaWork5,
-        alt: "Anna Kazakova — Invisible Weight 5",
+        alt: "Anna Kazakova — Pressure point",
         caption: { title: "Pressure point", medium: "Print on glass", dimensions: "45 × 30 cm", note: "Horizontal" },
       },
     ],
