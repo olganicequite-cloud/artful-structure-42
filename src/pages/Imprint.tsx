@@ -6,6 +6,11 @@ import Seo from "@/components/Seo";
 const Imprint = () => {
   return (
     <SiteLayout>
+      <Seo
+        title="Imprint — Creative Project NEW"
+        description="Legal information and contact details for Creative Project NEW, a curatorial platform based in Berlin."
+        path="/impressum"
+      />
       <section className="section-spacing page-padding">
         <div className="max-w-2xl mx-auto">
           <PageBreadcrumb items={[{ label: "Imprint" }]} />

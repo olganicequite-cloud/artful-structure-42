@@ -44,6 +44,11 @@ const Contact = () => {
 
   return (
     <SiteLayout>
+      <Seo
+        title="Contact — Creative Project NEW, Berlin"
+        description="Get in touch with Creative Project NEW about participation, collaboration, or project inquiries. Berlin-based curatorial platform."
+        path="/contact"
+      />
       <section className="section-spacing page-padding">
         <div className="max-w-2xl mx-auto">
           <PageBreadcrumb items={[{ label: "Contact" }]} />

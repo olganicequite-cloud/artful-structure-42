@@ -13,6 +13,12 @@ const ArtworkDetail = () => {
 
   return (
     <SiteLayout>
+      <Seo
+        title={`${artwork.title} — ${artwork.artist} | STYX Exhibition`}
+        description={`${artwork.title} by ${artwork.artist}. Featured artwork in the STYX: Crossing Darkness Within exhibition, Berlin.`}
+        path={`/exhibition/${artwork.slug}`}
+        type="article"
+      />
       <section className="section-spacing page-padding">
         <div className="max-w-2xl mx-auto">
           <PageBreadcrumb

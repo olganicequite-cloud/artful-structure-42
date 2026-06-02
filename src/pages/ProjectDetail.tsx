@@ -204,6 +204,12 @@ const ProjectDetail = () => {
 
   return (
     <SiteLayout>
+      <Seo
+        title={`${project.title} — ${project.artist} | Creative Project NEW`}
+        description={`${project.title} by ${project.artist}. Artist project developed within Creative Project NEW, Berlin.`}
+        path={`/projects/${project.slug}`}
+        type="article"
+      />
       <section className="section-spacing page-padding">
         <div className="max-w-2xl mx-auto">
           <PageBreadcrumb

@@ -30,6 +30,21 @@ const ArtistDetail = () => {
 
   return (
     <SiteLayout>
+      <Seo
+        title={`${artist.name} — Artist, Creative Project NEW`}
+        description={artist.bio.slice(0, 158)}
+        path={`/artists/${artist.slug}`}
+        type="profile"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: artist.name,
+          description: artist.bio,
+          jobTitle: "Artist",
+          worksFor: { "@type": "Organization", name: "Creative Project NEW" },
+          url: `https://artful-structure-42.lovable.app/artists/${artist.slug}`,
+        }}
+      />
       <section className="section-spacing page-padding">
         <div className="max-w-3xl mx-auto">
           <PageBreadcrumb

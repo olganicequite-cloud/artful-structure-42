@@ -5,6 +5,11 @@ import Seo from "@/components/Seo";
 const Projects2025 = () => {
   return (
     <SiteLayout>
+      <Seo
+        title="Projects 2025 — Creative Project NEW, Berlin"
+        description="Projects from the 2025 cohort of Creative Project NEW, the Berlin-based curatorial collaboration for contemporary artists."
+        path="/projects-2025"
+      />
       <section className="section-spacing page-padding">
         <div className="max-w-2xl mx-auto">
           <FadeIn>

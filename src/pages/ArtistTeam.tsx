@@ -69,6 +69,11 @@ const ArtistTeam = () => {
 
   return (
     <SiteLayout>
+      <Seo
+        title="Artist Team — Creative Project NEW, Berlin"
+        description="Meet the artists of Creative Project NEW: contemporary photographers, painters, and mixed-media practitioners working with curator Olga Tarabukina in Berlin."
+        path="/artists"
+      />
       <section className="section-spacing page-padding">
         <div className="max-w-4xl mx-auto">
           <PageBreadcrumb items={[{ label: "Artist Team" }]} />

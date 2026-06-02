@@ -13,6 +13,12 @@ const CityProjectDetail = () => {
 
   return (
     <SiteLayout>
+      <Seo
+        title={`${project.title} — ${project.artist} | City Exhibition`}
+        description={`${project.title} by ${project.artist}. From the City group exhibition by Creative Project NEW, Berlin.`}
+        path={`/exhibition/city/${project.slug}`}
+        type="article"
+      />
       <section className="section-spacing page-padding">
         <div className="max-w-2xl mx-auto">
           <PageBreadcrumb
