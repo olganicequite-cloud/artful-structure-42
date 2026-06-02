@@ -1,0 +1,19 @@
+# Creative Project NEW
+
+> Berlin-based curatorial platform where artists develop contemporary photography, painting, and mixed-media projects with curator Olga Tarabukina.
+
+Creative Project NEW pairs each artist with a curator over a long-term collaboration, guiding work from initial idea to public exhibition. Cohorts gather in Berlin for masterclasses, photowalks, group critiques, and joint exhibitions.
+
+## Pages
+
+- [Home](/): Overview of the platform, the curator, and how the collaboration works.
+- [Exhibition — STYX: Crossing Darkness Within](/exhibition): Current group exhibition at VOID INK, Berlin, 26 April – 31 May 2026.
+- [Artist Team](/artists): Artists from the 2025 and 2025–26 cohorts.
+- [Projects](/projects): Individual artist projects developed within the program.
+- [Feedbacks and Reviews](/reviews): Reflections from past participants.
+- [Contact](/contact): Inquiries about participation, collaboration, and projects.
+
+## Optional
+
+- [Imprint](/impressum)
+- [Privacy Policy](/privacy)

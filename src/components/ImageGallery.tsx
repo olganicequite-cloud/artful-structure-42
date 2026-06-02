@@ -183,7 +183,9 @@ const Lightbox = ({
         src={images[index].src}
         alt={images[index].alt}
         className="max-w-[90vw] max-h-[90vh] object-contain"
-        onClick={(e) = loading="lazy" decoding="async"> e.stopPropagation()}
+        onClick={(e) => e.stopPropagation()}
+        loading="lazy"
+        decoding="async"
       />
 
       {total > 1 && (

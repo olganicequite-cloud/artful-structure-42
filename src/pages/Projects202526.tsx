@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
+import Seo from "@/components/Seo";
 import { projects } from "@/lib/projectData";
 import { projects2025 } from "@/lib/projectData2025";
 
@@ -34,6 +35,11 @@ const ProjectCard = ({ project, i }: { project: typeof projects[0]; i: number })
 const Projects202526 = () => {
   return (
     <SiteLayout>
+      <Seo
+        title="Projects — Creative Project NEW, Berlin"
+        description="Artist projects developed within Creative Project NEW — Berlin curatorial collaboration spanning photography, painting, and mixed media."
+        path="/projects"
+      />
       <section className="section-spacing page-padding">
         <div className="max-w-4xl mx-auto">
           <PageBreadcrumb items={[{ label: "Projects" }]} />

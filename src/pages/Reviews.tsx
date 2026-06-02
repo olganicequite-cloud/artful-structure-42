@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
+import Seo from "@/components/Seo";
 import { artists, placeholderArtists2025 } from "@/lib/artistData";
 
 interface Review {
@@ -109,6 +110,11 @@ const getPortrait = (slug: string) => allArtists.find((a) => a.slug === slug)?.p
 const Reviews = () => {
   return (
     <SiteLayout>
+      <Seo
+        title="Feedbacks and Reviews — Creative Project NEW, Berlin"
+        description="Reflections from artists who participated in Creative Project NEW on the curatorial process, community, and journey from idea to exhibition."
+        path="/reviews"
+      />
       <section className="section-spacing page-padding">
         <div className="max-w-3xl mx-auto">
           <PageBreadcrumb items={[{ label: "Feedbacks and Reviews" }]} />

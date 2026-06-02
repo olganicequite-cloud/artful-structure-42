@@ -1,10 +1,16 @@
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
+import Seo from "@/components/Seo";
 
 const PrivacyPolicy = () => {
   return (
     <SiteLayout>
+      <Seo
+        title="Privacy Policy — Creative Project NEW"
+        description="How Creative Project NEW collects, processes, and protects personal data on this website."
+        path="/privacy"
+      />
       <section className="section-spacing page-padding">
         <div className="max-w-2xl mx-auto">
           <PageBreadcrumb items={[{ label: "Privacy Policy" }]} />

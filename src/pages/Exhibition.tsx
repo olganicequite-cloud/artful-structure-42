@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
+import Seo from "@/components/Seo";
 import styxHero from "@/assets/styx-hero.jpg";
 import { featuredArtworks } from "@/lib/exhibitionData";
 import CityExhibitionSection from "@/components/CityExhibitionSection";
@@ -20,6 +21,32 @@ const generateCalendarUrl = () => {
 const Exhibition = () => {
   return (
     <SiteLayout>
+      <Seo
+        title="STYX: Crossing Darkness Within — Exhibition, Berlin"
+        description="STYX: Crossing Darkness Within. Group exhibition at VOID INK, Schwedter Str. 48, Berlin. 26 April – 31 May 2026."
+        path="/exhibition"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "ExhibitionEvent",
+          name: "STYX: Crossing Darkness Within",
+          startDate: "2026-04-26",
+          endDate: "2026-05-31",
+          eventStatus: "https://schema.org/EventScheduled",
+          eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+          location: {
+            "@type": "Place",
+            name: "VOID INK",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Schwedter Str. 48",
+              postalCode: "10435",
+              addressLocality: "Berlin",
+              addressCountry: "DE",
+            },
+          },
+          organizer: { "@type": "Organization", name: "Creative Project NEW" },
+        }}
+      />
       {/* Hero */}
       <section className="relative w-full min-h-[85vh] md:min-h-[90vh] flex flex-col">
         <img
