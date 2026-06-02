@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
@@ -128,24 +129,26 @@ const Reviews = () => {
                 <FadeIn key={review.slug} delay={i * 0.04}>
                   <article className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
                     <div className="md:col-span-4">
-                      <div className="aspect-[4/5] bg-secondary overflow-hidden max-w-[220px] md:max-w-none">
-                        {portrait ? (
-                          <img
-                            src={portrait}
-                            alt={review.name}
-                            className="w-full h-full object-cover"
-                            style={{ objectPosition }}
-                            loading="lazy"
-                          />
-                        ) : (
-                          <div className="w-full h-full flex items-center justify-center">
-                            <span className="text-editorial-caption text-foreground/30">Portrait</span>
-                          </div>
-                        )}
-                      </div>
-                      <h2 className="font-sans text-base md:text-lg font-light leading-snug mt-4 mb-1">
-                        {review.name}
-                      </h2>
+                      <Link to={`/artists/${review.slug}`} className="group block">
+                        <div className="aspect-[4/5] bg-secondary overflow-hidden max-w-[220px] md:max-w-none">
+                          {portrait ? (
+                            <img
+                              src={portrait}
+                              alt={review.name}
+                              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                              style={{ objectPosition }}
+                              loading="lazy"
+                            />
+                          ) : (
+                            <div className="w-full h-full flex items-center justify-center">
+                              <span className="text-editorial-caption text-foreground/30">Portrait</span>
+                            </div>
+                          )}
+                        </div>
+                        <h2 className="font-sans text-base md:text-lg font-light leading-snug mt-4 mb-1 group-hover:text-foreground/70 transition-colors duration-300">
+                          {review.name}
+                        </h2>
+                      </Link>
                       <p className="text-editorial-caption text-foreground/50">Artist · Creative Project NEW</p>
                     </div>
 
