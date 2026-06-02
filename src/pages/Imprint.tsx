@@ -23,8 +23,8 @@ const Imprint = () => {
                 <h2 className="text-editorial-heading mb-3">Service Provider / Responsible for Content</h2>
                 <p>
                   Olga Tarabukina<br />
-                  Philippistraße 8<br />
-                  14059 Berlin<br />
+                  Osnabrücker Str. 27<br />
+                  10589 Berlin<br />
                   Germany
                 </p>
                 <p className="mt-3">
@@ -37,8 +37,8 @@ const Imprint = () => {
                 <h2 className="text-editorial-heading mb-3">Responsible for journalistic-editorial content, if applicable</h2>
                 <p>
                   Olga Tarabukina<br />
-                  Philippistraße 8<br />
-                  14059 Berlin<br />
+                  Osnabrücker Str. 27<br />
+                  10589 Berlin<br />
                   Germany
                 </p>
               </div>

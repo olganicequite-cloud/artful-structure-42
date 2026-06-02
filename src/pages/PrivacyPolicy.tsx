@@ -23,8 +23,8 @@ const PrivacyPolicy = () => {
                 <p className="mb-3">The controller responsible for data processing on this website is:</p>
                 <p>
                   Olga Tarabukina<br />
-                  Philippistraße 8<br />
-                  14059 Berlin<br />
+                  Osnabrücker Str. 27<br />
+                  10589 Berlin<br />
                   Germany<br />
                   Email: <a href="mailto:olga@tarabukina.de" className="underline underline-offset-2 hover:text-foreground/70 transition-colors">olga@tarabukina.de</a><br />
                   Phone: +49 176 23322581
@@ -127,8 +127,8 @@ const PrivacyPolicy = () => {
                 <p>
                   If you have any questions about this Privacy Policy or the processing of your personal data, please contact:<br /><br />
                   Olga Tarabukina<br />
-                  Philippistraße 8<br />
-                  14059 Berlin<br />
+                  Osnabrücker Str. 27<br />
+                  10589 Berlin<br />
                   Germany<br />
                   Email: <a href="mailto:olga@tarabukina.de" className="underline underline-offset-2 hover:text-foreground/70 transition-colors">olga@tarabukina.de</a><br />
                   Phone: +49 176 23322581
