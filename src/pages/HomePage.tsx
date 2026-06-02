@@ -209,6 +209,17 @@ const HomePage = () => {
               </FadeIn>
             ))}
           </div>
+          <FadeIn delay={0.4}>
+            <div className="mt-10 md:mt-12">
+              <Link
+                to="/reviews"
+                className="text-editorial-detail text-foreground/60 hover:text-foreground transition-colors duration-300 inline-flex items-center gap-2 group"
+              >
+                <span>Read all feedbacks and reviews</span>
+                <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+              </Link>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
