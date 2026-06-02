@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState, useCallback, useRef } from "react";
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
+import Seo from "@/components/Seo";
 import curatorPortrait from "@/assets/olga-tarabukina.jpg";
 import heroBerlin from "@/assets/hero-berlin.jpg";
 
@@ -63,6 +64,27 @@ const HomePage = () => {
 
   return (
     <SiteLayout>
+      <Seo
+        title="Creative Project NEW — Curatorial Collaboration for Artists in Berlin"
+        description="Berlin curatorial platform where artists develop contemporary photography, painting, and mixed-media projects with curator Olga Tarabukina."
+        path="/"
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Creative Project NEW",
+            url: "https://artful-structure-42.lovable.app/",
+            description: "Berlin-based curatorial platform pairing artists with a curator to develop contemporary art projects.",
+            founder: { "@type": "Person", name: "Olga Tarabukina" },
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Creative Project NEW",
+            url: "https://artful-structure-42.lovable.app/",
+          },
+        ]}
+      />
       {/* 1. Hero Banner */}
       <section className="relative w-full">
         <div className="relative w-full h-[45vh] sm:h-[50vh] md:h-[62vh] lg:h-[78vh] overflow-hidden">
@@ -104,7 +126,9 @@ const HomePage = () => {
       <section className="section-spacing page-padding">
         <div className="max-w-3xl mx-auto">
           <FadeIn>
-            <h1 className="text-editorial-title mb-4">Creative Project NEW</h1>
+            <h1 className="text-editorial-title mb-4">
+              Creative Project NEW — Curatorial Collaboration for Artists in Berlin
+            </h1>
             <p className="text-editorial-detail mb-8">Curatorial Collaboration</p>
           </FadeIn>
           <FadeIn delay={0.1}>
