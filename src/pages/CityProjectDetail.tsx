@@ -2,6 +2,7 @@ import { useParams, Navigate, Link } from "react-router-dom";
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
+import Seo from "@/components/Seo";
 import { getCityProjectBySlug } from "@/lib/cityExhibitionData";
 
 const CityProjectDetail = () => {

@@ -1,6 +1,7 @@
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
+import Seo from "@/components/Seo";
 
 const Imprint = () => {
   return (

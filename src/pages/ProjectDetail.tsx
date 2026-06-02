@@ -4,6 +4,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
+import Seo from "@/components/Seo";
 import { getProjectBySlug, type ProjectImage } from "@/lib/projectData";
 
 

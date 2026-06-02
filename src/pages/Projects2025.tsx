@@ -1,5 +1,6 @@
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
+import Seo from "@/components/Seo";
 
 const Projects2025 = () => {
   return (

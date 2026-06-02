@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
+import Seo from "@/components/Seo";
 import { toast } from "@/hooks/use-toast";
 
 const reasons = ["Participation", "Collaboration", "General Inquiry"] as const;
