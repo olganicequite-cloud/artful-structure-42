@@ -7,7 +7,6 @@ import thumbOxana from "@/assets/projects-thumb-oxana-grom.jpg";
 import thumbOlga from "@/assets/projects-thumb-olga-iavorskaia.jpg";
 
 import annaFrozen1 from "@/assets/anna-frozen-1.jpg";
-import annaFrozen2 from "@/assets/anna-frozen-2.jpg";
 import annaFrozen3 from "@/assets/anna-frozen-3.jpg";
 import annaFrozen4 from "@/assets/anna-frozen-4.jpg";
 import dariaDancing1 from "@/assets/daria-dancing-1.jpg";
@@ -127,14 +126,9 @@ export const projects2025: Project[] = [
         caption: { title: "Waiting", medium: "Photograph", dimensions: "Various sizes" },
       },
       {
-        src: annaFrozen2,
-        alt: "Anna Kazakova — Colonnade",
-        caption: { title: "Colonnade", medium: "Photograph", dimensions: "Various sizes" },
-      },
-      {
         src: annaFrozen3,
-        alt: "Anna Kazakova — Time Disruption",
-        caption: { title: "Time Disruption", medium: "Photograph", dimensions: "Various sizes" },
+        alt: "Anna Kazakova — Time Disputen",
+        caption: { title: "Time Disputen", medium: "Photograph", dimensions: "Various sizes" },
       },
       {
         src: annaFrozen4,
