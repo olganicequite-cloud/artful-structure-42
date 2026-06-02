@@ -1,7 +1,7 @@
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
-import { artists } from "@/lib/artistData";
+import { artists, placeholderArtists2025 } from "@/lib/artistData";
 
 interface Review {
   slug: string;
@@ -102,10 +102,8 @@ const portraitCropMap: Record<string, string> = {
   "oxana-grom": "50% 28%",
 };
 
-const getPortrait = (slug: string) => {
-  const artist = artists.find((a) => a.slug === slug);
-  return artist?.portrait;
-};
+const allArtists = [...artists, ...placeholderArtists2025];
+const getPortrait = (slug: string) => allArtists.find((a) => a.slug === slug)?.portrait;
 
 const Reviews = () => {
   return (
