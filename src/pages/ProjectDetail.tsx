@@ -168,7 +168,7 @@ const Lightbox = ({
                 alt={img.alt}
                 className="max-w-[88vw] max-h-[88vh] object-contain select-none"
                 draggable={false}
-              />
+               loading="lazy" decoding="async"/>
             </div>
           ))}
         </div>

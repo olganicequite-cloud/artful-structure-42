@@ -27,7 +27,7 @@ const ArtworkDetail = () => {
                 src={artwork.thumbnail}
                 alt={artwork.title}
                 className="w-full h-full object-cover"
-              />
+               loading="lazy" decoding="async"/>
             </div>
           </FadeIn>
 

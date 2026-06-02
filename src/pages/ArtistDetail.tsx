@@ -48,7 +48,7 @@ const ArtistDetail = () => {
                     alt={artist.name}
                     className="w-full h-full object-cover"
                     style={{ objectPosition }}
-                  />
+                   loading="lazy" decoding="async"/>
                 ) : (
                   <div className="w-full h-full flex items-center justify-center">
                     <span className="text-editorial-caption text-foreground/30">Portrait</span>

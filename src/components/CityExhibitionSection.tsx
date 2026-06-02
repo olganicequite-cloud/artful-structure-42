@@ -20,7 +20,7 @@ const CityExhibitionSection = () => {
           className="absolute inset-0 w-full h-full object-cover"
           width={1920}
           height={1080}
-        />
+         loading="lazy" decoding="async"/>
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/15 to-black/45" />
 
         {/* Photo Credit - top right inside hero (desktop/tablet only) */}

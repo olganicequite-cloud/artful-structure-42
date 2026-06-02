@@ -27,7 +27,7 @@ const CityProjectDetail = () => {
                 src={project.thumbnail}
                 alt={project.title}
                 className="w-full h-auto object-contain"
-              />
+               loading="lazy" decoding="async"/>
             </div>
           </FadeIn>
 
