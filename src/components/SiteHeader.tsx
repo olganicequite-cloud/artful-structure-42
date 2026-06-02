@@ -8,6 +8,7 @@ const navItems = [
   { path: "/exhibition", label: "Exhibition" },
   { path: "/artists", label: "Artist Team" },
   { path: "/projects", label: "Projects" },
+  { path: "/reviews", label: "Reviews" },
 ];
 
 const SiteHeader = () => {

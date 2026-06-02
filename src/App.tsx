@@ -16,6 +16,7 @@ const ArtworkDetail = lazy(() => import("./pages/ArtworkDetail"));
 const CityProjectDetail = lazy(() => import("./pages/CityProjectDetail"));
 const Imprint = lazy(() => import("./pages/Imprint"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const Reviews = lazy(() => import("./pages/Reviews"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const App = () => (
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/impressum" element={<Imprint />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/reviews" element={<Reviews />} />
           <Route path="/home" element={<Navigate to="/" replace />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
