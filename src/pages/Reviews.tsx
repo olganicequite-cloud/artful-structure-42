@@ -94,6 +94,13 @@ const reviews: Review[] = [
       "Thank you so much for this project.",
     ],
   },
+  {
+    slug: "aj-jul",
+    name: "Aj Jul",
+    paragraphs: [
+      "The Creative Project NEW initiative gave us assignments that really made me stop and think, not only about art itself, but about who I am as an artist, what I actually want to say, and what creativity means to me personally. These are the kinds of questions you don't always ask yourself on your own while being busy with everyday life or simply making things intuitively. For me, the most meaningful part of the project was this process of self-analysis and building a stronger foundation for future creative growth. It helped clarify direction, intentions, and motivation, and gave me something solid to continue developing from in my artistic journey.",
+    ],
+  },
 ];
 
 const portraitCropMap: Record<string, string> = {
