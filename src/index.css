@@ -141,3 +141,8 @@
     @apply px-5 md:px-10 lg:px-16;
   }
 }
+
+/* Hide browser-rendered alt text while images are loading */
+img {
+  color: transparent;
+}
