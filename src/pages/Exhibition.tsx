@@ -55,7 +55,7 @@ const Exhibition = () => {
           className="absolute inset-0 w-full h-full object-cover"
           width={1920}
           height={1080}
-         loading="lazy" decoding="async"/>
+         loading="eager" fetchPriority="high" decoding="async"/>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/50" />
 
         {/* Photo Credit - top right inside hero (desktop/tablet only) */}
