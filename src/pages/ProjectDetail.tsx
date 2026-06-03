@@ -247,17 +247,45 @@ const ProjectDetail = () => {
 
         {project.images.length > 0 && (
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-10">
-              {project.images.map((img, i) => (
-                <div key={i} className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.75rem)]">
-                  <ArtworkBlock
-                    image={img}
-                    artist={project.artist}
-                    onOpen={() => setLightboxIndex(i)}
-                  />
+            {(() => {
+              // Build groups: explicit groupSizes, or one group with all images.
+              const sizes =
+                project.groupSizes && project.groupSizes.reduce((a, b) => a + b, 0) === project.images.length
+                  ? project.groupSizes
+                  : [project.images.length];
+              const groups: { items: typeof project.images; startIndex: number }[] = [];
+              let cursor = 0;
+              for (const size of sizes) {
+                groups.push({ items: project.images.slice(cursor, cursor + size), startIndex: cursor });
+                cursor += size;
+              }
+              return (
+                <div className="space-y-14 md:space-y-20">
+                  {groups.map((group, gi) => (
+                    <div
+                      key={gi}
+                      className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-10"
+                    >
+                      {group.items.map((img, i) => {
+                        const flatIndex = group.startIndex + i;
+                        return (
+                          <div
+                            key={flatIndex}
+                            className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.75rem)]"
+                          >
+                            <ArtworkBlock
+                              image={img}
+                              artist={project.artist}
+                              onOpen={() => setLightboxIndex(flatIndex)}
+                            />
+                          </div>
+                        );
+                      })}
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              );
+            })()}
           </div>
         )}
       </section>
