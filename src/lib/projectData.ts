@@ -52,6 +52,8 @@ export interface Project {
   thumbnail: string;
   description: string[];
   images: ProjectImage[];
+  /** Optional layout: split images into separate rows (e.g. diptychs). Must sum to images.length. */
+  groupSizes?: number[];
 }
 
 export const projects: Project[] = [
