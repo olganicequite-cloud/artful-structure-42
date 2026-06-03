@@ -80,7 +80,7 @@ const Imprint = () => {
                 <div className="space-y-3">
                   <div>
                     <p className="text-editorial-caption mb-1">Instagram:</p>
-                    <a href="https://www.instagram.com/olga_tarabukina_photography" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-foreground/70 transition-colors block text-sm">instagram.com/olga_tarabukina_photography</a>
+                    <a href="https://www.instagram.com/tarabukina_photography" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-foreground/70 transition-colors block text-sm">instagram.com/tarabukina_photography</a>
                     <a href="https://www.instagram.com/creative.project.new" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-foreground/70 transition-colors block text-sm mt-1">instagram.com/creative.project.new</a>
                   </div>
                   <div>
