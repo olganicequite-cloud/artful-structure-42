@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://artful-structure-42.lovable.app/sitemap.xml
+Sitemap: https://creative-project-new.com/sitemap.xml
