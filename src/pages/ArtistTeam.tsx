@@ -159,18 +159,18 @@ const ArtistTeam = () => {
   const palmira: Partner = {
     slug: "palmira-furman",
     name: "Palmira Furman",
-    role: "Vocal Academy · Singer · Songwriter · Vocal Teacher",
+    role: "Program & Cooperation Partner",
     shortDescription:
-      "Featured cooperation: Meditative Sound Therapy — an immersive journey into the deep, primordial soundscapes of nature. Hosted by Palmira Furman.",
+      "Vocal Academy · Singer · Songwriter · Vocal Teacher. Featured cooperation: Meditative Sound Therapy — an immersive journey into the deep, primordial soundscapes of nature.",
     bio: "My name is Palmira Furman, and I am a professional singer, songwriter and vocal teacher based in Berlin. The emotions and needs of my clients are at the centre of my work.\n\nWhether you are a beginner, a professional or simply want to sing for pleasure, my individual approach supports you in expressing your own story through your voice. Empathy and experience are fundamental to my teaching and create an environment that is both accessible and professional.\n\nMy approach draws on more than a decade of teaching international clients as well as my own professional singing career. These areas overlap in a method that combines practical and theoretical work.\n\nMy method is built around three main pillars:\n– Fundamental skills: breathing, articulation and clear vocal production\n– Initial development: vocal range, stage work and artistic presentation\n– Professional performance: vocal techniques, stylistic versatility, multivocal practice and extreme vocals\n\nA balanced and healthy vocal technique gives singers greater freedom. Vocal freedom can remove barriers that often prevent truthful communication. Through freedom of voice and authentic expression, singing has the potential to transform both performers and listeners.",
   };
 
   const minimalistix: Partner = {
     slug: "minimalistix-gallery",
     name: "Minimalistix Gallery",
-    role: "Support & Exhibition Cooperation",
+    role: "Exhibition Partner",
     shortDescription:
-      "Support and exhibition cooperation for HAPPY ART WEEK Berlin 2026.",
+      "HAPPY ART WEEK Berlin 2026 — exhibition partner.",
     eventDate: "HAPPY ART WEEK Berlin 2026 · 24 July — 1 August 2026",
     internalUrl: "/exhibition#happy-art-week-2026",
     internalLabel: "View Exhibition →",
@@ -181,7 +181,7 @@ const ArtistTeam = () => {
   const speakeasy: Partner = {
     slug: "speakeasy",
     name: "SpeakEasy Stage & Studio",
-    role: "Exhibition Cooperation",
+    role: "Venue & Cooperation Partner",
     shortDescription: "Exhibition cooperation with SpeakEasy Berlin.",
     eventDate: "29 August 2026",
     externalUrl: "https://www.speakeasyberlin.de/events",
