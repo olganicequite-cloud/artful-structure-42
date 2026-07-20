@@ -162,6 +162,28 @@ export const artists: Artist[] = [
       },
     ],
   },
+  {
+    slug: "julia-shein",
+    name: "Julia Shein",
+    shortLine: "Photography · Nature · Atmosphere · Emotion",
+    bio: "Julia Shein is an emerging photographer whose practice is shaped by nature, silence and emotional observation. Her images seek to convey not only a person or place, but the atmosphere and feeling that remain with the viewer.",
+    longBio: "My name is Julia Shein.\n\nPhotography entered my life not as a profession, but as a way of seeing the world anew. It taught me to pause, to notice beauty in simple things, and to feel what cannot be expressed in words.\n\nMy path was not originally connected to art. For many years I worked in another field, but my love of photography always remained within me. Through the lens, I found calm, inspiration and a way to speak without words.\n\nI am especially drawn to nature. In its light, silence and endless movement, I see a reflection of human emotion. It is important to me not simply to show a place or a person, but to convey the atmosphere, mood and feeling that remain with the viewer.\n\nI discovered Creative Project NEW in February 2025. At the time, I still doubted myself and was unsure whether I deserved to become part of a creative community. This project became a space in which fear gradually turned into confidence, and a dream became a first real step.\n\nFor me, photography is not the search for a perfect image. It is the search for something genuine — the moment when a person stops playing a role and the world reveals itself as it truly is.\n\nI am only beginning my journey as a photographer, but I already know that I want to create work that does more than please the eye: work that makes people feel, remember and pause, even if only for a few seconds.\n\nCreative Project NEW marks the beginning of a new chapter in my life — a chapter in which creativity is no longer a dream, but becomes my way of speaking to the world.",
+    artistStatement: "",
+    portrait: "",
+    cohort: "2025-26",
+    projects: [],
+  },
+  {
+    slug: "vika-imago-mortis",
+    name: "Vika Imago Mortis",
+    shortLine: "Bone Jewellery · Drawing · Painting · Photography",
+    bio: "Vika Imago Mortis is the artistic identity of Vika Mavkka, whose multidisciplinary practice combines bone jewellery, drawing, painting, photography and visual work for music projects.",
+    longBio: "Vika Imago Mortis is the artistic identity of Vika Mavkka, whose multidisciplinary practice spans bone jewellery, drawing, painting, photography and visual work for music projects. Working with bone and organic materials, ink and traditional techniques, she creates singular objects and images situated between ornament, relic and ritual artefact.\n\nMagic and death are the central themes of her work. Her practice explores the spiritual connection between this world and the otherworld, between the living and the dead, and between the visible and the invisible.\n\nMusic is an important part of her creative environment, often leading to visual collaborations and artwork for musicians. Combining meticulous handwork with a raw and atmospheric visual language, Vika Imago Mortis works internationally and across changing locations and is currently based in Sweden.",
+    artistStatement: "",
+    portrait: "",
+    cohort: "2025-26",
+    projects: [],
+  },
 ];
 
 export const placeholderArtists2025: Artist[] = [
