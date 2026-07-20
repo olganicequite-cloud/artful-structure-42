@@ -209,59 +209,35 @@ const ArtistTeam = () => {
             </p>
           </FadeIn>
 
-          {/* Participants 2026 */}
+          {/* Artists · 2026 */}
           <FadeIn delay={0.05}>
-            <p className="text-editorial-detail mb-6">Participants · 2026</p>
+            <p className="text-editorial-detail mb-6">Artists · 2026</p>
           </FadeIn>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-24">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-20">
             <FadeIn>
-              <ArtistCard artist={anna} />
+              <ArtistCard artist={anna} roleLine="Participant" />
             </FadeIn>
             <FadeIn delay={0.05}>
-              <ArtistCard artist={julia} />
+              <ArtistCard artist={julia} roleLine="Participant" />
             </FadeIn>
-          </div>
-
-          {/* Independent Participant */}
-          <FadeIn>
-            <div className="gallery-divider mb-10" />
-            <p className="text-editorial-detail mb-6">Independent Participant</p>
-          </FadeIn>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-24">
-            <FadeIn>
+            <FadeIn delay={0.1}>
               <ArtistCard artist={vika} roleLine="Independent Participant" />
             </FadeIn>
           </div>
 
-          {/* Cooperation Partner */}
+          {/* Partners & Collaborations */}
           <FadeIn>
             <div className="gallery-divider mb-10" />
-            <p className="text-editorial-detail mb-6">Cooperation Partner</p>
+            <p className="text-editorial-detail mb-6">Partners &amp; Collaborations</p>
           </FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-24">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-20">
             <FadeIn>
               <PartnerCard partner={palmira} />
             </FadeIn>
-          </div>
-
-          {/* Support & Cooperation */}
-          <FadeIn>
-            <div className="gallery-divider mb-10" />
-            <p className="text-editorial-detail mb-6">Support &amp; Cooperation</p>
-          </FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-24">
-            <FadeIn>
+            <FadeIn delay={0.05}>
               <PartnerCard partner={minimalistix} />
             </FadeIn>
-          </div>
-
-          {/* Cooperation */}
-          <FadeIn>
-            <div className="gallery-divider mb-10" />
-            <p className="text-editorial-detail mb-6">Cooperation</p>
-          </FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-24">
-            <FadeIn>
+            <FadeIn delay={0.1}>
               <PartnerCard partner={speakeasy} />
             </FadeIn>
           </div>
@@ -271,7 +247,7 @@ const ArtistTeam = () => {
             <div className="gallery-divider mb-10" />
             <p className="text-editorial-detail mb-6">Participation</p>
           </FadeIn>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-24">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-20">
             <FadeIn>
               <CohortCTACard />
             </FadeIn>
