@@ -29,8 +29,10 @@ const ArtistCard = ({ artist, roleLine }: { artist: Artist; roleLine?: string })
             loading="lazy"
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center">
-            <span className="text-editorial-caption text-foreground/30">Portrait</span>
+          <div className="w-full h-full flex items-center justify-center p-6">
+            <span className="font-sans text-2xl md:text-3xl font-light tracking-tight text-foreground/40 text-center leading-tight">
+              {artist.name}
+            </span>
           </div>
         )}
       </div>
@@ -76,8 +78,10 @@ const PartnerCard = ({ partner }: { partner: Partner }) => (
           loading="lazy"
         />
       ) : (
-        <div className="w-full h-full flex items-center justify-center">
-          <span className="text-editorial-caption text-foreground/30">Portrait</span>
+        <div className="w-full h-full flex items-center justify-center p-6">
+          <span className="font-sans text-xl md:text-2xl font-light tracking-tight text-foreground/50 text-center leading-tight">
+            {partner.name}
+          </span>
         </div>
       )}
     </div>
