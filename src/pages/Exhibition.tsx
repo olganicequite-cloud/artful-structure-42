@@ -6,6 +6,7 @@ import Seo from "@/components/Seo";
 import styxHero from "@/assets/styx-hero.jpg";
 import { featuredArtworks } from "@/lib/exhibitionData";
 import CityExhibitionSection from "@/components/CityExhibitionSection";
+import HappyArtWeekSection from "@/components/HappyArtWeekSection";
 
 const mapsUrl = "https://www.google.com/maps/search/?api=1&query=Schwedter+Str.+48+10435+Berlin";
 
@@ -22,40 +23,66 @@ const Exhibition = () => {
   return (
     <SiteLayout>
       <Seo
-        title="STYX: Crossing Darkness Within — Exhibition, Berlin"
-        description="STYX: Crossing Darkness Within. Group exhibition at VOID INK, Schwedter Str. 48, Berlin. 26 April – 31 May 2026."
+        title="HAPPY ART WEEK Berlin 2026 — Creative Project NEW Exhibitions"
+        description="Discover HAPPY ART WEEK Berlin 2026, STYX and CITY — contemporary art exhibitions and curatorial projects presented by Creative Project NEW in Berlin."
         path="/exhibition"
-        jsonLd={{
-          "@context": "https://schema.org",
-          "@type": "ExhibitionEvent",
-          name: "STYX: Crossing Darkness Within",
-          startDate: "2026-04-26",
-          endDate: "2026-05-31",
-          eventStatus: "https://schema.org/EventScheduled",
-          eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-          location: {
-            "@type": "Place",
-            name: "VOID INK",
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: "Schwedter Str. 48",
-              postalCode: "10435",
-              addressLocality: "Berlin",
-              addressCountry: "DE",
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "ExhibitionEvent",
+            name: "HAPPY ART WEEK Berlin 2026",
+            startDate: "2026-07-24",
+            endDate: "2026-08-01",
+            eventStatus: "https://schema.org/EventScheduled",
+            eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+            location: {
+              "@type": "Place",
+              name: "Minimalistix Pop-Up Gallery",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Kurfürstenstraße 33",
+                postalCode: "10785",
+                addressLocality: "Berlin",
+                addressCountry: "DE",
+              },
             },
+            organizer: { "@type": "Organization", name: "Minimalistix.eu / Cengiz Tatar", url: "https://minimalistix.eu/" },
           },
-          organizer: { "@type": "Organization", name: "Creative Project NEW" },
-        }}
+          {
+            "@context": "https://schema.org",
+            "@type": "ExhibitionEvent",
+            name: "STYX: Crossing Darkness Within",
+            startDate: "2026-04-26",
+            endDate: "2026-05-31",
+            eventStatus: "https://schema.org/EventScheduled",
+            eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+            location: {
+              "@type": "Place",
+              name: "VOID INK",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Schwedter Str. 48",
+                postalCode: "10435",
+                addressLocality: "Berlin",
+                addressCountry: "DE",
+              },
+            },
+            organizer: { "@type": "Organization", name: "Creative Project NEW" },
+          },
+        ]}
       />
+      {/* Latest: HAPPY ART WEEK Berlin 2026 */}
+      <HappyArtWeekSection />
+
       {/* Hero */}
-      <section className="relative w-full min-h-[85vh] md:min-h-[90vh] flex flex-col">
+      <section id="styx-2026" className="scroll-mt-24 relative w-full min-h-[85vh] md:min-h-[90vh] flex flex-col">
         <img
           src={styxHero}
           alt="STYX exhibition — atmospheric dark waters"
           className="absolute inset-0 w-full h-full object-cover"
           width={1920}
           height={1080}
-         loading="eager" fetchPriority="high" decoding="async"/>
+         loading="lazy" decoding="async"/>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/50" />
 
         {/* Photo Credit - top right inside hero (desktop/tablet only) */}
@@ -69,14 +96,14 @@ const Exhibition = () => {
         <div className="relative z-10 page-padding pt-24 md:pt-32 lg:pt-20 w-full">
           <FadeIn>
             <p className="text-xs md:text-sm tracking-[0.3em] uppercase font-sans mb-2 md:mb-3 text-primary-foreground/60">
-              Exhibition
+              PAST EXHIBITION
             </p>
-            <h1
+            <h2
               className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-[0.04em] text-primary-foreground mb-2 md:mb-4"
               style={{ fontFamily: "'Arial Black', 'Arial', sans-serif" }}
             >
               STYX
-            </h1>
+            </h2>
             <p
               className="text-2xl md:text-3xl lg:text-4xl text-primary-foreground/95"
               style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 200 }}

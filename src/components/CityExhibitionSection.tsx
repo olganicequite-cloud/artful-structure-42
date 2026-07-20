@@ -6,7 +6,7 @@ const CityExhibitionSection = () => {
   return (
     <>
       {/* Divider */}
-      <section className="page-padding pt-16 md:pt-24">
+      <section id="city-2025" className="scroll-mt-24 page-padding pt-16 md:pt-24">
         <div className="max-w-4xl mx-auto">
           <div className="gallery-divider" />
         </div>
