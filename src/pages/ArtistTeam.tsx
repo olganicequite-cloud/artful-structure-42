@@ -29,8 +29,10 @@ const ArtistCard = ({ artist, roleLine }: { artist: Artist; roleLine?: string })
             loading="lazy"
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center">
-            <span className="text-editorial-caption text-foreground/30">Portrait</span>
+          <div className="w-full h-full flex items-center justify-center p-6">
+            <span className="font-sans text-2xl md:text-3xl font-light tracking-tight text-foreground/40 text-center leading-tight">
+              {artist.name}
+            </span>
           </div>
         )}
       </div>
@@ -76,8 +78,10 @@ const PartnerCard = ({ partner }: { partner: Partner }) => (
           loading="lazy"
         />
       ) : (
-        <div className="w-full h-full flex items-center justify-center">
-          <span className="text-editorial-caption text-foreground/30">Portrait</span>
+        <div className="w-full h-full flex items-center justify-center p-6">
+          <span className="font-sans text-xl md:text-2xl font-light tracking-tight text-foreground/50 text-center leading-tight">
+            {partner.name}
+          </span>
         </div>
       )}
     </div>
@@ -155,18 +159,18 @@ const ArtistTeam = () => {
   const palmira: Partner = {
     slug: "palmira-furman",
     name: "Palmira Furman",
-    role: "Vocal Academy · Singer · Songwriter · Vocal Teacher",
+    role: "Program & Cooperation Partner",
     shortDescription:
-      "Featured cooperation: Meditative Sound Therapy — an immersive journey into the deep, primordial soundscapes of nature. Hosted by Palmira Furman.",
+      "Vocal Academy · Singer · Songwriter · Vocal Teacher. Featured cooperation: Meditative Sound Therapy — an immersive journey into the deep, primordial soundscapes of nature.",
     bio: "My name is Palmira Furman, and I am a professional singer, songwriter and vocal teacher based in Berlin. The emotions and needs of my clients are at the centre of my work.\n\nWhether you are a beginner, a professional or simply want to sing for pleasure, my individual approach supports you in expressing your own story through your voice. Empathy and experience are fundamental to my teaching and create an environment that is both accessible and professional.\n\nMy approach draws on more than a decade of teaching international clients as well as my own professional singing career. These areas overlap in a method that combines practical and theoretical work.\n\nMy method is built around three main pillars:\n– Fundamental skills: breathing, articulation and clear vocal production\n– Initial development: vocal range, stage work and artistic presentation\n– Professional performance: vocal techniques, stylistic versatility, multivocal practice and extreme vocals\n\nA balanced and healthy vocal technique gives singers greater freedom. Vocal freedom can remove barriers that often prevent truthful communication. Through freedom of voice and authentic expression, singing has the potential to transform both performers and listeners.",
   };
 
   const minimalistix: Partner = {
     slug: "minimalistix-gallery",
     name: "Minimalistix Gallery",
-    role: "Support & Exhibition Cooperation",
+    role: "Exhibition Partner",
     shortDescription:
-      "Support and exhibition cooperation for HAPPY ART WEEK Berlin 2026.",
+      "HAPPY ART WEEK Berlin 2026 — exhibition partner.",
     eventDate: "HAPPY ART WEEK Berlin 2026 · 24 July — 1 August 2026",
     internalUrl: "/exhibition#happy-art-week-2026",
     internalLabel: "View Exhibition →",
@@ -177,7 +181,7 @@ const ArtistTeam = () => {
   const speakeasy: Partner = {
     slug: "speakeasy",
     name: "SpeakEasy Stage & Studio",
-    role: "Exhibition Cooperation",
+    role: "Venue & Cooperation Partner",
     shortDescription: "Exhibition cooperation with SpeakEasy Berlin.",
     eventDate: "29 August 2026",
     externalUrl: "https://www.speakeasyberlin.de/events",
@@ -205,59 +209,35 @@ const ArtistTeam = () => {
             </p>
           </FadeIn>
 
-          {/* Participants 2026 */}
+          {/* Artists · 2026 */}
           <FadeIn delay={0.05}>
-            <p className="text-editorial-detail mb-6">Participants · 2026</p>
+            <p className="text-editorial-detail mb-6">Artists · 2026</p>
           </FadeIn>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-24">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-20">
             <FadeIn>
-              <ArtistCard artist={anna} />
+              <ArtistCard artist={anna} roleLine="Participant" />
             </FadeIn>
             <FadeIn delay={0.05}>
-              <ArtistCard artist={julia} />
+              <ArtistCard artist={julia} roleLine="Participant" />
             </FadeIn>
-          </div>
-
-          {/* Independent Participant */}
-          <FadeIn>
-            <div className="gallery-divider mb-10" />
-            <p className="text-editorial-detail mb-6">Independent Participant</p>
-          </FadeIn>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-24">
-            <FadeIn>
+            <FadeIn delay={0.1}>
               <ArtistCard artist={vika} roleLine="Independent Participant" />
             </FadeIn>
           </div>
 
-          {/* Cooperation Partner */}
+          {/* Partners & Collaborations */}
           <FadeIn>
             <div className="gallery-divider mb-10" />
-            <p className="text-editorial-detail mb-6">Cooperation Partner</p>
+            <p className="text-editorial-detail mb-6">Partners &amp; Collaborations</p>
           </FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-24">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-20">
             <FadeIn>
               <PartnerCard partner={palmira} />
             </FadeIn>
-          </div>
-
-          {/* Support & Cooperation */}
-          <FadeIn>
-            <div className="gallery-divider mb-10" />
-            <p className="text-editorial-detail mb-6">Support &amp; Cooperation</p>
-          </FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-24">
-            <FadeIn>
+            <FadeIn delay={0.05}>
               <PartnerCard partner={minimalistix} />
             </FadeIn>
-          </div>
-
-          {/* Cooperation */}
-          <FadeIn>
-            <div className="gallery-divider mb-10" />
-            <p className="text-editorial-detail mb-6">Cooperation</p>
-          </FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-24">
-            <FadeIn>
+            <FadeIn delay={0.1}>
               <PartnerCard partner={speakeasy} />
             </FadeIn>
           </div>
@@ -267,7 +247,7 @@ const ArtistTeam = () => {
             <div className="gallery-divider mb-10" />
             <p className="text-editorial-detail mb-6">Participation</p>
           </FadeIn>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-24">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-20">
             <FadeIn>
               <CohortCTACard />
             </FadeIn>
