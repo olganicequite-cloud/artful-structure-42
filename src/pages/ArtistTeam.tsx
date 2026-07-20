@@ -3,7 +3,7 @@ import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import Seo from "@/components/Seo";
-import { artists, placeholderArtists2025, Artist } from "@/lib/artistData";
+import { artists, placeholderArtists2025, Artist, getArtistBySlug } from "@/lib/artistData";
 
 const portraitCropMap: Record<string, string> = {
   "olga-iavorskaia": "50% 30%",
@@ -13,7 +13,7 @@ const portraitCropMap: Record<string, string> = {
   "oxana-grom": "50% 28%",
 };
 
-const ArtistCard = ({ artist }: { artist: Artist }) => {
+const ArtistCard = ({ artist, roleLine }: { artist: Artist; roleLine?: string }) => {
   const hasDetail = artist.cohort === "2025-26" || artist.cohort === "2025";
   const objectPosition = portraitCropMap[artist.slug] || "center";
 
@@ -38,6 +38,9 @@ const ArtistCard = ({ artist }: { artist: Artist }) => {
         {artist.name}
       </h3>
       <p className="text-editorial-caption">{artist.shortLine}</p>
+      {roleLine && (
+        <p className="text-editorial-caption text-foreground/50 mt-0.5">{roleLine}</p>
+      )}
     </div>
   );
 
@@ -47,6 +50,86 @@ const ArtistCard = ({ artist }: { artist: Artist }) => {
 
   return content;
 };
+
+interface Partner {
+  slug: string;
+  name: string;
+  role: string;
+  shortDescription: string;
+  bio?: string;
+  image?: string;
+  externalUrl?: string;
+  externalLabel?: string;
+  internalUrl?: string;
+  internalLabel?: string;
+  eventDate?: string;
+}
+
+const PartnerCard = ({ partner }: { partner: Partner }) => (
+  <div>
+    <div className="aspect-[4/5] bg-secondary overflow-hidden mb-3">
+      {partner.image ? (
+        <img
+          src={partner.image}
+          alt={partner.name}
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+      ) : (
+        <div className="w-full h-full flex items-center justify-center">
+          <span className="text-editorial-caption text-foreground/30">Portrait</span>
+        </div>
+      )}
+    </div>
+    <h3 className="font-sans text-base md:text-lg font-light leading-snug mb-0.5">
+      {partner.name}
+    </h3>
+    <p className="text-editorial-caption">{partner.role}</p>
+    <p className="text-editorial-caption text-foreground/60 mt-2 leading-relaxed">
+      {partner.shortDescription}
+    </p>
+    {partner.eventDate && (
+      <p className="text-editorial-caption text-foreground/50 mt-1">{partner.eventDate}</p>
+    )}
+    {partner.bio && (
+      <details className="mt-3 group">
+        <summary className="text-editorial-caption cursor-pointer hover:text-foreground transition-colors list-none">
+          <span className="group-open:hidden">Read more →</span>
+          <span className="hidden group-open:inline">Close ↑</span>
+        </summary>
+        <div className="mt-3 space-y-3">
+          {partner.bio.split("\n\n").map((p, i) => (
+            <p key={i} className="text-editorial-body leading-relaxed whitespace-pre-line">
+              {p}
+            </p>
+          ))}
+        </div>
+      </details>
+    )}
+    {(partner.internalUrl || partner.externalUrl) && (
+      <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
+        {partner.internalUrl && (
+          <Link
+            to={partner.internalUrl}
+            className="text-editorial-caption hover:text-foreground transition-colors underline-offset-4 hover:underline"
+          >
+            {partner.internalLabel || "View →"}
+          </Link>
+        )}
+        {partner.externalUrl && (
+          <a
+            href={partner.externalUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-editorial-caption hover:text-foreground transition-colors underline-offset-4 hover:underline"
+          >
+            {partner.externalLabel || "Visit ↗"}
+          </a>
+        )}
+      </div>
+    )}
+  </div>
+);
 
 const CohortCTACard = () => (
   <Link to="/contact?reason=Participation" className="group">
@@ -65,13 +148,47 @@ const CohortCTACard = () => (
 );
 
 const ArtistTeam = () => {
-  const cohort202526 = artists.filter((a) => a.cohort === "2025-26");
+  const anna = getArtistBySlug("anna-kazakova")!;
+  const julia = getArtistBySlug("julia-shein")!;
+  const vika = getArtistBySlug("vika-imago-mortis")!;
+
+  const palmira: Partner = {
+    slug: "palmira-furman",
+    name: "Palmira Furman",
+    role: "Vocal Academy · Singer · Songwriter · Vocal Teacher",
+    shortDescription:
+      "Featured cooperation: Meditative Sound Therapy — an immersive journey into the deep, primordial soundscapes of nature. Hosted by Palmira Furman.",
+    bio: "My name is Palmira Furman, and I am a professional singer, songwriter and vocal teacher based in Berlin. The emotions and needs of my clients are at the centre of my work.\n\nWhether you are a beginner, a professional or simply want to sing for pleasure, my individual approach supports you in expressing your own story through your voice. Empathy and experience are fundamental to my teaching and create an environment that is both accessible and professional.\n\nMy approach draws on more than a decade of teaching international clients as well as my own professional singing career. These areas overlap in a method that combines practical and theoretical work.\n\nMy method is built around three main pillars:\n– Fundamental skills: breathing, articulation and clear vocal production\n– Initial development: vocal range, stage work and artistic presentation\n– Professional performance: vocal techniques, stylistic versatility, multivocal practice and extreme vocals\n\nA balanced and healthy vocal technique gives singers greater freedom. Vocal freedom can remove barriers that often prevent truthful communication. Through freedom of voice and authentic expression, singing has the potential to transform both performers and listeners.",
+  };
+
+  const minimalistix: Partner = {
+    slug: "minimalistix-gallery",
+    name: "Minimalistix Gallery",
+    role: "Support & Exhibition Cooperation",
+    shortDescription:
+      "Support and exhibition cooperation for HAPPY ART WEEK Berlin 2026.",
+    eventDate: "HAPPY ART WEEK Berlin 2026 · 24 July — 1 August 2026",
+    internalUrl: "/exhibition#happy-art-week-2026",
+    internalLabel: "View Exhibition →",
+    externalUrl: "https://minimalistix.eu/",
+    externalLabel: "Visit Minimalistix ↗",
+  };
+
+  const speakeasy: Partner = {
+    slug: "speakeasy",
+    name: "SpeakEasy Stage & Studio",
+    role: "Exhibition Cooperation",
+    shortDescription: "Exhibition cooperation with SpeakEasy Berlin.",
+    eventDate: "29 August 2026",
+    externalUrl: "https://www.speakeasyberlin.de/events",
+    externalLabel: "SpeakEasy Events ↗",
+  };
 
   return (
     <SiteLayout>
       <Seo
-        title="Artist Team — Creative Project NEW, Berlin"
-        description="Meet the artists of Creative Project NEW: contemporary photographers, painters, and mixed-media practitioners working with curator Olga Tarabukina in Berlin."
+        title="Artist Team 2026 & Cooperation Partners — Creative Project NEW"
+        description="Meet the 2026 participants Anna Kazakova and Julia Shein, independent participant Vika Imago Mortis, and the cooperation partners of Creative Project NEW in Berlin."
         path="/artists"
       />
       <section className="section-spacing page-padding">
@@ -80,20 +197,78 @@ const ArtistTeam = () => {
 
           <FadeIn>
             <p className="text-editorial-detail mb-4">Artist Team</p>
-            <h1 className="text-editorial-title mb-12 md:mb-16">The Artists</h1>
+            <h1 className="text-editorial-title mb-6">The Artists &amp; Partners</h1>
+            <p className="text-editorial-body text-foreground/70 max-w-2xl mb-12 md:mb-16">
+              Creative Project NEW brings together participating artists, independent artistic
+              voices and cooperation partners whose practices contribute to the project's
+              exhibitions, workshops and interdisciplinary program.
+            </p>
           </FadeIn>
 
-          {/* Cohort 2025–26 */}
+          {/* Participants 2026 */}
           <FadeIn delay={0.05}>
-            <p className="text-editorial-detail mb-6">Cohort 2025–26</p>
+            <p className="text-editorial-detail mb-6">Participants · 2026</p>
           </FadeIn>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-24">
-            {cohort202526.map((artist, i) => (
-              <FadeIn key={artist.slug} delay={i * 0.05}>
-                <ArtistCard artist={artist} />
-              </FadeIn>
-            ))}
-            <FadeIn delay={cohort202526.length * 0.05}>
+            <FadeIn>
+              <ArtistCard artist={anna} />
+            </FadeIn>
+            <FadeIn delay={0.05}>
+              <ArtistCard artist={julia} />
+            </FadeIn>
+          </div>
+
+          {/* Independent Participant */}
+          <FadeIn>
+            <div className="gallery-divider mb-10" />
+            <p className="text-editorial-detail mb-6">Independent Participant</p>
+          </FadeIn>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-24">
+            <FadeIn>
+              <ArtistCard artist={vika} roleLine="Independent Participant" />
+            </FadeIn>
+          </div>
+
+          {/* Cooperation Partner */}
+          <FadeIn>
+            <div className="gallery-divider mb-10" />
+            <p className="text-editorial-detail mb-6">Cooperation Partner</p>
+          </FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-24">
+            <FadeIn>
+              <PartnerCard partner={palmira} />
+            </FadeIn>
+          </div>
+
+          {/* Support & Cooperation */}
+          <FadeIn>
+            <div className="gallery-divider mb-10" />
+            <p className="text-editorial-detail mb-6">Support &amp; Cooperation</p>
+          </FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-24">
+            <FadeIn>
+              <PartnerCard partner={minimalistix} />
+            </FadeIn>
+          </div>
+
+          {/* Cooperation */}
+          <FadeIn>
+            <div className="gallery-divider mb-10" />
+            <p className="text-editorial-detail mb-6">Cooperation</p>
+          </FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-24">
+            <FadeIn>
+              <PartnerCard partner={speakeasy} />
+            </FadeIn>
+          </div>
+
+          {/* Participation CTA */}
+          <FadeIn>
+            <div className="gallery-divider mb-10" />
+            <p className="text-editorial-detail mb-6">Participation</p>
+          </FadeIn>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-24">
+            <FadeIn>
               <CohortCTACard />
             </FadeIn>
           </div>
