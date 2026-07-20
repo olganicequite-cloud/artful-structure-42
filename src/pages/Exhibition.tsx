@@ -98,12 +98,12 @@ const Exhibition = () => {
             <p className="text-xs md:text-sm tracking-[0.3em] uppercase font-sans mb-2 md:mb-3 text-primary-foreground/60">
               PAST EXHIBITION
             </p>
-            <h1
+            <h2
               className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-[0.04em] text-primary-foreground mb-2 md:mb-4"
               style={{ fontFamily: "'Arial Black', 'Arial', sans-serif" }}
             >
               STYX
-            </h1>
+            </h2>
             <p
               className="text-2xl md:text-3xl lg:text-4xl text-primary-foreground/95"
               style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 200 }}
