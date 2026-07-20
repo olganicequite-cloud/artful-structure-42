@@ -40,10 +40,12 @@ const HappyArtWeekSection = () => {
               LATEST EXHIBITION
             </p>
             <h1
-              className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-[0.04em] text-primary-foreground mb-2 md:mb-4"
+              className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-[0.04em] text-primary-foreground mb-2 md:mb-4 leading-[0.95]"
               style={{ fontFamily: "'Arial Black', 'Arial', sans-serif" }}
             >
-              HAPPY ART WEEK
+              HAPPY ART
+              <br />
+              WEEK
             </h1>
             <p
               className="text-2xl md:text-3xl lg:text-4xl text-primary-foreground/95"
@@ -63,17 +65,12 @@ const HappyArtWeekSection = () => {
                 <div>
                   <p className="font-sans text-xs tracking-widest uppercase text-primary-foreground/50 mb-0.5">Exhibition</p>
                   <p className="font-sans text-sm text-primary-foreground/90">24 July — 1 August 2026</p>
-                  <p className="font-sans text-sm font-light text-primary-foreground/70">Open daily from 7 p.m. until open end</p>
+                  <p className="font-sans text-sm font-light text-primary-foreground/70">Open daily from 7 p.m.</p>
                 </div>
                 <div>
                   <p className="font-sans text-xs tracking-widest uppercase text-primary-foreground/50 mb-0.5">Finissage</p>
                   <p className="font-sans text-sm text-primary-foreground/90">Saturday, 1 August 2026</p>
                   <p className="font-sans text-sm font-light text-primary-foreground/70">from 7 p.m.</p>
-                </div>
-                <div>
-                  <p className="font-sans text-xs tracking-widest uppercase text-primary-foreground/50 mb-0.5">Organized by</p>
-                  <p className="font-sans text-sm text-primary-foreground/90">Minimalistix.eu</p>
-                  <p className="font-sans text-sm font-light text-primary-foreground/70">Cengiz Tatar</p>
                 </div>
                 <div className="pt-1">
                   <p className="font-sans text-lg text-primary-foreground">MINIMALISTIX POP-UP GALLERY</p>
@@ -115,17 +112,12 @@ const HappyArtWeekSection = () => {
                 <div>
                   <p className="font-sans text-xs tracking-widest uppercase text-primary-foreground/50 mb-0.5">Exhibition</p>
                   <p className="font-sans text-sm text-primary-foreground/90">24 July — 1 August 2026</p>
-                  <p className="font-sans text-sm font-light text-primary-foreground/70">Open daily from 7 p.m. until open end</p>
+                  <p className="font-sans text-sm font-light text-primary-foreground/70">Open daily from 7 p.m.</p>
                 </div>
                 <div>
                   <p className="font-sans text-xs tracking-widest uppercase text-primary-foreground/50 mb-0.5">Finissage</p>
                   <p className="font-sans text-sm text-primary-foreground/90">Saturday, 1 August 2026</p>
                   <p className="font-sans text-sm font-light text-primary-foreground/70">from 7 p.m.</p>
-                </div>
-                <div>
-                  <p className="font-sans text-xs tracking-widest uppercase text-primary-foreground/50 mb-0.5">Organized by</p>
-                  <p className="font-sans text-sm text-primary-foreground/90">Minimalistix.eu</p>
-                  <p className="font-sans text-sm font-light text-primary-foreground/70">Cengiz Tatar</p>
                 </div>
                 <div className="pt-1">
                   <p className="font-sans text-lg text-primary-foreground">MINIMALISTIX POP-UP GALLERY</p>
@@ -162,34 +154,22 @@ const HappyArtWeekSection = () => {
         </p>
       </div>
 
-      {/* Exhibition Poster — matches Featured Projects section */}
-      <section className="page-padding pt-8 pb-16 md:pt-12 md:pb-24">
+      {/* Centered poster — quiet editorial interlude */}
+      <section className="page-padding pt-10 pb-16 md:pt-16 md:pb-24">
         <FadeIn>
-          <div className="max-w-4xl mx-auto mb-10">
-            <div className="gallery-divider mb-6" />
-            <h2 className="text-editorial-subtitle">Exhibition Poster</h2>
-          </div>
+          <figure className="mx-auto flex flex-col items-center" style={{ maxWidth: "440px" }}>
+            <img
+              src={posterAsset.url}
+              alt="HAPPY ART WEEK Berlin 2026 exhibition poster"
+              className="w-full h-auto"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption className="text-editorial-caption mt-4 text-center">
+              Organized by Minimalistix.eu and Cengiz Tatar
+            </figcaption>
+          </figure>
         </FadeIn>
-
-        <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12">
-          <FadeIn>
-            <div>
-              <div className="aspect-[4/5] bg-secondary overflow-hidden mb-3 flex items-center justify-center">
-                <img
-                  src={posterAsset.url}
-                  alt="HAPPY ART WEEK Berlin 2026 exhibition poster"
-                  className="w-full h-full object-contain"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <h3 className="font-sans text-base md:text-lg font-light leading-snug mb-0.5">
-                HAPPY ART WEEK Berlin 2026
-              </h3>
-              <p className="text-editorial-caption">Minimalistix.eu</p>
-            </div>
-          </FadeIn>
-        </div>
       </section>
     </>
   );
