@@ -73,6 +73,16 @@ const ArtworkBlock = ({
           </p>
         )}
       </div>
+
+      {image.description && image.description.length > 0 && (
+        <div className="mt-4 space-y-3">
+          {image.description.map((p, i) => (
+            <p key={i} className="text-editorial-body leading-relaxed text-foreground/75">
+              {p}
+            </p>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
