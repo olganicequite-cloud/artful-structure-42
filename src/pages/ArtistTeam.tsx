@@ -71,6 +71,7 @@ interface Partner {
   bio?: string;
   image?: string;
   isLogo?: boolean;
+  logoScale?: number;
   externalUrl?: string;
   externalLabel?: string;
   internalUrl?: string;
@@ -91,9 +92,10 @@ const PartnerCard = ({ partner }: { partner: Partner }) => (
           alt={partner.name}
           className={
             partner.isLogo
-              ? "max-w-[70%] max-h-[70%] object-contain"
+              ? "w-full h-full object-contain"
               : "w-full h-full object-cover"
           }
+          style={partner.isLogo && partner.logoScale ? { transform: `scale(${partner.logoScale})` } : undefined}
           loading="lazy"
         />
       ) : (
@@ -206,6 +208,7 @@ const ArtistTeam = () => {
     role: "Venue & Cooperation Partner",
     image: speakeazyLogo,
     isLogo: true,
+    logoScale: 1.6,
     shortDescription: "Exhibition cooperation with SpeakEasy Berlin.",
     eventDate: "29 August 2026",
     externalUrl: "https://www.speakeasyberlin.de/events",
