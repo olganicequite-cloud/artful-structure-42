@@ -278,10 +278,15 @@ const ProjectDetail = () => {
                     >
                       {group.items.map((img, i) => {
                         const flatIndex = group.startIndex + i;
+                        const cols = project.columns ?? 3;
+                        const widthClass =
+                          cols === 2
+                            ? "w-full md:w-[calc(50%-1rem)] lg:w-[calc(50%-1.25rem)]"
+                            : "w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.75rem)]";
                         return (
                           <div
                             key={flatIndex}
-                            className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.75rem)]"
+                            className={widthClass}
                           >
                             <ArtworkBlock
                               image={img}
