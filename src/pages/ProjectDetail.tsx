@@ -239,6 +239,11 @@ const ProjectDetail = () => {
             >
               {project.artist}
             </Link>
+            {project.contextLine && (
+              <p className="text-editorial-caption text-foreground/50 mt-1">
+                {project.contextLine}
+              </p>
+            )}
           </FadeIn>
 
           <FadeIn delay={0.05}>
