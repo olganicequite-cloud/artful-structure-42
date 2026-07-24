@@ -200,7 +200,7 @@ const ArtistTeam = () => {
             <div className="gallery-divider mb-10" />
             <p className="text-editorial-detail mb-6">Cohort 2025/26</p>
           </FadeIn>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-20">
             {artists
               .filter((a) => !excludeFromCohort202526.has(a.slug))
               .map((artist, i) => {
@@ -221,7 +221,7 @@ const ArtistTeam = () => {
             <div className="gallery-divider mb-10" />
             <p className="text-editorial-detail mb-6">Cohort 2025</p>
           </FadeIn>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12">
             {placeholderArtists2025.map((artist, i) => (
               <FadeIn key={artist.slug} delay={i * 0.04}>
                 <ArtistCard artist={artist} />
