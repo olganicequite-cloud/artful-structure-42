@@ -91,7 +91,7 @@ const PartnerCard = ({ partner }: { partner: Partner }) => (
           alt={partner.name}
           className={
             partner.isLogo
-              ? "max-w-[70%] max-h-[70%] object-contain"
+              ? "w-full h-full object-cover scale-[1.35]"
               : "w-full h-full object-cover"
           }
           loading="lazy"
