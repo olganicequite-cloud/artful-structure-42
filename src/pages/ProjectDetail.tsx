@@ -73,6 +73,16 @@ const ArtworkBlock = ({
           </p>
         )}
       </div>
+
+      {image.description && image.description.length > 0 && (
+        <div className="mt-4 space-y-3">
+          {image.description.map((p, i) => (
+            <p key={i} className="text-editorial-body leading-relaxed text-foreground/75">
+              {p}
+            </p>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
@@ -229,6 +239,11 @@ const ProjectDetail = () => {
             >
               {project.artist}
             </Link>
+            {project.contextLine && (
+              <p className="text-editorial-caption text-foreground/50 mt-1">
+                {project.contextLine}
+              </p>
+            )}
           </FadeIn>
 
           <FadeIn delay={0.05}>
@@ -268,10 +283,15 @@ const ProjectDetail = () => {
                     >
                       {group.items.map((img, i) => {
                         const flatIndex = group.startIndex + i;
+                        const cols = project.columns ?? 3;
+                        const widthClass =
+                          cols === 2
+                            ? "w-full md:w-[calc(50%-1rem)] lg:w-[calc(50%-1.25rem)]"
+                            : "w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.75rem)]";
                         return (
                           <div
                             key={flatIndex}
-                            className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.75rem)]"
+                            className={widthClass}
                           >
                             <ArtworkBlock
                               image={img}

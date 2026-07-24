@@ -42,6 +42,8 @@ export interface ProjectImage {
     dimensions: string;
     note?: string;
   };
+  /** Optional long-form description shown beneath the artwork caption. */
+  description?: string[];
 }
 
 export interface Project {
@@ -54,6 +56,10 @@ export interface Project {
   images: ProjectImage[];
   /** Optional layout: split images into separate rows (e.g. diptychs). Must sum to images.length. */
   groupSizes?: number[];
+  /** Optional grid column count on large screens. Defaults to 3. */
+  columns?: 2 | 3;
+  /** Optional cohort/context line displayed under the title. */
+  contextLine?: string;
 }
 
 export const projects: Project[] = [
@@ -304,6 +310,9 @@ export const projects: Project[] = [
 ];
 
 import { projects2025 } from "@/lib/projectData2025";
+import { projects2026 } from "@/lib/projectData2026";
 
 export const getProjectBySlug = (slug: string): Project | undefined =>
-  projects.find((p) => p.slug === slug) || projects2025.find((p) => p.slug === slug);
+  projects.find((p) => p.slug === slug) ||
+  projects2025.find((p) => p.slug === slug) ||
+  projects2026.find((p) => p.slug === slug);

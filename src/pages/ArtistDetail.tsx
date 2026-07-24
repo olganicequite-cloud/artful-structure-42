@@ -6,6 +6,7 @@ import Seo from "@/components/Seo";
 import { getArtistBySlug } from "@/lib/artistData";
 import { projects } from "@/lib/projectData";
 import { projects2025 } from "@/lib/projectData2025";
+import { projects2026 } from "@/lib/projectData2026";
 
 const portraitCropMap: Record<string, string> = {
   "olga-iavorskaia": "50% 30%",
@@ -25,6 +26,7 @@ const ArtistDetail = () => {
   const artistProjects = [
     ...projects.filter((p) => p.artistSlug === artist.slug),
     ...projects2025.filter((p) => p.artistSlug === artist.slug),
+    ...projects2026.filter((p) => p.artistSlug === artist.slug),
   ];
   const objectPosition = portraitCropMap[artist.slug] || "center";
 
