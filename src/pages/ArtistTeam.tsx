@@ -71,6 +71,7 @@ interface Partner {
   bio?: string;
   image?: string;
   isLogo?: boolean;
+  logoScale?: number;
   externalUrl?: string;
   externalLabel?: string;
   internalUrl?: string;
@@ -91,9 +92,10 @@ const PartnerCard = ({ partner }: { partner: Partner }) => (
           alt={partner.name}
           className={
             partner.isLogo
-              ? "w-full h-full object-cover scale-[1.35]"
+              ? "w-full h-full object-contain"
               : "w-full h-full object-cover"
           }
+          style={partner.isLogo && partner.logoScale ? { transform: `scale(${partner.logoScale})` } : undefined}
           loading="lazy"
         />
       ) : (
