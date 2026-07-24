@@ -1,5 +1,5 @@
 import FadeIn from "@/components/FadeIn";
-import heroAsset from "@/assets/happy-art-week-hero.jpg.asset.json";
+import happyArtWeekHero from "@/assets/happy-art-week-hero.jpg";
 
 const mapsUrl =
   "https://www.google.com/maps/search/?api=1&query=Kurf%C3%BCrstenstra%C3%9Fe+33+10785+Berlin";
@@ -14,7 +14,7 @@ const HappyArtWeekSection = () => {
         className="scroll-mt-24 relative w-full min-h-[85vh] md:min-h-[90vh] flex flex-col"
       >
         <img
-          src={heroAsset.url}
+          src={happyArtWeekHero}
           alt="HAPPY ART WEEK Berlin 2026 — architectural black-and-white composition"
           className="absolute inset-0 w-full h-full object-cover"
           width={1920}
