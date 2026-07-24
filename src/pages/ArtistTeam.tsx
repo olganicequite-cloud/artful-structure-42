@@ -6,6 +6,7 @@ import Seo from "@/components/Seo";
 import { artists, placeholderArtists2025, Artist, getArtistBySlug } from "@/lib/artistData";
 
 const featured2026Slugs = new Set(["anna-kazakova", "julia-shein", "vika-imago-mortis"]);
+const excludeFromCohort202526 = new Set(["julia-shein", "vika-imago-mortis"]);
 
 const portraitCropMap: Record<string, string> = {
   "olga-iavorskaia": "50% 30%",
@@ -262,7 +263,7 @@ const ArtistTeam = () => {
           </FadeIn>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-20">
             {artists
-              .filter((a) => !featured2026Slugs.has(a.slug))
+              .filter((a) => !excludeFromCohort202526.has(a.slug))
               .map((artist, i) => (
                 <FadeIn key={artist.slug} delay={i * 0.04}>
                   <ArtistCard artist={artist} />
