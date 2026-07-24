@@ -6,6 +6,8 @@ import Seo from "@/components/Seo";
 import { artists, placeholderArtists2025, Artist, getArtistBySlug } from "@/lib/artistData";
 import palmiraPortrait from "@/assets/palmira-furman.jpg";
 import annaK202526Portrait from "@/assets/anna-kazakova-2025-26.jpg";
+import minimalistixLogo from "@/assets/minimalistix-logo.png";
+import speakeazyLogo from "@/assets/speakeazy-logo.jpg";
 
 const excludeFromCohort202526 = new Set([
   "anna-kazakova-2026",
@@ -68,6 +70,7 @@ interface Partner {
   shortDescription: string;
   bio?: string;
   image?: string;
+  isLogo?: boolean;
   externalUrl?: string;
   externalLabel?: string;
   internalUrl?: string;
@@ -77,12 +80,20 @@ interface Partner {
 
 const PartnerCard = ({ partner }: { partner: Partner }) => (
   <div>
-    <div className="aspect-[4/5] bg-secondary overflow-hidden mb-3">
+    <div
+      className={`aspect-[4/5] overflow-hidden mb-3 ${
+        partner.isLogo ? "bg-black flex items-center justify-center" : "bg-secondary"
+      }`}
+    >
       {partner.image ? (
         <img
           src={partner.image}
           alt={partner.name}
-          className="w-full h-full object-cover"
+          className={
+            partner.isLogo
+              ? "max-w-[70%] max-h-[70%] object-contain"
+              : "w-full h-full object-cover"
+          }
           loading="lazy"
         />
       ) : (
@@ -178,6 +189,8 @@ const ArtistTeam = () => {
     slug: "minimalistix-gallery",
     name: "Minimalistix Gallery",
     role: "Exhibition Partner",
+    image: minimalistixLogo,
+    isLogo: true,
     shortDescription:
       "HAPPY ART WEEK Berlin 2026 — exhibition partner.",
     eventDate: "HAPPY ART WEEK Berlin 2026 · 24 July — 1 August 2026",
@@ -191,6 +204,8 @@ const ArtistTeam = () => {
     slug: "speakeasy",
     name: "SpeakEasy Stage & Studio",
     role: "Venue & Cooperation Partner",
+    image: speakeazyLogo,
+    isLogo: true,
     shortDescription: "Exhibition cooperation with SpeakEasy Berlin.",
     eventDate: "29 August 2026",
     externalUrl: "https://www.speakeasyberlin.de/events",
