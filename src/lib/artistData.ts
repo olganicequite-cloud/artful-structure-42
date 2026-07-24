@@ -48,9 +48,27 @@ export interface Artist {
   cohort: "2025-26" | "2025";
   projects: ArtistProject[];
   instagram?: { handle: string; url: string }[];
+  /** Public-facing year context, e.g. "2026" or "2025/26". */
+  profileYear?: string;
+  /** Public-facing role, e.g. "Participant" or "Independent Participant". */
+  role?: string;
 }
 
 export const artists: Artist[] = [
+  {
+    slug: "anna-kazakova-2026",
+    name: "Anna Kazakova",
+    shortLine: "Photography · Architecture · Nature · Inner States",
+    bio: "Anna Kazakova is a photographer working with architecture, nature and emotional states that cannot always be captured directly, but can be felt. Through colour, perspective and space, she builds a visual language in which each detail contributes to an emotional experience.",
+    longBio: "My name is Anna Kazakova, a photographer working with architecture, nature and states that cannot be captured directly, but can be felt.\n\nI do not photograph objects; I photograph sensations. Through colour, perspective and space, I build a visual language in which every detail contributes to an emotion. For me, photography is not merely an image, but a delicate thread between myself and the person on the other side of the frame.\n\nMy work is concerned with inner processes and states that are not always comfortable to reveal. In one of my recent projects, I turned to self-portraiture — an honest and vulnerable format through which I documented the experience of a \"grey\" emotional state and depression. It was not simply an artistic gesture, but an act of speaking out. The difficulty lay not in taking the photographs, but in saying aloud what is usually hidden. The weakness I once denied became both material and strength.\n\nI am drawn to movement, both through space and within myself. Journeys, even for a single day, become part of my visual archive and a way of experiencing life more intensely. I record moments with whatever is available: a camera, a phone or a drone. The format is secondary; the way of seeing is what matters.\n\nSometimes I draw. Not perfectly and not according to established rules, but honestly. For me, expressing what exists inside is more important than conforming to technique.\n\nI have participated in every edition of Creative Project NEW. For me, it is more than a project: it is a point of departure from everyday reality, an opportunity to experience, process and transform personal events into visual form.\n\nMy main professional work lies outside the art world. I am part of the process of creating things that people use every day, including photographers. This creates its own contrast: between system and freedom, between function and expression.\n\nMy work is not about perfection. It is about truth captured within the frame, about the emotion that remains, and about a gaze that does not ask permission to be seen.",
+    artistStatement: "",
+    portrait: annaPortrait,
+    cohort: "2025-26",
+    profileYear: "2026",
+    role: "Participant",
+    instagram: [{ handle: "@anna_art.foto", url: "https://www.instagram.com/anna_art.foto" }],
+    projects: [],
+  },
   {
     slug: "anna-kazakova",
     name: "Anna Kazakova",
@@ -60,6 +78,8 @@ export const artists: Artist[] = [
     artistStatement: "",
     portrait: annaPortrait,
     cohort: "2025-26",
+    profileYear: "2025/26",
+    role: "Cohort Artist",
     instagram: [{ handle: "@anna_art.foto", url: "https://www.instagram.com/anna_art.foto" }],
     projects: [
       {
@@ -173,6 +193,8 @@ export const artists: Artist[] = [
     artistStatement: "",
     portrait: juliaPortrait,
     cohort: "2025-26",
+    profileYear: "2026",
+    role: "Participant",
     projects: [],
   },
   {
@@ -184,6 +206,8 @@ export const artists: Artist[] = [
     artistStatement: "",
     portrait: vikaPortrait,
     cohort: "2025-26",
+    profileYear: "2026",
+    role: "Independent Participant",
     projects: [],
   },
 ];

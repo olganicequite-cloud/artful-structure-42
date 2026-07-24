@@ -28,6 +28,15 @@ const ArtistDetail = () => {
   ];
   const objectPosition = portraitCropMap[artist.slug] || "center";
 
+  const contextLine = [artist.role, artist.profileYear].filter(Boolean).join(" · ");
+
+  const annaCrossRef =
+    artist.slug === "anna-kazakova-2026"
+      ? { to: "/artists/anna-kazakova", label: "View Cohort 2025/26 profile →" }
+      : artist.slug === "anna-kazakova"
+      ? { to: "/artists/anna-kazakova-2026", label: "View 2026 profile →" }
+      : null;
+
   return (
     <SiteLayout>
       <Seo
@@ -76,7 +85,20 @@ const ArtistDetail = () => {
             <FadeIn delay={0.1}>
               <p className="text-editorial-detail mb-2">{artist.shortLine}</p>
               <h1 className="text-editorial-title mb-4">{artist.name}</h1>
+              {contextLine && (
+                <p className="text-editorial-caption text-foreground/60 mb-4">
+                  {contextLine}
+                </p>
+              )}
               <p className="text-editorial-body">{artist.bio}</p>
+              {annaCrossRef && (
+                <Link
+                  to={annaCrossRef.to}
+                  className="inline-block mt-4 text-editorial-caption underline-offset-4 hover:underline text-foreground/70 hover:text-foreground transition-colors"
+                >
+                  {annaCrossRef.label}
+                </Link>
+              )}
             </FadeIn>
           </div>
 

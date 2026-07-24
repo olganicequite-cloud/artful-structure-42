@@ -7,8 +7,11 @@ import { artists, placeholderArtists2025, Artist, getArtistBySlug } from "@/lib/
 import palmiraPortrait from "@/assets/palmira-furman.jpg";
 import annaK202526Portrait from "@/assets/anna-kazakova-2025-26.jpg";
 
-const featured2026Slugs = new Set(["anna-kazakova", "julia-shein", "vika-imago-mortis"]);
-const excludeFromCohort202526 = new Set(["julia-shein", "vika-imago-mortis"]);
+const excludeFromCohort202526 = new Set([
+  "anna-kazakova-2026",
+  "julia-shein",
+  "vika-imago-mortis",
+]);
 
 const portraitCropMap: Record<string, string> = {
   "olga-iavorskaia": "50% 30%",
@@ -157,17 +160,17 @@ const CohortCTACard = () => (
 );
 
 const ArtistTeam = () => {
-  const anna = getArtistBySlug("anna-kazakova")!;
+  const anna = getArtistBySlug("anna-kazakova-2026")!;
   const julia = getArtistBySlug("julia-shein")!;
   const vika = getArtistBySlug("vika-imago-mortis")!;
 
   const palmira: Partner = {
     slug: "palmira-furman",
     name: "Palmira Furman",
-    role: "Program & Cooperation Partner",
+    role: "Program & Cooperation Partner · 2026",
     image: palmiraPortrait,
     shortDescription:
-      "Vocal Academy · Singer · Songwriter · Vocal Teacher. Featured cooperation: Meditative Sound Therapy — an immersive journey into the deep, primordial soundscapes of nature.",
+      "Vocal Academy · Singer · Songwriter · Vocal Teacher. Featured cooperation: Meditative Sound Therapy — an immersive journey into the deep, primordial soundscapes of nature. Hosted by Palmira Furman.",
     bio: "My name is Palmira Furman, and I am a professional singer, songwriter and vocal teacher based in Berlin. The emotions and needs of my clients are at the centre of my work.\n\nWhether you are a beginner, a professional or simply want to sing for pleasure, my individual approach supports you in expressing your own story through your voice. Empathy and experience are fundamental to my teaching and create an environment that is both accessible and professional.\n\nMy approach draws on more than a decade of teaching international clients as well as my own professional singing career. These areas overlap in a method that combines practical and theoretical work.\n\nMy method is built around three main pillars:\n– Fundamental skills: breathing, articulation and clear vocal production\n– Initial development: vocal range, stage work and artistic presentation\n– Professional performance: vocal techniques, stylistic versatility, multivocal practice and extreme vocals\n\nA balanced and healthy vocal technique gives singers greater freedom. Vocal freedom can remove barriers that often prevent truthful communication. Through freedom of voice and authentic expression, singing has the potential to transform both performers and listeners.",
   };
 
@@ -221,13 +224,13 @@ const ArtistTeam = () => {
           </FadeIn>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-20">
             <FadeIn>
-              <ArtistCard artist={julia} roleLine="Participant" />
+              <ArtistCard artist={julia} roleLine="Participant · 2026" />
             </FadeIn>
             <FadeIn delay={0.05}>
-              <ArtistCard artist={vika} roleLine="Independent Participant" />
+              <ArtistCard artist={vika} roleLine="Independent Participant · 2026" />
             </FadeIn>
             <FadeIn delay={0.1}>
-              <ArtistCard artist={anna} roleLine="Participant" />
+              <ArtistCard artist={anna} roleLine="Participant · 2026" />
             </FadeIn>
           </div>
 
