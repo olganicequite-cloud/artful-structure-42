@@ -73,16 +73,6 @@ const ArtworkBlock = ({
           </p>
         )}
       </div>
-
-      {image.description && image.description.length > 0 && (
-        <div className="mt-4 space-y-3">
-          {image.description.map((p, i) => (
-            <p key={i} className="text-editorial-body leading-relaxed text-foreground/75">
-              {p}
-            </p>
-          ))}
-        </div>
-      )}
     </div>
   );
 };
@@ -261,7 +251,7 @@ const ProjectDetail = () => {
         </div>
 
         {project.images.length > 0 && (
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-[1120px] mx-auto">
             {(() => {
               // Build groups: explicit groupSizes, or one group with all images.
               const sizes =
@@ -286,8 +276,8 @@ const ProjectDetail = () => {
                         const cols = project.columns ?? 3;
                         const widthClass =
                           cols === 2
-                            ? "w-full md:w-[calc(50%-1rem)] lg:w-[calc(50%-1.25rem)]"
-                            : "w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.75rem)]";
+                            ? "w-full md:w-[calc(50%-1rem)] lg:w-[440px] max-w-[440px]"
+                            : "w-full md:w-[calc(50%-1rem)] lg:w-[320px] max-w-[320px]";
                         return (
                           <div
                             key={flatIndex}
@@ -306,6 +296,29 @@ const ProjectDetail = () => {
                 </div>
               );
             })()}
+          </div>
+        )}
+
+        {project.images.some((img) => img.description && img.description.length > 0) && (
+          <div className="max-w-2xl mx-auto mt-20 md:mt-28">
+            <div className="gallery-divider mb-8" />
+            <h2 className="text-editorial-detail mb-8">Artwork Notes</h2>
+            <div className="space-y-10">
+              {project.images
+                .filter((img) => img.description && img.description.length > 0)
+                .map((img, i) => (
+                  <div key={i} className="space-y-3">
+                    <p className="font-sans text-base italic text-foreground/80">
+                      {img.caption.title}
+                    </p>
+                    {img.description!.map((p, j) => (
+                      <p key={j} className="text-editorial-body leading-relaxed">
+                        {p}
+                      </p>
+                    ))}
+                  </div>
+                ))}
+            </div>
           </div>
         )}
       </section>

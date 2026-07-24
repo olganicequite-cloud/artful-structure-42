@@ -20,7 +20,7 @@ export const projects2026: Project[] = [
     artist: "Julia Shein",
     artistSlug: "julia-shein",
     thumbnail: thumbSpace,
-    columns: 2,
+    columns: 3,
     contextLine: "Project · 2026",
     description: [
       "The series is created in the style of Neurographica — a contemporary art form in which line, shape and colour become an independent artistic language. The abstract compositions do not offer fixed meanings, but create a space for personal associations, inner dialogue and free interpretation.",
