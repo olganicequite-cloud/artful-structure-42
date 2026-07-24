@@ -156,6 +156,17 @@ const ArtistDetail = () => {
               </div>
             </FadeIn>
           )}
+
+          <FadeIn>
+            <div className="mt-16">
+              <Link
+                to="/artists"
+                className="text-editorial-caption underline-offset-4 hover:underline text-foreground/70 hover:text-foreground transition-colors"
+              >
+                ← Back to Artist Team
+              </Link>
+            </div>
+          </FadeIn>
         </div>
       </section>
     </SiteLayout>

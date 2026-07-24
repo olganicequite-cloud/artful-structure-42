@@ -107,32 +107,6 @@ const PartnerCard = ({ partner }: { partner: Partner }) => {
       {partner.eventDate && (
         <p className="text-editorial-caption text-foreground/50 mt-1">{partner.eventDate}</p>
       )}
-      <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
-        <Link
-          to={profileHref}
-          className="text-editorial-caption hover:text-foreground transition-colors underline-offset-4 hover:underline"
-        >
-          Read more →
-        </Link>
-        {partner.internalUrl && (
-          <Link
-            to={partner.internalUrl}
-            className="text-editorial-caption hover:text-foreground transition-colors underline-offset-4 hover:underline"
-          >
-            {partner.internalLabel || "View →"}
-          </Link>
-        )}
-        {partner.externalUrl && (
-          <a
-            href={partner.externalUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-editorial-caption hover:text-foreground transition-colors underline-offset-4 hover:underline"
-          >
-            {partner.externalLabel || "Visit ↗"}
-          </a>
-        )}
-      </div>
     </div>
   );
 };
