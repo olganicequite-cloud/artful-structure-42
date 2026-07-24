@@ -1,6 +1,5 @@
 import FadeIn from "@/components/FadeIn";
 import heroAsset from "@/assets/happy-art-week-hero.jpg.asset.json";
-import posterAsset from "@/assets/happy-art-week-poster.png.asset.json";
 
 const mapsUrl =
   "https://www.google.com/maps/search/?api=1&query=Kurf%C3%BCrstenstra%C3%9Fe+33+10785+Berlin";
@@ -153,24 +152,6 @@ const HappyArtWeekSection = () => {
           Photo by Olga Tarabukina
         </p>
       </div>
-
-      {/* Centered poster — quiet editorial interlude */}
-      <section className="page-padding pt-10 pb-16 md:pt-16 md:pb-24">
-        <FadeIn>
-          <figure className="mx-auto flex flex-col items-center" style={{ maxWidth: "440px" }}>
-            <img
-              src={posterAsset.url}
-              alt="HAPPY ART WEEK Berlin 2026 exhibition poster"
-              className="w-full h-auto"
-              loading="lazy"
-              decoding="async"
-            />
-            <figcaption className="text-editorial-caption mt-4 text-center">
-              Organized by Minimalistix.eu and Cengiz Tatar
-            </figcaption>
-          </figure>
-        </FadeIn>
-      </section>
     </>
   );
 };

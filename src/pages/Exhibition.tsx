@@ -7,6 +7,12 @@ import styxHero from "@/assets/styx-hero.jpg";
 import { featuredArtworks } from "@/lib/exhibitionData";
 import CityExhibitionSection from "@/components/CityExhibitionSection";
 import HappyArtWeekSection from "@/components/HappyArtWeekSection";
+import { projects2026 } from "@/lib/projectData2026";
+
+const happyArtWeekProjects = [
+  projects2026.find((p) => p.slug === "space-of-associations")!,
+  projects2026.find((p) => p.slug === "the-wind-of-change")!,
+];
 
 const mapsUrl = "https://www.google.com/maps/search/?api=1&query=Schwedter+Str.+48+10435+Berlin";
 
@@ -73,6 +79,44 @@ const Exhibition = () => {
       />
       {/* Latest: HAPPY ART WEEK Berlin 2026 */}
       <HappyArtWeekSection />
+
+      {/* HAPPY ART WEEK — Featured Projects */}
+      <section className="page-padding pt-10 pb-16 md:pt-16 md:pb-24">
+        <FadeIn>
+          <div className="max-w-4xl mx-auto mb-10">
+            <div className="gallery-divider mb-6" />
+            <h2 className="text-editorial-subtitle">Featured Projects</h2>
+          </div>
+        </FadeIn>
+
+        <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12">
+          {happyArtWeekProjects.map((project, i) => (
+            <FadeIn key={project.slug} delay={i * 0.05}>
+              <div>
+                <Link to={`/projects/${project.slug}`} className="group">
+                  <div className="aspect-[4/5] bg-secondary overflow-hidden mb-3">
+                    <img
+                      src={project.thumbnail}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                      loading="lazy"
+                    />
+                  </div>
+                  <h3 className="font-sans text-base md:text-lg font-light leading-snug mb-0.5">
+                    {project.title}
+                  </h3>
+                </Link>
+                <Link
+                  to={`/artists/${project.artistSlug}`}
+                  className="text-editorial-caption hover:text-foreground transition-colors"
+                >
+                  {project.artist}
+                </Link>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+      </section>
 
       {/* Hero */}
       <section id="styx-2026" className="scroll-mt-24 relative w-full min-h-[85vh] md:min-h-[90vh] flex flex-col">
