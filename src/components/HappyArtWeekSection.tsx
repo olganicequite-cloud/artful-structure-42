@@ -1,6 +1,5 @@
 import FadeIn from "@/components/FadeIn";
 import heroAsset from "@/assets/happy-art-week-hero.jpg.asset.json";
-import posterAsset from "@/assets/happy-art-week-poster.png.asset.json";
 
 const mapsUrl =
   "https://www.google.com/maps/search/?api=1&query=Kurf%C3%BCrstenstra%C3%9Fe+33+10785+Berlin";
