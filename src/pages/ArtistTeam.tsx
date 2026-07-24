@@ -5,8 +5,8 @@ import PageBreadcrumb from "@/components/PageBreadcrumb";
 import Seo from "@/components/Seo";
 import { artists, placeholderArtists2025, Artist, getArtistBySlug } from "@/lib/artistData";
 
-const featured2026Slugs = new Set(["anna-kazakova", "julia-shein", "vika-imago-mortis"]);
-const excludeFromCohort202526 = new Set(["julia-shein", "vika-imago-mortis"]);
+const featured2026Slugs = new Set(["anna-kazakova", "julia-shein", "vika-imago-mortis", "palmira-furman"]);
+const excludeFromCohort202526 = new Set(["julia-shein", "vika-imago-mortis", "palmira-furman"]);
 
 const portraitCropMap: Record<string, string> = {
   "olga-iavorskaia": "50% 30%",
@@ -158,6 +158,7 @@ const ArtistTeam = () => {
   const anna = getArtistBySlug("anna-kazakova")!;
   const julia = getArtistBySlug("julia-shein")!;
   const vika = getArtistBySlug("vika-imago-mortis")!;
+  const palmiraArtist = getArtistBySlug("palmira-furman")!;
 
   const palmira: Partner = {
     slug: "palmira-furman",
@@ -218,13 +219,16 @@ const ArtistTeam = () => {
           </FadeIn>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-20">
             <FadeIn>
-              <ArtistCard artist={anna} roleLine="Participant" />
+              <ArtistCard artist={julia} roleLine="Participant" />
             </FadeIn>
             <FadeIn delay={0.05}>
-              <ArtistCard artist={julia} roleLine="Participant" />
+              <ArtistCard artist={palmiraArtist} roleLine="Cooperation Partner" />
             </FadeIn>
             <FadeIn delay={0.1}>
               <ArtistCard artist={vika} roleLine="Independent Participant" />
+            </FadeIn>
+            <FadeIn delay={0.15}>
+              <ArtistCard artist={anna} roleLine="Participant" />
             </FadeIn>
           </div>
 

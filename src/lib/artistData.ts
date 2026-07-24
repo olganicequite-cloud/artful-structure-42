@@ -3,6 +3,9 @@ import annaPortrait from "@/assets/anna-kazakova.jpg";
 import mariiaPortrait from "@/assets/mariia-zatsepina.jpg";
 import nadyaPortrait from "@/assets/nadya-net.jpg";
 import ajPortrait from "@/assets/aj-jul.png";
+import juliaPortrait from "@/assets/julia-shein.jpg";
+import vikaPortrait from "@/assets/vika-imago-mortis.jpg";
+import palmiraPortrait from "@/assets/palmira-furman.jpg";
 
 import nadezhdaPortrait from "@/assets/nadezhda-slavinskene.jpg";
 import markPortrait from "@/assets/mark-poriadkov.jpg";
@@ -169,7 +172,7 @@ export const artists: Artist[] = [
     bio: "Julia Shein is an emerging photographer whose practice is shaped by nature, silence and emotional observation. Her images seek to convey not only a person or place, but the atmosphere and feeling that remain with the viewer.",
     longBio: "My name is Julia Shein.\n\nPhotography entered my life not as a profession, but as a way of seeing the world anew. It taught me to pause, to notice beauty in simple things, and to feel what cannot be expressed in words.\n\nMy path was not originally connected to art. For many years I worked in another field, but my love of photography always remained within me. Through the lens, I found calm, inspiration and a way to speak without words.\n\nI am especially drawn to nature. In its light, silence and endless movement, I see a reflection of human emotion. It is important to me not simply to show a place or a person, but to convey the atmosphere, mood and feeling that remain with the viewer.\n\nI discovered Creative Project NEW in February 2025. At the time, I still doubted myself and was unsure whether I deserved to become part of a creative community. This project became a space in which fear gradually turned into confidence, and a dream became a first real step.\n\nFor me, photography is not the search for a perfect image. It is the search for something genuine — the moment when a person stops playing a role and the world reveals itself as it truly is.\n\nI am only beginning my journey as a photographer, but I already know that I want to create work that does more than please the eye: work that makes people feel, remember and pause, even if only for a few seconds.\n\nCreative Project NEW marks the beginning of a new chapter in my life — a chapter in which creativity is no longer a dream, but becomes my way of speaking to the world.",
     artistStatement: "",
-    portrait: "",
+    portrait: juliaPortrait,
     cohort: "2025-26",
     projects: [],
   },
@@ -180,7 +183,18 @@ export const artists: Artist[] = [
     bio: "Vika Imago Mortis is the artistic identity of Vika Mavkka, whose multidisciplinary practice combines bone jewellery, drawing, painting, photography and visual work for music projects.",
     longBio: "Vika Imago Mortis is the artistic identity of Vika Mavkka, whose multidisciplinary practice spans bone jewellery, drawing, painting, photography and visual work for music projects. Working with bone and organic materials, ink and traditional techniques, she creates singular objects and images situated between ornament, relic and ritual artefact.\n\nMagic and death are the central themes of her work. Her practice explores the spiritual connection between this world and the otherworld, between the living and the dead, and between the visible and the invisible.\n\nMusic is an important part of her creative environment, often leading to visual collaborations and artwork for musicians. Combining meticulous handwork with a raw and atmospheric visual language, Vika Imago Mortis works internationally and across changing locations and is currently based in Sweden.",
     artistStatement: "",
-    portrait: "",
+    portrait: vikaPortrait,
+    cohort: "2025-26",
+    projects: [],
+  },
+  {
+    slug: "palmira-furman",
+    name: "Palmira Furman",
+    shortLine: "Vocal Academy · Singer · Songwriter · Vocal Teacher",
+    bio: "Palmira Furman is a professional singer, songwriter and vocal teacher based in Berlin. As a cooperation partner of Creative Project NEW, she contributes to the interdisciplinary program with Meditative Sound Therapy — an immersive journey into the deep, primordial soundscapes of nature.",
+    longBio: "My name is Palmira Furman, and I am a professional singer, songwriter and vocal teacher based in Berlin. The emotions and needs of my clients are at the centre of my work.\n\nWhether you are a beginner, a professional or simply want to sing for pleasure, my individual approach supports you in expressing your own story through your voice. Empathy and experience are fundamental to my teaching and create an environment that is both accessible and professional.\n\nMy approach draws on more than a decade of teaching international clients as well as my own professional singing career. These areas overlap in a method that combines practical and theoretical work.\n\nMy method is built around three main pillars:\n– Fundamental skills: breathing, articulation and clear vocal production\n– Initial development: vocal range, stage work and artistic presentation\n– Professional performance: vocal techniques, stylistic versatility, multivocal practice and extreme vocals\n\nA balanced and healthy vocal technique gives singers greater freedom. Vocal freedom can remove barriers that often prevent truthful communication. Through freedom of voice and authentic expression, singing has the potential to transform both performers and listeners.",
+    artistStatement: "",
+    portrait: palmiraPortrait,
     cohort: "2025-26",
     projects: [],
   },
