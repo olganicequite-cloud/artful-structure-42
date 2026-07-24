@@ -101,12 +101,6 @@ const PartnerCard = ({ partner }: { partner: Partner }) => {
         </h3>
         <p className="text-editorial-caption">{partner.role}</p>
       </Link>
-      <p className="text-editorial-caption text-foreground/60 mt-2 leading-relaxed">
-        {partner.shortDescription}
-      </p>
-      {partner.eventDate && (
-        <p className="text-editorial-caption text-foreground/50 mt-1">{partner.eventDate}</p>
-      )}
     </div>
   );
 };
