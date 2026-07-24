@@ -196,6 +196,7 @@ export const artists: Artist[] = [
     cohort: "2025-26",
     profileYear: "2026",
     role: "Participant",
+    instagram: [{ handle: "@juliasheyns", url: "https://www.instagram.com/juliasheyns?igsh=YWd1cm5mMzQ4MDBh" }],
     projects: [],
   },
   {
