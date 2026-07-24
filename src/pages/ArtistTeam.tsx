@@ -71,7 +71,7 @@ interface Partner {
   bio?: string;
   image?: string;
   isLogo?: boolean;
-  logoScale?: number;
+  logoBg?: "black" | "white";
   externalUrl?: string;
   externalLabel?: string;
   internalUrl?: string;
@@ -83,7 +83,9 @@ const PartnerCard = ({ partner }: { partner: Partner }) => (
   <div>
     <div
       className={`aspect-[4/5] overflow-hidden mb-3 ${
-        partner.isLogo ? "bg-black flex items-center justify-center" : "bg-secondary"
+        partner.isLogo
+          ? `${partner.logoBg === "white" ? "bg-white" : "bg-black"} flex items-center justify-center`
+          : "bg-secondary"
       }`}
     >
       {partner.image ? (
@@ -92,10 +94,9 @@ const PartnerCard = ({ partner }: { partner: Partner }) => (
           alt={partner.name}
           className={
             partner.isLogo
-              ? "w-full h-full object-contain"
+              ? "max-w-[70%] max-h-[70%] object-contain"
               : "w-full h-full object-cover"
           }
-          style={partner.isLogo && partner.logoScale ? { transform: `scale(${partner.logoScale})` } : undefined}
           loading="lazy"
         />
       ) : (
