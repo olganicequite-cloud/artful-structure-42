@@ -224,13 +224,13 @@ const ArtistTeam = () => {
           </FadeIn>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-20">
             <FadeIn>
-              <ArtistCard artist={julia} roleLine="Participant" />
+              <ArtistCard artist={julia} roleLine="Participant · 2026" />
             </FadeIn>
             <FadeIn delay={0.05}>
-              <ArtistCard artist={vika} roleLine="Independent Participant" />
+              <ArtistCard artist={vika} roleLine="Independent Participant · 2026" />
             </FadeIn>
             <FadeIn delay={0.1}>
-              <ArtistCard artist={anna} roleLine="Participant" />
+              <ArtistCard artist={anna} roleLine="Participant · 2026" />
             </FadeIn>
           </div>
 
