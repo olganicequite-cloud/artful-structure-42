@@ -209,7 +209,7 @@ const ArtistTeam = () => {
     role: "Venue & Cooperation Partner",
     image: speakeazyLogo,
     isLogo: true,
-    logoScale: 1.6,
+    logoBg: "white",
     shortDescription: "Exhibition cooperation with SpeakEasy Berlin.",
     eventDate: "29 August 2026",
     externalUrl: "https://www.speakeasyberlin.de/events",
