@@ -11,6 +11,7 @@ import markPortrait from "@/assets/mark-poriadkov.jpg";
 import olgaPortrait from "@/assets/olga-iavorskaia.jpg";
 import dariaPortrait from "@/assets/daria-wagner.jpg";
 import annaK2025Portrait from "@/assets/anna-kazakova-2025.jpg";
+import annaK202526Portrait from "@/assets/anna-kazakova-2025-26.jpg";
 import evaMariaPortrait from "@/assets/eva-maria-shipova.jpg";
 import oxanaPortrait from "@/assets/oxana-grom.jpg";
 
