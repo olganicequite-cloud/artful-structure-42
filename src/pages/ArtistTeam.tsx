@@ -6,6 +6,8 @@ import Seo from "@/components/Seo";
 import { artists, placeholderArtists2025, Artist, getArtistBySlug } from "@/lib/artistData";
 import palmiraPortrait from "@/assets/palmira-furman.jpg";
 import annaK202526Portrait from "@/assets/anna-kazakova-2025-26.jpg";
+import minimalistixLogo from "@/assets/minimalistix-logo.png";
+import speakeazyLogo from "@/assets/speakeazy-logo.jpg";
 
 const excludeFromCohort202526 = new Set([
   "anna-kazakova-2026",
@@ -178,6 +180,7 @@ const ArtistTeam = () => {
     slug: "minimalistix-gallery",
     name: "Minimalistix Gallery",
     role: "Exhibition Partner",
+    image: minimalistixLogo,
     shortDescription:
       "HAPPY ART WEEK Berlin 2026 — exhibition partner.",
     eventDate: "HAPPY ART WEEK Berlin 2026 · 24 July — 1 August 2026",
@@ -191,6 +194,7 @@ const ArtistTeam = () => {
     slug: "speakeasy",
     name: "SpeakEasy Stage & Studio",
     role: "Venue & Cooperation Partner",
+    image: speakeazyLogo,
     shortDescription: "Exhibition cooperation with SpeakEasy Berlin.",
     eventDate: "29 August 2026",
     externalUrl: "https://www.speakeasyberlin.de/events",
