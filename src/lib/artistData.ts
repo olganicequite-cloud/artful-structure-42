@@ -78,6 +78,8 @@ export const artists: Artist[] = [
     artistStatement: "",
     portrait: annaPortrait,
     cohort: "2025-26",
+    profileYear: "2025/26",
+    role: "Cohort Artist",
     instagram: [{ handle: "@anna_art.foto", url: "https://www.instagram.com/anna_art.foto" }],
     projects: [
       {
@@ -191,6 +193,8 @@ export const artists: Artist[] = [
     artistStatement: "",
     portrait: juliaPortrait,
     cohort: "2025-26",
+    profileYear: "2026",
+    role: "Participant",
     projects: [],
   },
   {
@@ -202,6 +206,8 @@ export const artists: Artist[] = [
     artistStatement: "",
     portrait: vikaPortrait,
     cohort: "2025-26",
+    profileYear: "2026",
+    role: "Independent Participant",
     projects: [],
   },
 ];
