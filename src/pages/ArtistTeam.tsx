@@ -155,15 +155,12 @@ const ArtistTeam = () => {
           <FadeIn delay={0.05}>
             <p className="text-editorial-detail mb-6">Artists · 2026</p>
           </FadeIn>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-20">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-20">
             <FadeIn>
-              <ArtistCard artist={julia} roleLine="Participant · 2026" />
+              <ArtistCard artist={anna} roleLine="Participant · 2026" />
             </FadeIn>
             <FadeIn delay={0.05}>
-              <ArtistCard artist={vika} roleLine="Independent Participant · 2026" />
-            </FadeIn>
-            <FadeIn delay={0.1}>
-              <ArtistCard artist={anna} roleLine="Participant · 2026" />
+              <ArtistCard artist={julia} roleLine="Participant · 2026" />
             </FadeIn>
           </div>
 
@@ -172,14 +169,17 @@ const ArtistTeam = () => {
             <div className="gallery-divider mb-10" />
             <p className="text-editorial-detail mb-6">Partners &amp; Collaborations</p>
           </FadeIn>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-20">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-20">
             <FadeIn>
-              <PartnerCard partner={palmira} />
+              <ArtistCard artist={vika} roleLine="Independent Participant · 2026" />
             </FadeIn>
             <FadeIn delay={0.05}>
-              <PartnerCard partner={minimalistix} />
+              <PartnerCard partner={palmira} />
             </FadeIn>
             <FadeIn delay={0.1}>
+              <PartnerCard partner={minimalistix} />
+            </FadeIn>
+            <FadeIn delay={0.15}>
               <PartnerCard partner={speakeasy} />
             </FadeIn>
           </div>
@@ -189,7 +189,7 @@ const ArtistTeam = () => {
             <div className="gallery-divider mb-10" />
             <p className="text-editorial-detail mb-6">Participation</p>
           </FadeIn>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-20">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-20">
             <FadeIn>
               <CohortCTACard />
             </FadeIn>
@@ -200,7 +200,7 @@ const ArtistTeam = () => {
             <div className="gallery-divider mb-10" />
             <p className="text-editorial-detail mb-6">Cohort 2025/26</p>
           </FadeIn>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-20">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-20">
             {artists
               .filter((a) => !excludeFromCohort202526.has(a.slug))
               .map((artist, i) => {
@@ -221,7 +221,7 @@ const ArtistTeam = () => {
             <div className="gallery-divider mb-10" />
             <p className="text-editorial-detail mb-6">Cohort 2025</p>
           </FadeIn>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-8 md:gap-x-8 md:gap-y-12">
             {placeholderArtists2025.map((artist, i) => (
               <FadeIn key={artist.slug} delay={i * 0.04}>
                 <ArtistCard artist={artist} />
