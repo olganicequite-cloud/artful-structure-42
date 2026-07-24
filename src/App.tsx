@@ -17,6 +17,7 @@ const CityProjectDetail = lazy(() => import("./pages/CityProjectDetail"));
 const Imprint = lazy(() => import("./pages/Imprint"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const Reviews = lazy(() => import("./pages/Reviews"));
+const PartnerDetail = lazy(() => import("./pages/PartnerDetail"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const App = () => (
@@ -32,6 +33,8 @@ const App = () => (
           <Route path="/exhibition/:slug" element={<ArtworkDetail />} />
           <Route path="/artists" element={<ArtistTeam />} />
           <Route path="/artists/:slug" element={<ArtistDetail />} />
+          <Route path="/partners/:slug" element={<PartnerDetail />} />
+          <Route path="/artists/palmira-furman" element={<Navigate to="/partners/palmira-furman" replace />} />
           <Route path="/projects" element={<Projects202526 />} />
           <Route path="/projects/:slug" element={<ProjectDetail />} />
           <Route path="/projects-2025-26" element={<Navigate to="/projects" replace />} />

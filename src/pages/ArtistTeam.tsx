@@ -4,10 +4,8 @@ import FadeIn from "@/components/FadeIn";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import Seo from "@/components/Seo";
 import { artists, placeholderArtists2025, Artist, getArtistBySlug } from "@/lib/artistData";
-import palmiraPortrait from "@/assets/palmira-furman.jpg";
 import annaK202526Portrait from "@/assets/anna-kazakova-2025-26.jpg";
-import minimalistixLogo from "@/assets/minimalistix-logo.png";
-import speakeazyLogo from "@/assets/speakeazy-logo.jpg";
+import { partners as partnerList, Partner } from "@/lib/partnerData";
 
 const excludeFromCohort202526 = new Set([
   "anna-kazakova-2026",
@@ -63,77 +61,59 @@ const ArtistCard = ({ artist, roleLine }: { artist: Artist; roleLine?: string })
   return content;
 };
 
-interface Partner {
-  slug: string;
-  name: string;
-  role: string;
-  shortDescription: string;
-  bio?: string;
-  image?: string;
-  isLogo?: boolean;
-  logoBg?: "black" | "white";
-  externalUrl?: string;
-  externalLabel?: string;
-  internalUrl?: string;
-  internalLabel?: string;
-  eventDate?: string;
-}
-
-const PartnerCard = ({ partner }: { partner: Partner }) => (
-  <div>
-    <div
-      className={`aspect-[4/5] overflow-hidden mb-3 ${
-        partner.isLogo
-          ? `${partner.logoBg === "white" ? "bg-white" : "bg-black"} flex items-center justify-center`
-          : "bg-secondary"
-      }`}
-    >
-      {partner.image ? (
-        <img
-          src={partner.image}
-          alt={partner.name}
-          className={
+const PartnerCard = ({ partner }: { partner: Partner }) => {
+  const profileHref = `/partners/${partner.slug}`;
+  return (
+    <div className="group">
+      <Link
+        to={profileHref}
+        aria-label={`View ${partner.name} partner profile`}
+        className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+      >
+        <div
+          className={`aspect-[4/5] overflow-hidden mb-3 ${
             partner.isLogo
-              ? "max-w-[70%] max-h-[70%] object-contain"
-              : "w-full h-full object-cover"
-          }
-          loading="lazy"
-        />
-      ) : (
-        <div className="w-full h-full flex items-center justify-center p-6">
-          <span className="font-sans text-xl md:text-2xl font-light tracking-tight text-foreground/50 text-center leading-tight">
-            {partner.name}
-          </span>
+              ? `${partner.logoBg === "white" ? "bg-white" : "bg-black"} flex items-center justify-center`
+              : "bg-secondary"
+          }`}
+        >
+          {partner.image ? (
+            <img
+              src={partner.image}
+              alt={partner.name}
+              className={
+                partner.isLogo
+                  ? "max-w-[70%] max-h-[70%] object-contain transition-transform duration-300 ease-out group-hover:scale-[1.02] group-active:scale-[1.01]"
+                  : "w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.02] group-active:scale-[1.01]"
+              }
+              loading="lazy"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center p-6">
+              <span className="font-sans text-xl md:text-2xl font-light tracking-tight text-foreground/50 text-center leading-tight">
+                {partner.name}
+              </span>
+            </div>
+          )}
         </div>
+        <h3 className="font-sans text-base md:text-lg font-light leading-snug mb-0.5 transition-colors group-hover:underline underline-offset-4 decoration-foreground/30">
+          {partner.name}
+        </h3>
+        <p className="text-editorial-caption">{partner.role}</p>
+      </Link>
+      <p className="text-editorial-caption text-foreground/60 mt-2 leading-relaxed">
+        {partner.shortDescription}
+      </p>
+      {partner.eventDate && (
+        <p className="text-editorial-caption text-foreground/50 mt-1">{partner.eventDate}</p>
       )}
-    </div>
-    <h3 className="font-sans text-base md:text-lg font-light leading-snug mb-0.5">
-      {partner.name}
-    </h3>
-    <p className="text-editorial-caption">{partner.role}</p>
-    <p className="text-editorial-caption text-foreground/60 mt-2 leading-relaxed">
-      {partner.shortDescription}
-    </p>
-    {partner.eventDate && (
-      <p className="text-editorial-caption text-foreground/50 mt-1">{partner.eventDate}</p>
-    )}
-    {partner.bio && (
-      <details className="mt-3 group">
-        <summary className="text-editorial-caption cursor-pointer hover:text-foreground transition-colors list-none">
-          <span className="group-open:hidden">Read more →</span>
-          <span className="hidden group-open:inline">Close ↑</span>
-        </summary>
-        <div className="mt-3 space-y-3">
-          {partner.bio.split("\n\n").map((p, i) => (
-            <p key={i} className="text-editorial-body leading-relaxed whitespace-pre-line">
-              {p}
-            </p>
-          ))}
-        </div>
-      </details>
-    )}
-    {(partner.internalUrl || partner.externalUrl) && (
       <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
+        <Link
+          to={profileHref}
+          className="text-editorial-caption hover:text-foreground transition-colors underline-offset-4 hover:underline"
+        >
+          Read more →
+        </Link>
         {partner.internalUrl && (
           <Link
             to={partner.internalUrl}
@@ -153,9 +133,9 @@ const PartnerCard = ({ partner }: { partner: Partner }) => (
           </a>
         )}
       </div>
-    )}
-  </div>
-);
+    </div>
+  );
+};
 
 const CohortCTACard = () => (
   <Link to="/contact?reason=Participation" className="group">
@@ -178,43 +158,9 @@ const ArtistTeam = () => {
   const julia = getArtistBySlug("julia-shein")!;
   const vika = getArtistBySlug("vika-imago-mortis")!;
 
-  const palmira: Partner = {
-    slug: "palmira-furman",
-    name: "Palmira Furman",
-    role: "Program & Cooperation Partner · 2026",
-    image: palmiraPortrait,
-    shortDescription:
-      "Vocal Academy · Singer · Songwriter · Vocal Teacher. Featured cooperation: Meditative Sound Therapy — an immersive journey into the deep, primordial soundscapes of nature. Hosted by Palmira Furman.",
-    bio: "My name is Palmira Furman, and I am a professional singer, songwriter and vocal teacher based in Berlin. The emotions and needs of my clients are at the centre of my work.\n\nWhether you are a beginner, a professional or simply want to sing for pleasure, my individual approach supports you in expressing your own story through your voice. Empathy and experience are fundamental to my teaching and create an environment that is both accessible and professional.\n\nMy approach draws on more than a decade of teaching international clients as well as my own professional singing career. These areas overlap in a method that combines practical and theoretical work.\n\nMy method is built around three main pillars:\n– Fundamental skills: breathing, articulation and clear vocal production\n– Initial development: vocal range, stage work and artistic presentation\n– Professional performance: vocal techniques, stylistic versatility, multivocal practice and extreme vocals\n\nA balanced and healthy vocal technique gives singers greater freedom. Vocal freedom can remove barriers that often prevent truthful communication. Through freedom of voice and authentic expression, singing has the potential to transform both performers and listeners.",
-  };
-
-  const minimalistix: Partner = {
-    slug: "minimalistix-gallery",
-    name: "Minimalistix Gallery",
-    role: "Exhibition Partner",
-    image: minimalistixLogo,
-    isLogo: true,
-    shortDescription:
-      "HAPPY ART WEEK Berlin 2026 — exhibition partner.",
-    eventDate: "HAPPY ART WEEK Berlin 2026 · 24 July — 1 August 2026",
-    internalUrl: "/exhibition#happy-art-week-2026",
-    internalLabel: "View Exhibition →",
-    externalUrl: "https://minimalistix.eu/",
-    externalLabel: "Visit Minimalistix ↗",
-  };
-
-  const speakeasy: Partner = {
-    slug: "speakeasy",
-    name: "SpeakEasy Stage & Studio",
-    role: "Venue & Cooperation Partner",
-    image: speakeazyLogo,
-    isLogo: true,
-    logoBg: "white",
-    shortDescription: "Exhibition cooperation with SpeakEasy Berlin.",
-    eventDate: "29 August 2026",
-    externalUrl: "https://www.speakeasyberlin.de/events",
-    externalLabel: "SpeakEasy Events ↗",
-  };
+  const palmira = partnerList.find((p) => p.slug === "palmira-furman")!;
+  const minimalistix = partnerList.find((p) => p.slug === "minimalistix-gallery")!;
+  const speakeasy = partnerList.find((p) => p.slug === "speakeasy-stage-studio")!;
 
   return (
     <SiteLayout>
