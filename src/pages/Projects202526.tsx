@@ -5,6 +5,7 @@ import PageBreadcrumb from "@/components/PageBreadcrumb";
 import Seo from "@/components/Seo";
 import { projects } from "@/lib/projectData";
 import { projects2025 } from "@/lib/projectData2025";
+import { projects2026 } from "@/lib/projectData2026";
 
 const ProjectCard = ({ project, i }: { project: typeof projects[0]; i: number }) => (
   <FadeIn key={project.slug} delay={i * 0.05}>
@@ -44,10 +45,22 @@ const Projects202526 = () => {
         <div className="max-w-4xl mx-auto">
           <PageBreadcrumb items={[{ label: "Projects" }]} />
 
+          {/* Projects · 2026 */}
+          <FadeIn>
+            <p className="text-editorial-detail mb-4">Projects · 2026</p>
+            <h1 className="text-editorial-title mb-12 md:mb-16">Projects</h1>
+          </FadeIn>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12">
+            {projects2026.map((project, i) => (
+              <ProjectCard key={project.slug} project={project} i={i} />
+            ))}
+          </div>
+
           {/* Cohort 2025–26 */}
           <FadeIn>
+            <div className="gallery-divider mt-16 md:mt-24 mb-10 md:mb-16" />
             <p className="text-editorial-detail mb-4">Cohort 2025–26</p>
-            <h1 className="text-editorial-title mb-12 md:mb-16">Projects</h1>
           </FadeIn>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12">
