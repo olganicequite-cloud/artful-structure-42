@@ -176,6 +176,23 @@ const ArtistTeam = () => {
             </FadeIn>
           </div>
 
+          {/* Independent Artists · 2026 */}
+          <FadeIn>
+            <div className="gallery-divider mb-10" />
+            <p className="text-editorial-detail mb-6">Independent Artists &middot; 2026</p>
+            <p className="text-editorial-body text-foreground/70 max-w-2xl mb-8 md:mb-10">
+              Independent artists collaborate with Creative Project NEW on exhibitions and shared
+              projects while maintaining their own artistic practice and full artistic autonomy.
+            </p>
+          </FadeIn>
+          <div className="grid grid-cols-2 gap-x-4 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-20">
+            {independentArtists.map((artist, i) => (
+              <FadeIn key={artist.slug} delay={i * 0.05}>
+                <ArtistCard artist={artist} roleLine="Independent Participant · 2026" />
+              </FadeIn>
+            ))}
+          </div>
+
           {/* Partners & Collaborations */}
           <FadeIn>
             <div className="gallery-divider mb-10" />
@@ -183,9 +200,6 @@ const ArtistTeam = () => {
           </FadeIn>
           <div className="grid grid-cols-2 gap-x-4 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-20">
             <FadeIn>
-              <ArtistCard artist={vika} roleLine="Independent Participant · 2026" />
-            </FadeIn>
-            <FadeIn delay={0.05}>
               <PartnerCard partner={palmira} />
             </FadeIn>
             <FadeIn delay={0.1}>
