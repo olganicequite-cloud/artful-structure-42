@@ -174,56 +174,46 @@ const SirensSection = () => {
         </FadeIn>
       </section>
 
-      {/* Featured Projects — vertical stack */}
+      {/* Featured Projects */}
       <section className="page-padding pb-16 md:pb-24">
         <FadeIn>
-          <div className="max-w-2xl mx-auto mb-10">
+          <div className="max-w-4xl mx-auto mb-10">
             <div className="gallery-divider mb-6" />
             <h2 className="text-editorial-subtitle">Featured Projects</h2>
           </div>
         </FadeIn>
 
-        <div className="max-w-2xl mx-auto space-y-16 md:space-y-24">
-          {sirensProjects.map((project) => (
-            <FadeIn key={project.slug}>
-              <article>
-                {project.poster ? (
-                  <img
-                    src={project.poster}
-                    alt={`${project.title} — ${project.artist}`}
-                    className="w-full h-auto"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                ) : (
-                  <div className="w-full aspect-[4/5] bg-secondary flex items-center justify-center">
-                    <span className="font-sans font-light text-foreground/40 text-lg text-center px-6">
-                      {project.title}
-                    </span>
+        <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-8 md:gap-y-12">
+          {sirensProjects.map((project, i) => (
+            <FadeIn key={project.slug} delay={i * 0.05}>
+              <div>
+                <Link to={`/exhibition/sirens/${project.slug}`} className="group">
+                  <div className="aspect-[4/5] bg-secondary overflow-hidden mb-3">
+                    {project.poster ? (
+                      <img
+                        src={project.poster}
+                        alt={`${project.title} — ${project.artist}`}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                        loading="lazy"
+                      />
+                    ) : null}
                   </div>
-                )}
-                <div className="mt-5">
-                  {project.artistSlug ? (
-                    <Link
-                      to={`/artists/${project.artistSlug}`}
-                      className="text-editorial-detail hover:text-foreground transition-colors"
-                    >
-                      {project.artist}
-                    </Link>
-                  ) : (
-                    <span className="text-editorial-detail">{project.artist}</span>
-                  )}
-                  <h3 className="font-sans text-xl md:text-2xl font-light mt-1 mb-3">
+                  <h3 className="font-sans text-base md:text-lg font-light leading-snug mb-0.5">
                     {project.title}
                   </h3>
-                  <p className="text-editorial-body leading-relaxed mb-3">{project.statement}</p>
-                  <p className="text-editorial-caption text-foreground/50">{project.technicalNote}</p>
-                </div>
-              </article>
+                </Link>
+                <Link
+                  to={project.artistSlug ? `/artists/${project.artistSlug}` : "/#curator"}
+                  className="text-editorial-caption hover:text-foreground transition-colors"
+                >
+                  {project.artist}
+                </Link>
+              </div>
             </FadeIn>
           ))}
         </div>
       </section>
+
     </>
   );
 };
