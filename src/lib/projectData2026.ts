@@ -113,7 +113,7 @@ export const projects2026: Project[] = [
           title: "Winter",
           medium: "Acrylic and texture paste on canvas, brushwork",
           dimensions: "30 × 25 cm",
-          note: "June 2026 · Edition 1/1, unique piece · Price 50",
+          note: "June 2026 · Edition 1/1, unique piece",
         },
       },
       {
@@ -123,7 +123,7 @@ export const projects2026: Project[] = [
           title: "Spring",
           medium: "Acrylic and texture paste on canvas, brushwork",
           dimensions: "40 × 30 cm",
-          note: "June 2026 · Edition 1/1, unique piece · Price 75",
+          note: "June 2026 · Edition 1/1, unique piece",
         },
       },
       {
@@ -133,7 +133,7 @@ export const projects2026: Project[] = [
           title: "Summer",
           medium: "Acrylic and texture paste on canvas, brushwork",
           dimensions: "40 × 30 cm",
-          note: "June 2026 · Edition 1/1, unique piece · Price 75",
+          note: "June 2026 · Edition 1/1, unique piece",
         },
       },
       {
@@ -143,7 +143,7 @@ export const projects2026: Project[] = [
           title: "Autumn",
           medium: "Acrylic and texture paste on canvas, brushwork",
           dimensions: "30 × 25 cm",
-          note: "June 2026 · Edition 1/1, unique piece · Price 50",
+          note: "June 2026 · Edition 1/1, unique piece",
         },
       },
     ],
