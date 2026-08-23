@@ -136,7 +136,7 @@ const CohortCTACard = () => (
 const ArtistTeam = () => {
   const anna = getArtistBySlug("anna-kazakova-2026")!;
   const julia = getArtistBySlug("julia-shein")!;
-  const vika = getArtistBySlug("vika-imago-mortis")!;
+  const independentArtists = independentSlugs.map((s) => getArtistBySlug(s)!);
 
   const palmira = partnerList.find((p) => p.slug === "palmira-furman")!;
   const minimalistix = partnerList.find((p) => p.slug === "minimalistix-gallery")!;
