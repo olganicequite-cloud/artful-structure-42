@@ -146,7 +146,7 @@ const ArtistTeam = () => {
     <SiteLayout>
       <Seo
         title="Artist Team 2026 & Cooperation Partners — Creative Project NEW"
-        description="Meet the 2026 participants Anna Kazakova and Julia Shein, independent participant Vika Imago Mortis, and the cooperation partners of Creative Project NEW in Berlin."
+        description="Meet the 2026 participants Anna Kazakova and Julia Shein, the independent artists Vika Imago Mortis, Jeanne Saar, Olha Yezikova, Katina Kuhl and Oleg Tokar, and the cooperation partners of Creative Project NEW in Berlin."
         path="/artists"
       />
       <section className="section-spacing page-padding">
