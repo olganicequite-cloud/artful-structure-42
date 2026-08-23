@@ -13,6 +13,7 @@ const ProjectDetail = lazy(() => import("./pages/ProjectDetail"));
 const Projects2025 = lazy(() => import("./pages/Projects2025"));
 const Contact = lazy(() => import("./pages/Contact"));
 const ArtworkDetail = lazy(() => import("./pages/ArtworkDetail"));
+const SirensProjectDetail = lazy(() => import("./pages/SirensProjectDetail"));
 const CityProjectDetail = lazy(() => import("./pages/CityProjectDetail"));
 const Imprint = lazy(() => import("./pages/Imprint"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/" element={<HomePage />} />
           <Route path="/exhibition" element={<Exhibition />} />
           <Route path="/exhibition/city/:slug" element={<CityProjectDetail />} />
+          <Route path="/exhibition/sirens/:slug" element={<SirensProjectDetail />} />
           <Route path="/exhibition/:slug" element={<ArtworkDetail />} />
           <Route path="/artists" element={<ArtistTeam />} />
           <Route path="/artists/:slug" element={<ArtistDetail />} />

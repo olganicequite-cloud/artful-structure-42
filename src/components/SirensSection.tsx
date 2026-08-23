@@ -30,10 +30,6 @@ const InfoBlock = () => (
       <p className="font-sans text-sm text-primary-foreground/90">Saturday, 29 August 2026</p>
       <p className="font-sans text-sm font-light text-primary-foreground/70">13:30 – 20:00</p>
     </div>
-    <div>
-      <p className="font-sans text-xs tracking-widest uppercase text-primary-foreground/50 mb-0.5">Entrance</p>
-      <p className="font-sans text-sm text-primary-foreground/90">Online ticket 14 € · At the door 16 €</p>
-    </div>
     <div className="pt-1">
       <p className="font-sans text-lg text-primary-foreground">SPEAKEAZY STAGE &amp; STUDIO</p>
       <p className="font-sans text-sm font-light text-primary-foreground/70">Kulmerstraße 20A, 10783 Berlin</p>
@@ -123,13 +119,31 @@ const SirensSection = () => {
         <FadeIn>
           <div className="max-w-2xl mx-auto">
             <p className="text-editorial-body leading-relaxed mb-6">
-              SIRENS — The Call of Silence brings together eight international artists, each presenting an independent project with its own visual language and medium.
+              SIRENS — The Call of Silence is a group exhibition presented by Creative Project NEW and curated by Olga Tarabukina, shown as part of Summer Acoustic Festival 2026 at Speakeazy Stage &amp; Studio in Berlin. The festival is organised by{" "}
+              <Link to="/partners/palmira-furman" className="hover:text-foreground transition-colors">
+                Palmira Furman
+              </Link>
+              .
+            </p>
+            <p className="text-editorial-body leading-relaxed mb-6">
+              The exhibition brings together eight international artists based across Europe. Each presents an independent artistic project with its own visual language, medium and approach. Rather than illustrating a single common subject, the projects remain autonomous and are brought together through the curatorial framework of SIRENS.
             </p>
             <p className="text-editorial-body leading-relaxed mb-8">
-              Curated by Olga Tarabukina and shown inside Speakeazy Stage &amp; Studio as the visual art part of Summer Acoustic Festival 2026.
+              While the festival itself takes place in the open-air backyard, SIRENS is presented inside the building — a distinct visual space within a music-focused environment, where sound, silence, signal, attraction and visual perception become interconnected parts of the same experience.
             </p>
             <div className="mb-8">
               <p className="text-editorial-detail mb-3">Festival Context</p>
+              <p className="text-editorial-body leading-relaxed mb-5">
+                SIRENS is presented as part of Summer Acoustic Festival 2026, organised by{" "}
+                <Link to="/partners/palmira-furman" className="hover:text-foreground transition-colors underline underline-offset-4">
+                  Palmira Furman
+                </Link>{" "}
+                at{" "}
+                <Link to="/partners/speakeasy-stage-studio" className="hover:text-foreground transition-colors underline underline-offset-4">
+                  Speakeazy Stage &amp; Studio
+                </Link>
+                . The festival brings together acoustic live music, visual art, handmade culture and food in a shared summer environment, with a Live Rock Night as part of the programme. While the festival takes place in the open-air backyard, SIRENS is shown inside the building — a distinct visual space within the wider acoustic festival.
+              </p>
               <div className="text-editorial-caption text-foreground/60 space-y-1">
                 <p>Festival · Summer Acoustic Festival 2026 · 29 August 2026</p>
                 <p>Programme · Acoustic live music · Visual art exhibition · Handmade market · BBQ</p>
@@ -173,19 +187,19 @@ const SirensSection = () => {
           {sirensProjects.map((project, i) => (
             <FadeIn key={project.slug} delay={i * 0.05}>
               <div>
-                <div className="aspect-[4/5] bg-secondary overflow-hidden mb-3">
-                  {project.poster ? (
+                <Link to={`/exhibition/sirens/${project.slug}`} className="group">
+                  <div className="aspect-[4/5] bg-secondary overflow-hidden mb-3">
                     <img
                       src={project.poster}
                       alt={`${project.title} — ${project.artist}`}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                       loading="lazy"
                     />
-                  ) : null}
-                </div>
-                <h3 className="font-sans text-base md:text-lg font-light leading-snug mb-0.5">
-                  {project.title}
-                </h3>
+                  </div>
+                  <h3 className="font-sans text-base md:text-lg font-light leading-snug mb-0.5">
+                    {project.title}
+                  </h3>
+                </Link>
                 <Link
                   to={project.artistSlug ? `/artists/${project.artistSlug}` : "/#curator"}
                   className="text-editorial-caption hover:text-foreground transition-colors"
