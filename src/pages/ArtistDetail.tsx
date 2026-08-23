@@ -111,7 +111,7 @@ const ArtistDetail = () => {
               <p className="text-editorial-detail mb-2">Biography</p>
               <div className="mb-12 md:mb-16 space-y-4">
                 {artist.longBio.split("\n\n").map((p, i) => (
-                  <p key={i} className="text-editorial-body leading-relaxed">{p}</p>
+                  <p key={i} className="text-editorial-body leading-relaxed whitespace-pre-line">{p}</p>
                 ))}
               </div>
             </FadeIn>

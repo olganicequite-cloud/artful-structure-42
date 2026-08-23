@@ -5,6 +5,10 @@ import nadyaPortrait from "@/assets/nadya-net.jpg";
 import ajPortrait from "@/assets/aj-jul.png";
 import juliaPortrait from "@/assets/julia-shein.jpg";
 import vikaPortrait from "@/assets/vika-imago-mortis.jpg";
+import jeannePortrait from "@/assets/jeanne-saar.jpg";
+import ollyPortrait from "@/assets/olha-yezikova.jpg";
+import katinaPortrait from "@/assets/katina-kuhl.jpg";
+import olegPortrait from "@/assets/oleg-tokar.jpg";
 
 import nadezhdaPortrait from "@/assets/nadezhda-slavinskene.jpg";
 import markPortrait from "@/assets/mark-poriadkov.jpg";
@@ -207,6 +211,58 @@ export const artists: Artist[] = [
     longBio: "Vika Imago Mortis is the artistic identity of Vika Mavkka, whose multidisciplinary practice spans bone jewellery, drawing, painting, photography and visual work for music projects. Working with bone and organic materials, ink and traditional techniques, she creates singular objects and images situated between ornament, relic and ritual artefact.\n\nMagic and death are the central themes of her work. Her practice explores the spiritual connection between this world and the otherworld, between the living and the dead, and between the visible and the invisible.\n\nMusic is an important part of her creative environment, often leading to visual collaborations and artwork for musicians. Combining meticulous handwork with a raw and atmospheric visual language, Vika Imago Mortis works internationally and across changing locations and is currently based in Sweden.",
     artistStatement: "",
     portrait: vikaPortrait,
+    cohort: "2025-26",
+    profileYear: "2026",
+    role: "Independent Participant",
+    projects: [],
+  },
+  {
+    slug: "jeanne-saar",
+    name: "Jeanne Saar",
+    shortLine: "Sculpture · Hand Painting · Model Horse Art · 3D",
+    bio: "Jeanne Saar is a multidisciplinary artist working within the Model Horse Hobby, combining sculpture, realistic hand painting, traditional craftsmanship and digital techniques. Through detailed customization, she transforms collectible horse models into unique sculptural artworks with individual character and presence.",
+    longBio: "My name is Jeanne Saar, and I work in the Model Horse Hobby, creating and customizing collectible horse models. The main part of my work is realistic hand painting: complex coat patterns, subtle color work, detailed anatomy and realistic manes and tails made from natural mohair.\n\nI also work with sculpture and gradually incorporate modern digital tools such as 3D scanning and printing.\n\nFor me, Model Horse Hobby is a way to combine my love for horses, sculpture, painting and meticulous handwork, transforming mass-produced collectible models into unique animals.",
+    artistStatement: "",
+    portrait: jeannePortrait,
+    cohort: "2025-26",
+    profileYear: "2026",
+    role: "Independent Participant",
+    projects: [],
+  },
+  {
+    slug: "olha-yezikova",
+    name: "Olha Yezikova",
+    shortLine: "Acrylic Painting · Mixed Media · Hair · Colour",
+    bio: "Olha Yezikova is a Ukrainian multidisciplinary artist based in Berlin. Her practice combines acrylic painting, mixed media, colour, beads, glitter, synthetic hair and three-dimensional elements, exploring inner freedom, self-belief and the coexistence of light and darkness.",
+    longBio: "Olly (Olha Yezikova) is a Ukrainian multidisciplinary artist born in 1988 in Izium, Kharkiv region. She has lived and worked in Berlin since 2021.\n\nDrawing has been part of her life since childhood. During her school years, spent in a highly restrictive environment, art became a way of creating a space of inner freedom. The walls of her room were covered with mystical creatures: dark and threatening in appearance, yet kind and protective within the world she created. This early “gallery of death fighting for life” later became one of the recurring themes in her work: the alliance between light and darkness, inner strength, and the ability to create one's own reality.\n\nDespite her early connection to art, Olly pursued education in other fields, including a Master's degree in Management and professional qualifications in hairdressing. Her creativity, however, simply changed its form. Beginning with oil painting, she gradually moved towards drawing with black pen and ink, before eventually making hair itself her artistic medium. Working with natural and synthetic hair, colour, texture, beads, wood and metal, she transformed the creation of unique looks into an artistic practice of its own. Colour became her visual signature.\n\nEventually, her hand returned to the canvas. Today, Olly combines acrylic painting with mixed media, integrating glitter, beads, synthetic hair and three-dimensional elements into her work. Her art explores inner freedom, self-belief, the magic of the world, breaking imposed boundaries, and the coexistence of opposites.\n\nA teacher once told her that the lines in her drawings broke the rules and did not conform to established standards. Today, Olly regards those words as a blessing: the rules of form belong to the one who creates it.\n\nAlongside her artistic practice, Olly has created experimental works with kanekalon, presented her work at exhibitions and auctions, developed stage looks for music events, and currently serves as a judge at the Creative Vision Awards Ukraine.",
+    artistStatement: "",
+    portrait: ollyPortrait,
+    cohort: "2025-26",
+    profileYear: "2026",
+    role: "Independent Participant",
+    projects: [],
+  },
+  {
+    slug: "katina-kuhl",
+    name: "Katina Kuhl",
+    shortLine: "Painting · Collage · Writing · Performance",
+    bio: "Katina Kuhl is a Berlin-based multidisciplinary artist working across painting, writing, performance and visual self-expression. Her practice transforms deep emotional experience into image, combining vulnerability, contrast, softness and intensity.",
+    longBio: "Hey, I'm Katina.\nI've been living in Berlin since 2023.\nI moved here to move something.\nI create art in different ways –\nas a painter, a model, a writer.\nIn the process of creating, I want to turn deep feelings into something I like to look at.\n\nI am childish and serious.\nI am moody and consistent.\nI am honest and vulnerable.\n\nI like contrast as much as I like softness.",
+    artistStatement: "",
+    portrait: katinaPortrait,
+    cohort: "2025-26",
+    profileYear: "2026",
+    role: "Independent Participant",
+    projects: [],
+  },
+  {
+    slug: "oleg-tokar",
+    name: "Oleg Tokar",
+    shortLine: "Relief · Sculpture · Installation · Painting · Graphic Art",
+    bio: "Oleg Tokar is a Ukrainian artist and graduate of the Institute of Arts. His multidisciplinary practice spans sculpture, relief, installation, painting and graphic art, combining material experimentation with an ongoing interest in spiritual and philosophical themes.",
+    longBio: "Oleg Tokar is a Ukrainian artist and graduate of the Institute of Arts, with many years of creative practice behind him.\n\nHis work spans relief, sculpture, installation, painting and graphic art, driven by a continual pull toward discovering new techniques and material experimentation, alongside a deep interest in exploring spiritual themes through art.",
+    artistStatement: "",
+    portrait: olegPortrait,
     cohort: "2025-26",
     profileYear: "2026",
     role: "Independent Participant",

@@ -11,7 +11,19 @@ const excludeFromCohort202526 = new Set([
   "anna-kazakova-2026",
   "julia-shein",
   "vika-imago-mortis",
+  "jeanne-saar",
+  "olha-yezikova",
+  "katina-kuhl",
+  "oleg-tokar",
 ]);
+
+const independentSlugs = [
+  "vika-imago-mortis",
+  "jeanne-saar",
+  "olha-yezikova",
+  "katina-kuhl",
+  "oleg-tokar",
+];
 
 const portraitCropMap: Record<string, string> = {
   "olga-iavorskaia": "50% 30%",
@@ -124,7 +136,7 @@ const CohortCTACard = () => (
 const ArtistTeam = () => {
   const anna = getArtistBySlug("anna-kazakova-2026")!;
   const julia = getArtistBySlug("julia-shein")!;
-  const vika = getArtistBySlug("vika-imago-mortis")!;
+  const independentArtists = independentSlugs.map((s) => getArtistBySlug(s)!);
 
   const palmira = partnerList.find((p) => p.slug === "palmira-furman")!;
   const minimalistix = partnerList.find((p) => p.slug === "minimalistix-gallery")!;
@@ -134,7 +146,7 @@ const ArtistTeam = () => {
     <SiteLayout>
       <Seo
         title="Artist Team 2026 & Cooperation Partners — Creative Project NEW"
-        description="Meet the 2026 participants Anna Kazakova and Julia Shein, independent participant Vika Imago Mortis, and the cooperation partners of Creative Project NEW in Berlin."
+        description="Meet the 2026 participants Anna Kazakova and Julia Shein, the independent artists Vika Imago Mortis, Jeanne Saar, Olha Yezikova, Katina Kuhl and Oleg Tokar, and the cooperation partners of Creative Project NEW in Berlin."
         path="/artists"
       />
       <section className="section-spacing page-padding">
@@ -164,6 +176,23 @@ const ArtistTeam = () => {
             </FadeIn>
           </div>
 
+          {/* Independent Artists · 2026 */}
+          <FadeIn>
+            <div className="gallery-divider mb-10" />
+            <p className="text-editorial-detail mb-6">Independent Artists &middot; 2026</p>
+            <p className="text-editorial-body text-foreground/70 max-w-2xl mb-8 md:mb-10">
+              Independent artists collaborate with Creative Project NEW on exhibitions and shared
+              projects while maintaining their own artistic practice and full artistic autonomy.
+            </p>
+          </FadeIn>
+          <div className="grid grid-cols-2 gap-x-4 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-20">
+            {independentArtists.map((artist, i) => (
+              <FadeIn key={artist.slug} delay={i * 0.05}>
+                <ArtistCard artist={artist} roleLine="Independent Participant · 2026" />
+              </FadeIn>
+            ))}
+          </div>
+
           {/* Partners & Collaborations */}
           <FadeIn>
             <div className="gallery-divider mb-10" />
@@ -171,9 +200,6 @@ const ArtistTeam = () => {
           </FadeIn>
           <div className="grid grid-cols-2 gap-x-4 gap-y-8 md:gap-x-8 md:gap-y-12 mb-16 md:mb-20">
             <FadeIn>
-              <ArtistCard artist={vika} roleLine="Independent Participant · 2026" />
-            </FadeIn>
-            <FadeIn delay={0.05}>
               <PartnerCard partner={palmira} />
             </FadeIn>
             <FadeIn delay={0.1}>
