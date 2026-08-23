@@ -11,7 +11,19 @@ const excludeFromCohort202526 = new Set([
   "anna-kazakova-2026",
   "julia-shein",
   "vika-imago-mortis",
+  "jeanne-saar",
+  "olha-yezikova",
+  "katina-kuhl",
+  "oleg-tokar",
 ]);
+
+const independentSlugs = [
+  "vika-imago-mortis",
+  "jeanne-saar",
+  "olha-yezikova",
+  "katina-kuhl",
+  "oleg-tokar",
+];
 
 const portraitCropMap: Record<string, string> = {
   "olga-iavorskaia": "50% 30%",
