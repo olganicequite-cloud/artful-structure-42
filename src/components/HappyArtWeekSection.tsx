@@ -36,16 +36,16 @@ const HappyArtWeekSection = () => {
         <div className="relative z-10 page-padding pt-24 md:pt-32 lg:pt-20 w-full">
           <FadeIn>
             <p className="text-xs md:text-sm tracking-[0.3em] uppercase font-sans mb-2 md:mb-3 text-primary-foreground/60">
-              LATEST EXHIBITION
+              PAST EXHIBITION
             </p>
-            <h1
+            <h2
               className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-[0.04em] text-primary-foreground mb-2 md:mb-4 leading-[0.95]"
               style={{ fontFamily: "'Arial Black', 'Arial', sans-serif" }}
             >
               HAPPY ART
               <br />
               WEEK
-            </h1>
+            </h2>
             <p
               className="text-2xl md:text-3xl lg:text-4xl text-primary-foreground/95"
               style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 200 }}

@@ -7,6 +7,7 @@ import styxHero from "@/assets/styx-hero.jpg";
 import { featuredArtworks } from "@/lib/exhibitionData";
 import CityExhibitionSection from "@/components/CityExhibitionSection";
 import HappyArtWeekSection from "@/components/HappyArtWeekSection";
+import SirensSection from "@/components/SirensSection";
 import { projects2026 } from "@/lib/projectData2026";
 
 const happyArtWeekProjects = [
@@ -29,10 +30,31 @@ const Exhibition = () => {
   return (
     <SiteLayout>
       <Seo
-        title="HAPPY ART WEEK Berlin 2026 — Creative Project NEW Exhibitions"
-        description="Discover HAPPY ART WEEK Berlin 2026, STYX and CITY — contemporary art exhibitions and curatorial projects presented by Creative Project NEW in Berlin."
+        title="SIRENS — The Call of Silence | Creative Project NEW Berlin"
+        description="SIRENS — The Call of Silence, 29 August 2026 at Speakeazy Stage & Studio Berlin. Eight international artists, curated by Olga Tarabukina. Plus HAPPY ART WEEK, STYX and CITY."
         path="/exhibition"
         jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "ExhibitionEvent",
+            name: "SIRENS — The Call of Silence",
+            startDate: "2026-08-29T13:30",
+            endDate: "2026-08-29T20:00",
+            eventStatus: "https://schema.org/EventScheduled",
+            eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+            location: {
+              "@type": "Place",
+              name: "Speakeazy Stage & Studio",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Kulmerstraße 20A",
+                postalCode: "10783",
+                addressLocality: "Berlin",
+                addressCountry: "DE",
+              },
+            },
+            organizer: { "@type": "Organization", name: "Creative Project NEW" },
+          },
           {
             "@context": "https://schema.org",
             "@type": "ExhibitionEvent",
@@ -77,7 +99,10 @@ const Exhibition = () => {
           },
         ]}
       />
-      {/* Latest: HAPPY ART WEEK Berlin 2026 */}
+      {/* Latest: SIRENS — The Call of Silence */}
+      <SirensSection />
+
+      {/* Past: HAPPY ART WEEK Berlin 2026 */}
       <HappyArtWeekSection />
 
       {/* HAPPY ART WEEK — Featured Projects */}
