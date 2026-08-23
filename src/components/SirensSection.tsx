@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import FadeIn from "@/components/FadeIn";
+import sirensHero from "@/assets/sirens-hero.jpg";
 import { sirensProjects } from "@/lib/sirensData";
 
 const mapsUrl =
@@ -28,11 +29,6 @@ const InfoBlock = () => (
       <p className="font-sans text-xs tracking-widest uppercase text-primary-foreground/50 mb-0.5">Exhibition</p>
       <p className="font-sans text-sm text-primary-foreground/90">Saturday, 29 August 2026</p>
       <p className="font-sans text-sm font-light text-primary-foreground/70">13:30 – 20:00</p>
-    </div>
-    <div>
-      <p className="font-sans text-xs tracking-widest uppercase text-primary-foreground/50 mb-0.5">Festival</p>
-      <p className="font-sans text-sm text-primary-foreground/90">Summer Acoustic Festival 2026</p>
-      <p className="font-sans text-sm font-light text-primary-foreground/70">Open Air Festival with indoor visual art exhibition</p>
     </div>
     <div>
       <p className="font-sans text-xs tracking-widest uppercase text-primary-foreground/50 mb-0.5">Entrance</p>
@@ -73,6 +69,15 @@ const SirensSection = () => {
         id="sirens-2026"
         className="scroll-mt-24 relative w-full min-h-[85vh] md:min-h-[90vh] flex flex-col bg-foreground"
       >
+        <img
+          src={sirensHero}
+          alt="SIRENS — The Call of Silence, long exposure of sea and sky at dusk"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ objectPosition: "center 35%" }}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/50" />
 
         {/* Title group — upper-left */}
@@ -126,6 +131,38 @@ const SirensSection = () => {
             <p className="text-editorial-body leading-relaxed mb-8">
               While the festival itself takes place in the open-air backyard, SIRENS is presented inside the building — a distinct visual space within a music-focused environment, where sound, silence, signal, attraction and visual perception become interconnected parts of the same experience.
             </p>
+            <div className="mb-8">
+              <p className="text-editorial-detail mb-3">Festival Context</p>
+              <p className="text-editorial-body leading-relaxed mb-5">
+                SIRENS is presented as part of Summer Acoustic Festival 2026, organised by{" "}
+                <Link to="/partners/palmira-furman" className="hover:text-foreground transition-colors underline underline-offset-4">
+                  Palmira Furman
+                </Link>{" "}
+                at{" "}
+                <Link to="/partners/speakeasy-stage-studio" className="hover:text-foreground transition-colors underline underline-offset-4">
+                  Speakeazy Stage &amp; Studio
+                </Link>
+                . The festival brings together acoustic live music, visual art, handmade culture and food in a shared summer environment, with a Live Rock Night as part of the programme. While the festival takes place in the open-air backyard, SIRENS is shown inside the building — a distinct visual space within the wider acoustic festival.
+              </p>
+              <div className="text-editorial-caption text-foreground/60 space-y-1">
+                <p>Festival · Summer Acoustic Festival 2026 · 29 August 2026</p>
+                <p>Programme · Acoustic live music · Visual art exhibition · Handmade market · BBQ</p>
+                <p>Format · Open Air Festival with an indoor visual art exhibition</p>
+                <p>
+                  Open Air · Backyard of{" "}
+                  <Link to="/partners/speakeasy-stage-studio" className="hover:text-foreground transition-colors">
+                    Speakeazy Stage &amp; Studio
+                  </Link>
+                  , Kulmerstraße 20A, 10783 Berlin
+                </p>
+                <p>
+                  Organiser ·{" "}
+                  <Link to="/partners/palmira-furman" className="hover:text-foreground transition-colors">
+                    Palmira Furman
+                  </Link>
+                </p>
+              </div>
+            </div>
             <div className="flex flex-wrap gap-x-4 gap-y-2">
               {themes.map((theme) => (
                 <span key={theme} className="text-editorial-detail">
