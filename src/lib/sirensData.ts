@@ -1,5 +1,11 @@
 import sirensEquestrianArt from "@/assets/sirens-equestrian-art.jpg";
 import sirensPassingFaces from "@/assets/sirens-passing-faces.jpg";
+import sirensFreedomIsland from "@/assets/sirens-freedom-island.jpg";
+import sirensPaletteOfTime from "@/assets/sirens-palette-of-time.jpg";
+import sirensCreature from "@/assets/sirens-creature.jpg";
+import sirensZlata from "@/assets/sirens-zlata.jpg";
+import sirensConceptBehind from "@/assets/sirens-the-concept-behind.jpg";
+import sirensDarkArt from "@/assets/sirens-dark-art.jpg";
 
 export interface SirensProject {
   slug: string;
@@ -17,7 +23,7 @@ export const sirensProjects: SirensProject[] = [
     title: "Freedom Island",
     artist: "Olga Tarabukina",
     artistSlug: "",
-    poster: "",
+    poster: sirensFreedomIsland,
     statement:
       "Freedom Island explores personal freedom, creativity and introspection through a meditative fine-art photographic language. The series creates a visual space for reflection, where the movement of water, softened forms and an almost suspended sense of time become metaphors for inner freedom and personal perception.",
     technicalNote:
@@ -28,7 +34,7 @@ export const sirensProjects: SirensProject[] = [
     title: "Palette of Time",
     artist: "Anna Kazakova",
     artistSlug: "anna-kazakova-2026",
-    poster: "",
+    poster: sirensPaletteOfTime,
     statement:
       "Palette of Time explores the perception of time through colour, long exposure and intentional camera movement. Forms dissolve, space becomes fluid, and each photograph turns a passing moment into a visible trace of duration.",
     technicalNote:
@@ -39,7 +45,7 @@ export const sirensProjects: SirensProject[] = [
     title: "Creature",
     artist: "Olha Yezikova",
     artistSlug: "olha-yezikova",
-    poster: "",
+    poster: sirensCreature,
     statement:
       "Creature is a symbolic self-portrait reflecting wholeness without choosing between light and darkness. Vibrant colour and glitter express joy and sensitivity, while claws, fangs and dark skin represent strength and protection. Handmade kanekalon dreadlocks extend beyond the canvas, symbolising the refusal to remain within imposed boundaries.",
     technicalNote: "1 work · 50 × 70 cm · Acrylic on canvas",
@@ -49,7 +55,7 @@ export const sirensProjects: SirensProject[] = [
     title: "Zlata",
     artist: "Julia Shein",
     artistSlug: "julia-shein",
-    poster: "",
+    poster: sirensZlata,
     statement:
       "Zlata explores the delicate boundary between dreams and reality through the inner world of seven-year-old Zlata. The series moves through three states — Dream, Weightlessness and Grounding — using experimental scanning, grain and blurred imagery to express fragility, movement, growth and the return to reality. Developed under the artistic guidance of Olga Tarabukina within Creative Project NEW.",
     technicalNote: "3 works — Dream, Weightlessness, Grounding · A4 · Print on paper",
@@ -80,7 +86,7 @@ export const sirensProjects: SirensProject[] = [
     title: "The Concept Behind",
     artist: "Katina Kuhl",
     artistSlug: "katina-kuhl",
-    poster: "",
+    poster: sirensConceptBehind,
     statement:
       "The Concept Behind explores the tension between control and loss of control within Berlin's nightlife and club culture. The works focus on the female body, its objectification, and the ways this condition can be confronted, played with and reinterpreted through darkness, consumption, sensuality and emotional endurance. Using a black-and-white palette with accents of red and pink, the project moves between fragility and strength, discomfort and pleasure, seriousness and play.",
     technicalNote:
@@ -91,7 +97,7 @@ export const sirensProjects: SirensProject[] = [
     title: "Dark Art",
     artist: "Vika Imago Mortis",
     artistSlug: "vika-imago-mortis",
-    poster: "",
+    poster: sirensDarkArt,
     statement:
       "Dark Art brings together works in which darkness becomes a space for transformation, spiritual tension and reflection on mortality. Through symbolic imagery, ritual elements, bones, shadow and the human figure, Vika creates an atmosphere suspended between the living and the dead, the physical and the hidden.",
     technicalNote: "Selected works — approx. 4 dark photographs, 4 drawings and 6 paintings",
