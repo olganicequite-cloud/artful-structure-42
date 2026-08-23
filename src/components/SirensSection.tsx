@@ -30,10 +30,6 @@ const InfoBlock = () => (
       <p className="font-sans text-sm text-primary-foreground/90">Saturday, 29 August 2026</p>
       <p className="font-sans text-sm font-light text-primary-foreground/70">13:30 – 20:00</p>
     </div>
-    <div>
-      <p className="font-sans text-xs tracking-widest uppercase text-primary-foreground/50 mb-0.5">Entrance</p>
-      <p className="font-sans text-sm text-primary-foreground/90">Online ticket 14 € · At the door 16 €</p>
-    </div>
     <div className="pt-1">
       <p className="font-sans text-lg text-primary-foreground">SPEAKEAZY STAGE &amp; STUDIO</p>
       <p className="font-sans text-sm font-light text-primary-foreground/70">Kulmerstraße 20A, 10783 Berlin</p>
