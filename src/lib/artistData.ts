@@ -5,6 +5,10 @@ import nadyaPortrait from "@/assets/nadya-net.jpg";
 import ajPortrait from "@/assets/aj-jul.png";
 import juliaPortrait from "@/assets/julia-shein.jpg";
 import vikaPortrait from "@/assets/vika-imago-mortis.jpg";
+import jeannePortrait from "@/assets/jeanne-saar.jpg";
+import ollyPortrait from "@/assets/olha-yezikova.jpg";
+import katinaPortrait from "@/assets/katina-kuhl.jpg";
+import olegPortrait from "@/assets/oleg-tokar.jpg";
 
 import nadezhdaPortrait from "@/assets/nadezhda-slavinskene.jpg";
 import markPortrait from "@/assets/mark-poriadkov.jpg";
