@@ -62,8 +62,8 @@ export const partners: Partner[] = [
     logoBg: "white",
     shortDescription: "Exhibition cooperation with SpeakEasy Berlin.",
     eventDate: "29 August 2026",
-    externalUrl: "https://www.speakeasyberlin.de/events",
-    externalLabel: "SpeakEasy Events ↗",
+    externalUrl: "https://www.speakeazyberlin.de/",
+    externalLabel: "Visit Speakeazy ↗",
   },
 ];
 
