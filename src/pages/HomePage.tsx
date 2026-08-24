@@ -258,17 +258,9 @@ const HomePage = () => {
             <p className="text-editorial-detail mb-2">What participants say</p>
             <h2 className="text-editorial-subtitle mb-10">Feedbacks & Reviews</h2>
           </FadeIn>
-          <div className="grid md:grid-cols-3 gap-8 md:gap-10">
-            {feedbacks.map((fb, i) => (
-              <FadeIn key={i} delay={0.1 * (i + 1)}>
-                <blockquote className="border-l border-border pl-5">
-                  <StarRating count={fb.stars} />
-                  <p className="text-editorial-body italic mb-4">"{fb.quote}"</p>
-                  <cite className="text-editorial-caption not-italic">{fb.author}</cite>
-                </blockquote>
-              </FadeIn>
-            ))}
-          </div>
+          <FadeIn delay={0.1}>
+            <ReviewSlider />
+          </FadeIn>
           <FadeIn delay={0.4}>
             <div className="mt-10 md:mt-12">
               <Link
