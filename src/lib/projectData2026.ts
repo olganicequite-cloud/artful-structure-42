@@ -26,6 +26,7 @@ import jeanneMagnum from "@/assets/jeanne-magnum.jpg";
 import jeanneCenturion from "@/assets/jeanne-centurion.jpg";
 import jeanneGrechka from "@/assets/jeanne-grechka.jpg";
 import olegPassingFaces1 from "@/assets/oleg-passing-faces-1.jpg";
+import vikaDeathWitch from "@/assets/vika-death-witch.jpg";
 import vikaDeathWitchIii from "@/assets/vika-death-witch-iii.jpg";
 import vikaForestWitch from "@/assets/vika-forest-witch.jpg";
 
@@ -366,14 +367,19 @@ export const projects2026: Project[] = [
     columns: 2,
     images: [
       {
+        src: vikaDeathWitch,
+        alt: "Vika Imago Mortis — The Death Witch",
+        caption: { title: "The Death Witch", medium: "Photography, black-and-white print", dimensions: "A3", note: "2019" },
+      },
+      {
         src: vikaDeathWitchIii,
         alt: "Vika Imago Mortis — The Death Witch III",
-        caption: { title: "The Death Witch III", medium: "Photography", dimensions: "" },
+        caption: { title: "The Death Witch III", medium: "Photography, black-and-white print", dimensions: "A3", note: "2019" },
       },
       {
         src: vikaForestWitch,
         alt: "Vika Imago Mortis — Forest Witch",
-        caption: { title: "Forest Witch", medium: "Photography", dimensions: "" },
+        caption: { title: "Forest Witch", medium: "Photography, black-and-white print", dimensions: "A3", note: "2019" },
       },
     ],
 

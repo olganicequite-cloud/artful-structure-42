@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
 import Seo from "@/components/Seo";
+import { reviews } from "@/lib/reviewData";
 import curatorPortrait from "@/assets/olga-tarabukina.jpg";
 import heroBerlin from "@/assets/hero-berlin.jpg";
 
@@ -17,36 +19,70 @@ const modules = [
   "Support",
 ];
 
-const feedbacks = [
-  {
-    quote: "Working on this project gave me a clearer sense of my strengths and strengthened my desire to continue developing my artistic practice.",
-    author: "Oxana Grom, Cohort 2025",
-    stars: 5,
-  },
-  {
-    quote: "Presenting my film within the project and encountering the work of others made the experience deeply engaging and rewarding.",
-    author: "Mark Poriadkov, Cohort 2025",
-    stars: 5,
-  },
-  {
-    quote: "What stayed with me most was the guidance from the first idea to the final presentation. Olga supported us through every stage and helped turn the work into something real, visible, and ready to be shown.",
-    author: "Nadezhda Slaviskene, Cohort 2025",
-    stars: 5,
-  },
-];
+const ReviewSlider = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
+  const [selected, setSelected] = useState(0);
 
-const StarRating = ({ count }: { count: number }) => (
-  <div className="flex gap-0.5 mb-3">
-    {Array.from({ length: 5 }).map((_, i) => (
-      <span
-        key={i}
-        className={`text-xs ${i < count ? "text-foreground/70" : "text-foreground/15"}`}
+  useEffect(() => {
+    if (!emblaApi) return;
+    const onSelect = () => setSelected(emblaApi.selectedScrollSnap());
+    onSelect();
+    emblaApi.on("select", onSelect);
+    return () => {
+      emblaApi.off("select", onSelect);
+    };
+  }, [emblaApi]);
+
+  return (
+    <div className="relative">
+      <div ref={emblaRef} className="overflow-hidden">
+        <div className="flex">
+          {reviews.map((review) => (
+            <div key={review.slug} className="flex-none w-full min-w-0 px-0 md:px-12">
+              <blockquote className="min-h-[220px] md:min-h-[200px] flex flex-col justify-center border-l border-border pl-5 md:pl-8">
+                <p className="text-editorial-body italic mb-5">"{review.excerpt}"</p>
+                <cite className="text-editorial-caption not-italic block">
+                  <Link to={`/artists/${review.slug}`} className="hover:text-foreground transition-colors">
+                    {review.name}
+                  </Link>
+                  <span className="text-foreground/50"> · {review.cohort}</span>
+                </cite>
+              </blockquote>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <button
+        onClick={() => emblaApi?.scrollPrev()}
+        aria-label="Previous review"
+        className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 w-9 h-9 items-center justify-center border border-border text-foreground/60 hover:text-foreground hover:border-foreground transition-colors duration-300"
       >
-        ★
-      </span>
-    ))}
-  </div>
-);
+        ‹
+      </button>
+      <button
+        onClick={() => emblaApi?.scrollNext()}
+        aria-label="Next review"
+        className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 w-9 h-9 items-center justify-center border border-border text-foreground/60 hover:text-foreground hover:border-foreground transition-colors duration-300"
+      >
+        ›
+      </button>
+
+      <div className="flex items-center justify-center gap-1.5 mt-8">
+        {reviews.map((review, i) => (
+          <button
+            key={review.slug}
+            onClick={() => emblaApi?.scrollTo(i)}
+            aria-label={`Go to review ${i + 1}`}
+            className={`w-1.5 h-1.5 rounded-full transition-colors ${
+              i === selected ? "bg-foreground" : "bg-border"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const HomePage = () => {
   const [downloadDisabled, setDownloadDisabled] = useState(false);
@@ -222,17 +258,9 @@ const HomePage = () => {
             <p className="text-editorial-detail mb-2">What participants say</p>
             <h2 className="text-editorial-subtitle mb-10">Feedbacks & Reviews</h2>
           </FadeIn>
-          <div className="grid md:grid-cols-3 gap-8 md:gap-10">
-            {feedbacks.map((fb, i) => (
-              <FadeIn key={i} delay={0.1 * (i + 1)}>
-                <blockquote className="border-l border-border pl-5">
-                  <StarRating count={fb.stars} />
-                  <p className="text-editorial-body italic mb-4">"{fb.quote}"</p>
-                  <cite className="text-editorial-caption not-italic">{fb.author}</cite>
-                </blockquote>
-              </FadeIn>
-            ))}
-          </div>
+          <FadeIn delay={0.1}>
+            <ReviewSlider />
+          </FadeIn>
           <FadeIn delay={0.4}>
             <div className="mt-10 md:mt-12">
               <Link
