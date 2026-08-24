@@ -26,6 +26,8 @@ import jeanneMagnum from "@/assets/jeanne-magnum.jpg";
 import jeanneCenturion from "@/assets/jeanne-centurion.jpg";
 import jeanneGrechka from "@/assets/jeanne-grechka.jpg";
 import olegPassingFaces1 from "@/assets/oleg-passing-faces-1.jpg";
+import olgaFreedomIsland1 from "@/assets/olga-freedom-island-1.jpg";
+import olgaFreedomIsland2 from "@/assets/olga-freedom-island-2.jpg";
 import vikaDeathWitch from "@/assets/vika-death-witch.jpg";
 import vikaDeathWitchIii from "@/assets/vika-death-witch-iii.jpg";
 import vikaForestWitch from "@/assets/vika-forest-witch.jpg";
@@ -191,7 +193,29 @@ export const projects2026: Project[] = [
     description: [
       "Freedom Island presents an exploration of personal freedom, creativity and introspection through fine-art photography. The movement of water, softened forms and an almost suspended sense of time become metaphors for inner freedom and personal perception.",
     ],
-    images: [],
+    columns: 2,
+    images: [
+      {
+        src: olgaFreedomIsland1,
+        alt: "Olga Tarabukina — Freedom Island 3-9",
+        caption: {
+          title: "Freedom Island 3-9",
+          medium: "Fine Art Print on Hahnemühle Photo Rag Ultra Smooth 305 gsm",
+          dimensions: "40.6 × 50.6 cm · 10 cm passepartout, framed to 50 × 60 cm",
+          note: "2025",
+        },
+      },
+      {
+        src: olgaFreedomIsland2,
+        alt: "Olga Tarabukina — Freedom Island 9-9",
+        caption: {
+          title: "Freedom Island 9-9",
+          medium: "Fine Art Print on Hahnemühle Photo Rag Ultra Smooth 305 gsm",
+          dimensions: "40.6 × 50.6 cm · 10 cm passepartout, framed to 50 × 60 cm",
+          note: "2025",
+        },
+      },
+    ],
   },
   {
     slug: "palette-of-time",
