@@ -214,6 +214,7 @@ export const artists: Artist[] = [
     cohort: "2025-26",
     profileYear: "2026",
     role: "Independent Participant",
+    instagram: [{ handle: "@vikaimagomortis", url: "https://www.instagram.com/vikaimagomortis" }],
     projects: [],
   },
   {
@@ -227,6 +228,7 @@ export const artists: Artist[] = [
     cohort: "2025-26",
     profileYear: "2026",
     role: "Independent Participant",
+    instagram: [{ handle: "@saar_jeanne", url: "https://www.instagram.com/saar_jeanne" }],
     projects: [],
   },
   {
@@ -240,6 +242,7 @@ export const artists: Artist[] = [
     cohort: "2025-26",
     profileYear: "2026",
     role: "Independent Participant",
+    instagram: [{ handle: "@olly_dreadlocks.ua_eu", url: "https://www.instagram.com/olly_dreadlocks.ua_eu" }],
     projects: [],
   },
   {
@@ -253,6 +256,7 @@ export const artists: Artist[] = [
     cohort: "2025-26",
     profileYear: "2026",
     role: "Independent Participant",
+    instagram: [{ handle: "@katina.kuhl", url: "https://www.instagram.com/katina.kuhl" }],
     projects: [],
   },
   {
@@ -266,6 +270,7 @@ export const artists: Artist[] = [
     cohort: "2025-26",
     profileYear: "2026",
     role: "Independent Participant",
+    instagram: [{ handle: "@gelometrik", url: "https://www.instagram.com/gelometrik" }],
     projects: [],
   },
 ];
