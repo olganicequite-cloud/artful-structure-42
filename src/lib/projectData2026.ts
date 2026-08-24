@@ -19,6 +19,13 @@ import sirensEquestrian from "@/assets/sirens-equestrian-art.jpg";
 import sirensPassing from "@/assets/sirens-passing-faces.jpg";
 import sirensConcept from "@/assets/sirens-the-concept-behind.jpg";
 import sirensDarkArt from "@/assets/sirens-dark-art.jpg";
+import juliaZlataDream from "@/assets/julia-zlata-dream.jpg";
+import jeanneMagnum from "@/assets/jeanne-magnum.jpg";
+import jeanneCenturion from "@/assets/jeanne-centurion.jpg";
+import jeanneGrechka from "@/assets/jeanne-grechka.jpg";
+import olegPassingFaces1 from "@/assets/oleg-passing-faces-1.jpg";
+import vikaDeathWitchIii from "@/assets/vika-death-witch-iii.jpg";
+import vikaForestWitch from "@/assets/vika-forest-witch.jpg";
 
 import paletteFleetingness from "@/assets/anna-palette-fleetingness.jpg";
 import paletteAcceleration from "@/assets/anna-palette-acceleration.jpg";
