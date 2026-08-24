@@ -20,6 +20,8 @@ import sirensPassing from "@/assets/sirens-passing-faces.jpg";
 import sirensConcept from "@/assets/sirens-the-concept-behind.jpg";
 import sirensDarkArt from "@/assets/sirens-dark-art.jpg";
 import juliaZlataDream from "@/assets/julia-zlata-dream.jpg";
+import juliaZlataWeightlessness from "@/assets/julia-zlata-weightlessness.jpg";
+import juliaZlataGrounding from "@/assets/julia-zlata-grounding.jpg";
 import jeanneMagnum from "@/assets/jeanne-magnum.jpg";
 import jeanneCenturion from "@/assets/jeanne-centurion.jpg";
 import jeanneGrechka from "@/assets/jeanne-grechka.jpg";
