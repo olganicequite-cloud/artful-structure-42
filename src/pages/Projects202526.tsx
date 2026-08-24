@@ -23,12 +23,17 @@ const ProjectCard = ({ project, i }: { project: typeof projects[0]; i: number })
           {project.title}
         </h3>
       </Link>
-      <Link
-        to={`/artists/${project.artistSlug}`}
-        className="text-editorial-caption hover:text-foreground transition-colors"
-      >
-        {project.artist}
-      </Link>
+      {project.artistSlug ? (
+        <Link
+          to={`/artists/${project.artistSlug}`}
+          className="text-editorial-caption hover:text-foreground transition-colors"
+        >
+          {project.artist}
+        </Link>
+      ) : (
+        <span className="text-editorial-caption">{project.artist}</span>
+      )}
+
     </div>
   </FadeIn>
 );
