@@ -272,6 +272,16 @@ export const projects2026: Project[] = [
         alt: "Julia Shein — Dream",
         caption: { title: "Dream", medium: "Print on paper", dimensions: "A4 (210 × 297 mm)", note: "2026" },
       },
+      {
+        src: juliaZlataWeightlessness,
+        alt: "Julia Shein — Weightlessness",
+        caption: { title: "Weightlessness", medium: "Print on paper", dimensions: "A4 (210 × 297 mm)", note: "2026" },
+      },
+      {
+        src: juliaZlataGrounding,
+        alt: "Julia Shein — Grounding",
+        caption: { title: "Grounding", medium: "Print on paper", dimensions: "A4 (210 × 297 mm)", note: "2026" },
+      },
     ],
   },
   {
