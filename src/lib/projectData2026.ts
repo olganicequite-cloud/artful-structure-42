@@ -344,7 +344,20 @@ export const projects2026: Project[] = [
     description: [
       "Death and magic form the central axis of this work. The practice explores the spiritual connection between this world and the otherworld, between the living and the dead, and between what is visible and what remains hidden. Meticulous handwork meets a raw, atmospheric visual language.",
     ],
-    images: [],
+    columns: 2,
+    images: [
+      {
+        src: vikaDeathWitchIii,
+        alt: "Vika Imago Mortis — The Death Witch III",
+        caption: { title: "The Death Witch III", medium: "Photography", dimensions: "" },
+      },
+      {
+        src: vikaForestWitch,
+        alt: "Vika Imago Mortis — Forest Witch",
+        caption: { title: "Forest Witch", medium: "Photography", dimensions: "" },
+      },
+    ],
+
   },
 ];
 
