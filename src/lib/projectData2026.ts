@@ -19,6 +19,13 @@ import sirensEquestrian from "@/assets/sirens-equestrian-art.jpg";
 import sirensPassing from "@/assets/sirens-passing-faces.jpg";
 import sirensConcept from "@/assets/sirens-the-concept-behind.jpg";
 import sirensDarkArt from "@/assets/sirens-dark-art.jpg";
+import juliaZlataDream from "@/assets/julia-zlata-dream.jpg";
+import jeanneMagnum from "@/assets/jeanne-magnum.jpg";
+import jeanneCenturion from "@/assets/jeanne-centurion.jpg";
+import jeanneGrechka from "@/assets/jeanne-grechka.jpg";
+import olegPassingFaces1 from "@/assets/oleg-passing-faces-1.jpg";
+import vikaDeathWitchIii from "@/assets/vika-death-witch-iii.jpg";
+import vikaForestWitch from "@/assets/vika-forest-witch.jpg";
 
 import paletteFleetingness from "@/assets/anna-palette-fleetingness.jpg";
 import paletteAcceleration from "@/assets/anna-palette-acceleration.jpg";
@@ -257,11 +264,13 @@ export const projects2026: Project[] = [
       "Zlata is an evolving project that explores a child's inner world through the states of dreaming, weightlessness, growth and the return to reality.",
       "Developed under the artistic guidance of Olga Tarabukina within Creative Project NEW.",
     ],
-    // Photographs pending — add the three works once the files arrive:
-    // { src: julia-zlata-dream.jpg,          caption: { title: "Dream",          medium: "Print on paper", dimensions: "A4 (210 × 297 mm)", note: "2026" } }
-    // { src: julia-zlata-weightlessness.jpg, caption: { title: "Weightlessness", medium: "Print on paper", dimensions: "A4 (210 × 297 mm)", note: "2026" } }
-    // { src: julia-zlata-grounding.jpg,      caption: { title: "Grounding",      medium: "Print on paper", dimensions: "A4 (210 × 297 mm)", note: "2026" } }
-    images: [],
+    images: [
+      {
+        src: juliaZlataDream,
+        alt: "Julia Shein — Dream",
+        caption: { title: "Dream", medium: "Print on paper", dimensions: "A4 (210 × 297 mm)", note: "2026" },
+      },
+    ],
   },
   {
     slug: "equestrian-art",
@@ -275,10 +284,31 @@ export const projects2026: Project[] = [
       "Equestrian Art explores the horse as both a sculptural form and an individual character. Each piece begins as a mass-produced collectible model and is transformed by hand into a unique animal.",
       "The work combines realistic hand painting in acrylics and dry pigments, sculpted anatomical detail, natural mohair manes and tails, handmade tack, and digital 3D sculpting and casting.",
     ],
-    // Centurion and Grechka are awaiting photographs — drop the file in and uncomment.
-    // { src: jeanne-centurion.jpg, alt: "Jeanne Saar — Centurion", caption: { title: "Centurion", medium: "Mixed media, acrylics and dry pigments on plastic model, natural mohair", dimensions: "" } }
-    // { src: jeanne-grechka.jpg,   alt: "Jeanne Saar — Grechka",   caption: { title: "Grechka",   medium: "Mixed media, acrylics and dry pigments on plastic model, natural mohair", dimensions: "" } }
-    images: [],
+    images: [
+      {
+        src: jeanneMagnum,
+        alt: "Jeanne Saar — Magnum",
+        caption: { title: "Magnum", medium: "Sculpted and cast model, hand-finished", dimensions: "" },
+      },
+      {
+        src: jeanneCenturion,
+        alt: "Jeanne Saar — Centurion",
+        caption: {
+          title: "Centurion",
+          medium: "Mixed media, acrylics and dry pigments on plastic model, natural mohair",
+          dimensions: "",
+        },
+      },
+      {
+        src: jeanneGrechka,
+        alt: "Jeanne Saar — Grechka",
+        caption: {
+          title: "Grechka",
+          medium: "Mixed media, acrylics and dry pigments on plastic model, natural mohair",
+          dimensions: "",
+        },
+      },
+    ],
   },
   {
     slug: "passing-faces",
@@ -290,8 +320,15 @@ export const projects2026: Project[] = [
     description: [
       "Faces surface in the feathers and dissolve without lingering — states, masks, moments of self, passing in a stream. At the centre sits a mirror, the one point that holds nothing: it reflects each face without preference, without memory. Whoever leans in looking for the eye that watches finds only themselves there — not what the mirror sees, but the seeing itself.",
     ],
-    images: [],
+    images: [
+      {
+        src: olegPassingFaces1,
+        alt: "Oleg Tokar — Passing Faces",
+        caption: { title: "Passing Faces", medium: "Sculptural relief with mirror", dimensions: "" },
+      },
+    ],
   },
+
   {
     slug: "the-concept-behind",
     title: "The Concept Behind",
@@ -314,7 +351,20 @@ export const projects2026: Project[] = [
     description: [
       "Death and magic form the central axis of this work. The practice explores the spiritual connection between this world and the otherworld, between the living and the dead, and between what is visible and what remains hidden. Meticulous handwork meets a raw, atmospheric visual language.",
     ],
-    images: [],
+    columns: 2,
+    images: [
+      {
+        src: vikaDeathWitchIii,
+        alt: "Vika Imago Mortis — The Death Witch III",
+        caption: { title: "The Death Witch III", medium: "Photography", dimensions: "" },
+      },
+      {
+        src: vikaForestWitch,
+        alt: "Vika Imago Mortis — Forest Witch",
+        caption: { title: "Forest Witch", medium: "Photography", dimensions: "" },
+      },
+    ],
+
   },
 ];
 
