@@ -94,6 +94,9 @@ const SirensSection = () => {
             >
               The Call of Silence
             </p>
+            <p className="text-xs md:text-sm tracking-[0.2em] uppercase font-sans text-primary-foreground/60 mt-3">
+              Part of Summer Acoustic Festival 2026
+            </p>
 
             {/* Desktop: event info inline below title */}
             <div className="hidden lg:flex flex-row items-end gap-10 mt-8">
