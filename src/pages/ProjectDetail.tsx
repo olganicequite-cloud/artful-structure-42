@@ -223,12 +223,17 @@ const ProjectDetail = () => {
             <h1 className="font-sans text-2xl md:text-3xl font-light mb-2">
               {project.title}
             </h1>
-            <Link
-              to={`/artists/${project.artistSlug}`}
-              className="text-editorial-detail hover:text-foreground transition-colors"
-            >
-              {project.artist}
-            </Link>
+            {project.artistSlug ? (
+              <Link
+                to={`/artists/${project.artistSlug}`}
+                className="text-editorial-detail hover:text-foreground transition-colors"
+              >
+                {project.artist}
+              </Link>
+            ) : (
+              <p className="text-editorial-detail">{project.artist}</p>
+            )}
+
             {project.contextLine && (
               <p className="text-editorial-caption text-foreground/50 mt-1">
                 {project.contextLine}
