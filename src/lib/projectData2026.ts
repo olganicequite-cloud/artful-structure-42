@@ -20,6 +20,8 @@ import sirensPassing from "@/assets/sirens-passing-faces.jpg";
 import sirensConcept from "@/assets/sirens-the-concept-behind.jpg";
 import sirensDarkArt from "@/assets/sirens-dark-art.jpg";
 import juliaZlataDream from "@/assets/julia-zlata-dream.jpg";
+import juliaZlataWeightlessness from "@/assets/julia-zlata-weightlessness.jpg";
+import juliaZlataGrounding from "@/assets/julia-zlata-grounding.jpg";
 import jeanneMagnum from "@/assets/jeanne-magnum.jpg";
 import jeanneCenturion from "@/assets/jeanne-centurion.jpg";
 import jeanneGrechka from "@/assets/jeanne-grechka.jpg";
@@ -269,6 +271,16 @@ export const projects2026: Project[] = [
         src: juliaZlataDream,
         alt: "Julia Shein — Dream",
         caption: { title: "Dream", medium: "Print on paper", dimensions: "A4 (210 × 297 mm)", note: "2026" },
+      },
+      {
+        src: juliaZlataWeightlessness,
+        alt: "Julia Shein — Weightlessness",
+        caption: { title: "Weightlessness", medium: "Print on paper", dimensions: "A4 (210 × 297 mm)", note: "2026" },
+      },
+      {
+        src: juliaZlataGrounding,
+        alt: "Julia Shein — Grounding",
+        caption: { title: "Grounding", medium: "Print on paper", dimensions: "A4 (210 × 297 mm)", note: "2026" },
       },
     ],
   },
