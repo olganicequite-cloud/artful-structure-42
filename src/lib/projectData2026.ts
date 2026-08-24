@@ -11,9 +11,32 @@ import annaSpring from "@/assets/anna-wind-of-change-spring.jpg";
 import annaSummer from "@/assets/anna-wind-of-change-summer.jpg";
 import annaAutumn from "@/assets/anna-wind-of-change-autumn.jpg";
 
+import sirensFreedom from "@/assets/sirens-freedom-island.jpg";
+import sirensPalette from "@/assets/sirens-palette-of-time.jpg";
+import sirensCreature from "@/assets/sirens-creature.jpg";
+import sirensZlata from "@/assets/sirens-zlata.jpg";
+import sirensEquestrian from "@/assets/sirens-equestrian-art.jpg";
+import sirensPassing from "@/assets/sirens-passing-faces.jpg";
+import sirensConcept from "@/assets/sirens-the-concept-behind.jpg";
+import sirensDarkArt from "@/assets/sirens-dark-art.jpg";
+
+import paletteFleetingness from "@/assets/anna-palette-fleetingness.jpg";
+import paletteAcceleration from "@/assets/anna-palette-acceleration.jpg";
+import paletteFlow from "@/assets/anna-palette-flow.jpg";
+import paletteDissolution from "@/assets/anna-palette-dissolution.jpg";
+import paletteDuration from "@/assets/anna-palette-duration.jpg";
+
 import type { Project } from "@/lib/projectData";
 
+const paletteCaption = (title: string) => ({
+  title,
+  medium: "Photography, Sony camera · Photo print",
+  dimensions: "29.7 × 42 cm (A3)",
+  note: "August 2026 · Edition 1/1",
+});
+
 export const projects2026: Project[] = [
+
   {
     slug: "space-of-associations",
     title: "Space of Associations",
