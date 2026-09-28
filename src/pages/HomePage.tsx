@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState, useCallback, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
