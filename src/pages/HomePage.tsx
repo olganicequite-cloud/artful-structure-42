@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState, useCallback, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import SiteLayout from "@/components/SiteLayout";
 import FadeIn from "@/components/FadeIn";
@@ -85,19 +85,6 @@ const ReviewSlider = () => {
 };
 
 const HomePage = () => {
-  const [downloadDisabled, setDownloadDisabled] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  const handleDownload = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (downloadDisabled) {
-      e.preventDefault();
-      return;
-    }
-    // Allow the native download to proceed, then disable
-    setDownloadDisabled(true);
-    timerRef.current = setTimeout(() => setDownloadDisabled(false), 4000);
-  }, [downloadDisabled]);
-
   return (
     <SiteLayout>
       <Seo
@@ -180,25 +167,6 @@ const HomePage = () => {
             <p className="text-editorial-body">
               Through this process, artists expand their artistic field, deepen their practice, and reach new creative horizons.
             </p>
-          </FadeIn>
-
-          {/* 3. Download Button */}
-          <FadeIn delay={0.15}>
-            <div className="mt-10">
-              <a
-                href="/Creative_Project_NEW_participant_info.pdf"
-                download
-                onClick={handleDownload}
-                className={`inline-block px-6 py-2.5 border border-foreground text-editorial-detail transition-colors duration-300 ${
-                  downloadDisabled
-                    ? "opacity-40 pointer-events-none text-foreground/50 border-foreground/30"
-                    : "text-foreground hover:bg-foreground hover:text-background"
-                }`}
-                aria-disabled={downloadDisabled}
-              >
-                Download
-              </a>
-            </div>
           </FadeIn>
         </div>
       </section>
