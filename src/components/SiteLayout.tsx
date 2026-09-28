@@ -15,7 +15,6 @@ const footerNav = [
 ];
 
 const footerInfo = [
-  { path: "/Creative_Project_NEW_participant_info.pdf", label: "Download", isExternal: true },
   { path: "/contact", label: "Contact" },
   { path: "https://www.instagram.com/creative.project.new/?__d=undefined", label: "Instagram", isExternal: true },
 ];
